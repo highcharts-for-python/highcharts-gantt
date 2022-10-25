@@ -3,67 +3,58 @@ from typing import Optional, List
 
 from validator_collection import validators
 
-from highcharts_stock import utility_functions
-from highcharts_stock.decorators import class_sensitive
-from highcharts_stock.utility_classes.gradients import Gradient
-from highcharts_stock.utility_classes.patterns import Pattern
-from highcharts_stock.options.series.series_generator import create_series_obj
+from highcharts_gantt import utility_functions
+from highcharts_gantt.decorators import class_sensitive
+from highcharts_gantt.utility_classes.gradients import Gradient
+from highcharts_gantt.utility_classes.patterns import Pattern
+from highcharts_gantt.options.series.series_generator import create_series_obj
 
-from highcharts_stock.options.accessibility import Accessibility
-from highcharts_stock.options.annotations import Annotation
-from highcharts_stock.options.boost import Boost
-from highcharts_stock.options.caption import Caption
-from highcharts_stock.options.chart import ChartOptions
-from highcharts_stock.options.axes.color_axis import ColorAxis
-from highcharts_stock.options.credits import Credits
-from highcharts_stock.options.data import Data
-from highcharts_stock.options.defs import MarkerDefinition
-from highcharts_stock.options.drilldown import Drilldown
-from highcharts_stock.options.exporting import Exporting
-from highcharts_stock.global_options.language import Language
-from highcharts_stock.options.legend import Legend
-from highcharts_stock.options.loading import Loading
-from highcharts_stock.options.navigation import Navigation
-from highcharts_stock.options.no_data import NoData
-from highcharts_stock.options.pane import Pane
-from highcharts_stock.options.plot_options import PlotOptions
-from highcharts_stock.options.plot_options.generic import GenericTypeOptions
-from highcharts_stock.options.responsive import Responsive
-from highcharts_stock.options.subtitle import Subtitle
-from highcharts_stock.options.time import Time
-from highcharts_stock.options.title import Title
-from highcharts_stock.options.tooltips import Tooltip
-from highcharts_stock.options.axes.x_axis import XAxis
-from highcharts_stock.options.axes.y_axis import YAxis
-from highcharts_stock.options.axes.z_axis import ZAxis
+from highcharts_gantt.options.accessibility import Accessibility
+from highcharts_gantt.options.annotations import Annotation
+from highcharts_gantt.options.caption import Caption
+from highcharts_gantt.options.chart import ChartOptions
+from highcharts_gantt.options.credits import Credits
+from highcharts_gantt.options.data import Data
+from highcharts_gantt.options.defs import MarkerDefinition
+from highcharts_gantt.options.exporting import Exporting
+from highcharts_gantt.global_options.language import Language
+from highcharts_gantt.options.legend import Legend
+from highcharts_gantt.options.loading import Loading
+from highcharts_gantt.options.navigation import Navigation
+from highcharts_gantt.options.no_data import NoData
+from highcharts_gantt.options.plot_options import PlotOptions
+from highcharts_gantt.options.plot_options.generic import GenericTypeOptions
+from highcharts_gantt.options.responsive import Responsive
+from highcharts_gantt.options.subtitle import Subtitle
+from highcharts_gantt.options.time import Time
+from highcharts_gantt.options.title import Title
+from highcharts_gantt.options.tooltips import Tooltip
+from highcharts_gantt.options.axes.x_axis import XAxis
+from highcharts_gantt.options.axes.y_axis import YAxis
 
-# Highcharts Stock Classes
-from highcharts_stock.options.navigator import Navigator
-from highcharts_stock.options.range_selector import RangeSelector
-from highcharts_stock.options.scrollbar import Scrollbar
-from highcharts_stock.options.stock_tools import StockTools
+# Highcharts Gantt Classes
+from highcharts_gantt.options.connectors import ConnectorOptions
+from highcharts_gantt.options.navigator import Navigator
+from highcharts_gantt.options.range_selector import RangeSelector
+from highcharts_gantt.options.scrollbar import Scrollbar
 
 from highcharts_python.options import Options, HighchartsOptions
 
 
-class HighchartsStockOptions(HighchartsOptions):
+class HighchartsGanttOptions(HighchartsOptions):
     """The Python representation of the
-    `Highcharts Stock <https://api.highcharts.com/highstock/>`_ configuration object."""
+    `Highcharts Gantt <https://api.highcharts.com/gantt/>`_ configuration object."""
 
     def __init__(self, **kwargs):
-        self._boost = None
         self._navigator = None
         self._no_data = None
         self._range_selector = None
         self._scrollbar = None
-        self._stock_tools = None
 
-        self.boost = kwargs.get('boost', None)
         self.navigator = kwargs.get('navigator', None)
         self.no_data = kwargs.get('no_data', None)
         self.range_selector = kwargs.get('range_selector', None)
         self.scrollbar = kwargs.get('scrollbar', None)
-        self.stock_tools = kwargs.get('stock_tools', None)
 
         super().__init__(**kwargs)
 
@@ -109,38 +100,6 @@ class HighchartsStockOptions(HighchartsOptions):
         self._annotations = value
 
     @property
-    def boost(self) -> Optional[Boost]:
-        """Options for the Boost module.
-
-        The Boost module allows certain series types to be rendered by WebGL instead of
-        the default SVG. This allows hundreds of thousands of data points to be rendered
-        in milliseconds. In addition to the WebGL rendering it saves time by skipping
-        processing and inspection of the data wherever possible.
-
-        .. warning::
-
-          This introduces some limitations to what features are available in boost mode.
-          See
-          `the docs <https://www.highcharts.com/docs/advanced-chart-features/boost-module>`_
-          for details.
-
-        .. note:
-
-          In addition to the global boost option, each series has a ``boostThreshold``
-          that defines when the boost should kick in.
-
-        :returns: The :class:`Boost <Boost>` object.
-        :rtype: :class:`Boost <highcharts.boost.Boost>`
-
-        """
-        return self._boost
-
-    @boost.setter
-    @class_sensitive(Boost)
-    def boost(self, value):
-        self._boost = value
-
-    @property
     def caption(self) -> Optional[Caption]:
         """The chart's caption, which will render below the chart and will be part of
         exported charts.
@@ -179,49 +138,6 @@ class HighchartsStockOptions(HighchartsOptions):
     @class_sensitive(ChartOptions)
     def chart(self, value):
         self._chart = value
-
-    @property
-    def color_axis(self) -> Optional[List[ColorAxis]]:
-        """A color axis for series.
-
-        Visually, the color axis will appear as a gradient or as separate items inside the
-        legend, depending on whether the axis is scalar or based on data classes.
-
-        A scalar color axis is represented by a gradient. The colors either range between
-        the ``minimum_color`` and the ``maximum_color``, or for more fine grained control
-        the colors can be defined in :ref:`stops <ColorAxis.stops>`. Often times, the
-        color axis needs to be  adjusted to get the right color spread for the data. In
-        addition to stops, consider using a logarithmic axis type, or setting min and max
-        to avoid the colors being determined by outliers.
-
-        For supported color formats, please see
-        `the documentation article about colors <https://www.highcharts.com/docs/chart-design-and-style/colors>`_.
-
-
-        When :ref:`data_classes <ColorAxis.data_classes>` are used, the ranges are
-        subdivided into separate classes like categories based on their values. This can
-        be used for ranges between two values, but also for a true category. However, when
-        your data is categorized, it may be as convenient to add each category to a
-        separate series.
-
-        .. warning::
-
-          Color axis does not work with: ``sankey``, ``sunburst``, ``dependencywheel``,
-          ``networkgraph``, ``wordcloud``, ``venn``, ``gauge`` and ``solidgauge`` series types.
-
-        See the :ref:`Axis` object for programmatic access to the axis.
-
-        :returns: A collection of :class:`ColorAxis` objects defining the color axis to
-          apply, or :obj:`None <python:None>`.
-        :rtype: :class:`list <python:list>` of :class:`ColorAxis` or
-          :obj:`None <python:None>`
-        """
-        return self._color_axis
-
-    @color_axis.setter
-    @class_sensitive(ColorAxis, force_iterable = True)
-    def color_axis(self, value):
-        self._color_axis = value
 
     @property
     def colors(self) -> Optional[List[str | Gradient | Pattern]]:
@@ -268,6 +184,28 @@ class HighchartsStockOptions(HighchartsOptions):
         else:
             value = validators.iterable(value)
             self._colors = [utility_functions.validate_color(x) for x in value]
+
+    @property
+    def connectors(self) -> Optional[ConnectorOptions]:
+        """**Highcharts Gantt for Python** allows you to define a connection between two
+        points, with the connection represented as a line with optional markers for the
+        start and end of that line. Multiple algorithms are available for calculating how
+        connecting lines should be drawn.
+
+        .. note::
+
+          These configuration options are used to control how :term:`dependencies` between
+          tasks are rendered in :term:`Gantt charts <Gantt chart>`.
+
+        :rtype: :class:`ConnectorOptions <highcharts_gantt.options.connectors.ConnectorOptions>`
+          or :obj:`None <python:None>`
+        """
+        return self._connectors
+
+    @connectors.setter
+    @class_sensitive(ConnectorOptions)
+    def connectors(self, value):
+        self._connectors = value
 
     @property
     def credits(self) -> Optional[Credits]:
@@ -323,29 +261,6 @@ class HighchartsStockOptions(HighchartsOptions):
     @class_sensitive(MarkerDefinition)
     def defs(self, value):
         self._defs = value
-
-    @property
-    def drilldown(self) -> Optional[Drilldown]:
-        """Options to configure :term:`drilldown` functionality in the chart, which
-        enables users to inspect increasingly high resolution data by clicking on chart
-        items like columns or pie slices.
-
-        .. note::
-
-          The drilldown feature requires the ``drilldown.js`` file to be loaded in the
-          browser/client. This file is found in the modules directory of the download
-          package, or online at
-          `code.highcharts.com/modules/drilldown.js <code.highcharts.com/modules/drilldown.js>`_.
-
-        :returns: The options to configure the chart's drill down functionality.
-        :rtype: :class:`Drilldown` or :obj:`None <python:None>`
-        """
-        return self._drilldown
-
-    @drilldown.setter
-    @class_sensitive(Drilldown)
-    def drilldown(self, value):
-        self._drilldown = value
 
     @property
     def exporting(self) -> Optional[Exporting]:
@@ -486,21 +401,6 @@ class HighchartsStockOptions(HighchartsOptions):
         self._no_data = value
 
     @property
-    def pane(self) -> Optional[Pane]:
-        """The pane serves as a container for axes and backgrounds for circular gauges and
-        polar charts.
-
-        :returns: The Pane configuration options.
-        :rtype: :class:`Pane` or :obj:`None <python:None>`
-        """
-        return self._pane
-
-    @pane.setter
-    @class_sensitive(Pane)
-    def pane(self, value):
-        self._pane = value
-
-    @property
     def plot_options(self) -> Optional[PlotOptions]:
         """A wrapper object for configurations applied to each series type.
 
@@ -613,30 +513,6 @@ class HighchartsStockOptions(HighchartsOptions):
                             for x in value]
 
     @property
-    def stock_tools(self) -> Optional[StockTools]:
-        """Configure the **stockTools** GUI strings in the chart.
-
-        .. warning::
-
-          Requires the `stockTools module <https://api.highcharts.com/highstock/>`_` to be
-          loaded in the client/browser.
-
-        .. seealso::
-
-          For a description of the module and information on its features, see
-          `Highcharts StockTools <https://api.highcharts.com/highstock/>`_.
-
-        :returns: The configuration options for the StockTools functionality.
-        :rtype: :class:`StockTools` or :obj:`None <python:None>`
-        """
-        return self._stock_tools
-
-    @stock_tools.setter
-    @class_sensitive(StockTools)
-    def stock_tools(self, value):
-        self._stock_tools = value
-
-    @property
     def subtitle(self) -> Optional[Subtitle]:
         """The chart's subtitle.
 
@@ -740,20 +616,6 @@ class HighchartsStockOptions(HighchartsOptions):
     def y_axis(self, value):
         self._y_axis = value
 
-    @property
-    def z_axis(self) -> Optional[List[ZAxis]]:
-        """The Z axis or depth axis for 3D plots.
-
-        :returns: A collection of :class:`ZAxis` objects
-        :rtype: :class:`list <python:list>` of :class:`ZAxis` or :obj:`None <python:None>`
-        """
-        return self._z_axis
-
-    @z_axis.setter
-    @class_sensitive(ZAxis, force_iterable = True)
-    def z_axis(self, value):
-        self._z_axis = value
-
     @classmethod
     def _get_kwargs_from_dict(cls, as_dict):
         as_dict = validators.dict(as_dict, allow_empty = True) or {}
@@ -761,15 +623,13 @@ class HighchartsStockOptions(HighchartsOptions):
         kwargs_dict = {
             'accessibility': as_dict.get('accessibility', None),
             'annotations': as_dict.get('annotations', None),
-            'boost': as_dict.get('boost', None),
             'caption': as_dict.get('caption', None),
             'chart': as_dict.get('chart', None),
-            'color_axis': as_dict.get('colorAxis', None),
             'colors': as_dict.get('colors', None),
+            'connectors': as_dict.get('connectors', None),
             'credits': as_dict.get('credits', None),
             'data': as_dict.get('data', None),
             'defs': as_dict.get('defs', None),
-            'drilldown': as_dict.get('drilldown', None),
             'exporting': as_dict.get('exporting', None),
             'language': as_dict.get('lang', None),
             'legend': as_dict.get('legend', None),
@@ -777,20 +637,17 @@ class HighchartsStockOptions(HighchartsOptions):
             'navigation': as_dict.get('navigation', None),
             'navigator': as_dict.get('navigator', None),
             'no_data': as_dict.get('noData', None),
-            'pane': as_dict.get('pane', None),
             'plot_options': as_dict.get('plotOptions', None),
             'range_selector': as_dict.get('rangeSelector', None),
             'responsive': as_dict.get('responsive', None),
             'scrollbar': as_dict.get('scrollbar', None),
             'series': as_dict.get('series', None),
-            'stock_tools': as_dict.get('stockTools', None),
             'subtitle': as_dict.get('subtitle', None),
             'time': as_dict.get('time', None),
             'title': as_dict.get('title', None),
             'tooltip': as_dict.get('tooltip', None),
             'x_axis': as_dict.get('xAxis', None),
             'y_axis': as_dict.get('yAxis', None),
-            'z_axis': as_dict.get('zAxis', None),
         }
 
         return kwargs_dict
@@ -799,15 +656,13 @@ class HighchartsStockOptions(HighchartsOptions):
         untrimmed = {
             'accessibility': self.accessibility,
             'annotations': self.annotations,
-            'boost': self.boost,
             'caption': self.caption,
             'chart': self.chart,
-            'colorAxis': self.color_axis,
             'colors': self.colors,
+            'connectors': self.connectors,
             'credits': self.credits,
             'data': self.data,
             'defs': self.defs,
-            'drilldown': self.drilldown,
             'exporting': self.exporting,
             'lang': self.language,
             'legend': self.legend,
@@ -815,20 +670,17 @@ class HighchartsStockOptions(HighchartsOptions):
             'navigation': self.navigation,
             'navigator': self.navigator,
             'noData': self.no_data,
-            'pane': self.pane,
             'plotOptions': self.plot_options,
             'rangeSelector': self.range_selector,
             'responsive': self.responsive,
             'scrollbar': self.scrollbar,
             'series': self.series,
-            'stockTools': self.stock_tools,
             'subtitle': self.subtitle,
             'time': self.time,
             'title': self.title,
             'tooltip': self.tooltip,
             'xAxis': self.x_axis,
-            'yAxis': self.y_axis,
-            'zAxis': self.z_axis,
+            'yAxis': self.y_axis
         }
 
         return untrimmed
