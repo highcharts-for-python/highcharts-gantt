@@ -3,28 +3,54 @@ from decimal import Decimal
 
 from validator_collection import validators
 
-from highcharts_python.options.axes.x_axis import XAxis as XAxisBase
+from highcharts_stock.options.axes.x_axis import XAxis as XAxisBase
 
-from highcharts_stock.decorators import class_sensitive
-from highcharts_stock.options.scrollbar import Scrollbar
+from highcharts_gantt.decorators import class_sensitive
+from highcharts_gantt.options.axes.plot_bands import PlotLine
+from highcharts_gantt.options.axes.grids import GridOptions
 
 
 class XAxis(XAxisBase):
 
     def __init__(self, **kwargs):
+        self._current_date_indicator = None
+        self._grid = None
         self._max_range = None
-        self._overscroll = None
-        self._range = None
-        self._resize = None
-        self._scrollbar = None
 
+        self.current_date_indicator = kwargs.get('current_date_indicator', None)
+        self.grid = kwargs.get('grid', None)
         self.max_range = kwargs.get('max_range', None)
-        self.overscroll = kwargs.get('overscroll', None)
-        self.range = kwargs.get('range', None)
-        self.resize = kwargs.get('resize', None)
-        self.scrollbar = kwargs.get('scrollbar', None)
 
         super().__init__(**kwargs)
+
+    @property
+    def current_date_indicator(self) -> Optional[PlotLine]:
+        """Configuration for an indicator on the axis to provide the current date and
+        time. Accepts either a :class:`bool <python:bool>`, or a
+        :class:`PlotLine <highcharts_gantt.options.axes.plot_bands.PlotLine>`
+        instance.
+
+        :rtype: :class:`PlotLine <highcharts_gantt.options.axes.plot_bands.PlotLine>`
+        """
+        return self._current_date_indicator
+
+    @current_date_indicator.setter
+    @class_sensitive(PlotLine)
+    def current_date_indicator(self, value):
+        self._current_date_indicator = value
+
+    @property
+    def grid(self) -> Optional[GridOptions]:
+        """Grid options for the axis labels.
+
+        :rtype: :class:`GridOptions <highcharts_gantt.options.axes.grids.GridOptions>`
+        """
+        return self._grid
+
+    @grid.setter
+    @class_sensitive(GridOptions)
+    def grid(self, value):
+        self._grid = value
 
     @property
     def max_range(self) -> Optional[int | float | Decimal]:
@@ -45,70 +71,21 @@ class XAxis(XAxisBase):
         self._max_range = validators.numeric(value, allow_empty = True)
 
     @property
-    def overscroll(self) -> Optional[int]:
-        """Additional range on the right side of the x-axis. Works similar to
-        :meth:`.max_padding <highcharts_stock.options.axes.x_axis.XAxis.max_padding>`, but
-        value is set in milliseconds. Defaults to ``0``.
+    def opposite(self) -> Optional[bool]:
+        """If ``True``, displays the axis on the opposite side of where it would normally
+        appear. Defaults to ``True``.
 
-        :rtype: :class:`int <python:int>` or :obj:`None <python:None>`
+        Vertical axes would normally appear on the left side of the chart, while
+        horizontal axes would normally appear on the bottom of the chart. Thus, the
+        opposite side would be the right and top respectively.
+
+        .. hint::
+
+          This feature is typically used with dual or multiple axes.
+
+        :rtype: :class:`bool <python:bool>` or :obj:`None <python:None>`
         """
-        return self._overscroll
-
-    @overscroll.setter
-    def overscroll(self, value):
-        self._overscroll = validators.integer(value,
-                                              allow_empty = True,
-                                              minimum = 0)
-
-    @property
-    def range(self) -> Optional[int | float | Decimal]:
-        """The minimum range to display on this axis. Defaults to
-        :obj:`None <python:None>`.
-
-        .. note::
-
-          The entire axis will not be allowed to span over a smaller interval than this.
-          For example, for a datetime axis the main unit is milliseconds. If ``min_range``
-          is set to ``3600000``, you can't zoom in more than to one hour.
-
-          On a logarithmic axis, the unit for the range is the power. So a ``range`` of
-          ``1`` means that the axis can be zoomed to 10-100, 100-1,000, 1,000-10,000 etc.
-
-        .. note::
-
-          For the x-axis, when :obj:`None <python:None>`, defaults to five times the
-          smallest interval between any of the data points.
-
-        .. caution::
-
-          The :meth:`min_padding <highcharts_stock.options.axes.x_axis.XAxis.min_padding>`,
-          :meth:`max_padding <highcharts_stock.options.axes.x_axis.XAxis.max_padding>`,
-          :meth:`start_on_tick <highcharts_stock.options.axes.x_axis.XAxis.start_on_tick>`,
-          and :meth:`end_on_tick <highcharts_stock.options.axes.x_axis.XAxis.end_on_tick>`
-          settings also affect how the extremes of the axis are computed.
-
-        :rtype: numeric or :obj:`None <python:None>`
-        """
-        return self._range
-
-    @range.setter
-    def range(self, value):
-        self._range = validators.numeric(value, allow_empty = True)
-
-    @property
-    def scrollbar(self) -> Optional[Scrollbar]:
-        """An optional scrollbar to display on the X axis in response to limiting the
-        minimum and maximum of the axis values. Defaults to :obj:`None <python:None>`.
-
-        :rtype: :class:`Scrollbar <highcharts_stock.options.axes.scrollbar.Scrollbar>` or
-          :obj:`None <python:None>`
-        """
-        return self._scrollbar
-
-    @scrollbar.setter
-    @class_sensitive(Scrollbar)
-    def scrollbar(self, value):
-        self._scrollbar = value
+        return self._opposite
 
     @classmethod
     def _get_kwargs_from_dict(cls, as_dict):
@@ -197,20 +174,18 @@ class XAxis(XAxisBase):
             'stops': as_dict.get('stops', None),
             'tooltip_value_format': as_dict.get('tooltipValueFormat', None),
 
+            'grid': as_dict.get('grid', None),
+            'current_date_indicator': as_dict.get('currentDateIndicator', None),
             'max_range': as_dict.get('maxRange', None),
-            'overscroll': as_dict.get('overscroll', None),
-            'range': as_dict.get('range', None),
-            'scrollbar': as_dict.get('scrollbar', None),
         }
 
         return kwargs
 
     def _to_untrimmed_dict(self, in_cls = None) -> dict:
         untrimmed = {
+            'currentDateIndicator': self.current_date_indicator,
+            'grid': self.grid,
             'maxRange': self.max_range,
-            'overscroll': self.overscroll,
-            'range': self.range,
-            'scrollbar': self.scrollbar,
         }
 
         parent_as_dict = super()._to_untrimmed_dict(in_cls = in_cls)
