@@ -1,21 +1,43 @@
-from highcharts_stock.utility_functions import mro__to_untrimmed_dict
+from typing import Optional
 
-from highcharts_stock.options.series.base import NavigatorIndicatorSeries
-from highcharts_stock.options.plot_options.pivot_points import PivotPointsOptions
+from validator_collection import validators
+
+from highcharts_python.options.series.base import SeriesBase
+
+from highcharts_gantt.options.plot_options.gantt import GanttOptions
+from highcharts_gantt.options.series.data.gantt import GanttData
+from highcharts_gantt.utility_functions import mro__to_untrimmed_dict
 
 
-class PivotPointsSeries(NavigatorIndicatorSeries, PivotPointsOptions):
-    """Options to configure a Pivot Points :term:`indicator <techincal indicator>`,
-    which are typically used to identify trends and reversals in intraday trading.
+class GanttSeries(SeriesBase, GanttOptions):
+    """Options to configure a Gantt series.
 
-    .. figure:: ../../../_static/pivot-points-example.png
-      :alt: Pivot Points Example Chart
-      :align: center
-
+    Gantt charts are a type of chart used to visualize efforts executed in a sequence.
     """
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+
+    @property
+    def data(self) -> Optional[List[GanttData]]:
+        """Collection of data that represents the series. Defaults to
+        :obj:`None <python:None>`.
+
+        While the series type returns a collection of :class:`GanttData` instances,
+        it accepts as input an iterable of :class:`GanttData` instances or
+        :class:`dict <python:dict>` instances that can be coerced to :class:`GanttData`.
+
+        :rtype: :class:`list <python:list>` of :class:`GanttData` or
+          :obj:`None <python:None>`
+        """
+        return self._data
+
+    @data.setter
+    def data(self, value):
+        if not value:
+            self._data = None
+        else:
+            self._data = GanttData.from_array(value)
 
     @classmethod
     def _get_kwargs_from_dict(cls, as_dict):
@@ -56,60 +78,67 @@ class PivotPointsSeries(NavigatorIndicatorSeries, PivotPointsOptions):
             'animation_limit': as_dict.get('animationLimit', None),
             'boost_blending': as_dict.get('boostBlending', None),
             'boost_threshold': as_dict.get('boostThreshold', None),
+            'color_axis': as_dict.get('colorAxis', None),
             'color_index': as_dict.get('colorIndex', None),
             'color_key': as_dict.get('colorKey', None),
+            'connect_ends': as_dict.get('connectEnds', None),
             'connect_nulls': as_dict.get('connectNulls', None),
             'crisp': as_dict.get('crisp', None),
             'crop_threshold': as_dict.get('cropThreshold', None),
             'data_sorting': as_dict.get('dataSorting', None),
+            'drag_drop': as_dict.get('dragDrop', None),
+            'fill_color': as_dict.get('fillColor', None),
+            'fill_opacity': as_dict.get('fillOpacity', None),
             'find_nearest_point_by': as_dict.get('findNearestPointBy', None),
             'get_extremes_from_all': as_dict.get('getExtremesFromAll', None),
             'linecap': as_dict.get('linecap', None),
+            'line_color': as_dict.get('lineColor', None),
             'line_width': as_dict.get('lineWidth', None),
-            'relative_x_value': as_dict.get('relativeXValue', None),
-            'shadow': as_dict.get('shadow', None),
-            'soft_threshold': as_dict.get('softThreshold', None),
-            'step': as_dict.get('step', None),
-            'zone_axis': as_dict.get('zoneAxis', None),
-            'zones': as_dict.get('zones', None),
-
-            'color_axis': as_dict.get('colorAxis', None),
-            'connect_ends': as_dict.get('connectEnds', None),
-            'drag_drop': as_dict.get('dragDrop', None),
             'negative_color': as_dict.get('negativeColor', None),
+            'negative_fill_color': as_dict.get('negativeFillColor', None),
             'point_interval': as_dict.get('pointInterval', None),
             'point_interval_unit': as_dict.get('pointIntervalUnit', None),
             'point_placement': as_dict.get('pointPlacement', None),
             'point_start': as_dict.get('pointStart', None),
+            'relative_x_value': as_dict.get('relativeXValue', None),
+            'shadow': as_dict.get('shadow', None),
+            'soft_threshold': as_dict.get('softThreshold', None),
             'stacking': as_dict.get('stacking', None),
+            'step': as_dict.get('step', None),
+            'track_by_area': as_dict.get('trackByArea', None),
+            'zone_axis': as_dict.get('zoneAxis', None),
+            'zones': as_dict.get('zones', None),
 
-            'compare_start': as_dict.get('compareStart', None),
-            'compare_to_main': as_dict.get('compareToMain', None),
-            'cumulative': as_dict.get('cumulative', None),
+            'border_color': as_dict.get('borderColor', None),
+            'border_radius': as_dict.get('borderRadius', None),
+            'border_width': as_dict.get('borderWidth', None),
+            'center_in_category': as_dict.get('centerInCategory', None),
+            'color_by_point': as_dict.get('colorByPoint', None),
+            'colors': as_dict.get('colors', None),
+            'grouping': as_dict.get('grouping', None),
+            'group_padding': as_dict.get('groupPadding', None),
+            'max_point_width': as_dict.get('maxPointWidth', None),
+            'min_point_length': as_dict.get('minPointLength', None),
+            'point_padding': as_dict.get('pointPadding', None),
+            'point_range': as_dict.get('pointRange', None),
+            'point_width': as_dict.get('pointWidth', None),
+
+            'group_z_padding': as_dict.get('groupZPadding', None),
+            'partial_fill': as_dict.get('partialFill', None),
+
             'data_as_columns': as_dict.get('dataAsColumns', None),
-            'data_grouping': as_dict.get('dataGrouping', None),
-            'gap_size': as_dict.get('gapSize', None),
-            'gap_unit': as_dict.get('gapUnit', None),
-            'last_price': as_dict.get('lastPrice', None),
-            'last_visible_price': as_dict.get('lastVisiblePrice', None),
-            'name': as_dict.get('name', None),
-            'params': as_dict.get('params', None),
 
+            'data': as_dict.get('data', None),
             'id': as_dict.get('id', None),
             'index': as_dict.get('index', None),
             'legend_index': as_dict.get('legendIndex', None),
-            'stack': as_dict.get('stack', None),
-            'x_axis': as_dict.get('xAxis', None),
-            'y_axis': as_dict.get('yAxis', None),
+            'name': as_dict.get('name', None),
             'z_index': as_dict.get('zIndex', None),
-
-            'navigator_options': as_dict.get('navigatorOptions', None),
-            'show_in_navigator': as_dict.get('showInNavigator', None),
         }
 
         return kwargs
 
     def _to_untrimmed_dict(self, in_cls = None) -> dict:
-        untrimmed = mro__to_untrimmed_dict(self, in_cls = in_cls) or {}
+        untrimmed = mro__to_untrimmed_dict(self, in_cls = in_cls)
 
         return untrimmed
