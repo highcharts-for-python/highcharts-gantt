@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, List
 from decimal import Decimal
 from datetime import datetime
 
@@ -9,7 +9,10 @@ from highcharts_python.options.series.data.base import DataBase
 from highcharts_gantt import errors, constants
 from highcharts_gantt.decorators import validate_types
 from highcharts_gantt.metaclasses import HighchartsMeta
+from highcharts_gantt.options.series.data.connect import DataConnection
 from highcharts_gantt.utility_functions import validate_color
+from highcharts_gantt.utility_classes.gradients import Gradient
+from highcharts_gantt.utility_classes.patterns import Pattern
 
 
 class ProgressIndicator(HighchartsMeta):
@@ -163,7 +166,7 @@ class GanttData(DataBase):
           :class:`DataConnection <highcharts_gantt.options.series.data.connect.DataConnection>`
           or :obj:`None <python:None>`
         """
-        return self._connect
+        return self._dependency
 
     @dependency.setter
     def dependency(self, value):

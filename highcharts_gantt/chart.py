@@ -843,3 +843,144 @@ class Chart(ChartBase):
         instance.options = options
 
         return instance
+
+    @classmethod
+    def from_asana(cls,
+                   project_gid,
+                   section_gid = None,
+                   completed_since = None,
+                   use_html_description = True,
+                   personal_access_token = None,
+                   asana_client = None,
+                   api_request_params = None,
+                   connection_kwargs = None,
+                   connection_callback = None,
+                   series_kwargs = None,
+                   options_kwargs = None,
+                   chart_kwargs = None):
+        """Create a Gantt :class:`Chart <highcharts_gantt.chart.Chart>`
+        instance from an `Asana <https://www.asana.com/>`__ project.
+        
+        .. note::
+        
+          **Highcharts Gantt for Python** can create an Asana API client for you, 
+          authenticating using the :term:`Personal Access Token`` method supported by
+          the Asana API. However, if you wish to use the more-involved OAuth2 handshake
+          process you will need to create your own Asana API client using the 
+          `asana-python <https://pypi.org/project/asana/>`__ library. 
+          
+          The reason for this is because the OAuth2 handshake has various permutations
+          involving redirects, token refreshes, etc. which are outside the scope of the
+          **Highcharts Gantt for Python** library, and if you are integrating 
+          **Highcharts Gantt for Python** into a larger application you are likely 
+          already facilitating the OAuth2 dance in a fashion appropriate for your use 
+          case.
+          
+        :param project_gid: The globally unique ID of the Project whose tasks should be
+          used to assemble the Gantt chart.
+        :type project_gid: :class:`str <python:str>`
+        
+        :param section_gid: The optional unique ID of the section whose tasks should be
+          used to assemble the Gantt chart. Defaults to :obj:`None <python:None>`, which
+          returns all tasks in the project.
+        :type section_gid: :class:`str <python:str>` or :obj:`None <python:None>`
+        
+        :param completed_since: An optional filter which only returns tasks that have 
+          been completed after this date. Defaults to :obj:`None <python:None>`, which
+          returns all tasks.
+        :type completed_since: :class:`datetime <python:datetime.datetime>` or 
+          :obj:`None <python:None>`
+          
+        :param use_html_description: If ``True``, will use the Asana task's HTML notes 
+          in the data point's 
+          :meth:`.description <highcharts_gantt.options.series.data.gantt.GanttData.description>` 
+          field. If ``False``, will use the non-HTML notes. Defaults to ``True``.
+        :type use_html_description: :class:`bool <python:bool>`
+        
+        :param personal_access_token: A Personal Access Token created by Asana.
+          Defaults to :obj:`None <python:None>`, which tries to determine its value
+          by looking in the ``ASANA_PERSONAL_ACCESS_TOKEN`` environment variable.
+        :type personal_access_token: :class:`str <python:str>` or 
+          :obj:`None <python:None>`
+          
+        :param api_request_params: Collection of additional request parameters to 
+          submit to the Asana API. Defaults to :obj:`None <python:None>`.
+        :type api_request_params: :class:`dict <python:dict>` or 
+          :obj:`None <python:None>`
+          
+        :param connection_kwargs: Set of keyword arugments to supply to the   
+          :class:`DataConnection <highcharts_gantt.options.series.data.connect.DataConnection>`
+          constructor, besides the :meth:`.to <highcharts_gantt.options.series.data.connect.DataConnection.to>` property which is derived from the task. Defaults
+          to :obj:`None <python:None>`
+        :type connection_kwargs: :class:`dict <python:dict>` or 
+          :obj:`None <python:None>`
+          
+        :param connection_callback: A custom Python function or method which accepts two
+          keyword arguments: ``connection_target`` (which expects the dependency 
+          :class:`dict <python:dict>` object from the Asana task), and ``asana_task`` 
+          (which expects the Asana task :class:`dict <pythoN:dict>` object). The 
+          function should return a 
+          :class:`DataConnection <highcharts_gantt.options.series.data.connect.DataConnection>` instance. Defaults to :obj:`None <python:None>`
+          
+          .. tip::
+          
+            The ``connection_callback`` argument is useful if you want to customize the
+            connection styling based on properties included in the Asana task.
+            
+        :type connection_callback: Callable or :obj:`None <python:None>`
+        
+        :param series_kwargs: Collection of additional keyword arguments to use when 
+          instantiating the 
+          :class:`GanttSeries <highcharts_gantt.options.series.GanttSeries>` (besides 
+          the ``data`` argument, which will be determined from the Asana tasks).
+          Defaults to :obj:`None <python:None>`.
+        :type series_kwargs: :class:`dict <python:dict>` or :obj:`None <python:None>`
+
+        :param options_kwargs: An optional :class:`dict <python:dict>` containing keyword
+          arguments that should be used when instantiating the :class:`HighchartsOptions`
+          instance. Defaults to :obj:`None <python:None>`.
+
+          .. warning::
+
+            If ``options_kwargs`` contains a ``series`` key, the ``series`` value will be
+            *overwritten*. The ``series`` value will be created from the data in ``df``.
+
+        :type options_kwargs: :class:`dict <python:dict>` or :obj:`None <python:None>`
+
+        :param chart_kwargs: An optional :class:`dict <python:dict>` containing keyword
+          arguments that should be used when instantiating the :class:`Chart` instance.
+          Defaults to :obj:`None <python:None>`.
+
+          .. warning::
+
+            If ``chart_kwargs`` contains an ``options`` key, ``options`` will be
+            *overwritten*. The ``options`` value will be created from the
+            ``options_kwargs`` and the data in ``df`` instead.
+
+        :type chart_kwargs: :class:`dict <python:dict>` or :obj:`None <python:None>`
+
+        :rtype: :class:`GanttSeries <highcharts_gantt.options.series.gantt.GanttSeries>`
+        """
+        series_cls = SERIES_CLASSES.get('gantt', None)
+        
+        options_kwargs = validators.dict(options_kwargs, allow_empty = True) or {}
+        chart_kwargs = validators.dict(chart_kwargs, allow_empty = True) or {}
+        
+        series = series_cls.from_asana(project_gid = project_gid,
+                                       section_gid = section_gid,
+                                       completed_since = completed_since,
+                                       use_html_description = use_html_description,
+                                       personal_access_token = personal_access_token,
+                                       asana_client = asana_client,
+                                       api_request_params = api_request_params,
+                                       connection_kwargs = connection_kwargs,
+                                       connection_callback = connection_callback,
+                                       series_kwargs = series_kwargs)
+        
+        options = HighchartsGanttOptions(**options_kwargs)
+        options.series = [series]
+        
+        instance = cls(**chart_kwargs)
+        instance.options = options
+        
+        return instance
