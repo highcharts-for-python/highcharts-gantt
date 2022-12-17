@@ -189,8 +189,8 @@ class HighchartsGanttOptions(HighchartsOptions):
     def connectors(self) -> Optional[ConnectorOptions]:
         """**Highcharts Gantt for Python** allows you to define a connection between two
         points, with the connection represented as a line with optional markers for the
-        start and end of that line. Multiple algorithms are available for calculating how
-        connecting lines should be drawn.
+        start and end of that line. Multiple algorithms are available for calculating 
+        how connecting lines should be drawn.
 
         .. note::
 

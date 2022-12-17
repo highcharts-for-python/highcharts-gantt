@@ -32,7 +32,7 @@ class Chart(ChartBase):
         .. note::
 
           Currently includes *all* `Highcharts JS <https://www.highcharts.com/>`__ or
-          `Highcharts Gantt <https://www.highcharts.com/products/stock/>`__ modules
+          `Highcharts Gantt <https://www.highcharts.com/products/gantt/>`__ modules
           in the HTML. This issue will be addressed when roadmap issue :issue:`2` is
           released.
 
@@ -55,7 +55,7 @@ class Chart(ChartBase):
     @property
     def is_gantt_chart(self) -> bool:
         """If ``True``, indicates that the chart should be rendered as a
-        `Highcharts Gantt <https://www.highcharts.com/products/maps/>`__ chart. If
+        `Highcharts Gantt <https://www.highcharts.com/products/gantt/>`__ chart. If
         ``False``, the chart will be rendered using the standard
         `Highcharts JS <https://www.highcharts.com/products/highcharts/>`__ constructor.
         Defaults to ``False``.
@@ -71,8 +71,8 @@ class Chart(ChartBase):
     @property
     def options(self) -> Optional[HighchartsOptions | HighchartsGanttOptions]:
         """The Python representation of the
-        `Highcharts Gantt <https://www.highcharts.com/products/maps/>`__
-        ``options`` `configuration object <https://api.highcharts.com/highmaps/>`_
+        `Highcharts Gantt <https://www.highcharts.com/products/gantt/>`__
+        ``options`` `configuration object <https://api.highcharts.com/gantt/>`_
         Defaults to :obj:`None <python:None>`.
 
         :rtype: :class:`HighchartsOptions` or :class:`HighchartsGanttOptions` or
@@ -159,30 +159,7 @@ class Chart(ChartBase):
         signature_elements = 0
 
         fetch_as_str = ''
-        if self.is_async:
-            urls = []
-            topologies = []
-            for index, series in enumerate(self.options.series):
-                if series.is_async:
-                    url = series.map_data.url
-                    if url in urls:
-                        continue
-                    urls.append(url)
-                    if len(urls) > 1:
-                        self.options.series[index].map_data.fetch_counter += 1
-                    map_data_as_str = series.map_data.to_js_literal(encoding = encoding)
-                    topologies.append(map_data_as_str)
-
-            fetch_as_str = ''
-            for topology in topologies:
-                fetch_request = topology.to_js_literal(encoding = encoding)
-                fetch_as_str += f"""{fetch_request}\n"""
-
-        custom_projection_as_str = ''
-        if self.uses_custom_projection:
-            custom_projection_as_str = self.options.map_view.projection.custom.to_js_literal(encoding = encoding)
-            custom_projection_as_str += f"""\nHighcharts.Projection.add('{self.options.map_view.projection.custom.name}', {self.options.map_view.projection.custom.class_name})\n"""
-
+        
         container_as_str = ''
         if self.container:
             container_as_str = f"""renderTo = '{self.container}'"""
@@ -202,7 +179,7 @@ class Chart(ChartBase):
 
         signature = """new Highcharts.chart("""
         if self.is_gantt_chart:
-            signature = """new Highcharts.mapChart("""
+            signature = """new Highcharts.ganttChart("""
         if container_as_str:
             signature += container_as_str
             if signature_elements > 1:
@@ -221,18 +198,8 @@ class Chart(ChartBase):
 
         as_str = constructor_prefix + signature
 
-        if self.is_async:
-            prefix = """document.addEventListener('DOMContentLoaded', function() {\n"""
-            if custom_projection_as_str:
-                prefix += custom_projection_as_str
-            prefix += """(async () => """
-            suffix = """})()});"""
-            as_str = fetch_as_str + '\n' + as_str
-        else:
-            prefix = """document.addEventListener('DOMContentLoaded', function() {\n"""
-            if custom_projection_as_str:
-                prefix += custom_projection_as_str
-            suffix = """});"""
+        prefix = """document.addEventListener('DOMContentLoaded', function() {\n"""
+        suffix = """});"""
 
         as_str = prefix + as_str + '\n' + suffix
 
@@ -406,7 +373,7 @@ class Chart(ChartBase):
                                             types = SharedGanttOptions)
 
         if self.is_gantt_chart:
-            include_str = constants.MAPS_INCLUDE_STR
+            include_str = constants.GANTT_INCLUDE_STR
         else:
             include_str = constants.INCLUDE_STR
 
@@ -864,10 +831,10 @@ class Chart(ChartBase):
             chart_kwargs['is_gantt_chart'] = True
         elif checkers.is_type(options, 'HighchartsOptions'):
             options = options
-        elif ('mapNavigation' in options
-              or 'map_navigation' in options
-              or 'mapView' in options
-              or 'map_view' in options):
+        elif ('navigator' in value
+              or 'range_selector' in value
+              or 'rangeSelector' in value
+              or 'connectors' in value):
             options = validate_types(options, HighchartsGanttOptions)
             chart_kwargs['is_gantt_chart'] = True
         else:

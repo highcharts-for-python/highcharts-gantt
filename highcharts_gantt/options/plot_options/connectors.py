@@ -3,7 +3,7 @@ from decimal import Decimal
 
 from validator_collection import validators
 
-from highcharts_python import errors
+from highcharts_gantt import constants, errors
 
 from highcharts_gantt.decorators import class_sensitive
 from highcharts_gantt.metaclasses import HighchartsMeta
