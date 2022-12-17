@@ -37,7 +37,7 @@ class ExportServer(ExportServerBase):
         """The :class:`HighchartsOptions` which should be applied to render the exported
         chart. Defaults to :obj:`None <python:None>`.
 
-        :rtype: :class:`HighchartsOptions` or :obj:`None <pythoN:None>`
+        :rtype: :class:`HighchartsOptions` or :obj:`None <python:None>`
         """
         return self._options
 
