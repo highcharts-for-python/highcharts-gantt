@@ -210,7 +210,7 @@ class Chart(ChartBase):
         return as_str
 
     def download_chart(self,
-                       format = 'png',
+                       format_ = 'png',
                        scale = 1,
                        width = None,
                        filename = None,
@@ -255,10 +255,7 @@ class Chart(ChartBase):
           keyword argument).
         :rtype: :class:`bytes <python:bytes>` or :class:`str <python:str>`
         """
-        if self.is_gantt_chart:
-            constructor = 'Gantt'
-        else:
-            constructor = 'Chart'
+        constructor = 'Chart'
 
         if not server_instance:
             return ExportServer.get_chart(filename = filename,
@@ -269,6 +266,7 @@ class Chart(ChartBase):
                                           constructor = constructor,
                                           scale = scale,
                                           width = width,
+                                          format_ = format_,
                                           **kwargs)
 
         if not isinstance(server_instance, ExportServer):
@@ -282,6 +280,7 @@ class Chart(ChartBase):
                                              timeout = timeout,
                                              options = self.options,
                                              constructor = constructor,
+                                             format_ = format_,
                                              **kwargs)
 
     def add_series(self, *series):
