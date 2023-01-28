@@ -10,7 +10,7 @@ from highcharts_gantt import errors, constants
 from highcharts_gantt.decorators import validate_types
 from highcharts_gantt.metaclasses import HighchartsMeta
 from highcharts_gantt.options.series.data.connect import DataConnection
-from highcharts_gantt.utility_functions import validate_color
+from highcharts_gantt.utility_functions import validate_color, parse_jira_issue
 from highcharts_gantt.utility_classes.gradients import Gradient
 from highcharts_gantt.utility_classes.patterns import Pattern
 
@@ -450,3 +450,249 @@ class GanttData(DataBase):
             collection.append(as_obj)
 
         return collection
+
+    @classmethod
+    def from_asana(cls,
+                   task,
+                   use_html_description = True,
+                   connection_callback = None,
+                   connection_kwargs = None):
+        """Create a 
+        :class:`GanttData <highcharts_gantt.options.series.data.gantt.Ganttdata>` 
+        instance from an Asana task :class:`dict <python:dict>` representation.
+        
+        :param task: An Asana task object.
+        :type task: :class:`dict <python:dict>`
+        
+        :param use_html_description: If ``True``, will use the Asana task's HTML notes 
+          in the data point's 
+          :meth:`.description <highcharts_gantt.options.series.data.gantt.GanttData.description>` 
+          field. If ``False``, will use the non-HTML notes. Defaults to ``True``.
+        :type use_html_description: :class:`bool <python:bool>`
+        
+        :param connection_callback: A custom Python function or method which accepts two
+          keyword arguments: ``connection_target`` (which expects the dependency 
+          :class:`dict <python:dict>` object from the Asana task), and ``task`` 
+          (which expects the originating Asana task :class:`dict <python:dict>` 
+          object). The function should return a 
+          :class:`DataConnection <highcharts_gantt.options.series.data.connect.DataConnection>` 
+          instance. Defaults to :obj:`None <python:None>`
+          
+          .. tip::
+          
+            The ``connection_callback`` argument is useful if you want to customize the
+            connection styling based on properties included in the Asana task.
+            
+        :type connection_callback: Callable or :obj:`None <python:None>`
+
+        :param connection_kwargs: Set of keyword arugments to supply to the   
+          :class:`DataConnection <highcharts_gantt.options.series.data.connect.DataConnection>`
+          constructor, besides the :meth:`.to <highcharts_gantt.options.series.data.connect.DataConnection.to>` property which is derived from the task. Defaults
+          to :obj:`None <python:None>`
+        :type connection_kwargs: :class:`dict <python:dict>` or 
+          :obj:`None <python:None>`
+
+        :returns: A 
+          :class:`GanttData <highcharts_gantt.options.series.data.gantt.Ganttdata>` 
+          instance
+        :rtype: :class:`GanttData <highcharts_gantt.options.series.data.gantt.Ganttdata>` 
+        """
+        if connection_callback and not checkers.is_callable(connection_callback):
+            raise errors.HighchartsValueError('connection_callback - if supplied - '
+                                              'must be callable.')
+
+        connection_kwargs = validators.dict(connection_kwargs,
+                                            allow_empty = True) or {}
+
+        is_milestone = task.get('resource_subtype', None) == 'milestone'
+        data_point = cls(end = task.get('due_on', None) or task.get('due_at', None),
+                         start = task.get('start_on', None) or task.get('start_at',
+                                                                        None),
+                         parent = task.get('parent', None),
+                         completed = task.get('completed', None),
+                         milestone = is_milestone,
+                         id = task['gid'],
+                         name = task['name'])
+        if use_html_description:
+            data_point.description = task.get('html_notes', None)
+        else:
+            data_point.description = task.get('notes', None)
+
+        dependencies = []
+        for item in task['dependencies']:
+            if connection_callback:
+                connection = connection_callback(connection_target = item, 
+                                                 task = task)
+            elif connection_kwargs:
+                connection_kwargs['to'] = item['gid']
+                connection = DataConnection(**connection_kwargs)
+            else:
+                connection = item['gid']
+            dependencies.append(connection)
+            
+        data_point.dependency = dependencies
+        data_point.custom = task
+        
+        return data_point
+
+    @classmethod
+    def from_monday(cls,
+                    task,
+                    template = None,
+                    property_column_map = None,
+                    connection_kwargs = None,
+                    connection_callback = None):
+        """Create a 
+        :class:`GanttData <highcharts_gantt.options.series.data.gantt.Ganttdata>` 
+        instance from a Monday.com task :class:`dict <python:dict>` representation.
+        
+        :param task: A Monday.com task object.
+        :type task: :class:`dict <python:dict>`
+        
+        :param connection_callback: A custom Python function or method which accepts two
+          keyword arguments: ``connection_target`` (which expects the dependency 
+          :class:`dict <python:dict>` object from the Monday.com task), and ``task`` 
+          (which expects the originating Monday.com task :class:`dict <python:dict>` 
+          object). The function should return a 
+          :class:`DataConnection <highcharts_gantt.options.series.data.connect.DataConnection>` 
+          instance. Defaults to :obj:`None <python:None>`
+          
+          .. tip::
+          
+            The ``connection_callback`` argument is useful if you want to customize the
+            connection styling based on properties included in the Monday.com task.
+            
+        :type connection_callback: Callable or :obj:`None <python:None>`
+
+        :param connection_kwargs: Set of keyword arugments to supply to the   
+          :class:`DataConnection <highcharts_gantt.options.series.data.connect.DataConnection>`
+          constructor, besides the :meth:`.to <highcharts_gantt.options.series.data.connect.DataConnection.to>` property which is derived from the task. Defaults
+          to :obj:`None <python:None>`
+        :type connection_kwargs: :class:`dict <python:dict>` or 
+          :obj:`None <python:None>`
+
+        :returns: A 
+          :class:`GanttData <highcharts_gantt.options.series.data.gantt.Ganttdata>` 
+          instance
+        :rtype: :class:`GanttData <highcharts_gantt.options.series.data.gantt.Ganttdata>` 
+        
+        :raises HighchartsValueError: if both ``template`` and ``property_column_map`` 
+          are :obj:`None <python:None>` or ``connection_callback`` is not callable
+        :raises MondayTemplateError: if ``template`` is not :obj:`None <python:None>`, 
+          but is not supported
+        """
+        template = validators.string(template, allow_empty = True)
+        property_column_map = validators.dict(property_column_map, allow_empty = True)
+        if not template and not property_column_map:
+          raise errors.HighchartsValueError('either template or property_column_map '
+                                            'must be supplied. Both were None.')
+
+        if connection_callback and not checkers.is_callable(connection_callback):
+            raise errors.HighchartsValueError('connection_callback - if supplied - '
+                                              'must be callable.')
+
+        connection_kwargs = validators.dict(connection_kwargs,
+                                            allow_empty = True) or {}
+        
+        if not property_column_map:
+            # TODO: Define MONDAY_TEMPLATES
+            property_column_map = MONDAY_TEMPLATES.get(template, None)
+            if not property_column_map:
+                raise errors.MondayTemplateError(f'template ("{template}") is not '
+                                                 f'a supported Monday.com template.')
+                
+        data_point_kwargs = {}
+        for key, field_name in property_column_map.items():
+            data_point_kwargs[key] = task.get(field_name, None)
+        
+        data_point = cls(**data_point_kwargs)
+        
+        # TODO: Handle dependencies
+        dependencies = []
+        for item in task['dependencies']:
+            if connection_callback:
+                connection = connection_callback(connection_target = item, 
+                                                 task = task)
+            elif connection_kwargs:
+                connection_kwargs['to'] = item['gid']
+                connection = DataConnection(**connection_kwargs)
+            else:
+                connection = item['gid']
+            dependencies.append(connection)
+            
+        data_point.dependency = dependencies
+        data_point.custom = task
+        
+        return data_point
+
+    @classmethod
+    def from_jira(cls,
+                  issue,
+                  connection_kwargs = None,
+                  connection_callback = None):
+        """Create a 
+        :class:`GanttData <highcharts_gantt.options.series.data.gantt.GanttData>` 
+        instance from a JIRA :class:`Issue <jira:jira.resources.Issue>` representation.
+        
+        :param issue: A JIRA :class:`Issue <jira:jira.resources.Issue>` instance
+        :type issue: :class:`Issue <jira:jira.resources.Issue>`
+        
+        :param connection_callback: A custom Python function or method which accepts two
+          keyword arguments: ``connection_target`` (which expects the dependency 
+          :class:`Issue <jira:jira.resources.Issue>` instance), and ``issue`` 
+          (which expects the originating :class:`Issue <jira:jira.resources.Issue>`
+          object). The function should return a 
+          :class:`DataConnection <highcharts_gantt.options.series.data.connect.DataConnection>` 
+          instance. Defaults to :obj:`None <python:None>`
+          
+          .. tip::
+          
+            The ``connection_callback`` argument is useful if you want to customize the
+            connection styling based on properties included in the Monday.com task.
+            
+        :type connection_callback: Callable or :obj:`None <python:None>`
+
+        :param connection_kwargs: Set of keyword arugments to supply to the   
+          :class:`DataConnection <highcharts_gantt.options.series.data.connect.DataConnection>`
+          constructor, besides the :meth:`.to <highcharts_gantt.options.series.data.connect.DataConnection.to>` property which is derived from the task. Defaults
+          to :obj:`None <python:None>`
+        :type connection_kwargs: :class:`dict <python:dict>` or 
+          :obj:`None <python:None>`
+
+        :returns: A 
+          :class:`GanttData <highcharts_gantt.options.series.data.gantt.Ganttdata>` 
+          instance
+        :rtype: :class:`GanttData <highcharts_gantt.options.series.data.gantt.Ganttdata>` 
+        
+        :raises HighchartsValueError: if both ``template`` and ``property_column_map`` 
+          are :obj:`None <python:None>` or ``connection_callback`` is not callable
+        :raises MondayTemplateError: if ``template`` is not :obj:`None <python:None>`, 
+          but is not supported
+        """
+        if connection_callback and not checkers.is_callable(connection_callback):
+            raise errors.HighchartsValueError('connection_callback - if supplied - '
+                                              'must be callable.')
+
+        connection_kwargs = validators.dict(connection_kwargs,
+                                            allow_empty = True) or {}
+        
+        try:
+            data_point_kwargs = parse_jira_issue(issue)
+        except errors.DuplicateJIRAIssueError:
+            return
+        
+        dependencies = []
+        connections = data_point_kwargs.get('dependency', None)
+        for item in connections:
+            if not item:
+                continue
+            if isinstance(item, dict):
+                as_obj = DataConnection(**item)
+                dependencies.append(as_obj)
+            else:
+                dependencies.append(item)
+        
+        data_point_kwargs['dependency'] = dependencies
+        data_point = cls(**data_point_kwargs)
+        
+        return data_point

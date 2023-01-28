@@ -15,14 +15,20 @@ try:
     HAS_MONDAY = True
 except ImportError:
     HAS_MONDAY = False
+    
+try:
+  import jira
+  HAS_JIRA = True
+except ImportError:
+  HAS_JIRA = False
 
 from highcharts_python.options.series.base import SeriesBase
 
 from highcharts_gantt import errors
 from highcharts_gantt.options.plot_options.gantt import GanttOptions
 from highcharts_gantt.options.series.data.gantt import GanttData
-from highcharts_gantt.options.series.data.connect import DataConnection
 from highcharts_gantt.utility_functions import mro__to_untrimmed_dict
+from highcharts_gantt.utility_functions import format_monday_columns
 
 load_dotenv()
 
@@ -180,7 +186,7 @@ class GanttSeries(SeriesBase, GanttOptions):
         .. note::
         
           **Highcharts Gantt for Python** can create an Asana API client for you, 
-          authenticating using the :term:`Personal Access Token`` method supported by
+          authenticating using the :term:`Personal Access Token` method supported by
           the Asana API. However, if you wish to use the more-involved OAuth2 handshake
           process you will need to create your own Asana API client using the 
           `asana-python <https://pypi.org/project/asana/>`__ library. 
@@ -255,6 +261,18 @@ class GanttSeries(SeriesBase, GanttOptions):
         :returns: A :class:`GanttSeries <highcharts_gantt.options.series.gantt.GanttSeries>`
           populated with data from the indicated Asana project/section.
         :rtype: :class:`GanttSeries <highcharts_gantt.options.series.gantt.GanttSeries>`
+        
+        :raises HighchartsDependencyError: if the 
+          `asana <https://pypi.org/project/asana/>`__ Python library is not available 
+          in the runtime environment.
+          
+        :raises HighchartsValueError: if ``connection_callback`` is not 
+          :obj:`None <python:None>`, but is not callable
+        :raises HighchartsValueError: if ``asana_client`` is not 
+          :obj:`None <python:None>`, but is not a valid :class:`asana.client.Client>`
+          instance
+        :raises AsanaAuthenticationError: if ``asana_client`` is not authenticated or 
+          if no personal access token is supplied
         """
         if not HAS_ASANA:
             raise errors.HighchartsDependencyError('The .from_asana() method requires '
@@ -274,13 +292,6 @@ class GanttSeries(SeriesBase, GanttOptions):
         api_request_params = validators.dict(api_request_params, 
                                              allow_empty = True) or {}
         
-        connection_kwargs = validators.dict(connection_kwargs,
-                                            allow_empty = True) or {}
-        
-        if connection_callback and not checkers.is_callable(connection_callback):
-            raise errors.HighchartsValueError('connection_callback - if supplied - '
-                                              'must be callable.')
-
         series_kwargs = validators.dict(series_kwargs, allow_empty = True) or {}
         
         if not personal_access_token:
@@ -290,9 +301,10 @@ class GanttSeries(SeriesBase, GanttOptions):
             raise errors.HighchartsValueError(f'asana_client must be a valid asana '
                                               f'Client instance. Was: '
                                               f'{asana_client.__class__.__name__}')
-        elif asana_client and not asana_client.session.token:
+        if asana_client and not asana_client.session.token:
             raise errors.AsanaAuthenticationError('asana_client is not authenticated')
-        elif asana_client:
+          
+        if asana_client:
             client = asana_client
         elif not personal_access_token:
             raise errors.AsanaAuthenticationError('from_asana() requires either a '
@@ -342,38 +354,365 @@ class GanttSeries(SeriesBase, GanttOptions):
             api_request_params[key] = request_params[key]
 
         tasks = [x for x in request(**api_request_params)]
-        data_points = []
-        for task in tasks:
-            is_milestone = task.get('resource_subtype', None) == 'milestone'
-            data_point = GanttData(end = task.get('due_on', 
-                                                  None) or task.get('due_at',
-                                                                    None),
-                                   start = task.get('start_on', 
-                                                    None) or task.get('start_at',
-                                                                      None),
-                                   parent = task.get('parent', None),
-                                   completed = task.get('completed', None),
-                                   milestone = is_milestone,
-                                   id = task['gid'],
-                                   name = task['name'])
-            if use_html_description:
-                data_point.description = task.get('html_notes', None)
-            else:
-                data_point.description = task.get('notes', None)
-            dependencies = []
-            for item in task['dependencies']:
-                if connection_callback:
-                    connection = connection_callback(connection_target = item, 
-                                                     asana_task = task)
-                elif connection_kwargs:
-                    connection_kwargs['to'] = item['gid']
-                    connection = DataConnection(**connection_kwargs)
-                else:
-                    connection = item['gid']
-                dependencies.append(connection)
-            
-            data_point.custom = task
-            data_points.append(task)
+        data_points = [GanttData.from_asana(x,
+                                            use_html_description = use_html_description,
+                                            connection_callback = connection_callback,
+                                            connection_kwargs = connection_kwargs)
+                       for x in tasks]
+
         series_kwargs['data'] = data_points
+
+        return cls(**series_kwargs)
+
+    @classmethod
+    def from_monday(cls,
+                    board_id,
+                    api_token = None,
+                    template = None,
+                    property_column_map = None,
+                    connection_kwargs = None,
+                    connection_callback = None,
+                    series_kwargs = None):
+        """Create a :class:`GanttSeries <highcharts_gantt.options.series.gantt.GanttSeries>` instance from a `Monday.com <https://www.monday.com>`__ work board.
         
+        :param board_id: The ID of the Monday.com board whose items should be retrieved
+          to populate the Gantt series.
+        :type board_id: :class:`int <python:int>`
+        
+        :param api_token: The Monday.com API token to use when authenticating your
+          request against the Monday.com API. Defaults to :obj:`None <python:None>`,
+          which will then try to determine the token from the ``MONDAY_API_TOKEN``
+          environment variable.
+          
+          .. warning::
+          
+            If no token is either passed to the method *or* found in the 
+            ``MONDAY_API_TOKEN`` environment variable, calling this method will raise
+            an error.
+            
+        :type api_token: :class:`str <python:str>` or :obj:`None <python:None>`
+        
+        :param template: The name of a standard Mpnday.com board template supported by 
+          **Highcharts for Python**. If supplied, will override the 
+          ``property_column_map`` argument. Defaults to :obj:`None <python:None>`.
+          
+          .. note::
+          
+            If ``property_column_map`` is set, the ``template`` argument will be
+            *ignored* and overridden by ``property_column_map``.
+
+        :type template: :class:`str <python:str>` or :obj:`None <python:None>`
+        
+        :param property_column_map: A :class:`dict <python:dict>` used to map Monday.com
+          columns to their corresponding 
+          :class:`GanttSeries <highcharts_gantt.options.series.gantt.GanttSeries>` 
+          properties. Keys are expected to be 
+          :class:`GanttSeries <highcharts_gantt.options.series.gantt.GanttSeries>`
+          properties, while values are expected to be Monday.com column field names. 
+          Defaults to :obj:`None <python:None>`.
+          
+          .. note::
+          
+            If ``property_column_map`` is supplied, its settings *override* the 
+            ``template`` setting.
+            
+        :type property_column_map: :class:`dict <python:dict>` or 
+          :obj:`None <python:None>`
+          
+        :param connection_kwargs: Set of keyword arugments to supply to the   
+          :class:`DataConnection <highcharts_gantt.options.series.data.connect.DataConnection>`
+          constructor, besides the :meth:`.to <highcharts_gantt.options.series.data.connect.DataConnection.to>` property which is derived from the task. Defaults
+          to :obj:`None <python:None>`
+        :type connection_kwargs: :class:`dict <python:dict>` or 
+          :obj:`None <python:None>`
+          
+        :param connection_callback: A custom Python function or method which accepts two
+          keyword arguments: ``connection_target`` (which expects the dependency 
+          :class:`dict <python:dict>` object from the Asana task), and ``asana_task`` 
+          (which expects the Asana task :class:`dict <pythoN:dict>` object). The 
+          function should return a 
+          :class:`DataConnection <highcharts_gantt.options.series.data.connect.DataConnection>` instance. Defaults to :obj:`None <python:None>`
+          
+          .. tip::
+          
+            The ``connection_callback`` argument is useful if you want to customize the
+            connection styling based on properties included in the Asana task.
+            
+        :type connection_callback: Callable or :obj:`None <python:None>`
+        
+        :param series_kwargs: Collection of additional keyword arguments to use when 
+          instantiating the 
+          :class:`GanttSeries <highcharts_gantt.options.series.GanttSeries>` (besides 
+          the ``data`` argument, which will be determined from the Asana tasks).
+          Defaults to :obj:`None <python:None>`.
+        :type series_kwargs: :class:`dict <python:dict>` or :obj:`None <python:None>`
+
+        :returns: A :class:`GanttSeries <highcharts_gantt.options.series.gantt.GanttSeries>`
+          populated with data from the indicated Asana project/section.
+        :rtype: :class:`GanttSeries <highcharts_gantt.options.series.gantt.GanttSeries>`
+        
+        :raises HighchartsDependencyError: if the 
+          `monday <https://pypi.org/project/monday/>`__ Python library is not available 
+          in the runtime environment
+        :raises MondayAuthenticationError: if there is no Monday.com API token supplied
+        :raises HighchartsValueError: if both ``template`` and ``property_column_map`` 
+          are empty
+        
+        """
+        if not HAS_MONDAY:
+            raise errors.HighchartsDependencyError('the .from_monday() method depends '
+                                                   'on the monday Python library. That '
+                                                   'library was not found in your '
+                                                   'runtime environment.')
+        if not api_token:
+            api_token = os.getenv('MONDAY_API_TOKEN', None)
+        
+        if not api_token:
+            raise errors.MondayAuthenticationError('.from_monday() requires a '
+                                                   'Monday.com API token. None was '
+                                                   'supplied.')
+            
+        api_token = validators.string(api_token)
+        board_id = validators.integer(board_id)
+        
+        client = monday.MondayClient(api_token)
+        columns = client.fetch_columns_by_board_id([board_id])
+        column_definitions = {}
+        for column in columns:
+            field_name = column['id']
+            column_definitions[field_name] = column
+            
+        items = client.fetch_items_by_board_id([board_id],
+                                               limit = 100,
+                                               page = 1)
+        
+        rows = []
+        for item in items:
+            row = {}
+            for column in item['column_values']:
+                field_name = column['id']
+                value = column['value']
+                row[field_name] = format_monday_columns(column_definitions,
+                                                        field_name,
+                                                        value)
+            rows.append(row)
+            
+        data_points = [GanttData.from_monday(x,
+                                             template = template,
+                                             property_column_map = property_column_map,
+                                             connection_kwargs = connection_kwargs,
+                                             connection_callback = connection_callback) for x in rows]
+        
+        series_kwargs['data'] = data_points
+
+        return cls(**series_kwargs)
+
+    @classmethod
+    def from_jira(cls, 
+                  project_id,
+                  server = None,
+                  jql = None,
+                  username = None,
+                  password_or_token = None,
+                  oauth_dict = None,
+                  client_kwargs = None,
+                  jira_client = None,
+                  connection_kwargs = None,
+                  connection_callback = None,
+                  series_kwargs = None):
+        """Create a 
+        :class:`GanttSeries <highcharts_gantt.options.series.gantt.GanttSeries>`
+        instance from an `Atlassian JIRA <https://www.atlassian.com/>`__ project.
+        
+        .. note::
+        
+          **Highcharts Gantt for Python** can create a JIRA API client for you, 
+          authenticating using either the :term:`Basic Authentication` or 
+          :term:`Access Token` methods supported by the JIRA API. However, if you wish to use the more-involved OAuth2 handshake, you can do so yourself and either
+          
+            * supply an ``oauth_dict`` argument containing the OAuth2 configuration 
+              details, or
+            * supply a fully-authenticated ``jira_client``
+          
+          The reason for this is because the OAuth2 handshake has various permutations
+          involving redirects, token refreshes, etc. which are outside the scope of the
+          **Highcharts Gantt for Python** library, and if you are integrating 
+          **Highcharts Gantt for Python** into a larger application you are likely 
+          already facilitating the OAuth2 dance in a fashion appropriate for your use 
+          case.
+          
+        :param project_id: The globally unique ID of the Project whose tasks should be
+          used to assemble the Gantt chart. For example, ``JRA``.
+        :type project_id: :class:`str <python:str>`
+        
+        :param server: The URL of the JIRA instance from which data should be retrieved.
+          Defaults to :obj:`None <python:None>`, which looks for a value in the ``HIGHCHARTS_JIRA_SERVER`` environment variable. If no value is found there, will then fallback to JIRA Cloud: ``'https://jira.atlasian.com'``.
+          
+          .. note::
+          
+            This argument will override the comparable setting in ``client_kwargs`` if
+            ``client_kwargs`` is supplied.
+
+        :type server: :class:`str <python:str>` or :obj:`None <python:None>`
+        
+        :param jql: An optional :term:`JIRA Query Language` query string to further 
+          narrow the issues returned from JIRA. Defaults to :obj:`None <python:None>`.
+        :type jql: :class:`str <python:str>` or :obj:`None <python:None>`
+        
+        :param username: The username to use when authenticating using either ``basic`` 
+          or ``token`` authentication. Defaults to :obj:`None <python:None>`, which 
+          looks for a value in the ``HIGHCHARTS_JIRA_USERNAME`` environment variable.
+          
+          .. note::
+          
+            If ``oauth2_dict`` is supplied, the ``username`` argument will be ignored
+            since OAuth2 authentication will be used.
+            
+        :type username: :class:`str <python:str>` or :obj:`None <python:None>`
+        
+        :param password_or_token: The password or access token to use when 
+          authenticating using either ``basic`` or ``token`` authentication. Defaults 
+          to :obj:`None <python:None>`, which looks for a vlaue in the 
+          ``HIGHCHARTS_JIRA_TOKEN`` environment variable.
+          
+          .. note::
+          
+            If ``oauth_dict`` is supplied, the ``password_or_token`` will be ignored
+            since OAuth2 authentication will be used.
+            
+        :type password_or_token: :class:`str <python:str>` or :obj:`None <python:None>`
+        
+        :param oauth_dict: A :class:`dict <python:dict>` of key/value pairs providing
+          configuration of the Oauth2 authentication details. Expected keys are:
+          
+            * ``'access_token'``
+            * ``'access_token_secret'``
+            * ``'consumer_key'``
+            * ``'key_cert'``
+          
+          Defaults to :obj:`None <python:None>`.
+          
+          .. note::
+          
+            To use OAuth2 authentication, an ``oauth_dict`` *must* be supplied. If you 
+            wish to force either basic or token authentication, make sure this argument
+            remains :obj:`None <python:None>`.
+          
+        :type oauth_dict: :class:`dict <python:dict>` or :obj:`None <python:None>`
+        
+        :param client_kwargs: An optional :class:`dict <python:dict>` providing keyword 
+          arguments to use when instantiating the JIRA client.
+        :type client_kwargs: :class:`dict <python:dict>` or :obj:`None <python:None>`
+        
+        :param jira_client: A fully-configured and fully-authenticated JIRA API client.
+          Defaults to :obj:`None <python:None>`.
+        :type jira_client: :class:`jira.client.JIRA <jira:jira.client.JIRA>` instance 
+          that has been fully authenticated
+          
+        :param connection_kwargs: Set of keyword arugments to supply to the   
+          :class:`DataConnection <highcharts_gantt.options.series.data.connect.DataConnection>`
+          constructor, besides the 
+          :meth:`.to <highcharts_gantt.options.series.data.connect.DataConnection.to>` 
+          property which is derived from the task. Defaults to :obj:`None <python:None>`
+        :type connection_kwargs: :class:`dict <python:dict>` or 
+          :obj:`None <python:None>`
+          
+        :param connection_callback: A custom Python function or method which accepts two
+          keyword arguments: ``connection_target`` (which expects the dependency 
+          :class:`Issue <jira:jira.resources.Issue>` object from the initial 
+          :class:`Issue <jira:jira.resources.Issue>`), and ``issue`` 
+          (which expects the initial :class:`Issue <jira:jira.resources.Issue>` 
+          object). The function should return a 
+          :class:`DataConnection <highcharts_gantt.options.series.data.connect.DataConnection>` 
+          instance. Defaults to :obj:`None <python:None>`.
+          
+          .. tip::
+          
+            The ``connection_callback`` argument is useful if you want to customize the
+            connection styling based on properties included in the target issue.
+            
+        :type connection_callback: Callable or :obj:`None <python:None>`
+        
+        :param series_kwargs: Collection of additional keyword arguments to use when 
+          instantiating the 
+          :class:`GanttSeries <highcharts_gantt.options.series.GanttSeries>` (besides 
+          the ``data`` argument, which will be determined from the JIRA issues).
+          Defaults to :obj:`None <python:None>`.
+        :type series_kwargs: :class:`dict <python:dict>` or :obj:`None <python:None>`
+
+        :returns: A :
+          class:`GanttSeries <highcharts_gantt.options.series.gantt.GanttSeries>`
+          populated with data from the indicated JIRA project.
+        :rtype: :class:`GanttSeries <highcharts_gantt.options.series.gantt.GanttSeries>`
+        """
+        if not HAS_JIRA:
+            raise errors.HighchartsDependencyError('The .from_jira() method depends '
+                                                   'on the jira Python library. This '
+                                                   'library was not found in the '
+                                                   'runtime environment. Please install'
+                                                   ' and try again.')
+
+        if not jira_client:
+            client_kwargs = validators.dict(client_kwargs, allow_empty = True) or {}
+            if not server:
+                server = os.getenv('HIGHCHARTS_JIRA_SERVER', 
+                                  client_kwargs.get('server', 
+                                                    'https://jira.atlasian.com'))
+
+            client_kwargs['server'] = validators.url(server, allow_special_ips = True)
+
+            project_id = validators.string(project_id)
+
+            use_basic = oauth_dict is None and username is not None
+            use_token = oauth_dict is None and username is None
+
+            username = validators.string(username, allow_empty = True) \
+                      or os.getenv('HIGHCHARTS_JIRA_USERNAME', None)
+            password_or_token = validators.string(password_or_token, 
+                                                  allow_empty = True) \
+                                or os.getenv('HIGHCHARTS_JIRA_TOKEN', None)
+
+            if use_basic:
+                client_kwargs['basic_auth'] = (username, password_or_token)
+            elif use_token:
+                client_kwargs['token_auth'] = password_or_token
+            elif oauth_dict is not None:
+                client_kwargs['oauth'] = validators.dict(oauth_dict, 
+                                                         allow_empty = False)
+            else:
+                raise errors.JIRAAuthenticationError('no authentication details '
+                                                     'provided')
+        else:
+            if not isinstance(jira_client, jira.client.JIRA):
+                raise errors.HighchartsValueError(f'jira_client must be a valid '
+                                                  f'jira.client.JIRA instance. Was: '
+                                                  f'{jira_client.__class__.__name__}')
+              
+        if not jira_client._session:
+            raise errors.JIRAAuthenticationError('jira_client is not authenticated')
+        
+        if jql and f'project = {project_id}' not in jql:
+            raise errors.HighchartsValueError(f'jql contains a project reference '
+                                                f'that does not match project_id '
+                                                f'("{project_id}").')    
+        elif not jql:
+            jql = f'project = {project_id}'
+
+        series_kwargs = validators.dict(series_kwargs, allow_empty = True) or {}
+
+        issues = jira_client.search_issues(jql)
+        if issues.total > len(issues):
+            issues.extend(jira_client.search_issues(jql, startAt = len(issues)))
+        
+        data_points_with_none = [
+            GanttData.from_jira(x,
+                                connection_kwargs = connection_kwargs,
+                                connection_callback = connection_callback)
+            for x in issues
+        ]
+        
+        data_points = [x for x in data_points_with_none if x is not None]
+        
+        series_kwargs['data'] = data_points
+
         return cls(**series_kwargs)
