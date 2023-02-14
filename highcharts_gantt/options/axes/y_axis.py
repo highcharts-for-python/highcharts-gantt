@@ -3,7 +3,7 @@ from decimal import Decimal
 
 from validator_collection import validators
 
-from highcharts_python.options.axes.y_axis import YAxis as YAxisBase
+from highcharts_core.options.axes.y_axis import YAxis as YAxisBase
 
 from highcharts_gantt.decorators import class_sensitive
 from highcharts_gantt.options.axes.grids import GridOptions

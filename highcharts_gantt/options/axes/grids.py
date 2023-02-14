@@ -3,8 +3,8 @@ from decimal import Decimal
 
 from validator_collection import validators
 
-from highcharts_python.options.axes.x_axis import XAxis as XAxisBase
-from highcharts_python.options.axes.y_axis import YAxis as YAxisBase
+from highcharts_core.options.axes.x_axis import XAxis as XAxisBase
+from highcharts_core.options.axes.y_axis import YAxis as YAxisBase
 
 from highcharts_gantt.decorators import validate_types
 from highcharts_gantt.metaclasses import HighchartsMeta

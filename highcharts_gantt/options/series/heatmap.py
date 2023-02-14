@@ -1,1 +1,1 @@
-from highcharts_python.options.series.heatmap import *
+from highcharts_core.options.series.heatmap import *

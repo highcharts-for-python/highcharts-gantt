@@ -22,7 +22,7 @@ try:
 except ImportError:
   HAS_JIRA = False
 
-from highcharts_python.options.series.base import SeriesBase
+from highcharts_core.options.series.base import SeriesBase
 
 from highcharts_gantt import errors
 from highcharts_gantt.options.plot_options.gantt import GanttOptions

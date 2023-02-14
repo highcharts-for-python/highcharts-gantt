@@ -4,7 +4,7 @@ from datetime import datetime
 
 from validator_collection import validators, checkers
 
-from highcharts_python.options.series.data.base import DataBase
+from highcharts_core.options.series.data.base import DataBase
 
 from highcharts_gantt import errors, constants
 from highcharts_gantt.decorators import validate_types
@@ -363,9 +363,9 @@ class GanttData(DataBase):
           .. note::
 
             An example of how this works for a simple
-            :class:`LineSeries <highcharts_python.options.series.area.LineSeries>` (which
+            :class:`LineSeries <highcharts_core.options.series.area.LineSeries>` (which
             uses
-            :class:`CartesianData <highcharts_python.options.series.data.cartesian.CartesianData>`
+            :class:`CartesianData <highcharts_core.options.series.data.cartesian.CartesianData>`
             data points) would be:
 
             .. code-block:: python
@@ -424,9 +424,9 @@ class GanttData(DataBase):
         :type value: iterable
 
         :returns: Collection of :term:`data point` instances (descended from
-          :class:`DataBase <highcharts_python.options.series.data.base.DataBase>`)
+          :class:`DataBase <highcharts_core.options.series.data.base.DataBase>`)
         :rtype: :class:`list <python:list>` of
-          :class:`DataBase <highcharts_python.options.series.data.base.DataBase>`
+          :class:`DataBase <highcharts_core.options.series.data.base.DataBase>`
           descendant instances
         """
         if not value:

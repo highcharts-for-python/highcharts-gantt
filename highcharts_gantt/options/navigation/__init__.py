@@ -1,3 +1,3 @@
 from typing import Optional
 
-from highcharts_python.options.navigation import *
+from highcharts_core.options.navigation import *

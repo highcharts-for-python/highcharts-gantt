@@ -1,4 +1,4 @@
-from highcharts_python.options.plot_options.bar import (BaseBarOptions,
+from highcharts_core.options.plot_options.bar import (BaseBarOptions,
                                                         BarOptions,
                                                         ColumnOptions,
                                                         ColumnPyramidOptions,
@@ -7,7 +7,7 @@ from highcharts_python.options.plot_options.bar import (BaseBarOptions,
                                                         VariwideOptions,
                                                         WaterfallOptions,
                                                         XRangeOptions as XRangeBase)
-from highcharts_python.utility_functions import mro__to_untrimmed_dict
+from highcharts_core.utility_functions import mro__to_untrimmed_dict
 
 from highcharts_gantt.options.plot_options.series import SeriesOptions
 

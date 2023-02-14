@@ -2,7 +2,7 @@ from typing import Optional, List
 
 from validator_collection import checkers
 
-from highcharts_python.options.series.data.bar import (BarData,
+from highcharts_core.options.series.data.bar import (BarData,
                                                        WaterfallData,
                                                        WindBarbData,
                                                        XRangeData as XRangeDataBase)

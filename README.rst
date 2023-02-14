@@ -5,7 +5,7 @@ Highcharts Gantt for Python
 **High-end Gantt chart visualization for the Python ecosystem**
 
 **Highcharts Gantt for Python** is an extension to the
-`Highcharts for Python <https://highcharts-python.readthedocs.io>`__ library, and provides
+`Highcharts for Python <https://highcharts-core.readthedocs.io>`__ library, and provides
 a Python wrapper for the fantastic
 `Highcharts Gantt <https://www.highcharts.com/products/gantt/>`__
 JavaScript data visualization library. **Highcharts Gantt for Python** also supports

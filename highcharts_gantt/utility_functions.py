@@ -1,5 +1,5 @@
 from typing import Any
-from highcharts_python.utility_functions import *
+from highcharts_core.utility_functions import *
 
 try:
     import orjson as json

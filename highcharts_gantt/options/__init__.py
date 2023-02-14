@@ -38,7 +38,7 @@ from highcharts_gantt.options.navigator import Navigator
 from highcharts_gantt.options.range_selector import RangeSelector
 from highcharts_gantt.options.scrollbar import Scrollbar
 
-from highcharts_python.options import Options, HighchartsOptions
+from highcharts_core.options import Options, HighchartsOptions
 
 
 class HighchartsGanttOptions(HighchartsOptions):

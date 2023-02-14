@@ -1,4 +1,4 @@
-from highcharts_python.errors import *
+from highcharts_core.errors import *
 
 
 class AsanaAuthenticationError(HighchartsValueError):

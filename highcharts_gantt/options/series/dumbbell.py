@@ -1,1 +1,1 @@
-from highcharts_python.options.series.dubbell import *
+from highcharts_core.options.series.dubbell import *

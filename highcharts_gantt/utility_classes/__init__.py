@@ -1,1 +1,1 @@
-from highcharts_python.utility_classes import *
+from highcharts_core.utility_classes import *

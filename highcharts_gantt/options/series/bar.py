@@ -1,6 +1,6 @@
 from typing import Optional, List
 
-from highcharts_python.options.series.bar import (BaseBarSeries,
+from highcharts_core.options.series.bar import (BaseBarSeries,
                                                   BarSeries,
                                                   ColumnSeries,
                                                   ColumnPyramidSeries,

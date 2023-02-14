@@ -2,7 +2,7 @@ from typing import Optional
 
 from validator_collection import validators, checkers
 
-from highcharts_python.chart import Chart as ChartBase
+from highcharts_core.chart import Chart as ChartBase
 
 from highcharts_gantt import constants, errors
 from highcharts_gantt.options import HighchartsOptions, HighchartsGanttOptions
@@ -285,15 +285,15 @@ class Chart(ChartBase):
 
     def add_series(self, *series):
         """Adds ``series`` to the
-        :meth:`Chart.options.series <highcharts_python.options.HighchartsOptions.series>`
+        :meth:`Chart.options.series <highcharts_core.options.HighchartsOptions.series>`
         property.
 
         :param series: One or more :term:`series` instances (descended from
-          :class:`SeriesBase <highcharts_python.options.series.base.SeriesBase>`) or an
+          :class:`SeriesBase <highcharts_core.options.series.base.SeriesBase>`) or an
           instance (e.g. :class:`dict <python:dict>`, :class:`str <python:str>`, etc.)
           coercable to one
         :type series: one or more
-          :class:`SeriesBase <highcharts_python.options.series.base.SeriesBase>`
+          :class:`SeriesBase <highcharts_core.options.series.base.SeriesBase>`
           or coercable
 
         """
@@ -319,15 +319,15 @@ class Chart(ChartBase):
 
     @classmethod
     def from_series(cls, *series, kwargs = None):
-        """Creates a new :class:`Chart <highcharts_python.chart.Chart>` instance populated
+        """Creates a new :class:`Chart <highcharts_core.chart.Chart>` instance populated
         with ``series``.
 
         :param series: One or more :term:`series` instances (descended from
-          :class:`SeriesBase <highcharts_python.options.series.base.SeriesBase>`) or an
+          :class:`SeriesBase <highcharts_core.options.series.base.SeriesBase>`) or an
           instance (e.g. :class:`dict <python:dict>`, :class:`str <python:str>`, etc.)
           coercable to one
         :type series: one or more
-          :class:`SeriesBase <highcharts_python.options.series.base.SeriesBase>`
+          :class:`SeriesBase <highcharts_core.options.series.base.SeriesBase>`
           or
           :class:`IndicatorSeriesBase <highcharts_gantt.options.series.base.IndicatorSeriesBase>`
           coercable
@@ -437,13 +437,13 @@ class Chart(ChartBase):
                  double_wrapper_character_when_nested = False,
                  escape_character = "\\",
                  is_gantt_chart = False):
-        """Create a new :class:`Chart <highcharts_python.chart.Chart>` instance with
+        """Create a new :class:`Chart <highcharts_core.chart.Chart>` instance with
         data populated from a CSV string or file.
 
           .. note::
 
             For an example
-            :class:`LineSeries <highcharts_python.options.series.area.LineSeries>`, the
+            :class:`LineSeries <highcharts_core.options.series.area.LineSeries>`, the
             minimum code required would be:
 
               .. code-block:: python
@@ -585,9 +585,9 @@ class Chart(ChartBase):
           instantiated as a **Highcharts Stock for Python** chart. Defaults to ``False``.
         :type is_gantt_chart: :class:`bool <python:bool>`
 
-        :returns: A :class:`Chart <highcharts_python.chart.Chart>` instance with its
+        :returns: A :class:`Chart <highcharts_core.chart.Chart>` instance with its
           data populated from the CSV data.
-        :rtype: :class:`Chart <highcharts_python.chart.Chart>`
+        :rtype: :class:`Chart <highcharts_core.chart.Chart>`
 
         :raises HighchartsCSVDeserializationError: if ``property_column_map`` references
           CSV columns by their label, but the CSV data does not contain a header row
@@ -626,7 +626,7 @@ class Chart(ChartBase):
                     series_kwargs = None,
                     options_kwargs = None,
                     chart_kwargs = None):
-        """Create a :class:`Chart <highcharts_python.chart.Chart>` instance whose
+        """Create a :class:`Chart <highcharts_core.chart.Chart>` instance whose
         data is populated from a `pandas <https://pandas.pydata.org/>`_
         :class:`DataFrame <pandas:DataFrame>`.
 
@@ -679,9 +679,9 @@ class Chart(ChartBase):
 
         :type chart_kwargs: :class:`dict <python:dict>` or :obj:`None <python:None>`
 
-        :returns: A :class:`Chart <highcharts_python.chart.Chart>` instance with its
+        :returns: A :class:`Chart <highcharts_core.chart.Chart>` instance with its
           data populated from the data in ``df``.
-        :rtype: :class:`Chart <highcharts_python.chart.Chart>`
+        :rtype: :class:`Chart <highcharts_core.chart.Chart>`
 
         :raises HighchartsPandasDeserializationError: if ``property_map`` references
           a column that does not exist in the data frame
@@ -714,7 +714,7 @@ class Chart(ChartBase):
                      series_kwargs = None,
                      options_kwargs = None,
                      chart_kwargs = None):
-        """Create a :class:`Chart <highcharts_python.chart.Chart>` instance whose
+        """Create a :class:`Chart <highcharts_core.chart.Chart>` instance whose
         data is populated from a
         `PySpark <https://spark.apache.org/docs/latest/api/python/>`_
         :class:`DataFrame <pyspark:pyspark.sql.DataFrame>`.
@@ -768,9 +768,9 @@ class Chart(ChartBase):
 
         :type chart_kwargs: :class:`dict <python:dict>` or :obj:`None <python:None>`
 
-        :returns: A :class:`Chart <highcharts_python.chart.Chart>` instance with its
+        :returns: A :class:`Chart <highcharts_core.chart.Chart>` instance with its
           data populated from the data in ``df``.
-        :rtype: :class:`Chart <highcharts_python.chart.Chart>`
+        :rtype: :class:`Chart <highcharts_core.chart.Chart>`
 
         :raises HighchartsPySparkDeserializationError: if ``property_map`` references
           a column that does not exist in the data frame
@@ -807,7 +807,7 @@ class Chart(ChartBase):
 
         :param options: The configuration options to use to instantiate the chart.
         :type options:
-          :class:`HighchartsOptions <highcharts_python.options.HighchartsOptions>` or
+          :class:`HighchartsOptions <highcharts_core.options.HighchartsOptions>` or
           related or coercable
 
         :param chart_kwargs: An optional :class:`dict <python:dict>` containing keyword
@@ -821,8 +821,8 @@ class Chart(ChartBase):
 
         :type chart_kwargs: :class:`dict <python:dict>` or :obj:`None <python:None>`
 
-        :returns: The :class:`Chart <highcharts_python.chart.Chart>` instance
-        :rtype: :class:`Chart <highcharts_python.chart.Chart>`
+        :returns: The :class:`Chart <highcharts_core.chart.Chart>` instance
+        :rtype: :class:`Chart <highcharts_core.chart.Chart>`
         """
         chart_kwargs = validators.dict(chart_kwargs, allow_empty = True) or {}
         if checkers.is_type(options, 'HighchartsGanttOptions'):
