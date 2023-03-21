@@ -1,13 +1,14 @@
-from highcharts_core.options.plot_options.bar import (BaseBarOptions,
-                                                        BarOptions,
-                                                        ColumnOptions,
-                                                        ColumnPyramidOptions,
-                                                        ColumnRangeOptions,
-                                                        CylinderOptions,
-                                                        VariwideOptions,
-                                                        WaterfallOptions,
-                                                        XRangeOptions as XRangeBase)
-from highcharts_core.utility_functions import mro__to_untrimmed_dict
+from highcharts_stock.options.plot_options.bar import (BaseBarOptions,
+                                                       BarOptions,
+                                                       ColumnOptions,
+                                                       ColumnPyramidOptions,
+                                                       ColumnRangeOptions,
+                                                       CylinderOptions,
+                                                       VariwideOptions,
+                                                       WaterfallOptions,
+                                                       WindBarbOptions,
+                                                       XRangeOptions as XRangeBase)
+from highcharts_stock.utility_functions import mro__to_untrimmed_dict
 
 from highcharts_gantt.options.plot_options.series import SeriesOptions
 

@@ -1,6 +1,6 @@
 {
-  maxLength: '100%',
   maxRange: 123,
+  maxLength: '100%',
   minLength: '20%',
   range: 123,
   resize: {

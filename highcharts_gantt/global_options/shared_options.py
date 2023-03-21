@@ -7,7 +7,7 @@ from highcharts_gantt.options import HighchartsGanttOptions
 
 from highcharts_gantt import errors
 from highcharts_gantt.decorators import validate_types
-from highcharts_core.global_options.shared_options import SharedOptions
+from highcharts_stock.global_options.shared_options import SharedOptions, SharedStockOptions
 
 
 class SharedGanttOptions(HighchartsGanttOptions):

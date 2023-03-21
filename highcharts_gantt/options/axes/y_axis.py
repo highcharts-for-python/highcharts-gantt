@@ -3,7 +3,7 @@ from decimal import Decimal
 
 from validator_collection import validators
 
-from highcharts_core.options.axes.y_axis import YAxis as YAxisBase
+from highcharts_stock.options.axes.y_axis import YAxis as YAxisBase
 
 from highcharts_gantt.decorators import class_sensitive
 from highcharts_gantt.options.axes.grids import GridOptions
@@ -114,10 +114,12 @@ class YAxis(YAxisBase):
             'min_tick_interval': as_dict.get('minTickInterval', None),
             'offset': as_dict.get('offset', None),
             'opposite': as_dict.get('opposite', None),
+            'pane': as_dict.get('pane', None),
             'panning_enabled': as_dict.get('panningEnabled', None),
             'plot_bands': as_dict.get('plotBands', None),
             'plot_lines': as_dict.get('plotLines', None),
             'reversed': as_dict.get('reversed', None),
+            'reversed_stacks': as_dict.get('reversedStacks', None),
             'show_first_label': as_dict.get('showFirstLabel', None),
             'show_last_label': as_dict.get('showLastLabel', None),
             'soft_max': as_dict.get('softMax', None),
@@ -143,9 +145,25 @@ class YAxis(YAxisBase):
             'zoom_enabled': as_dict.get('zoomEnabled', None),
 
             'crosshair': as_dict.get('crosshair', None),
+            'height': as_dict.get('height', None),
+            'left': as_dict.get('left', None),
             'line_color': as_dict.get('lineColor', None),
             'line_width': as_dict.get('lineWidth', None),
             'show_empty': as_dict.get('showEmpty', None),
+            'top': as_dict.get('top', None),
+            'width': as_dict.get('width', None),
+
+            'max_color': as_dict.get('maxColor', None),
+            'min_color': as_dict.get('minColor', None),
+            'stack_labels': as_dict.get('stackLabels', None),
+            'stops': as_dict.get('stops', None),
+            'tooltip_value_format': as_dict.get('tooltipValueFormat', None),
+
+            'max_length': as_dict.get('maxLength', None),
+            'min_length': as_dict.get('minLength', None),
+            'range': as_dict.get('range', None),
+            'resize': as_dict.get('resize', None),
+            'scrollbar': as_dict.get('scrollbar', None),
 
             'grid': as_dict.get('grid', None),
             'max_range': as_dict.get('maxRange', None),

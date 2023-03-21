@@ -70,23 +70,6 @@ class XAxis(XAxisBase):
     def max_range(self, value):
         self._max_range = validators.numeric(value, allow_empty = True)
 
-    @property
-    def opposite(self) -> Optional[bool]:
-        """If ``True``, displays the axis on the opposite side of where it would normally
-        appear. Defaults to ``True``.
-
-        Vertical axes would normally appear on the left side of the chart, while
-        horizontal axes would normally appear on the bottom of the chart. Thus, the
-        opposite side would be the right and top respectively.
-
-        .. hint::
-
-          This feature is typically used with dual or multiple axes.
-
-        :rtype: :class:`bool <python:bool>` or :obj:`None <python:None>`
-        """
-        return self._opposite
-
     @classmethod
     def _get_kwargs_from_dict(cls, as_dict):
         kwargs = {

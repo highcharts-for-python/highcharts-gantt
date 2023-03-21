@@ -450,8 +450,8 @@ def test_to_dict(kwargs, error):
 
 
 @pytest.mark.parametrize('filename, as_file, error', [
-    ('plot_options/series/01.js', False, None),
-    ('plot_options/series/02.js', False, None),
+    ('plot_options/series/original-01.js', False, None),
+    ('plot_options/series/original-02.js', False, None),
 
     ('plot_options/series/error-01.js',
      False,
@@ -468,8 +468,8 @@ def test_to_dict(kwargs, error):
       TypeError,
       ValueError)),
 
-    ('plot_options/series/01.js', True, None),
-    ('plot_options/series/02.js', True, None),
+    ('plot_options/series/original-01.js', True, None),
+    ('plot_options/series/original-02.js', True, None),
 
     ('plot_options/series/error-01.js',
      True,

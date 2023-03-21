@@ -2,7 +2,7 @@ from typing import Optional
 
 from validator_collection import validators, checkers
 
-from highcharts_core.chart import Chart as ChartBase
+from highcharts_stock.chart import Chart as ChartBase
 
 from highcharts_gantt import constants, errors
 from highcharts_gantt.options import (HighchartsOptions, 
@@ -201,6 +201,8 @@ class Chart(ChartBase):
             'variable_name': as_dict.get('variable_name',
                                          None) or as_dict.get('variableName', None),
 
+            'is_stock_chart': as_dict.get('is_stock_chart',
+                                          None) or as_dict.get('isStockChart', False),
             'is_gantt_chart': as_dict.get('is_gantt_chart',
                                           None) or as_dict.get('isGanttChart', False)
         }

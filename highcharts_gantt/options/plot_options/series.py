@@ -3,14 +3,15 @@ from decimal import Decimal
 
 from validator_collection import validators
 
-from highcharts_core import errors
-from highcharts_core.decorators import class_sensitive
-from highcharts_core.utility_classes.gradients import Gradient
-from highcharts_core.utility_classes.patterns import Pattern
-from highcharts_core.options.plot_options.drag_drop import DragDropOptions
-from highcharts_core.options.plot_options.series import SeriesBaseOptions as SeriesBase
-from highcharts_core.utility_functions import mro__to_untrimmed_dict
+from highcharts_stock import errors
+from highcharts_stock.decorators import class_sensitive
+from highcharts_stock.utility_classes.gradients import Gradient
+from highcharts_stock.utility_classes.patterns import Pattern
+from highcharts_stock.options.plot_options.drag_drop import DragDropOptions
+from highcharts_stock.options.plot_options.series import SeriesOptions as SeriesBase
+from highcharts_stock.utility_functions import mro__to_untrimmed_dict
 
+from highcharts_gantt.options.connectors import ConnectorOptions
 
 class SeriesOptions(SeriesBase):
     """General options to apply to all series types."""
@@ -35,6 +36,7 @@ class SeriesOptions(SeriesBase):
         self.connectors = kwargs.get('connectors', None)
 
         super().__init__(**kwargs)
+
     @property
     def drag_drop(self) -> Optional[DragDropOptions]:
         """The draggable-points module allows points to be moved around or modified in the
@@ -296,14 +298,30 @@ class SeriesOptions(SeriesBase):
             'zone_axis': as_dict.get('zoneAxis', None),
             'zones': as_dict.get('zones', None),
 
+            'color_axis': as_dict.get('colorAxis', None),
+            'connect_ends': as_dict.get('connectEnds', None),
             'drag_drop': as_dict.get('dragDrop', None),
             'negative_color': as_dict.get('negativeColor', None),
             'point_interval': as_dict.get('pointInterval', None),
             'point_interval_unit': as_dict.get('pointIntervalUnit', None),
             'point_placement': as_dict.get('pointPlacement', None),
             'point_start': as_dict.get('pointStart', None),
+            'stacking': as_dict.get('stacking', None),
 
+            'compare_start': as_dict.get('compareStart', None),
+            'cumulative': as_dict.get('cumulative', None),
             'data_as_columns': as_dict.get('dataAsColumns', None),
+            'data_grouping': as_dict.get('dataGrouping', None),
+            'gap_size': as_dict.get('gapSize', None),
+            'gap_unit': as_dict.get('gapUnit', None),
+            'last_price': as_dict.get('lastPrice', None),
+            'last_visible_price': as_dict.get('lastVisiblePrice', None),
+
+            'compare': as_dict.get('compare', None),
+            'compare_base': as_dict.get('compareBase', None),
+            'navigator_options': as_dict.get('navigatorOptions', None),
+            'point_range': as_dict.get('pointRange', None),
+            'show_in_navigator': as_dict.get('showInNavigator', None),
 
             'connectors': as_dict.get('connectors', None),
         }
@@ -312,13 +330,6 @@ class SeriesOptions(SeriesBase):
 
     def _to_untrimmed_dict(self, in_cls = None) -> dict:
         untrimmed = {
-            'dragDrop': self.drag_drop,
-            'negativeColor': self.negative_color,
-            'pointInterval': self.point_interval,
-            'pointIntervalUnit': self.point_interval_unit,
-            'pointPlacement': self.point_placement,
-            'pointStart': self.point_start,
-
             'dataAsColumns': self.data_as_columns,
 
             'connectors': self.connectors,
