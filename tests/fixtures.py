@@ -194,9 +194,13 @@ def does_kwarg_value_match_result(kwarg_value, result_value):
             if key == 'patternOptions':
                 matches = does_kwarg_value_match_result(kwarg_value.get(key),
                                                         result_value.get('pattern'))
-            else:
+            elif key in result_value:
                 matches = does_kwarg_value_match_result(kwarg_value.get(key),
                                                         result_value.get(key))
+            else:
+                result_key = to_camelCase(key)
+                matches = does_kwarg_value_match_result(kwarg_value.get(key),
+                                                        result_value.get(result_key))
             if not matches:
                 print(f'-- dict key ({key}) does not match')
                 return False
