@@ -158,6 +158,8 @@ class GanttSeries(SeriesBase, GanttOptions):
             'legend_index': as_dict.get('legendIndex', None),
             'name': as_dict.get('name', None),
             'z_index': as_dict.get('zIndex', None),
+            
+            'connectors': as_dict.get('connectors', None),
         }
 
         return kwargs
