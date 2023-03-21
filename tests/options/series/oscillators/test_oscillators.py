@@ -4,16 +4,16 @@ import pytest
 
 from json.decoder import JSONDecodeError
 
-from highcharts_stock.options.series.oscillators import AroonOscillatorSeries as cls
-from highcharts_stock.options.series.oscillators import APOSeries as cls2
-from highcharts_stock.options.series.oscillators import CCISeries as cls3
-from highcharts_stock.options.series.oscillators import ChaikinSeries as cls4
-from highcharts_stock.options.series.oscillators import CMOSeries as cls5
-from highcharts_stock.options.series.oscillators import DPOSeries as cls6
-from highcharts_stock.options.series.oscillators import TRIXSeries as cls7
-from highcharts_stock.options.series.oscillators import WilliamsRSeries as cls8
+from highcharts_gantt.options.series.oscillators import AroonOscillatorSeries as cls
+from highcharts_gantt.options.series.oscillators import APOSeries as cls2
+from highcharts_gantt.options.series.oscillators import CCISeries as cls3
+from highcharts_gantt.options.series.oscillators import ChaikinSeries as cls4
+from highcharts_gantt.options.series.oscillators import CMOSeries as cls5
+from highcharts_gantt.options.series.oscillators import DPOSeries as cls6
+from highcharts_gantt.options.series.oscillators import TRIXSeries as cls7
+from highcharts_gantt.options.series.oscillators import WilliamsRSeries as cls8
 
-from highcharts_stock import errors
+from highcharts_gantt import errors
 from tests.fixtures import input_files, check_input_file, to_camelCase, to_js_dict, \
     Class__init__, Class__to_untrimmed_dict, Class_from_dict, Class_to_dict, \
     Class_from_js_literal

@@ -4,12 +4,12 @@ import pytest
 
 from json.decoder import JSONDecodeError
 
-from highcharts_stock.options.series.momentum import MomentumSeries as cls
-from highcharts_stock.options.series.momentum import OBVSeries as cls2
-from highcharts_stock.options.series.momentum import ROCSeries as cls3
-from highcharts_stock.options.series.momentum import RSISeries as cls4
+from highcharts_gantt.options.series.momentum import MomentumSeries as cls
+from highcharts_gantt.options.series.momentum import OBVSeries as cls2
+from highcharts_gantt.options.series.momentum import ROCSeries as cls3
+from highcharts_gantt.options.series.momentum import RSISeries as cls4
 
-from highcharts_stock import errors
+from highcharts_gantt import errors
 from tests.fixtures import input_files, check_input_file, to_camelCase, to_js_dict, \
     Class__init__, Class__to_untrimmed_dict, Class_from_dict, Class_to_dict, \
     Class_from_js_literal

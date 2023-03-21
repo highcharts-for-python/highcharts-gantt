@@ -2,8 +2,8 @@
 
 import pytest
 
-from highcharts_stock.metaclasses import HighchartsMeta
-from highcharts_stock import constants
+from highcharts_gantt.metaclasses import HighchartsMeta
+from highcharts_gantt import constants
 
 from json.decoder import JSONDecodeError
 from validator_collection import checkers

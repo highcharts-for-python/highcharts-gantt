@@ -4,17 +4,17 @@ import pytest
 
 from json.decoder import JSONDecodeError
 
-from highcharts_stock.options.annotations.stock_tools import CrookedLineAnnotation as cls1
-from highcharts_stock.options.annotations.stock_tools import ElliottWaveAnnotation as cls2
-from highcharts_stock.options.annotations.stock_tools import FibonacciAnnotation as cls3
-from highcharts_stock.options.annotations.stock_tools import FibonacciTimeZonesAnnotation as cls4
-from highcharts_stock.options.annotations.stock_tools import InfinityLineAnnotation as cls5
-from highcharts_stock.options.annotations.stock_tools import MeasureAnnotation as cls6
-from highcharts_stock.options.annotations.stock_tools import PitchforkAnnotation as cls7
-from highcharts_stock.options.annotations.stock_tools import TimeCyclesAnnotation as cls8
-from highcharts_stock.options.annotations.stock_tools import TunnelAnnotation as cls9
-from highcharts_stock.options.annotations.stock_tools import VerticalLineAnnotation as cls10
-from highcharts_stock import errors
+from highcharts_gantt.options.annotations.stock_tools import CrookedLineAnnotation as cls1
+from highcharts_gantt.options.annotations.stock_tools import ElliottWaveAnnotation as cls2
+from highcharts_gantt.options.annotations.stock_tools import FibonacciAnnotation as cls3
+from highcharts_gantt.options.annotations.stock_tools import FibonacciTimeZonesAnnotation as cls4
+from highcharts_gantt.options.annotations.stock_tools import InfinityLineAnnotation as cls5
+from highcharts_gantt.options.annotations.stock_tools import MeasureAnnotation as cls6
+from highcharts_gantt.options.annotations.stock_tools import PitchforkAnnotation as cls7
+from highcharts_gantt.options.annotations.stock_tools import TimeCyclesAnnotation as cls8
+from highcharts_gantt.options.annotations.stock_tools import TunnelAnnotation as cls9
+from highcharts_gantt.options.annotations.stock_tools import VerticalLineAnnotation as cls10
+from highcharts_gantt import errors
 from tests.fixtures import input_files, check_input_file, to_camelCase, to_js_dict, \
     Class__init__, Class__to_untrimmed_dict, Class_from_dict, Class_to_dict, \
     Class_from_js_literal

@@ -3,8 +3,8 @@ import json
 
 import pytest
 
-from highcharts_stock.decorators import class_sensitive, validate_types
-from highcharts_stock import errors
+from highcharts_gantt.decorators import class_sensitive, validate_types
+from highcharts_gantt import errors
 
 
 class TestClass:

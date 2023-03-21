@@ -4,16 +4,16 @@ import pytest
 
 from json.decoder import JSONDecodeError
 
-from highcharts_stock.options.plot_options.oscillators import AroonOscillatorOptions as cls
-from highcharts_stock.options.plot_options.oscillators import APOOptions as cls2
-from highcharts_stock.options.plot_options.oscillators import CCIOptions as cls3
-from highcharts_stock.options.plot_options.oscillators import ChaikinOptions as cls4
-from highcharts_stock.options.plot_options.oscillators import CMOOptions as cls5
-from highcharts_stock.options.plot_options.oscillators import DPOOptions as cls6
-from highcharts_stock.options.plot_options.oscillators import TRIXOptions as cls7
-from highcharts_stock.options.plot_options.oscillators import WilliamsROptions as cls8
+from highcharts_gantt.options.plot_options.oscillators import AroonOscillatorOptions as cls
+from highcharts_gantt.options.plot_options.oscillators import APOOptions as cls2
+from highcharts_gantt.options.plot_options.oscillators import CCIOptions as cls3
+from highcharts_gantt.options.plot_options.oscillators import ChaikinOptions as cls4
+from highcharts_gantt.options.plot_options.oscillators import CMOOptions as cls5
+from highcharts_gantt.options.plot_options.oscillators import DPOOptions as cls6
+from highcharts_gantt.options.plot_options.oscillators import TRIXOptions as cls7
+from highcharts_gantt.options.plot_options.oscillators import WilliamsROptions as cls8
 
-from highcharts_stock import errors
+from highcharts_gantt import errors
 from tests.fixtures import input_files, check_input_file, to_camelCase, to_js_dict, \
     Class__init__, Class__to_untrimmed_dict, Class_from_dict, Class_to_dict, \
     Class_from_js_literal
