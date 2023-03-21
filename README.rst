@@ -5,12 +5,13 @@ Highcharts Gantt for Python
 **High-end Gantt chart visualization for the Python ecosystem**
 
 **Highcharts Gantt for Python** is an extension to the
-`Highcharts for Python <https://highcharts-core.readthedocs.io>`__ library, and provides
+`Highcharts Stock for Python <https://stock-docs.highchartspython.com>`__ library, and provides
 a Python wrapper for the fantastic
 `Highcharts Gantt <https://www.highcharts.com/products/gantt/>`__
 JavaScript data visualization library. **Highcharts Gantt for Python** also supports
 
-  * **Highcharts JS** - the core Highcharts data visualization library
+  * **Highcharts Core (JS)** - the core Highcharts data visualization library
+  * **Highcharts Stock (JS)** - the Highcharts extension providing time series and asset price data visualization
   * The **Highcharts Export Server** - enabling the programmatic creation of static
     (downloadable) data visualizations
 
@@ -22,8 +23,11 @@ library features native integration with:
   * **Pandas**. Automatically produce data visualizations from your Pandas dataframes
   * **PySpark**. Automatically produce data visualizations from data in a PySpark
     dataframe.
+  * **Asana**. You can generate Gantt charts from your Asana projects using one simple method call.
+  * **Monday.com**. Produce Gantt charts automatically from your Monday.com projects.
+  * **JIRA**. Generate Gantt charts from your Atlassian JIRA Cloud projects.
 
-**COMPLETE DOCUMENTATION:** http://highcharts-gantt.readthedocs.org/en/latest/index.html
+**COMPLETE DOCUMENTATION:** http://gantt-docs.highchartspython.com/en/latest/index.html
 
 --------------------
 
@@ -54,7 +58,7 @@ look at the Highcharts suite of solutions. Just take a look at some of their fan
 `Highcharts Gantt demo visualizations <https://www.highcharts.com/demo/gantt>`__.
 
 Highcharts Gantt is a JavaScript library, and is an extension of the
-`Highcharts JS <https://www.highcharts.com/products/highcharts/>`__ JavaScript library. It
+`Highcharts Stock <https://www.highcharts.com/products/stock/>`__ JavaScript library. It
 is written in JavaScript, and is specifically used to configure and render data
 visualizations in a web browser (or other JavaScript-executing, like mobile app)
 environment. As a JavaScript library, its audience is JavaScript developers. But what
@@ -70,7 +74,7 @@ capabilities to simplify integration with Javascript frontend frameworks (React,
 VueJS, etc.). But facilitating that with Highcharts has historically been very difficult.
 Part of this difficulty is because the Highcharts JavaScript suite - while supporting JSON
 as a serialization/deserialization format - leverages
-:term:`JavaScript object literals <JavaScript Object Literal Notation>` to expose the
+JavaScript object literals to expose the
 full power and interactivity of its data visualizations. And while it's easy to serialize
 JSON from Python, serializing and deserializing to/from JavaScript object literal notation
 is much more complicated. This means that Python developers looking to integrate with
@@ -90,13 +94,14 @@ use, it also includes the full functionality of **Highcharts for Python** as wel
 Key Highcharts Gantt for Python Features
 ==============================================
 
-* **Clean and consistent API**. No reliance on "hacky" code, :class:`dict <python:dict>`
+* **Clean and consistent API**. No reliance on "hacky" code, ``dict``
   and JSON serialization, or impossible to maintain / copy-pasted "spaghetti code".
 * **Comprehensive Highcharts support**. Every single Highcharts chart type and every
   single configuration option is supported in **Highcharts Gantt for Python**. This
   includes the over 70 data visualization types supported by
-  `Highcharts JS <https://www.highcharts.com/product/highcharts/>`__ and the
-  multiple Gantt visualizations available in
+  `Highcharts Core <https://www.highcharts.com/product/highcharts/>`__, and the 50+ 
+  visualizations supported by `Highcharts Stock <https://www.highcharts.com/products/stock/>`__ 
+  and the multiple Gantt visualizations available in
   `Highcharts Gantt <https://www.highcharts.com/product/gantt/>`__, with full support for
   the rich JavaScript formatter (JS callback functions)
   capabilities that are often needed to get the most out of Highcharts' visualization and
@@ -104,15 +109,14 @@ Key Highcharts Gantt for Python Features
 
   .. seealso::
 
-    * :doc:`Supported Visualizations <visualizations>`
+    * `Supported Visualizations <https://gantt-docs.highchartspython.com/en/latest/visualizations.html>`__
 
 * **Simple JavaScript Code Generation**. With one method call, produce production-ready
   JavaScript code to render your interactive visualizations using Highcharts' rich
   capabilities.
 * **Easy Chart Download**. With one method call, produce high-end static
   visualizations that can be downloaded or shared as files with your audience. Produce
-  static charts using the Highsoft-provided
-  :term:`Highcharts Export Server <Export Server>`, or using your own private export
+  static charts using the Highsoft-provided **Highcharts Export Server**, or using your own private export
   server as needed.
 * **Consistent Code Style**. For Python developers, switching between Pythonic code
   conventions and JavaScript code conventions can be...annoying. So
@@ -125,7 +129,7 @@ Key Highcharts Gantt for Python Features
 ===================================================
 
 For a discussion of **Highcharts Gantt for Python** in comparison to alternatives, please see
-the **COMPLETE DOCUMENTATION:** http://highcharts-gantt.readthedocs.org/en/latest/index.html
+the **COMPLETE DOCUMENTATION:** http://gantt-docs.highchartspython.com/en/latest/index.html
 
 ---------------------
 
@@ -136,47 +140,36 @@ Hello World, and Basic Usage
 1. Import Highcharts Gantt for Python
 ==========================================
 
-.. tabs::
+  .. code-block:: python
+    
+    # BEST PRACTICE!
+    # PRECISE LOCATION PATTERN
+    # This method of importing Highcharts Gantt for Python objects yields the fastest
+    # performance for the import statement. However, it is more verbose and requires
+    # you to navigate the extensive Highcharts Gantt for Python API.
 
-  .. tab:: from Precise Location
+    # Import classes using precise module indications. For example:
+    from highcharts_gantt.chart import Chart
+    from highcharts_gantt.global_options.shared_options import SharedGanttOptions
+    from highcharts_gantt.options import HighchartsGanttOptions
+    from highcharts_gantt.options.plot_options.gantt import GanttOptions
+    from highcharts_gantt.options.series.gantt import GanttSeries
 
-    .. tip::
+    # CATCH-ALL PATTERN
+    # This method of importing Highcharts Gantt for Python classes has relatively slow
+    # performance because it imports hundreds of different classes from across the entire
+    # library. This is also a known anti-pattern, as it obscures the namespace within the
+    # library. Both may be acceptable to you in your use-case, but do use at your own risk.
 
-      **Best Practice!**
+    # Import objects from the catch-all ".highcharts" module.
+    from highcharts_gantt import highcharts
 
-      This method of importing **Highcharts Gantt for Python** objects yields the fastest
-      performance for the ``import`` statement. However, it is more verbose and requires
-      you to navigate the extensive :doc:`Highcharts Gantt for Python API </api>`.
-
-    .. code-block:: python
-
-      # Import classes using precise module indications. For example:
-      from highcharts_gantt.chart import Chart
-      from highcharts_gantt.global_options.shared_options import SharedGanttOptions
-      from highcharts_gantt.options import HighchartsGanttOptions
-      from highcharts_gantt.options.plot_options.gantt import GanttOptions
-      from highcharts_gantt.options.series.gantt import GanttSeries
-
-  .. tab:: from ``.highcharts``
-
-    .. caution::
-
-      This method of importing **Highcharts Gantt for Python** classes has relatively slow
-      performance because it imports hundreds of different classes from across the entire
-      library. This is also a known anti-pattern, as it obscures the namespace within the
-      library. Both may be acceptable to you in your use-case, but do use at your own risk.
-
-    .. code-block:: python
-
-      # Import objects from the catch-all ".highcharts" module.
-      from highcharts_gantt import highcharts
-
-      # You can now access specific classes without individual import statements.
-      highcharts.Chart
-      highcharts.SharedGanttOptions
-      highcharts.HighchartsGanttOptions
-      highcharts.GanttOptions
-      highcharts.GanttSeries
+    # You can now access specific classes without individual import statements.
+    highcharts.Chart
+    highcharts.SharedGanttOptions
+    highcharts.HighchartsGanttOptions
+    highcharts.GanttOptions
+    highcharts.GanttSeries
 
 
 2. Create Your Chart
@@ -338,7 +331,7 @@ Questions and Issues
 *********************
 
 You can ask questions and report issues on the project's
-`Github Issues Page <https://github.com/hcpllc/highcharts-gantt/issues>`_
+`Github Issues Page <https://github.com/highcharts-for-python/highcharts-gantt/issues>`_
 
 -----------------
 
@@ -347,10 +340,7 @@ Contributing
 *********************
 
 We welcome contributions and pull requests! For more information, please see the
-:doc:`Contributor Guide <contributing>`. And thanks to all those who've already
-contributed:
-
-.. include:: _contributors.rst
+`Contributor Guide <https://gantt-docs.highchartspython.com/en/latest/contributing.html>`. And thanks to all those who've already contributed!
 
 -------------------
 

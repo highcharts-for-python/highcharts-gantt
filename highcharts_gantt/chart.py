@@ -5,14 +5,18 @@ from validator_collection import validators, checkers
 from highcharts_core.chart import Chart as ChartBase
 
 from highcharts_gantt import constants, errors
-from highcharts_gantt.options import HighchartsOptions, HighchartsGanttOptions
+from highcharts_gantt.options import (HighchartsOptions, 
+                                      HighchartsStockOptions,
+                                      HighchartsGanttOptions)
 from highcharts_gantt.decorators import validate_types
 from highcharts_gantt.js_literal_functions import serialize_to_js_literal
 from highcharts_gantt.headless_export import ExportServer
 from highcharts_gantt.options.series.series_generator import (create_series_obj,
                                                               SERIES_CLASSES,
                                                               GANTT_SERIES_LIST)
-from highcharts_gantt.global_options.shared_options import SharedGanttOptions
+from highcharts_gantt.global_options.shared_options import (SharedGanttOptions, 
+                                                            SharedStockOptions, 
+                                                            SharedOptions)
 from highcharts_gantt.options.chart import ChartOptions
 
 
@@ -25,6 +29,92 @@ class Chart(ChartBase):
         self.is_gantt_chart = kwargs.get('is_gantt_chart', False)
 
         super().__init__(**kwargs)
+
+    def _jupyter_include_scripts(self):
+        """Return the JavaScript code that is used to load the Highcharts JS libraries.
+
+        .. note::
+
+          Currently includes *all* `Highcharts JS <https://www.highcharts.com/>`_ modules
+          in the HTML. This issue will be addressed when roadmap issue :issue:`2` is
+          released.
+
+        :rtype: :class:`str <python:str>`
+        """
+        js_str = ''
+        if self.is_gantt_chart:
+            for item in constants.GANTT_INCLUDE_LIBS:
+                js_str += utility_functions.jupyter_add_script(item)
+                js_str += """.then(() => {"""
+                
+            for item in constants.GANTT_INCLUDE_LIBS:
+                js_str += """});"""
+        elif self.is_stock_chart:
+            for item in constants.STOCK_INCLUDE_LIBS:
+                js_str += utility_functions.jupyter_add_script(item)
+                js_str += """.then(() => {"""
+
+            for item in constants.STOCK_INCLUDE_LIBS:
+                js_str += """});"""
+
+        else:
+            for item in constants.INCLUDE_LIBS:
+                js_str += utility_functions.jupyter_add_script(item)
+                js_str += """.then(() => {"""
+
+            for item in constants.INCLUDE_LIBS:
+                js_str += """});"""
+
+        return js_str
+
+    def _jupyter_javascript(self, 
+                            global_options = None, 
+                            container = None,
+                            retries = 3,
+                            interval = 1000):
+        """Return the JavaScript code which Jupyter Labs will need to render the chart.
+
+        :param global_options: The :term:`shared options` to use when rendering the chart.
+          Defaults to :obj:`None <python:None>`
+        :type global_options: :class:`SharedOptions <highcharts_stock.global_options.shared_options.SharedOptions>`
+          or :obj:`None <python:None>`
+          
+        :param container: The ID to apply to the HTML container when rendered in Jupyter Labs. Defaults to
+          :obj:`None <python:None>`, which applies the :meth:`.container <highcharts_core.chart.Chart.container>` 
+          property if set, and ``'highcharts_target_div'`` if not set.
+        :type container: :class:`str <python:str>` or :obj:`None <python:None>`
+
+        :param retries: The number of times to retry rendering the chart. Used to avoid race conditions with the 
+          Highcharts script. Defaults to 3.
+        :type retries: :class:`int <python:int>`
+        
+        :param interval: The number of milliseconds to wait between retrying rendering the chart. Defaults to 1000 (1 
+          seocnd).
+        :type interval: :class:`int <python:int>`
+
+        :rtype: :class:`str <python:str>`
+        """
+        original_container = self.container
+        self.container = container or self.container or 'highcharts_target_div'
+        
+        if global_options is not None:
+            global_options = validate_types(global_options,
+                                            types = (SharedGanttOptions, SharedStockOptions, SharedOptions))
+
+        js_str = ''
+        js_str += utility_functions.get_retryHighcharts()
+
+        if global_options:
+            js_str += '\n' + utility_functions.prep_js_for_jupyter(global_options.to_js_literal()) + '\n'
+
+        js_str += utility_functions.prep_js_for_jupyter(self.to_js_literal(),
+                                                        container = self.container,
+                                                        retries = retries,
+                                                        interval = interval)
+
+        self.container = original_container
+
+        return js_str
 
     def _repr_html_(self):
         """Produce the HTML representation of the chart.
@@ -69,7 +159,7 @@ class Chart(ChartBase):
         self._is_gantt_chart = bool(value)
 
     @property
-    def options(self) -> Optional[HighchartsOptions | HighchartsGanttOptions]:
+    def options(self) -> Optional[HighchartsOptions | HighchartsGanttOptions | HighchartsStockOptions]:
         """The Python representation of the
         `Highcharts Gantt <https://www.highcharts.com/products/gantt/>`__
         ``options`` `configuration object <https://api.highcharts.com/gantt/>`_
@@ -158,28 +248,32 @@ class Chart(ChartBase):
 
         signature_elements = 0
 
-        fetch_as_str = ''
-        
         container_as_str = ''
         if self.container:
-            container_as_str = f"""renderTo = '{self.container}'"""
-            signature_elements += 1
+            container_as_str = f"""'{self.container}'"""
+        else:
+            container_as_str = """null"""
+        signature_elements += 1
 
         options_as_str = ''
         if self.options:
             options_as_str = self.options.to_js_literal(encoding = encoding)
-            options_as_str = f"""options = {options_as_str}"""
-            signature_elements += 1
+            options_as_str = f"""{options_as_str}"""
+        else:
+            options_as_str = """{}"""
+        signature_elements += 1
 
         callback_as_str = ''
         if self.callback:
             callback_as_str = self.callback.to_js_literal(encoding = encoding)
-            callback_as_str = f"""callback = {callback_as_str}"""
+            callback_as_str = f"""{callback_as_str}"""
             signature_elements += 1
 
         signature = """new Highcharts.chart("""
         if self.is_gantt_chart:
             signature = """new Highcharts.ganttChart("""
+        elif self.is_stock_chart:
+            signature = """new Highcharts.stockChart("""
         if container_as_str:
             signature += container_as_str
             if signature_elements > 1:
