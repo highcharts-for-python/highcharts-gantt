@@ -1,14 +1,19 @@
 """Tests for ``highcharts.no_data``."""
-
+import os
 import pytest
 
 from json.decoder import JSONDecodeError
 
 from highcharts_gantt.options.series.gantt import GanttSeries as cls
+from highcharts_gantt.options.series.data.connect import DataConnection
 from highcharts_gantt import errors
 from tests.fixtures import input_files, check_input_file, to_camelCase, to_js_dict, \
     Class__init__, Class__to_untrimmed_dict, Class_from_dict, Class_to_dict, \
     Class_from_js_literal
+
+from dotenv import load_dotenv
+
+load_dotenv()
 
 STANDARD_PARAMS = [
     ({}, None),
@@ -559,3 +564,44 @@ def test_GanttSeries_to_dict(kwargs, error):
 ])
 def test_GanttSeries_from_js_literal(input_files, filename, as_file, error):
     Class_from_js_literal(cls, input_files, filename, as_file, error)
+
+
+def callback_function(connection_target, task):
+    return DataConnection(to = connection_target['gid'],
+                          type = 'straight')
+
+
+@pytest.mark.parametrize('kwargs, expected_data_points, error', [
+    ({}, 5, None),
+    ({'completed_since': '2023-03-22'}, 2, None),
+
+    # Connection Callback
+    ({ 'connection_callback': callback_function }, 5, None),
+
+    # Errors
+    ({}, 0, errors.AsanaAuthenticationError),
+])
+def test_GanttSeries_from_asana(kwargs, expected_data_points, error):
+    project_gid = os.getenv('ASANA_PROJECT_GID', None)
+    section_gid = os.getenv('ASANA_SECTION_GID', None)
+    
+    kwargs['project_gid'] = project_gid
+    kwargs['section_gid'] = section_gid
+    
+    if not error:
+        personal_access_token = os.getenv('ASANA_PERSONAL_ACCESS_TOKEN', None)
+        
+        kwargs['personal_access_token'] = personal_access_token
+        
+        result = cls.from_asana(**kwargs)
+        assert result is not None
+        assert isinstance(result, cls) is True
+        assert len(result.data) == expected_data_points
+    elif error == errors.AsanaAuthenticationError:
+        kwargs['personal_access_token'] = 'invalid-token-goes-here'
+
+        with pytest.raises(error):
+            result = cls.from_asana(**kwargs)
+    elif error:
+        with pytest.raises(error):
+            result = cls.from_asana(**kwargs)

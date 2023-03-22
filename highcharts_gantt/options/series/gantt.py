@@ -355,7 +355,10 @@ class GanttSeries(SeriesBase, GanttOptions):
         for key in request_params:
             api_request_params[key] = request_params[key]
 
-        tasks = [x for x in request(**api_request_params)]
+        try:
+            tasks = [x for x in request(**api_request_params)]
+        except asana.error.NoAuthorizationError:
+            raise errors.AsanaAuthenticationError('the authentication method supplied returned as unauthorized')
         data_points = [GanttData.from_asana(x,
                                             use_html_description = use_html_description,
                                             connection_callback = connection_callback,

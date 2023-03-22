@@ -1078,5 +1078,6 @@ class Chart(ChartBase):
         
         instance = cls(**chart_kwargs)
         instance.options = options
+        instance.is_gantt_chart = True
         
         return instance
