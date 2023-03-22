@@ -4,6 +4,7 @@ import pytest
 import datetime
 
 from json.decoder import JSONDecodeError
+from validator_collection import validators
 
 from highcharts_gantt.options.series.data.gantt import ProgressIndicator as cls, GanttData as cls2
 from highcharts_gantt import errors
@@ -168,3 +169,74 @@ def test_GanttData_to_dict(kwargs, error):
 ])
 def test_GanttData_from_js_literal(input_files, filename, as_file, error):
     Class_from_js_literal(cls2, input_files, filename, as_file, error)
+
+
+@pytest.mark.parametrize('kwargs, error', [
+    ({
+        'task': {
+            'id': '4181772228',
+            'name': 'Release Highcharts Core for Python',
+            'Person': 'Chris Modzelewski',
+            'is_milestone': False,
+            'Status': 'Done',
+            'Date': datetime.date(2023, 3, 21),
+            'start': datetime.date(2023, 3, 21),
+            'end': datetime.date(2023, 3, 21),
+            'completed': 1
+        },
+        'template': 'task-management'
+    }, None),
+    ({
+        'task': {
+            'id': '4181781003',
+            'name': 'Release Highcharts Gantt for Python',
+            'Person': 'Chris Modzelewski',
+            'is_milestone': False,
+            'Status': 'Working on it',
+            'Date': datetime.date(2023, 3, 31),
+            'start': datetime.date(2023, 3, 21),
+            'end': datetime.date(2023, 3, 31),
+            'dependencies': [4181772232],
+            'completed': 0.5
+        }
+    }, None),
+    
+    ({
+        'task': {
+            'id': '4181781003',
+            'name': 'Release Highcharts Gantt for Python',
+            'Person': 'Chris Modzelewski',
+            'is_milestone': False,
+            'Status': 'Working on it',
+            'Date': datetime.date(2023, 3, 31),
+            'start': datetime.date(2023, 3, 21),
+            'end': datetime.date(2023, 3, 31),
+            'dependencies': [4181772232],
+            'completed': 0.5
+        },
+        'template': 'invalid-template-name'
+    }, errors.MondayTemplateError),
+
+])
+def test_GanttData_from_monday(kwargs, error):
+    if not error:
+        result = cls2.from_monday(**kwargs)
+        assert result is not None
+        assert isinstance(result, cls2) is True
+        if 'task' in kwargs:
+            task = kwargs['task']
+            if 'id' in task:
+                assert result.id == task['id']
+            if 'name' in task:
+                assert result.name == task['name']
+            if 'is_milestone' in task:
+                assert result.milestone == task['is_milestone']
+            if 'start' in task:
+                assert result.start == validators.datetime(task['start'])
+            if 'end' in task:
+                assert result.end == validators.datetime(task['end'])
+            if 'dependencies' in task:
+                assert len(result.dependency) == len(task['dependencies'])
+    else:
+        with pytest.raises(error):
+            result = cls2.from_monday(**kwargs)

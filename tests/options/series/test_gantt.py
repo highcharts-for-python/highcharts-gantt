@@ -605,3 +605,33 @@ def test_GanttSeries_from_asana(kwargs, expected_data_points, error):
     elif error:
         with pytest.raises(error):
             result = cls.from_asana(**kwargs)
+            
+@pytest.mark.parametrize('kwargs, expected_data_points, error', [
+    ({ 'template': 'task-management' }, 7, None),
+
+    # Errors
+    ({}, 0, errors.MondayAuthenticationError),
+])
+def test_GanttSeries_from_monday(kwargs, expected_data_points, error):
+    board_id = os.getenv('MONDAY_BOARD_ID', None)
+    
+    kwargs['board_id'] = board_id
+    
+    if not error:
+        personal_access_token = os.getenv('MONDAY_API_TOKEN', None)
+        
+        kwargs['api_token'] = personal_access_token
+        
+        result = cls.from_monday(**kwargs)
+        assert result is not None
+        assert isinstance(result, cls) is True
+        assert len(result.data) == expected_data_points
+    elif error == errors.MondayAuthenticationError:
+        kwargs['api_token'] = 'invalid-token-goes-here'
+
+        with pytest.raises(error):
+            result = cls.from_monday(**kwargs)
+    elif error:
+        with pytest.raises(error):
+            result = cls.from_monday(**kwargs)
+            
