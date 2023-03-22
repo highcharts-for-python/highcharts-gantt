@@ -11,6 +11,11 @@ from tests.fixtures import input_files, check_input_file, to_camelCase, to_js_di
     Class__init__, Class__to_untrimmed_dict, Class_from_dict, Class_to_dict, \
     Class_from_js_literal, Class_from_js_literal_with_expected
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
 STANDARD_PARAMS = [
     ({}, None),
 ]
