@@ -15,3 +15,16 @@ GANTT_INCLUDE_LIBS = [
 ]
 
 GANTT_INCLUDE_STR = """<script src="https://code.highcharts.com/gantt/modules/gantt.js"></script>"""
+
+
+MONDAY_TEMPLATES = {
+    'task-management': {
+        'id': 'id',
+        'name': 'name',
+        'start': 'start',
+        'end': 'end',
+        'parent': 'parent_id',
+        'milestone': 'is_milestone',
+        'completed': 'completed'
+    },
+}

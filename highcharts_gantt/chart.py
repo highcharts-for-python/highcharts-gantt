@@ -1055,7 +1055,8 @@ class Chart(ChartBase):
 
         :type chart_kwargs: :class:`dict <python:dict>` or :obj:`None <python:None>`
 
-        :rtype: :class:`GanttSeries <highcharts_gantt.options.series.gantt.GanttSeries>`
+        :returns: A Gantt :class:`Chart <highcharts_gantt.chart.Chart>` instance
+        :rtype: :class:`Chart <highcharts_gantt.chart.Chart>`
         """
         series_cls = SERIES_CLASSES.get('gantt', None)
         
@@ -1073,6 +1074,156 @@ class Chart(ChartBase):
                                        connection_callback = connection_callback,
                                        series_kwargs = series_kwargs)
         
+        options = HighchartsGanttOptions(**options_kwargs)
+        options.series = [series]
+        
+        instance = cls(**chart_kwargs)
+        instance.options = options
+        instance.is_gantt_chart = True
+        
+        return instance
+      
+    @classmethod
+    def from_monday(cls,
+                    board_id,
+                    api_token = None,
+                    template = None,
+                    property_column_map = None,
+                    connection_kwargs = None,
+                    connection_callback = None,
+                    series_kwargs = None,
+                    options_kwargs = None,
+                    chart_kwargs = None):
+        """Create a :class:`GanttSeries <highcharts_gantt.options.series.gantt.GanttSeries>` instance from a 
+        `Monday.com <https://www.monday.com>`__ work board.
+        
+        :param board_id: The ID of the Monday.com board whose items should be retrieved
+          to populate the Gantt series.
+        :type board_id: :class:`int <python:int>`
+        
+        :param api_token: The Monday.com API token to use when authenticating your
+          request against the Monday.com API. Defaults to :obj:`None <python:None>`,
+          which will then try to determine the token from the ``MONDAY_API_TOKEN``
+          environment variable.
+          
+          .. warning::
+          
+            If no token is either passed to the method *or* found in the 
+            ``MONDAY_API_TOKEN`` environment variable, calling this method will raise
+            an error.
+            
+        :type api_token: :class:`str <python:str>` or :obj:`None <python:None>`
+        
+        :param template: The name of a standard Mpnday.com board template supported by 
+          **Highcharts for Python**. If supplied, will override the 
+          ``property_column_map`` argument. Defaults to :obj:`None <python:None>`.
+          
+          .. note::
+          
+            If ``property_column_map`` is set, the ``template`` argument will be
+            *ignored* and overridden by ``property_column_map``.
+
+        :type template: :class:`str <python:str>` or :obj:`None <python:None>`
+        
+        :param property_column_map: A :class:`dict <python:dict>` used to map Monday.com
+          columns to their corresponding 
+          :class:`GanttSeries <highcharts_gantt.options.series.gantt.GanttSeries>` 
+          properties. Keys are expected to be 
+          :class:`GanttSeries <highcharts_gantt.options.series.gantt.GanttSeries>`
+          properties, while values are expected to be Monday.com column field names. 
+          Defaults to :obj:`None <python:None>`.
+          
+          .. note::
+          
+            If ``property_column_map`` is supplied, its settings *override* the 
+            ``template`` setting.
+            
+        :type property_column_map: :class:`dict <python:dict>` or 
+          :obj:`None <python:None>`
+          
+        :param connection_kwargs: Set of keyword arugments to supply to the   
+          :class:`DataConnection <highcharts_gantt.options.series.data.connect.DataConnection>`
+          constructor, besides the :meth:`.to <highcharts_gantt.options.series.data.connect.DataConnection.to>` 
+          property which is derived from the task. Defaults to :obj:`None <python:None>`
+        :type connection_kwargs: :class:`dict <python:dict>` or 
+          :obj:`None <python:None>`
+          
+        :param connection_callback: A custom Python function or method which accepts two
+          keyword arguments: ``connection_target`` (which expects the dependency 
+          :class:`dict <python:dict>` object from the Asana task), and ``asana_task`` 
+          (which expects the Asana task :class:`dict <pythoN:dict>` object). The 
+          function should return a 
+          :class:`DataConnection <highcharts_gantt.options.series.data.connect.DataConnection>` instance. Defaults to 
+          :obj:`None <python:None>`
+          
+          .. tip::
+          
+            The ``connection_callback`` argument is useful if you want to customize the
+            connection styling based on properties included in the Asana task.
+            
+        :type connection_callback: Callable or :obj:`None <python:None>`
+        
+        :param series_kwargs: Collection of additional keyword arguments to use when 
+          instantiating the 
+          :class:`GanttSeries <highcharts_gantt.options.series.GanttSeries>` (besides 
+          the ``data`` argument, which will be determined from the Asana tasks).
+          Defaults to :obj:`None <python:None>`.
+        :type series_kwargs: :class:`dict <python:dict>` or :obj:`None <python:None>`
+
+        :param series_kwargs: Collection of additional keyword arguments to use when 
+          instantiating the 
+          :class:`GanttSeries <highcharts_gantt.options.series.GanttSeries>` (besides 
+          the ``data`` argument, which will be determined from the Asana tasks).
+          Defaults to :obj:`None <python:None>`.
+        :type series_kwargs: :class:`dict <python:dict>` or :obj:`None <python:None>`
+
+        :param options_kwargs: An optional :class:`dict <python:dict>` containing keyword
+          arguments that should be used when instantiating the :class:`HighchartsOptions`
+          instance. Defaults to :obj:`None <python:None>`.
+
+          .. warning::
+
+            If ``options_kwargs`` contains a ``series`` key, the ``series`` value will be
+            *overwritten*. The ``series`` value will be created from the data in ``df``.
+
+        :type options_kwargs: :class:`dict <python:dict>` or :obj:`None <python:None>`
+
+        :param chart_kwargs: An optional :class:`dict <python:dict>` containing keyword
+          arguments that should be used when instantiating the :class:`Chart` instance.
+          Defaults to :obj:`None <python:None>`.
+
+          .. warning::
+
+            If ``chart_kwargs`` contains an ``options`` key, ``options`` will be
+            *overwritten*. The ``options`` value will be created from the
+            ``options_kwargs`` and the data in ``df`` instead.
+
+        :type chart_kwargs: :class:`dict <python:dict>` or :obj:`None <python:None>`
+
+        :returns: A Gantt :class:`Chart <highcharts_gantt.chart.Chart>` instance
+        :rtype: :class:`GanttSeries <highcharts_gantt.options.series.gantt.GanttSeries>`
+        
+        :raises HighchartsDependencyError: if the 
+          `monday <https://pypi.org/project/monday/>`__ Python library is not available 
+          in the runtime environment
+        :raises MondayAuthenticationError: if there is no Monday.com API token supplied
+        :raises HighchartsValueError: if both ``template`` and ``property_column_map`` 
+          are empty
+        
+        """
+        series_cls = SERIES_CLASSES.get('gantt', None)
+
+        options_kwargs = validators.dict(options_kwargs, allow_empty = True) or {}
+        chart_kwargs = validators.dict(chart_kwargs, allow_empty = True) or {}
+
+        series = series_cls.from_monday(board_id = board_id,
+                                        api_token = api_token,
+                                        template = template,
+                                        property_column_map = property_column_map,
+                                        connection_kwargs = connection_kwargs,
+                                        connection_callback = connection_callback,
+                                        series_kwargs = series_kwargs)
+
         options = HighchartsGanttOptions(**options_kwargs)
         options.series = [series]
         

@@ -15,6 +15,16 @@ class MondayAuthenticationError(HighchartsValueError):
     pass
 
 
+class MondayBoardNotFoundError(HighchartsValueError):
+    """:exc:`ValueError <python:ValueError>` encountered when an indicated Monday.com board was not found."""
+    pass
+
+
+class MondayItemNotFoundError(HighchartsValueError):
+    """:exc:`ValueError <python:ValueError>` encountered when an indicated Monday.com item (task) was not found."""
+    pass
+
+
 class JIRAAuthenticationError(HighchartsValueError):
     """:exc:`ValueError <python:ValueError>` encountered when trying to call 
     :meth:`GanttSeries.from_jira() <highcharts_gantt.options.series.gantt.GanttSeries.from_jira>` 

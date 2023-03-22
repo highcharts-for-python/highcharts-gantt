@@ -1,5 +1,8 @@
 from typing import Any
+
 from highcharts_core.utility_functions import *
+
+from highcharts_gantt import errors
 
 try:
     import orjson as json
@@ -12,84 +15,7 @@ except ImportError:
         except ImportError:
             import json
 
-from validator_collection import checkers
-
-def format_monday_columns(column_definition, field_name, value):
-    """Format the ``value`` found in ``field_name`` to be human-readable.
-    
-    :param column_definition: The column definition object returned by the Monday.com 
-      API.
-    :type column_definition: :class:`dict <python:dict>`
-    
-    :param field_name: The name of the field to format.
-    :type field_name: :class:`str <python:str>`
-    
-    :param value: The value to format.
-    :type value: any
-    
-    :returns: The formatted value.
-    
-    """
-    def default(column_definition, field_name, value):
-        return value
-    
-    def text_field(column_definition, field_name, value):
-        return json.loads(value)
-    
-    def date_field(column_definition, field_name, value):
-        if value is None:
-            return None
-        value = json.loads(value)['date']
-        
-        return validators.date(value, allow_empty = True)
-        
-    def numeric_field(column_definition, field_name, value):
-        if value is None:
-            return None
-        return json.loads(value)
-    
-    def longtext_field(column_definition, field_name, value):
-        if value is None:
-            return None
-        value = json.loads(value)['text']
-        value = value.strip()
-        if not value:
-            return None
-        
-        return value
-    
-    def color_field(column_definition, field_name, value):
-        if value is None:
-            return None
-        labels = json.loads(column_definition[field_name]['settings_str'])['labels']
-        value = labels.get(str(json.loads(value)['index']))
-    
-        return value
-    
-    def dropdown_field(column_definition, field_name, value):
-        if value is None:
-            return None
-        
-        labels = json.loads(column_definition[field_name]['settings_str'])['labels']
-        label_map = { row['id']:row['name'] for row in labels }
-        
-        values = [label_map.get(id, None) for id in json.loads(value)['ids']]
-        
-        return values
-    
-    type_to_formatter_map = {
-        'color': color_field,
-        'dropdown': dropdown_field,
-        'long-text': longtext_field,
-        'date': date_field,
-        'numeric': numeric_field,
-        'text': text_field
-    }
-    
-    type_ = column_definition[field_name]['type']
-    formatter = type_to_formatter_map.get(type_, default)
-    
-    return formatter(column_definition, field_name, value)
+from validator_collection import checkers, validators
 
 
 def parse_jira_issue(issue,
