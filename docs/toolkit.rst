@@ -79,11 +79,11 @@ project project repo, the lists below provides some high-level information.
 
   .. tab:: Core Visualization Libraries
 
-    * Needed Script Tags ( :issue:`4` ). It would be helpful for **Highcharts Stock for Python**
+    * Needed Script Tags ( :issue:`7` ). It would be helpful for **Highcharts Gantt for Python**
       to support the production of the relevant ``<script/>`` tags needed to include the
       Highcharts JS modules that are needed to render a specific chart (and to *not*
       include the modules that are not needed).
-    * Support for Explicit Defaults ( :issue:`5` ). Currently, Highcharts default values
+    * Support for Explicit Defaults ( :issue:`8` ). Currently, Highcharts default values
       are always presented as :obj:`None <python:None>` in outputs within Python, and are
       stripped from the serialized JSON or JS literal representation of all objects
       (because that way the Highcharts JS library applies its default). While this is
@@ -93,10 +93,15 @@ project project repo, the lists below provides some high-level information.
       Zen of Python spirit that "explicit is better than implicit", there needs to be a
       mechanism for users of the library to *explicitly* request that default values are
       accessible in Python and shown when serializing the chart configuration.
-    * Styled Mode Configuration ( :issue:`6` ). While :term:`styled mode` can currently be
-      enabled in **Highcharts Stock for Python**, the library does not provide for the actual
+    * Styled Mode Configuration ( :issue:`9` ). While :term:`styled mode` can currently be
+      enabled in **Highcharts Gantt for Python**, the library does not provide for the actual
       definition or configuration of Highcharts CSS. It would be good if it did, so that
       all Highcharts-related configuration could be handled within the library.
+    * Additional Monday.com Temlates ( :issue:`4` ). Monday.com features a very flexible / elastic
+      way of structuring its projects (a.k.a. boards). The platform features many different templates
+      for different types of project, and it would be good to add additional templates to 
+      **Highcharts Gantt for Python** to support templates beyond the "default" task management template
+      currently implemented.
 
   .. tab:: Extensions
 

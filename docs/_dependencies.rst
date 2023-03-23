@@ -1,6 +1,6 @@
 .. note::
 
-  **Highcharts Stock for Python** has several types of dependencies:
+  **Highcharts Gantt for Python** has several types of dependencies:
 
     * "hard" dependencies, without which you will not be able to use the library at all,
     * "soft" dependencies, which will not produce errors but which may limit the value you
@@ -16,23 +16,23 @@
     .. warning::
 
       If these hard dependencies are not available in the environment where
-      **Highcharts Stock for Python** is running, then the library will simply not work.
-      Besides `Highcharts Stock <https://www.highcharts.com/products/stock>`__ itself, all
+      **Highcharts Gantt for Python** is running, then the library will simply not work.
+      Besides `Highcharts Gantt <https://www.highcharts.com/products/gantt>`__ itself, all
       of the other hard dependencies are automatically installed when installing
-      **Highcharts Stock for Python** using:
+      **Highcharts Gantt for Python** using:
 
       .. code-block:: bash
 
-        $ pip install highcharts-stock
+        $ pip install highcharts-gantt
 
-    * `Highcharts Stock <https://www.highcharts.com/products/stock/>`__ v.10.2 or higher
+    * `Highcharts Gantt <https://www.highcharts.com/products/gantt/>`__ v.10.3 or higher
 
       .. note::
 
-        Not technically a Python dependency, but obviously **Highcharts Stock for Python**
-        will not work properly if your rendering layer does not leverage Highcharts Stock.
+        Not technically a Python dependency, but obviously **Highcharts Gantt for Python**
+        will not work properly if your rendering layer does not leverage Highcharts Gantt.
 
-    * `highcharts-core <https://core-docs.highchartspython.com>`_ v.1.0.0 or higher
+    * `highcharts-stock <https://stock-docs.highchartspython.com>`_ v.1.0.0 or higher
     * `esprima-python <https://github.com/Kronuz/esprima-python>`_ v.4.0 or higher
     * `requests <https://requests.readthedocs.io/en/latest/>`_ v.2.28 or higher
     * `validator-collection <https://validator-collection.readthedocs.io/en/latest/>`_
@@ -43,7 +43,7 @@
     .. warning::
 
       If these soft dependencies are not available in the environment where
-      **Highcharts Stock for Python** is running, then the library will throw a
+      **Highcharts Gantt for Python** is running, then the library will throw a
       :exc:`HighchartsDependencyError <errors.HighchartsDependencyError>` exception when
       you try to use functionality that relies on them.
 
@@ -51,17 +51,20 @@
       a ``from_pandas()`` method but `pandas <https://pandas.pydata.org/>`_ is not
       installed, you will get an error.
 
-      You can install **Highcharts Stock for Python** with *all* soft dependencies using:
+      You can install **Highcharts Gantt for Python** with *all* soft dependencies using:
 
       .. code-block::
 
-        $ pip install highcharts-stock[soft]
+        $ pip install highcharts-gantt[soft]
 
     * `IPython <https://ipython.org/>`__ v. 8.10 or higher
     * `orjson <https://github.com/ijl/orjson>`__ v.3.7.7 or higher
     * `pandas <https://pandas.pydata.org/>`_ v. 1.3 or higher
     * `pyspark <https://spark.apache.org/docs/latest/api/python/index.html>`_ v.3.3 or
       higher
+    * `asana <https://github.com/Asana/python-asana>`__ v.3.0 or higher
+    * `monday <https://monday.readthedocs.io/en/latest/>`__ v.1.3 or higher
+    * `jira <https://jira.readthedocs.io/>`__ v.3.4 or higher
 
   .. tab:: Developer
 
@@ -73,7 +76,7 @@
 
       .. code-block:: bash
 
-        $ pip install highcharts-stock[dev]
+        $ pip install highcharts-gantt[dev]
 
     * `pytest <https://docs.pytest.org/en/7.1.x/>`_ v.7.1 or higher
     * `pytest-cov <https://pytest-cov.readthedocs.io/en/latest/>`_ v.3.0 or higher
@@ -98,7 +101,7 @@
 
       .. code-block:: bash
 
-        $ pip install highcharts-stock[docs]
+        $ pip install highcharts-gantt[docs]
 
     * `Sphinx <https://www.sphinx-doc.org/en/master/>`_ v.6.1.3 or higher
     * `Sphinx RTD Theme <https://sphinx-themes.org/sample-sites/sphinx-rtd-theme/>`_ v.1.2

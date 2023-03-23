@@ -17,7 +17,7 @@ Installation
 ----------------------
 
 *****************************************************
-Importing Highcharts Stock for Python Objects
+Importing Highcharts Gantt for Python Objects
 *****************************************************
 
 .. include:: using/_importing.rst
@@ -67,6 +67,44 @@ Standardizing Your Charts
 ************************************
 Populating Series with Data
 ************************************
+
+.. tabs::
+
+  .. tab:: w/ ``.from_asana()``
+
+    .. tabs::
+
+      .. tab:: Create a New Series
+
+        .. include:: using/populating_series_data/_new_from_asana.rst
+
+      .. tab:: Update an Existing Series
+
+        .. include:: using/populating_series_data/_load_from_asana.rst
+
+  .. tab:: w/ ``.from_monday()``
+
+    .. tabs::
+
+      .. tab:: Create a New Series
+
+        .. include:: using/populating_series_data/_new_from_monday.rst
+
+      .. tab:: Update an Existing Series
+
+        .. include:: using/populating_series_data/_load_from_monday.rst
+
+  .. tab:: w/ ``.from_jira()``
+
+    .. tabs::
+
+      .. tab:: Create a New Series
+
+        .. include:: using/populating_series_data/_new_from_jira.rst
+
+      .. tab:: Update an Existing Series
+
+        .. include:: using/populating_series_data/_load_from_jira.rst
 
 .. tabs::
 

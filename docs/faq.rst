@@ -9,39 +9,40 @@ Frequently Asked Questions
 -------------------
 
 ************************************************************
-Highcharts Core for Python vs Highcharts Stock for Python
+Highcharts Core for Python vs Highcharts Gantt for Python
 ************************************************************
 
-**What is the difference between Highcharts Core for Python and Highcharts Stock for Python?**
+**What is the difference between Highcharts Core for Python and Highcharts Gantt for Python?**
 
 The `Highcharts Core for Python <https://core-docs.highchartspython.com/>`__ library supports
-`Highcharts JS <https://www.highcharts.com/products/highcharts/>`__, which is the core
+`Highcharts Core <https://www.highcharts.com/products/highcharts/>`__, which is the core
 data visualization library developed by `Highsoft <https://www.highcharts.com/>`__. It
 provides over 60 different visualization types.
 
-**Highcharts Stock for Python** is an *extension* to **Highcharts Core for Python** in the same
-way that `Highcharts Stock <https://www.highcharts.com/products/stock/>`__ is an
-*extension* to `Highcharts JS <https://www.highcharts.com/products/highcharts/>`__. It:
+**Highcharts Gantt for Python** is an *extension* to **Highcharts Core for Python** in the same
+way that `Highcharts Gantt <https://www.highcharts.com/products/gantt/>`__ is an
+*extension* to `Highcharts Core <https://www.highcharts.com/products/highcharts/>`__. Technically,
+it is actually an extension *to an extension*, in that it extends `Highcharts Stock for Python <https://stock-docs.highchartspython.com/>`__ to provide:
 
-  * adds new features (including a :term:`navigator`, interactive :term:`stock tools`, and
-    :term:`scrollbars <scrollbar>`) to supported charts,
-  * adds new series types, including :term:`candlestick`, :term:`HLC`, and :term:`OHLC`
-  * adds support for over 40 :term:`technical indicators <technical indicator>` which you
-    can include in your visualizations
+  * new series types, including :term:`Gantt charts <gantt chart>`
+  * adds support for direct integration with popular project management platforms including 
+    `Asana <https://www.asana.com>`__, `Monday.com <https://www.monday.com>`__, and 
+    `Atlassian JIRA <https://www.atlassian.com>`__
 
 .. tip::
 
-  **Highcharts Stock for Python** *includes* all of the functionality from
-  **Highcharts Core for Python** using the exact same API. As a result, the best practice is
+  **Highcharts Gantt for Python** *includes* all of the functionality from
+  **Highcharts Stock for Python** using the exact same API. As a result, the best practice is
   that if your application needs any of the features included in
   **Highcharts Stock for Python**, just use that library.
 
 **Can I use the Navigator or Stock Tools on non-Stock charts?**
 
 Yes, you can. If you are using the Highcharts Stock :term:`stock tools` or
-:term:`navigator` features, you can still use them with non-stock charts (e.g.
-:class:`Organization <highcharts_stock.options.series.organization.OrganizationSeries>`,
-or :class:`Gauge <highcharts_stock.options.series.gauge.GaugeSeries>`). This can be
+:term:`navigator` features, you can still use them with non-stock charts, including in **Highcharts Gantt**'s 
+:class:`GanttSeries <highcharts_gantt.options.series.gantt.GanttSeries>`__, 
+:class:`OrganizationSeries <highcharts_gantt.options.series.organization.OrganizationSeries>`,
+or :class:`GaugeSeries <highcharts_gantt.options.series.gauge.GaugeSeries>`). This can be
 particualrly useful if you are using custom :term:`stock tools` and want to maintain a
 consistent user experience in your application.
 

@@ -19,7 +19,7 @@ Contributing to Highcharts for Python
   * provide ready to use functions and objects
   * don't force [the user] to subclass unless there's a *very good* reason
   * include the batteries: make easy tasks easy
-  * are simple to use but not simplistic: make hard tasks possible
+  * simple to use but not simplistic: make hard tasks possible
   * leverage the Python data model to:
 
     * provide objects that behave as you expect
@@ -34,7 +34,7 @@ Contributing to Highcharts for Python
 Design Philosophy
 *************************
 
-**Highcharts Stock for Python** is meant to be a "beautiful" and "usable" library. That
+**Highcharts Gantt for Python** is meant to be a "beautiful" and "usable" library. That
 means that it should offer an idiomatic API that:
 
 * works out of the box as intended,
@@ -229,7 +229,7 @@ Code Style: Python vs JavaScript Naming Conventions
 
 .. include:: using/_code_style_naming_conventions.rst
 
-Standard Methods: :class:`HighchartsMeta <highcharts_stock.metaclasses.HighchartsMeta>`
+Standard Methods: :class:`HighchartsMeta <highcharts_gantt.metaclasses.HighchartsMeta>`
 ============================================================================================
 
 Every single object supported by the Highcharts JS API corresponds to a Python class in
@@ -294,10 +294,10 @@ inheritance, we can reduce the number of properties from about 15,000 to about 1
 bad!
 
 However, this significant reduction *does* require us to use multiple inheritance in some
-cases, paritcularly in the :mod:`.options.series <highcharts_stock.options.series>`
+cases, paritcularly in the :mod:`.options.series <highcharts_gantt.options.series>`
 classes (which inherit from both the corresponding type-specific options in
-:mod:`.options.plot_options <highcharts_stock.options.plot_options>`) *and* from the
-generic :class:`SeriesBase <highcharts_stock.options.series.base.SeriesBase>` class).
+:mod:`.options.plot_options <highcharts_gantt.options.plot_options>`) *and* from the
+generic :class:`SeriesBase <highcharts_gantt.options.series.base.SeriesBase>` class).
 
 To solve the :term:`diamond of death` problem, we implemented a number of private
 helper methods to assist in navigating the MRO:
@@ -308,20 +308,20 @@ helper methods to assist in navigating the MRO:
 
   * - Method / Function
     - Purpose
-  * - :func:`.utility_functions.get_remaining_mro() <highcharts_stock.utility_functions.get_remaining_mro>`
+  * - :func:`.utility_functions.get_remaining_mro() <highcharts_gantt.utility_functions.get_remaining_mro>`
     - Retrieve the class objects that are still to be traversed for a given class' MRO.
-  * - :func:`.utility_functions.mro__to_untrimmed_dict() <highcharts_stock.utility_functions.mro__to_untrimmed_dict>`
+  * - :func:`.utility_functions.mro__to_untrimmed_dict() <highcharts_gantt.utility_functions.mro__to_untrimmed_dict>`
     - Retrieve a consolidated :term:`untrimmed` :class:`dict <python:dict>` representation
       from all ancestors of a given class.
-  * - :meth:`HighchartsMeta._untrimmed_mro_ancestors() <highcharts_stock.metaclasses.HighchartsMeta._untrimmed_mro_ancestors>`
+  * - :meth:`HighchartsMeta._untrimmed_mro_ancestors() <highcharts_gantt.metaclasses.HighchartsMeta._untrimmed_mro_ancestors>`
     - Method which consolidates the results of
-      :meth:`_to_untrimmed_dict() <highcharts_stock.metaclasses.HighchartsMeta._to_untrimmed_dict>`
+      :meth:`_to_untrimmed_dict() <highcharts_gantt.metaclasses.HighchartsMeta._to_untrimmed_dict>`
       from a given instance's parent class into a single :class:`dict <python:dict>`.
-  * - :meth:`HighchartsMeta._to_untrimmed_dict() <highcharts_stock.metaclasses.HighchartsMeta._to_untrimmed_dict>`
+  * - :meth:`HighchartsMeta._to_untrimmed_dict() <highcharts_gantt.metaclasses.HighchartsMeta._to_untrimmed_dict>`
     - Generates an :term:`untrimmed` :class:`dict <python:dict>` representation of the
       instance at its lowest level in the class hierarchy. Think of this as the
       "botom of the ladder", with other methods (notably
-      :meth:`_untrimmed_mro_ancestors() <highcharts_stock.metaclasses.HighchartsMeta._untrimmed_mro_ancestors>`)
+      :meth:`_untrimmed_mro_ancestors() <highcharts_gantt.metaclasses.HighchartsMeta._untrimmed_mro_ancestors>`)
       being used to generate corresponding :class:`dict <python:dict>` from other rungs on
       the ladder.
 
@@ -358,21 +358,21 @@ Preparing Your Development Environment
 
 In order to prepare your local development environment, you should:
 
-#. Fork the `Git repository <https://github.com/highcharts-for-python/highcharts-stock>`_.
+#. Fork the `Git repository <https://github.com/highcharts-for-python/highcharts-gantt>`_.
 #. Clone your forked repository.
 #. Set up a virtual environment (optional).
 #. Install development dependencies:
 
   .. code-block:: bash
 
-    highcharts-stock/ $ pip install -r requirements.dev.txt
+    highcharts-gantt/ $ pip install -r requirements.dev.txt
 
 And you should be good to go!
 
 Ideas and Feature Requests
 ============================
 
-Check for open `issues <https://github.com/highcharts-for-python/highcharts-stock/issues>`_
+Check for open `issues <https://github.com/highcharts-for-python/highcharts-gantt/issues>`_
 or create a new issue to start a discussion around a bug or feature idea.
 
 Testing
@@ -428,7 +428,7 @@ available at:
 
   .. code-block:: bash
 
-    highcharts-stock/docs/_build/html/index.html
+    highcharts-gantt/docs/_build/html/index.html
 
 .. note::
 
@@ -438,7 +438,7 @@ available at:
 Contributors
 ================
 
-Thanks to everyone who helps make **Highcharts Stock for Python** useful:
+Thanks to everyone who helps make **Highcharts Gantt for Python** useful:
 
 .. include:: _contributors.rst
 

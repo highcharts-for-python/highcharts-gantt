@@ -1,7 +1,7 @@
-Since `Highcharts Stock <https://www.highcharts.com/product/stock/>`_ is one of the most
-popular high-end time-series data visualization libraries for JavaScript, there are a
+Since `Highcharts Gantt <https://www.highcharts.com/product/gantt/>`_ is one of the most
+popular high-end Gantt visualization libraries for JavaScript, there are a
 variety of alternative ways of working with it in Python. We have an obvious bias towards
-**Highcharts Stock for Python**, but it may be useful to compare it against some
+**Highcharts Gantt for Python**, but it may be useful to compare it against some
 commonly-used alternatives:
 
 .. tabs::
@@ -10,7 +10,7 @@ commonly-used alternatives:
 
     By far, this is the most common approach to integrating Highcharts into your Python
     code. As a developer, you know that your JavaScript front-end will be using Highcharts
-    Stock. So you work in your Python backend to deliver the data to your front-end that
+    Gantt. So you work in your Python backend to deliver the data to your front-end that
     your front-end will need. Simple, right? Often, more complicated than one might think.
 
     There are many patterns for rolling your own Highcharts + Python implementation, but
@@ -61,7 +61,7 @@ commonly-used alternatives:
     to do". So they turn to Highcharts alternatives that are more Python-friendly, like
     `plotly <https://plotly.com/python/>`_.
 
-    **Highcharts for Python** and its **Highcharts Stock for Python** extension are
+    **Highcharts for Python** and its **Highcharts Gantt for Python** extension are
     designed to eliminate this pain.
 
     .. tip::
@@ -74,11 +74,11 @@ commonly-used alternatives:
       using Highcharts. But anything more robust than that is going to prove "hacky" and
       incredibly difficult to maintain.
 
-      Which is why I wrote **Highcharts for Python** and **Highcharts Stock for Python**.
+      Which is why I wrote **Highcharts for Python** and **Highcharts Gantt for Python**.
 
   .. tab:: panel-highcharts
 
-    The `panel-highcharts <https://pypi.org/project/panel-highcharts/>`_ library is -
+    The `panel-highcharts <https://pypi.org/project/panel-highcharts/>`__ library is -
     honestly - fantastic. It is a excellent wrapper for the Highcharts JS library to
     enable exploratory data analysis (EDA) in Jupyter Notebooks or in Holoviz web
     applications.

@@ -37,7 +37,7 @@ to visualize your data.
     .. note::
 
       The visualizations below are provided by **Highcharts for Python** and
-      `Highcharts JS <https://www.highcharts.com/products/highcharts/>`__. They are also
+      `Highcharts Core <https://www.highcharts.com/products/highcharts/>`__. They are also
       available in the other libraries within the toolkit.
 
     .. list-table::
