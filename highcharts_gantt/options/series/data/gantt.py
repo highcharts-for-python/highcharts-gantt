@@ -652,8 +652,8 @@ class GanttData(DataBase):
 
         :param connection_kwargs: Set of keyword arugments to supply to the   
           :class:`DataConnection <highcharts_gantt.options.series.data.connect.DataConnection>`
-          constructor, besides the :meth:`.to <highcharts_gantt.options.series.data.connect.DataConnection.to>` property which is derived from the task. Defaults
-          to :obj:`None <python:None>`
+          constructor, besides the :meth:`.to <highcharts_gantt.options.series.data.connect.DataConnection.to>` 
+          property which is derived from the task. Defaults to :obj:`None <python:None>`
         :type connection_kwargs: :class:`dict <python:dict>` or 
           :obj:`None <python:None>`
 
@@ -667,30 +667,11 @@ class GanttData(DataBase):
         :raises MondayTemplateError: if ``template`` is not :obj:`None <python:None>`, 
           but is not supported
         """
-        if connection_callback and not checkers.is_callable(connection_callback):
-            raise errors.HighchartsValueError('connection_callback - if supplied - '
-                                              'must be callable.')
-
-        connection_kwargs = validators.dict(connection_kwargs,
-                                            allow_empty = True) or {}
-        
         try:
             data_point_kwargs = parse_jira_issue(issue)
-        except errors.DuplicateJIRAIssueError:
-            return
+        except errors.JIRADuplicateIssueError:
+            return None
         
-        dependencies = []
-        connections = data_point_kwargs.get('dependency', None)
-        for item in connections:
-            if not item:
-                continue
-            if isinstance(item, dict):
-                as_obj = DataConnection(**item)
-                dependencies.append(as_obj)
-            else:
-                dependencies.append(item)
-        
-        data_point_kwargs['dependency'] = dependencies
         data_point = cls(**data_point_kwargs)
         
         return data_point

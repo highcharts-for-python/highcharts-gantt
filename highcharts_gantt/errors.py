@@ -25,13 +25,6 @@ class MondayItemNotFoundError(HighchartsValueError):
     pass
 
 
-class JIRAAuthenticationError(HighchartsValueError):
-    """:exc:`ValueError <python:ValueError>` encountered when trying to call 
-    :meth:`GanttSeries.from_jira() <highcharts_gantt.options.series.gantt.GanttSeries.from_jira>` 
-    with improperly configured authentication."""
-    pass
-
-
 class MondayTemplateError(HighchartsValueError):
     """:exc:`ValueError <python:ValueError>` encountered when attempting to apply a 
     Monday.com template that is not supported by **Highcharts Gantt for Python**.
@@ -39,7 +32,14 @@ class MondayTemplateError(HighchartsValueError):
     pass
 
 
-class DuplicateJIRAIssueError(HighchartsValueError):
+class JIRAAuthenticationError(HighchartsValueError):
+    """:exc:`ValueError <python:ValueError>` encountered when trying to call 
+    :meth:`GanttSeries.from_jira() <highcharts_gantt.options.series.gantt.GanttSeries.from_jira>` 
+    with improperly configured authentication."""
+    pass
+
+
+class JIRADuplicateIssueError(HighchartsValueError):
     """:exc:`ValueError <python:ValueError>` encountered when encountering a JIRA issue 
     that is a duplicate of another issue."""
     pass

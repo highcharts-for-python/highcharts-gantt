@@ -628,23 +628,21 @@ class GanttSeries(SeriesBase, GanttOptions):
         if not jira_client:
             client_kwargs = validators.dict(client_kwargs, allow_empty = True) or {}
             if not server:
-                server = os.getenv('HIGHCHARTS_JIRA_SERVER', 
-                                  client_kwargs.get('server', 
-                                                    'https://jira.atlasian.com'))
+                server = os.getenv('HIGHCHARTS_JIRA_SERVER',
+                                   client_kwargs.get('server', 'https://jira.atlassian.com'))
 
             client_kwargs['server'] = validators.url(server, allow_special_ips = True)
 
             project_id = validators.string(project_id)
 
+            username = validators.string(username, allow_empty = True) \
+                or os.getenv('HIGHCHARTS_JIRA_USERNAME', None)
+            password_or_token = validators.string(password_or_token, allow_empty = True) \
+                or os.getenv('HIGHCHARTS_JIRA_TOKEN', None)
+
             use_basic = oauth_dict is None and username is not None
             use_token = oauth_dict is None and username is None
-
-            username = validators.string(username, allow_empty = True) \
-                      or os.getenv('HIGHCHARTS_JIRA_USERNAME', None)
-            password_or_token = validators.string(password_or_token, 
-                                                  allow_empty = True) \
-                                or os.getenv('HIGHCHARTS_JIRA_TOKEN', None)
-
+            
             if use_basic:
                 client_kwargs['basic_auth'] = (username, password_or_token)
             elif use_token:
@@ -655,16 +653,23 @@ class GanttSeries(SeriesBase, GanttOptions):
             else:
                 raise errors.JIRAAuthenticationError('no authentication details '
                                                      'provided')
+            try:
+                jira_client = jira.JIRA(**client_kwargs)
+            except jira.JIRAError as error:
+                if error.status_code == 401:
+                    raise errors.JIRAAuthenticationError('JIRA failed to authenticate')
+                else:
+                    raise error
         else:
             if not isinstance(jira_client, jira.client.JIRA):
                 raise errors.HighchartsValueError(f'jira_client must be a valid '
                                                   f'jira.client.JIRA instance. Was: '
                                                   f'{jira_client.__class__.__name__}')
-              
+
         if not jira_client._session:
             raise errors.JIRAAuthenticationError('jira_client is not authenticated')
-        
-        if jql and f'project = {project_id}' not in jql:
+
+        if jql and f'project = {project_id}' not in jql and f'project={project_id}' not in jql:
             raise errors.HighchartsValueError(f'jql contains a project reference '
                                                 f'that does not match project_id '
                                                 f'("{project_id}").')    
@@ -676,16 +681,16 @@ class GanttSeries(SeriesBase, GanttOptions):
         issues = jira_client.search_issues(jql)
         if issues.total > len(issues):
             issues.extend(jira_client.search_issues(jql, startAt = len(issues)))
-        
+
         data_points_with_none = [
             GanttData.from_jira(x,
                                 connection_kwargs = connection_kwargs,
                                 connection_callback = connection_callback)
             for x in issues
         ]
-        
+
         data_points = [x for x in data_points_with_none if x is not None]
-        
+
         series_kwargs['data'] = data_points
 
         return cls(**series_kwargs)
