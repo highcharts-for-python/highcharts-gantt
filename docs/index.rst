@@ -97,7 +97,7 @@ Why Highcharts for Python?
 
 Odds are you are aware of
 `Highcharts Gantt <https://www.highcharts.com/products/gantt/>`__. If not, why not? Built as an extension to 
-`Highcharts Core <https://www.highcharts.com/products/highcharts/`__, it is a powerful JavaScript data visualization 
+`Highcharts Core <https://www.highcharts.com/products/highcharts/>`__, it is a powerful JavaScript data visualization 
 library for rendering rich :term:`Gantt charts <Gantt chart>`.
 
 If you are building a web or mobile app/dashboard that will be
