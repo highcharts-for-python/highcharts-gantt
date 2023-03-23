@@ -9,16 +9,24 @@ job:
     #    - TOXENV=py39
     - python: "3.10"
       dist: focal
-      env: TOXENV=py310
+      env: 
+        - TOXENV=py310
+        - YARN_GPG=no
     - python: "3.11"
       dist: bionic
-      env: TOXENV=py311
+      env: 
+        - TOXENV=py311
+        - YARN_GPG=no
     - python: "3.10"
       dist: focal
-      env: TOXENV=coverage
+      env: 
+        - TOXENV=coverage
+        - YARN_GPG=no
     - python: "3.10"
       dist: focal
-      env: TOXENV=docs
+      env: 
+        - TOXENV=docs
+        - YARN_GPG=no
 os:
   - linux
 git:
@@ -29,6 +37,6 @@ install:
 before_script:
   - curl -Os --retry 5 https://uploader.codecov.io/latest/linux/codecov
   - chmod +x codecov
-script: tox -- -v -nauto 
+script: tox -- -v -n auto
 after_success:
   - if [[ -e .coverage ]]; then ./codecov -t $CODECOV_TOKEN; fi
