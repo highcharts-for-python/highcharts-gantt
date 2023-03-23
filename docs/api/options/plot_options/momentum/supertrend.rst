@@ -1,5 +1,5 @@
 #################################################################################
-:mod:`.supertrend <highcharts_stock.options.plot_options.momentum.supertrend>`
+:mod:`.supertrend <highcharts_gantt.options.plot_options.momentum.supertrend>`
 #################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 -------------------------
 
-.. module:: highcharts_stock.options.plot_options.momentum.supertrend
+.. module:: highcharts_gantt.options.plot_options.momentum.supertrend
 
 ********************************************************************************************************************
-class: :class:`SupertrendOptions <highcharts_stock.options.plot_options.momentum.supertrend.SupertrendOptions>`
+class: :class:`SupertrendOptions <highcharts_gantt.options.plot_options.momentum.supertrend.SupertrendOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: SupertrendOptions
@@ -22,7 +22,7 @@ class: :class:`SupertrendOptions <highcharts_stock.options.plot_options.momentum
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: SupertrendOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`SupertrendOptions <highcharts_stock.options.plot_options.momentum
 --------------
 
 ************************************************************************************************************************
-class: :class:`SupertrendParameters <highcharts_stock.options.plot_options.momentum.supertrend.SupertrendParameters>`
+class: :class:`SupertrendParameters <highcharts_gantt.options.plot_options.momentum.supertrend.SupertrendParameters>`
 ************************************************************************************************************************
 
 .. autoclass:: SupertrendParameters
@@ -40,7 +40,7 @@ class: :class:`SupertrendParameters <highcharts_stock.options.plot_options.momen
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: SupertrendParameters
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -48,7 +48,7 @@ class: :class:`SupertrendParameters <highcharts_stock.options.plot_options.momen
 --------------
 
 **************************************************************************************************************************
-class: :class:`SupertrendLineOptions <highcharts_stock.options.plot_options.momentum.supertrend.SupertrendLineOptions>`
+class: :class:`SupertrendLineOptions <highcharts_gantt.options.plot_options.momentum.supertrend.SupertrendLineOptions>`
 **************************************************************************************************************************
 
 .. autoclass:: SupertrendLineOptions
@@ -58,7 +58,7 @@ class: :class:`SupertrendLineOptions <highcharts_stock.options.plot_options.mome
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: SupertrendLineOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

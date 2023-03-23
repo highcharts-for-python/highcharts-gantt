@@ -1,5 +1,5 @@
 ########################################################################################################################
-:mod:`.time_cycles <highcharts_stock.options.annotations.stock_tools.type_options.time_cycles>`
+:mod:`.time_cycles <highcharts_gantt.options.annotations.stock_tools.type_options.time_cycles>`
 ########################################################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.annotations.stock_tools.type_options.time_cycles
+.. module:: highcharts_gantt.options.annotations.stock_tools.type_options.time_cycles
 
 *********************************************************************************************************************************************************
-class: :class:`TimeCyclesTypeOptions <highcharts_stock.options.annotations.stock_tools.type_options.time_cycles.TimeCyclesTypeOptions>`
+class: :class:`TimeCyclesTypeOptions <highcharts_gantt.options.annotations.stock_tools.type_options.time_cycles.TimeCyclesTypeOptions>`
 *********************************************************************************************************************************************************
 
 .. autoclass:: TimeCyclesTypeOptions
@@ -22,7 +22,7 @@ class: :class:`TimeCyclesTypeOptions <highcharts_stock.options.annotations.stock
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: TimeCyclesTypeOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

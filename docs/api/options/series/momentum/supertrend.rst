@@ -1,5 +1,5 @@
 #################################################################################
-:mod:`.supertrend <highcharts_stock.options.series.momentum.supertrend>`
+:mod:`.supertrend <highcharts_gantt.options.series.momentum.supertrend>`
 #################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 -------------------------
 
-.. module:: highcharts_stock.options.series.momentum.supertrend
+.. module:: highcharts_gantt.options.series.momentum.supertrend
 
 ********************************************************************************************************************
-class: :class:`SupertrendSeries <highcharts_stock.options.series.momentum.supertrend.SupertrendSeries>`
+class: :class:`SupertrendSeries <highcharts_gantt.options.series.momentum.supertrend.SupertrendSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: SupertrendSeries
@@ -22,7 +22,7 @@ class: :class:`SupertrendSeries <highcharts_stock.options.series.momentum.supert
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: SupertrendSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

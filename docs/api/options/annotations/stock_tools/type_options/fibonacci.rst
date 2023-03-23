@@ -1,5 +1,5 @@
 ########################################################################################################################
-:mod:`.fibonacci <highcharts_stock.options.annotations.stock_tools.type_options.fibonacci>`
+:mod:`.fibonacci <highcharts_gantt.options.annotations.stock_tools.type_options.fibonacci>`
 ########################################################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.annotations.stock_tools.type_options.fibonacci
+.. module:: highcharts_gantt.options.annotations.stock_tools.type_options.fibonacci
 
 ************************************************************************************************************************************
-class: :class:`FibonacciTypeOptions <highcharts_stock.options.annotations.stock_tools.type_options.fibonacci.FibonacciTypeOptions>`
+class: :class:`FibonacciTypeOptions <highcharts_gantt.options.annotations.stock_tools.type_options.fibonacci.FibonacciTypeOptions>`
 ************************************************************************************************************************************
 
 .. autoclass:: FibonacciTypeOptions
@@ -22,7 +22,7 @@ class: :class:`FibonacciTypeOptions <highcharts_stock.options.annotations.stock_
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: FibonacciTypeOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`FibonacciTypeOptions <highcharts_stock.options.annotations.stock_
 -----------------------
 
 *********************************************************************************************************************************************************
-class: :class:`FibonacciTimeZonesTypeOptions <highcharts_stock.options.annotations.stock_tools.type_options.fibonacci.FibonacciTimeZonesTypeOptions>`
+class: :class:`FibonacciTimeZonesTypeOptions <highcharts_gantt.options.annotations.stock_tools.type_options.fibonacci.FibonacciTimeZonesTypeOptions>`
 *********************************************************************************************************************************************************
 
 .. autoclass:: FibonacciTimeZonesTypeOptions
@@ -40,7 +40,7 @@ class: :class:`FibonacciTimeZonesTypeOptions <highcharts_stock.options.annotatio
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: FibonacciTimeZonesTypeOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

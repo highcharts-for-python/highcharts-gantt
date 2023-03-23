@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.aroon <highcharts_stock.options.series.aroon>`
+:mod:`.aroon <highcharts_gantt.options.series.aroon>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.aroon
+.. module:: highcharts_gantt.options.series.aroon
 
 ********************************************************************************************************************
-class: :class:`AroonSeries <highcharts_stock.options.series.aroon.AroonSeries>`
+class: :class:`AroonSeries <highcharts_gantt.options.series.aroon.AroonSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: AroonSeries
@@ -22,7 +22,7 @@ class: :class:`AroonSeries <highcharts_stock.options.series.aroon.AroonSeries>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: AroonSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

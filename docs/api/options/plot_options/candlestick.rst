@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.candlestick <highcharts_stock.options.plot_options.candlestick>`
+:mod:`.candlestick <highcharts_gantt.options.plot_options.candlestick>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.plot_options.candlestick
+.. module:: highcharts_gantt.options.plot_options.candlestick
 
 ********************************************************************************************************************
-class: :class:`CandlestickOptions <highcharts_stock.options.plot_options.candlestick.CandlestickOptions>`
+class: :class:`CandlestickOptions <highcharts_gantt.options.plot_options.candlestick.CandlestickOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: CandlestickOptions
@@ -22,7 +22,7 @@ class: :class:`CandlestickOptions <highcharts_stock.options.plot_options.candles
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: CandlestickOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`CandlestickOptions <highcharts_stock.options.plot_options.candles
 -------------------
 
 **********************************************************************************************************************
-class: :class:`HollowCandlestickOptions <highcharts_stock.options.plot_options.candlestick.HollowCandlestickOptions>`
+class: :class:`HollowCandlestickOptions <highcharts_gantt.options.plot_options.candlestick.HollowCandlestickOptions>`
 **********************************************************************************************************************
 
 .. autoclass:: HollowCandlestickOptions
@@ -40,7 +40,7 @@ class: :class:`HollowCandlestickOptions <highcharts_stock.options.plot_options.c
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: HollowCandlestickOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -48,7 +48,7 @@ class: :class:`HollowCandlestickOptions <highcharts_stock.options.plot_options.c
 -------------------
 
 ********************************************************************************************************************
-class: :class:`HeikinAshiOptions <highcharts_stock.options.plot_options.candlestick.HeikinAshiOptions>`
+class: :class:`HeikinAshiOptions <highcharts_gantt.options.plot_options.candlestick.HeikinAshiOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: HeikinAshiOptions
@@ -58,7 +58,7 @@ class: :class:`HeikinAshiOptions <highcharts_stock.options.plot_options.candlest
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: HeikinAshiOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

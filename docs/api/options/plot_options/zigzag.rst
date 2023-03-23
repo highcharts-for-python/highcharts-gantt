@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.zigzag <highcharts_stock.options.plot_options.zigzag>`
+:mod:`.zigzag <highcharts_gantt.options.plot_options.zigzag>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.plot_options.zigzag
+.. module:: highcharts_gantt.options.plot_options.zigzag
 
 ********************************************************************************************************************
-class: :class:`ZigZagOptions <highcharts_stock.options.plot_options.zigzag.ZigZagOptions>`
+class: :class:`ZigZagOptions <highcharts_gantt.options.plot_options.zigzag.ZigZagOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: ZigZagOptions
@@ -22,7 +22,7 @@ class: :class:`ZigZagOptions <highcharts_stock.options.plot_options.zigzag.ZigZa
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ZigZagOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`ZigZagOptions <highcharts_stock.options.plot_options.zigzag.ZigZa
 -------------------
 
 ********************************************************************************************************************
-class: :class:`ZigZagParameters <highcharts_stock.options.plot_options.zigzag.ZigZagParameters>`
+class: :class:`ZigZagParameters <highcharts_gantt.options.plot_options.zigzag.ZigZagParameters>`
 ********************************************************************************************************************
 
 .. autoclass:: ZigZagParameters
@@ -40,7 +40,7 @@ class: :class:`ZigZagParameters <highcharts_stock.options.plot_options.zigzag.Zi
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ZigZagParameters
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

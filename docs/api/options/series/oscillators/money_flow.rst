@@ -1,5 +1,5 @@
 ###################################################################################
-:mod:`.money_flow <highcharts_stock.options.series.oscillators.money_flow>`
+:mod:`.money_flow <highcharts_gantt.options.series.oscillators.money_flow>`
 ###################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 -------------------------
 
-.. module:: highcharts_stock.options.series.oscillators.money_flow
+.. module:: highcharts_gantt.options.series.oscillators.money_flow
 
 ********************************************************************************************************************
-class: :class:`MFISeries <highcharts_stock.options.series.oscillators.money_flow.MFISeries>`
+class: :class:`MFISeries <highcharts_gantt.options.series.oscillators.money_flow.MFISeries>`
 ********************************************************************************************************************
 
 .. autoclass:: MFISeries
@@ -22,7 +22,7 @@ class: :class:`MFISeries <highcharts_stock.options.series.oscillators.money_flow
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: MFISeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`MFISeries <highcharts_stock.options.series.oscillators.money_flow
 -------------------------
 
 ********************************************************************************************************************
-class: :class:`CMFSeries <highcharts_stock.options.series.oscillators.money_flow.CMFSeries>`
+class: :class:`CMFSeries <highcharts_gantt.options.series.oscillators.money_flow.CMFSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: CMFSeries
@@ -40,7 +40,7 @@ class: :class:`CMFSeries <highcharts_stock.options.series.oscillators.money_flow
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: CMFSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

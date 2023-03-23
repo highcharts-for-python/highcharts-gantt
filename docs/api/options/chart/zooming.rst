@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.zooming <highcharts_stock.options.chart.zooming>`
+:mod:`.zooming <highcharts_gantt.options.chart.zooming>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.chart.zooming
+.. module:: highcharts_gantt.options.chart.zooming
 
 ********************************************************************************************************************
-class: :class:`ZoomingOptions <highcharts_stock.options.chart.zooming.ZoomingOptions>`
+class: :class:`ZoomingOptions <highcharts_gantt.options.chart.zooming.ZoomingOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: ZoomingOptions
@@ -22,7 +22,7 @@ class: :class:`ZoomingOptions <highcharts_stock.options.chart.zooming.ZoomingOpt
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ZoomingOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

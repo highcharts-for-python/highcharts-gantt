@@ -1,5 +1,5 @@
 ################################################################
-:mod:`.stock_tools <highcharts_stock.options.stock_tools>`
+:mod:`.stock_tools <highcharts_gantt.options.stock_tools>`
 ################################################################
 
 .. contents:: Module Contents
@@ -14,10 +14,10 @@
 
 -------------------------
 
-.. module:: highcharts_stock.options.stock_tools
+.. module:: highcharts_gantt.options.stock_tools
 
 ********************************************************************************************************************
-class: :class:`StockTools <highcharts_stock.options.stock_tools.StockTools>`
+class: :class:`StockTools <highcharts_gantt.options.stock_tools.StockTools>`
 ********************************************************************************************************************
 
 .. autoclass:: StockTools
@@ -27,7 +27,7 @@ class: :class:`StockTools <highcharts_stock.options.stock_tools.StockTools>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: StockTools
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -35,7 +35,7 @@ class: :class:`StockTools <highcharts_stock.options.stock_tools.StockTools>`
 -------------------------
 
 ********************************************************************************************************************
-class: :class:`StockToolsGUI <highcharts_stock.options.stock_tools.StockToolsGUI>`
+class: :class:`StockToolsGUI <highcharts_gantt.options.stock_tools.StockToolsGUI>`
 ********************************************************************************************************************
 
 .. autoclass:: StockToolsGUI
@@ -45,7 +45,7 @@ class: :class:`StockToolsGUI <highcharts_stock.options.stock_tools.StockToolsGUI
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: StockToolsGUI
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -62,18 +62,18 @@ Sub-components
 
   * - Module
     - Classes / Functions
-  * - :mod:`.options.stock_tools <highcharts_stock.options.stock_tools>`
-    - :class:`StockTools <highcharts_stock.options.stock_tools.StockTools>`
-      :class:`StockToolsGUI <highcharts_stock.options.stock_tools.StockToolsGUI>`
-  * - :mod:`.options.stock_tools.definitions <highcharts_stock.options.stock_tools.definitions>`
-    - :class:`StockToolsDefinitions <highcharts_stock.options.stock_tools.definitions.StockToolsDefinitions>`
-      :class:`AdvancedDefinitions <highcharts_stock.options.stock_tools.definitions.AdvancedDefinitions>`
-      :class:`CrookedLinesDefinitions <highcharts_stock.options.stock_tools.definitions.CrookedLinesDefinitions>`
-      :class:`FlagsDefinitions <highcharts_stock.options.stock_tools.definitions.FlagsDefinitions>`
-      :class:`LinesDefinitions <highcharts_stock.options.stock_tools.definitions.LinesDefinitions>`
-      :class:`MeasureDefinitions <highcharts_stock.options.stock_tools.definitions.MeasureDefinitions>`
-      :class:`SimpleShapesDefinitions <highcharts_stock.options.stock_tools.definitions.SimpleShapesDefinitions>`
-      :class:`TypeChangeDefinitions <highcharts_stock.options.stock_tools.definitions.TypeChangeDefinitions>`
-      :class:`VerticalLabelsDefinitions <highcharts_stock.options.stock_tools.definitions.VerticalLabelsDefinitions>`
-      :class:`ZoomChangeDefinitions <highcharts_stock.options.stock_tools.definitions.ZoomChangeDefinitions>`
-      :class:`Definition <highcharts_stock.options.stock_tools.definitions.Definition>`
+  * - :mod:`.options.stock_tools <highcharts_gantt.options.stock_tools>`
+    - :class:`StockTools <highcharts_gantt.options.stock_tools.StockTools>`
+      :class:`StockToolsGUI <highcharts_gantt.options.stock_tools.StockToolsGUI>`
+  * - :mod:`.options.stock_tools.definitions <highcharts_gantt.options.stock_tools.definitions>`
+    - :class:`StockToolsDefinitions <highcharts_gantt.options.stock_tools.definitions.StockToolsDefinitions>`
+      :class:`AdvancedDefinitions <highcharts_gantt.options.stock_tools.definitions.AdvancedDefinitions>`
+      :class:`CrookedLinesDefinitions <highcharts_gantt.options.stock_tools.definitions.CrookedLinesDefinitions>`
+      :class:`FlagsDefinitions <highcharts_gantt.options.stock_tools.definitions.FlagsDefinitions>`
+      :class:`LinesDefinitions <highcharts_gantt.options.stock_tools.definitions.LinesDefinitions>`
+      :class:`MeasureDefinitions <highcharts_gantt.options.stock_tools.definitions.MeasureDefinitions>`
+      :class:`SimpleShapesDefinitions <highcharts_gantt.options.stock_tools.definitions.SimpleShapesDefinitions>`
+      :class:`TypeChangeDefinitions <highcharts_gantt.options.stock_tools.definitions.TypeChangeDefinitions>`
+      :class:`VerticalLabelsDefinitions <highcharts_gantt.options.stock_tools.definitions.VerticalLabelsDefinitions>`
+      :class:`ZoomChangeDefinitions <highcharts_gantt.options.stock_tools.definitions.ZoomChangeDefinitions>`
+      :class:`Definition <highcharts_gantt.options.stock_tools.definitions.Definition>`

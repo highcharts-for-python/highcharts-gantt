@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.no_data <highcharts_stock.options.no_data>`
+:mod:`.no_data <highcharts_gantt.options.no_data>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.no_data
+.. module:: highcharts_gantt.options.no_data
 
 ********************************************************************************************************************
-class: :class:`NoData <highcharts_stock.options.no_data.NoData>`
+class: :class:`NoData <highcharts_gantt.options.no_data.NoData>`
 ********************************************************************************************************************
 
 .. autoclass:: NoData
@@ -22,7 +22,7 @@ class: :class:`NoData <highcharts_stock.options.no_data.NoData>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: NoData
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

@@ -1,5 +1,5 @@
 #########################################################################
-:mod:`.stock_tools <highcharts_stock.options.annotations.stock_tools>`
+:mod:`.stock_tools <highcharts_gantt.options.annotations.stock_tools>`
 #########################################################################
 
 .. contents:: Module Contents
@@ -14,10 +14,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.annotations.stock_tools
+.. module:: highcharts_gantt.options.annotations.stock_tools
 
 ************************************************************************************************************************************
-class: :class:`CrookedLineAnnotation <highcharts_stock.options.annotations.stock_tools.CrookedLineAnnotation>`
+class: :class:`CrookedLineAnnotation <highcharts_gantt.options.annotations.stock_tools.CrookedLineAnnotation>`
 ************************************************************************************************************************************
 
 .. autoclass:: CrookedLineAnnotation
@@ -27,7 +27,7 @@ class: :class:`CrookedLineAnnotation <highcharts_stock.options.annotations.stock
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: CrookedLineAnnotation
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -35,7 +35,7 @@ class: :class:`CrookedLineAnnotation <highcharts_stock.options.annotations.stock
 -----------------------
 
 ************************************************************************************************************************************
-class: :class:`ElliottWaveAnnotation <highcharts_stock.options.annotations.stock_tools.ElliottWaveAnnotation>`
+class: :class:`ElliottWaveAnnotation <highcharts_gantt.options.annotations.stock_tools.ElliottWaveAnnotation>`
 ************************************************************************************************************************************
 
 .. autoclass:: ElliottWaveAnnotation
@@ -45,7 +45,7 @@ class: :class:`ElliottWaveAnnotation <highcharts_stock.options.annotations.stock
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ElliottWaveAnnotation
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -53,7 +53,7 @@ class: :class:`ElliottWaveAnnotation <highcharts_stock.options.annotations.stock
 -----------------------
 
 ************************************************************************************************************************************
-class: :class:`FibonacciAnnotation <highcharts_stock.options.annotations.stock_tools.FibonacciAnnotation>`
+class: :class:`FibonacciAnnotation <highcharts_gantt.options.annotations.stock_tools.FibonacciAnnotation>`
 ************************************************************************************************************************************
 
 .. autoclass:: FibonacciAnnotation
@@ -63,7 +63,7 @@ class: :class:`FibonacciAnnotation <highcharts_stock.options.annotations.stock_t
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: FibonacciAnnotation
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -71,7 +71,7 @@ class: :class:`FibonacciAnnotation <highcharts_stock.options.annotations.stock_t
 -----------------------
 
 ************************************************************************************************************************************
-class: :class:`FibonacciTimeZonesAnnotation <highcharts_stock.options.annotations.stock_tools.FibonacciTimeZonesAnnotation>`
+class: :class:`FibonacciTimeZonesAnnotation <highcharts_gantt.options.annotations.stock_tools.FibonacciTimeZonesAnnotation>`
 ************************************************************************************************************************************
 
 .. autoclass:: FibonacciTimeZonesAnnotation
@@ -81,7 +81,7 @@ class: :class:`FibonacciTimeZonesAnnotation <highcharts_stock.options.annotation
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: FibonacciTimeZonesAnnotation
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -89,7 +89,7 @@ class: :class:`FibonacciTimeZonesAnnotation <highcharts_stock.options.annotation
 -----------------------
 
 ************************************************************************************************************************************
-class: :class:`InfinityLineAnnotation <highcharts_stock.options.annotations.stock_tools.InfinityLineAnnotation>`
+class: :class:`InfinityLineAnnotation <highcharts_gantt.options.annotations.stock_tools.InfinityLineAnnotation>`
 ************************************************************************************************************************************
 
 .. autoclass:: InfinityLineAnnotation
@@ -99,7 +99,7 @@ class: :class:`InfinityLineAnnotation <highcharts_stock.options.annotations.stoc
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: InfinityLineAnnotation
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -107,7 +107,7 @@ class: :class:`InfinityLineAnnotation <highcharts_stock.options.annotations.stoc
 -----------------------
 
 ************************************************************************************************************************************
-class: :class:`MeasureAnnotation <highcharts_stock.options.annotations.stock_tools.MeasureAnnotation>`
+class: :class:`MeasureAnnotation <highcharts_gantt.options.annotations.stock_tools.MeasureAnnotation>`
 ************************************************************************************************************************************
 
 .. autoclass:: MeasureAnnotation
@@ -117,7 +117,7 @@ class: :class:`MeasureAnnotation <highcharts_stock.options.annotations.stock_too
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: MeasureAnnotation
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -125,7 +125,7 @@ class: :class:`MeasureAnnotation <highcharts_stock.options.annotations.stock_too
 -----------------------
 
 ************************************************************************************************************************************
-class: :class:`PitchforkAnnotation <highcharts_stock.options.annotations.stock_tools.PitchforkAnnotation>`
+class: :class:`PitchforkAnnotation <highcharts_gantt.options.annotations.stock_tools.PitchforkAnnotation>`
 ************************************************************************************************************************************
 
 .. autoclass:: PitchforkAnnotation
@@ -135,7 +135,7 @@ class: :class:`PitchforkAnnotation <highcharts_stock.options.annotations.stock_t
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: PitchforkAnnotation
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -143,7 +143,7 @@ class: :class:`PitchforkAnnotation <highcharts_stock.options.annotations.stock_t
 -----------------------
 
 ************************************************************************************************************************************
-class: :class:`TimeCyclesAnnotation <highcharts_stock.options.annotations.stock_tools.TimeCyclesAnnotation>`
+class: :class:`TimeCyclesAnnotation <highcharts_gantt.options.annotations.stock_tools.TimeCyclesAnnotation>`
 ************************************************************************************************************************************
 
 .. autoclass:: TimeCyclesAnnotation
@@ -153,7 +153,7 @@ class: :class:`TimeCyclesAnnotation <highcharts_stock.options.annotations.stock_
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: TimeCyclesAnnotation
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -161,7 +161,7 @@ class: :class:`TimeCyclesAnnotation <highcharts_stock.options.annotations.stock_
 -----------------------
 
 ************************************************************************************************************************************
-class: :class:`TunnelAnnotation <highcharts_stock.options.annotations.stock_tools.TunnelAnnotation>`
+class: :class:`TunnelAnnotation <highcharts_gantt.options.annotations.stock_tools.TunnelAnnotation>`
 ************************************************************************************************************************************
 
 .. autoclass:: TunnelAnnotation
@@ -171,7 +171,7 @@ class: :class:`TunnelAnnotation <highcharts_stock.options.annotations.stock_tool
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: TunnelAnnotation
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -179,7 +179,7 @@ class: :class:`TunnelAnnotation <highcharts_stock.options.annotations.stock_tool
 -----------------------
 
 ************************************************************************************************************************************
-class: :class:`VerticalLineAnnotation <highcharts_stock.options.annotations.stock_tools.VerticalLineAnnotation>`
+class: :class:`VerticalLineAnnotation <highcharts_gantt.options.annotations.stock_tools.VerticalLineAnnotation>`
 ************************************************************************************************************************************
 
 .. autoclass:: VerticalLineAnnotation
@@ -189,7 +189,7 @@ class: :class:`VerticalLineAnnotation <highcharts_stock.options.annotations.stoc
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: VerticalLineAnnotation
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -206,45 +206,45 @@ Sub-components
 
   * - Module
     - Classes / Functions
-  * - :mod:`.options.annotations.stock_tools <highcharts_stock.options.annotations.stock_tools>`
-    - :class:`CrookedLineAnnotation <highcharts_stock.options.annotations.stock_tools.CrookedLineAnnotation>`
-      :class:`ElliottWaveAnnotation <highcharts_stock.options.annotations.stock_tools.ElliottWaveAnnotation>`
-      :class:`FibonacciAnnotation <highcharts_stock.options.annotations.stock_tools.FibonacciAnnotation>`
-      :class:`FibonacciTimeZonesAnnotation <highcharts_stock.options.annotations.stock_tools.FibonacciTimeZonesAnnotation>`
-      :class:`InfinityLineAnnotation <highcharts_stock.options.annotations.stock_tools.InfinityLineAnnotation>`
-      :class:`MeasureAnnotation <highcharts_stock.options.annotations.stock_tools.MeasureAnnotation>`
-      :class:`PitchforkAnnotation <highcharts_stock.options.annotations.stock_tools.PitchforkAnnotation>`
-      :class:`TimeCyclesAnnotation <highcharts_stock.options.annotations.stock_tools.TimeCyclesAnnotation>`
-      :class:`TunnelAnnotation <highcharts_stock.options.annotations.stock_tools.TunnelAnnotation>`
-      :class:`VerticalLineAnnotation <highcharts_stock.options.annotations.stock_tools.VerticalLineAnnotation>`
-  * - :mod:`.options.annotations.stock_tools.type_options <highcharts_stock.options.annotations.stock_tools.type_options>`
+  * - :mod:`.options.annotations.stock_tools <highcharts_gantt.options.annotations.stock_tools>`
+    - :class:`CrookedLineAnnotation <highcharts_gantt.options.annotations.stock_tools.CrookedLineAnnotation>`
+      :class:`ElliottWaveAnnotation <highcharts_gantt.options.annotations.stock_tools.ElliottWaveAnnotation>`
+      :class:`FibonacciAnnotation <highcharts_gantt.options.annotations.stock_tools.FibonacciAnnotation>`
+      :class:`FibonacciTimeZonesAnnotation <highcharts_gantt.options.annotations.stock_tools.FibonacciTimeZonesAnnotation>`
+      :class:`InfinityLineAnnotation <highcharts_gantt.options.annotations.stock_tools.InfinityLineAnnotation>`
+      :class:`MeasureAnnotation <highcharts_gantt.options.annotations.stock_tools.MeasureAnnotation>`
+      :class:`PitchforkAnnotation <highcharts_gantt.options.annotations.stock_tools.PitchforkAnnotation>`
+      :class:`TimeCyclesAnnotation <highcharts_gantt.options.annotations.stock_tools.TimeCyclesAnnotation>`
+      :class:`TunnelAnnotation <highcharts_gantt.options.annotations.stock_tools.TunnelAnnotation>`
+      :class:`VerticalLineAnnotation <highcharts_gantt.options.annotations.stock_tools.VerticalLineAnnotation>`
+  * - :mod:`.options.annotations.stock_tools.type_options <highcharts_gantt.options.annotations.stock_tools.type_options>`
     -
-  * - :mod:`.options.annotations.stock_tools.type_options.crooked_line <highcharts_stock.options.annotations.stock_tools.type_options.crooked_line>`
-    - :class:`CrookedLineTypeOptions <highcharts_stock.options.annotations.stock_tools.type_options.crooked_line.CrookedLineTypeOptions>`
-      :class:`InfinityLineTypeOptions <highcharts_stock.options.annotations.stock_tools.type_options.crooked_line.InfinityLineTypeOptions>`
-  * - :mod:`.options.annotations.stock_tools.type_options.elliot_wave <highcharts_stock.options.annotations.stock_tools.type_options.elliott_wave>`
-    - :class:`ElliottWaveTypeOptions <highcharts_stock.options.annotations.stock_tools.type_options.elliott_wave.ElliottWaveTypeOptions>`
-  * - :mod:`.options.annotations.stock_tools.type_options.fibonacci <highcharts_stock.options.annotations.stock_tools.type_options.fibonacci>`
-    - :class:`FibonacciTypeOptions <highcharts_stock.options.annotations.stock_tools.type_options.fibonacci.FibonacciTypeOptions>`
-      :class:`FibonacciTimeZonesTypeOptions <highcharts_stock.options.annotations.stock_tools.type_options.fibonacci.FibonacciTimeZonesTypeOptions>`
-  * - :mod:`.options.annotations.stock_tools.type_options.line <highcharts_stock.options.annotations.stock_tools.type_options.line>`
-    - :class:`LineFillOnly <highcharts_stock.options.annotations.stock_tools.type_options.line.LineFillOnly>`
-      :class:`LineStrokeWidth <highcharts_stock.options.annotations.stock_tools.type_options.line.LineStrokeWidth>`
-      :class:`LineStrokeWidthStroke <highcharts_stock.options.annotations.stock_tools.type_options.line.LineStrokeWidthStroke>`
-  * - :mod:`.options.annotations.stock_tools.type_options.measure <highcharts_stock.options.annotations.stock_tools.type_options.measure>`
-    - :class:`MeasureTypeOptions <highcharts_stock.options.annotations.stock_tools.type_options.measure.MeasureTypeOptions>`
-      :class:`MeasureLabelOptions <highcharts_stock.options.annotations.stock_tools.type_options.measure.MeasureLabelOptions>`
-      :class:`MeasureLabelStyle <highcharts_stock.options.annotations.stock_tools.type_options.measure.MeasureLabelStyle>`
-  * - :mod:`.options.annotations.stock_tools.type_options.pitchfork <highcharts_stock.options.annotations.stock_tools.type_options.pitchfork>`
-    - :class:`PitchforkTypeOptions <highcharts_stock.options.annotations.stock_tools.type_options.pitchfork.PitchforkTypeOptions>`
-  * - :mod:`.options.annotations.stock_tools.type_options.points <highcharts_stock.options.annotations.stock_tools.type_options.points>`
-    - :class:`StockToolsPoint <highcharts_stock.options.annotations.stock_tools.type_options.points.StockToolsPoint>`
-      :class:`LabeledStockToolsPoint <highcharts_stock.options.annotations.stock_tools.type_options.points.LabeledStockToolsPoint>`
-      :class:`StockToolsXPoint <highcharts_stock.options.annotations.stock_tools.type_options.points.StockToolsXPoint>`
-  * - :mod:`.options.annotations.stock_tools.type_options.time_cycles <highcharts_stock.options.annotations.stock_tools.type_options.time_cycles>`
-    - :class:`TimeCyclesTypeOptions <highcharts_stock.options.annotations.stock_tools.type_options.time_cycles.TimeCyclesTypeOptions>`
-  * - :mod:`.options.annotations.stock_tools.type_options.tunnel <highcharts_stock.options.annotations.stock_tools.type_options.tunnel>`
-    - :class:`TunnelTypeOptions <highcharts_stock.options.annotations.stock_tools.type_options.tunnel.TunnelTypeOptions>`
-  * - :mod:`.options.annotations.stock_tools.type_options.vertical_line <highcharts_stock.options.annotations.stock_tools.type_options.vertical_line>`
-    - :class:`VerticalLineTypeOptions <highcharts_stock.options.annotations.stock_tools.type_options.vertical_line.VerticalLineTypeOptions>`
-      :class:`VerticalLineConnector <highcharts_stock.options.annotations.stock_tools.type_options.vertical_line.VerticalLineConnector>`
+  * - :mod:`.options.annotations.stock_tools.type_options.crooked_line <highcharts_gantt.options.annotations.stock_tools.type_options.crooked_line>`
+    - :class:`CrookedLineTypeOptions <highcharts_gantt.options.annotations.stock_tools.type_options.crooked_line.CrookedLineTypeOptions>`
+      :class:`InfinityLineTypeOptions <highcharts_gantt.options.annotations.stock_tools.type_options.crooked_line.InfinityLineTypeOptions>`
+  * - :mod:`.options.annotations.stock_tools.type_options.elliot_wave <highcharts_gantt.options.annotations.stock_tools.type_options.elliott_wave>`
+    - :class:`ElliottWaveTypeOptions <highcharts_gantt.options.annotations.stock_tools.type_options.elliott_wave.ElliottWaveTypeOptions>`
+  * - :mod:`.options.annotations.stock_tools.type_options.fibonacci <highcharts_gantt.options.annotations.stock_tools.type_options.fibonacci>`
+    - :class:`FibonacciTypeOptions <highcharts_gantt.options.annotations.stock_tools.type_options.fibonacci.FibonacciTypeOptions>`
+      :class:`FibonacciTimeZonesTypeOptions <highcharts_gantt.options.annotations.stock_tools.type_options.fibonacci.FibonacciTimeZonesTypeOptions>`
+  * - :mod:`.options.annotations.stock_tools.type_options.line <highcharts_gantt.options.annotations.stock_tools.type_options.line>`
+    - :class:`LineFillOnly <highcharts_gantt.options.annotations.stock_tools.type_options.line.LineFillOnly>`
+      :class:`LineStrokeWidth <highcharts_gantt.options.annotations.stock_tools.type_options.line.LineStrokeWidth>`
+      :class:`LineStrokeWidthStroke <highcharts_gantt.options.annotations.stock_tools.type_options.line.LineStrokeWidthStroke>`
+  * - :mod:`.options.annotations.stock_tools.type_options.measure <highcharts_gantt.options.annotations.stock_tools.type_options.measure>`
+    - :class:`MeasureTypeOptions <highcharts_gantt.options.annotations.stock_tools.type_options.measure.MeasureTypeOptions>`
+      :class:`MeasureLabelOptions <highcharts_gantt.options.annotations.stock_tools.type_options.measure.MeasureLabelOptions>`
+      :class:`MeasureLabelStyle <highcharts_gantt.options.annotations.stock_tools.type_options.measure.MeasureLabelStyle>`
+  * - :mod:`.options.annotations.stock_tools.type_options.pitchfork <highcharts_gantt.options.annotations.stock_tools.type_options.pitchfork>`
+    - :class:`PitchforkTypeOptions <highcharts_gantt.options.annotations.stock_tools.type_options.pitchfork.PitchforkTypeOptions>`
+  * - :mod:`.options.annotations.stock_tools.type_options.points <highcharts_gantt.options.annotations.stock_tools.type_options.points>`
+    - :class:`StockToolsPoint <highcharts_gantt.options.annotations.stock_tools.type_options.points.StockToolsPoint>`
+      :class:`LabeledStockToolsPoint <highcharts_gantt.options.annotations.stock_tools.type_options.points.LabeledStockToolsPoint>`
+      :class:`StockToolsXPoint <highcharts_gantt.options.annotations.stock_tools.type_options.points.StockToolsXPoint>`
+  * - :mod:`.options.annotations.stock_tools.type_options.time_cycles <highcharts_gantt.options.annotations.stock_tools.type_options.time_cycles>`
+    - :class:`TimeCyclesTypeOptions <highcharts_gantt.options.annotations.stock_tools.type_options.time_cycles.TimeCyclesTypeOptions>`
+  * - :mod:`.options.annotations.stock_tools.type_options.tunnel <highcharts_gantt.options.annotations.stock_tools.type_options.tunnel>`
+    - :class:`TunnelTypeOptions <highcharts_gantt.options.annotations.stock_tools.type_options.tunnel.TunnelTypeOptions>`
+  * - :mod:`.options.annotations.stock_tools.type_options.vertical_line <highcharts_gantt.options.annotations.stock_tools.type_options.vertical_line>`
+    - :class:`VerticalLineTypeOptions <highcharts_gantt.options.annotations.stock_tools.type_options.vertical_line.VerticalLineTypeOptions>`
+      :class:`VerticalLineConnector <highcharts_gantt.options.annotations.stock_tools.type_options.vertical_line.VerticalLineConnector>`

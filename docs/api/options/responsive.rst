@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.responsive <highcharts_stock.options.responsive>`
+:mod:`.responsive <highcharts_gantt.options.responsive>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.responsive
+.. module:: highcharts_gantt.options.responsive
 
 ********************************************************************************************************************
-class: :class:`Responsive <highcharts_stock.options.responsive.Responsive>`
+class: :class:`Responsive <highcharts_gantt.options.responsive.Responsive>`
 ********************************************************************************************************************
 
 .. autoclass:: Responsive
@@ -22,7 +22,7 @@ class: :class:`Responsive <highcharts_stock.options.responsive.Responsive>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: Responsive
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`Responsive <highcharts_stock.options.responsive.Responsive>`
 -----------------
 
 ********************************************************************************************************************
-class: :class:`ResponsiveRules <highcharts_stock.options.responsive.ResponsiveRules>`
+class: :class:`ResponsiveRules <highcharts_gantt.options.responsive.ResponsiveRules>`
 ********************************************************************************************************************
 
 .. autoclass:: ResponsiveRules
@@ -40,7 +40,7 @@ class: :class:`ResponsiveRules <highcharts_stock.options.responsive.ResponsiveRu
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ResponsiveRules
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -48,7 +48,7 @@ class: :class:`ResponsiveRules <highcharts_stock.options.responsive.ResponsiveRu
 --------------------
 
 ********************************************************************************************************************
-class: :class:`Condition <highcharts_stock.options.responsive.Condition>`
+class: :class:`Condition <highcharts_gantt.options.responsive.Condition>`
 ********************************************************************************************************************
 
 .. autoclass:: Condition
@@ -58,7 +58,7 @@ class: :class:`Condition <highcharts_stock.options.responsive.Condition>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: Condition
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

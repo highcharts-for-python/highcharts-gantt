@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.points <highcharts_stock.options.annotations.points>`
+:mod:`.points <highcharts_gantt.options.annotations.points>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.annotations.points
+.. module:: highcharts_gantt.options.annotations.points
 
 ********************************************************************************************************
-class: :class:`AnnotationPoint <highcharts_stock.options.annotations.points.AnnotationPoint>`
+class: :class:`AnnotationPoint <highcharts_gantt.options.annotations.points.AnnotationPoint>`
 ********************************************************************************************************
 
 .. autoclass:: AnnotationPoint
@@ -22,7 +22,7 @@ class: :class:`AnnotationPoint <highcharts_stock.options.annotations.points.Anno
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: AnnotationPoint
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

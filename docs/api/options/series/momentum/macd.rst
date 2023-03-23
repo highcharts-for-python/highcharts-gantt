@@ -1,5 +1,5 @@
 ##############################################################################
-:mod:`.macd <highcharts_stock.options.series.momentum.macd>`
+:mod:`.macd <highcharts_gantt.options.series.momentum.macd>`
 ##############################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 -------------------------
 
-.. module:: highcharts_stock.options.series.momentum.macd
+.. module:: highcharts_gantt.options.series.momentum.macd
 
 ********************************************************************************************************************
-class: :class:`MACDSeries <highcharts_stock.options.series.momentum.macd.MACDSeries>`
+class: :class:`MACDSeries <highcharts_gantt.options.series.momentum.macd.MACDSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: MACDSeries
@@ -22,7 +22,7 @@ class: :class:`MACDSeries <highcharts_stock.options.series.momentum.macd.MACDSer
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: MACDSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

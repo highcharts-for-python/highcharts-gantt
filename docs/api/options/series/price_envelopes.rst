@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.price_envelopes <highcharts_stock.options.series.price_envelopes>`
+:mod:`.price_envelopes <highcharts_gantt.options.series.price_envelopes>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.price_envelopes
+.. module:: highcharts_gantt.options.series.price_envelopes
 
 ********************************************************************************************************************
-class: :class:`PriceEnvelopesSeries <highcharts_stock.options.series.price_envelopes.PriceEnvelopesSeries>`
+class: :class:`PriceEnvelopesSeries <highcharts_gantt.options.series.price_envelopes.PriceEnvelopesSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: PriceEnvelopesSeries
@@ -22,7 +22,7 @@ class: :class:`PriceEnvelopesSeries <highcharts_stock.options.series.price_envel
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: PriceEnvelopesSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

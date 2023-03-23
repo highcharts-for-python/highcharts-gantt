@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.ad <highcharts_stock.options.series.ad>`
+:mod:`.ad <highcharts_gantt.options.series.ad>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.ad
+.. module:: highcharts_gantt.options.series.ad
 
 ********************************************************************************************************************
-class: :class:`ADSeries <highcharts_stock.options.series.ad.ADSeries>`
+class: :class:`ADSeries <highcharts_gantt.options.series.ad.ADSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: ADSeries
@@ -22,7 +22,7 @@ class: :class:`ADSeries <highcharts_stock.options.series.ad.ADSeries>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ADSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

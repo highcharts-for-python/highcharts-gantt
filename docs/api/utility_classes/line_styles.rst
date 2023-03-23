@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.line_styles <highcharts_stock.utility_classes.line_styles>`
+:mod:`.line_styles <highcharts_gantt.utility_classes.line_styles>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.utility_classes.line_styles
+.. module:: highcharts_gantt.utility_classes.line_styles
 
 ********************************************************************************************************************
-class: :class:`LineStylesWidth <highcharts_stock.utility_classes.line_styles.LineStylesWidth>`
+class: :class:`LineStylesWidth <highcharts_gantt.utility_classes.line_styles.LineStylesWidth>`
 ********************************************************************************************************************
 
 .. autoclass:: LineStylesWidth
@@ -22,7 +22,7 @@ class: :class:`LineStylesWidth <highcharts_stock.utility_classes.line_styles.Lin
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: LineStylesWidth
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`LineStylesWidth <highcharts_stock.utility_classes.line_styles.Lin
 --------------------------
 
 ********************************************************************************************************************
-class: :class:`LineStylesColorWidth <highcharts_stock.utility_classes.line_styles.LineStylesColorWidth>`
+class: :class:`LineStylesColorWidth <highcharts_gantt.utility_classes.line_styles.LineStylesColorWidth>`
 ********************************************************************************************************************
 
 .. autoclass:: LineStylesColorWidth
@@ -40,7 +40,7 @@ class: :class:`LineStylesColorWidth <highcharts_stock.utility_classes.line_style
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: LineStylesColorWidth
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -48,7 +48,7 @@ class: :class:`LineStylesColorWidth <highcharts_stock.utility_classes.line_style
 -------------------
 
 ********************************************************************************************************************
-class: :class:`LineStylesColorWidthDash <highcharts_stock.utility_classes.line_styles.LineStylesColorWidthDash>`
+class: :class:`LineStylesColorWidthDash <highcharts_gantt.utility_classes.line_styles.LineStylesColorWidthDash>`
 ********************************************************************************************************************
 
 .. autoclass:: LineStylesColorWidthDash
@@ -58,7 +58,7 @@ class: :class:`LineStylesColorWidthDash <highcharts_stock.utility_classes.line_s
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: LineStylesColorWidthDash
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

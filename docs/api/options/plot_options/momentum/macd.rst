@@ -1,5 +1,5 @@
 ##############################################################################
-:mod:`.macd <highcharts_stock.options.plot_options.momentum.macd>`
+:mod:`.macd <highcharts_gantt.options.plot_options.momentum.macd>`
 ##############################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 -------------------------
 
-.. module:: highcharts_stock.options.plot_options.momentum.macd
+.. module:: highcharts_gantt.options.plot_options.momentum.macd
 
 ********************************************************************************************************************
-class: :class:`MACDOptions <highcharts_stock.options.plot_options.momentum.macd.MACDOptions>`
+class: :class:`MACDOptions <highcharts_gantt.options.plot_options.momentum.macd.MACDOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: MACDOptions
@@ -22,7 +22,7 @@ class: :class:`MACDOptions <highcharts_stock.options.plot_options.momentum.macd.
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: MACDOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`MACDOptions <highcharts_stock.options.plot_options.momentum.macd.
 --------------
 
 ********************************************************************************************************************
-class: :class:`MACDParameters <highcharts_stock.options.plot_options.momentum.macd.MACDParameters>`
+class: :class:`MACDParameters <highcharts_gantt.options.plot_options.momentum.macd.MACDParameters>`
 ********************************************************************************************************************
 
 .. autoclass:: MACDParameters
@@ -40,7 +40,7 @@ class: :class:`MACDParameters <highcharts_stock.options.plot_options.momentum.ma
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: MACDParameters
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -48,7 +48,7 @@ class: :class:`MACDParameters <highcharts_stock.options.plot_options.momentum.ma
 --------------
 
 ********************************************************************************************************************
-class: :class:`MACDLineOptions <highcharts_stock.options.plot_options.momentum.macd.MACDLineOptions>`
+class: :class:`MACDLineOptions <highcharts_gantt.options.plot_options.momentum.macd.MACDLineOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: MACDLineOptions
@@ -58,7 +58,7 @@ class: :class:`MACDLineOptions <highcharts_stock.options.plot_options.momentum.m
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: MACDLineOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

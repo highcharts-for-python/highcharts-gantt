@@ -1,5 +1,5 @@
 ###################################################################################
-:mod:`.money_flow <highcharts_stock.options.plot_options.oscillators.money_flow>`
+:mod:`.money_flow <highcharts_gantt.options.plot_options.oscillators.money_flow>`
 ###################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 -------------------------
 
-.. module:: highcharts_stock.options.plot_options.oscillators.money_flow
+.. module:: highcharts_gantt.options.plot_options.oscillators.money_flow
 
 ********************************************************************************************************************
-class: :class:`MFIOptions <highcharts_stock.options.plot_options.oscillators.money_flow.MFIOptions>`
+class: :class:`MFIOptions <highcharts_gantt.options.plot_options.oscillators.money_flow.MFIOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: MFIOptions
@@ -22,7 +22,7 @@ class: :class:`MFIOptions <highcharts_stock.options.plot_options.oscillators.mon
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: MFIOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`MFIOptions <highcharts_stock.options.plot_options.oscillators.mon
 -------------------------
 
 ********************************************************************************************************************
-class: :class:`MFIParameters <highcharts_stock.options.plot_options.oscillators.money_flow.MFIParameters>`
+class: :class:`MFIParameters <highcharts_gantt.options.plot_options.oscillators.money_flow.MFIParameters>`
 ********************************************************************************************************************
 
 .. autoclass:: MFIParameters
@@ -40,7 +40,7 @@ class: :class:`MFIParameters <highcharts_stock.options.plot_options.oscillators.
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: MFIParameters
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -48,7 +48,7 @@ class: :class:`MFIParameters <highcharts_stock.options.plot_options.oscillators.
 -------------------------
 
 ********************************************************************************************************************
-class: :class:`CMFOptions <highcharts_stock.options.plot_options.oscillators.money_flow.CMFOptions>`
+class: :class:`CMFOptions <highcharts_gantt.options.plot_options.oscillators.money_flow.CMFOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: CMFOptions
@@ -58,7 +58,7 @@ class: :class:`CMFOptions <highcharts_stock.options.plot_options.oscillators.mon
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: CMFOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

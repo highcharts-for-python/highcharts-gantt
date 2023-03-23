@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.bar <highcharts_stock.options.series.data.bar>`
+:mod:`.bar <highcharts_gantt.options.series.data.bar>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.data.bar
+.. module:: highcharts_gantt.options.series.data.bar
 
 ********************************************************************************************************************
-class: :class:`BarData <highcharts_stock.options.series.data.bar.BarData>`
+class: :class:`BarData <highcharts_gantt.options.series.data.bar.BarData>`
 ********************************************************************************************************************
 
 .. autoclass:: BarData
@@ -22,7 +22,7 @@ class: :class:`BarData <highcharts_stock.options.series.data.bar.BarData>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: BarData
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`BarData <highcharts_stock.options.series.data.bar.BarData>`
 -----------------
 
 ********************************************************************************************************************
-class: :class:`WaterfallData <highcharts_stock.options.series.data.bar.WaterfallData>`
+class: :class:`WaterfallData <highcharts_gantt.options.series.data.bar.WaterfallData>`
 ********************************************************************************************************************
 
 .. autoclass:: WaterfallData
@@ -40,7 +40,7 @@ class: :class:`WaterfallData <highcharts_stock.options.series.data.bar.Waterfall
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: WaterfallData
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -48,7 +48,7 @@ class: :class:`WaterfallData <highcharts_stock.options.series.data.bar.Waterfall
 -----------------
 
 ********************************************************************************************************************
-class: :class:`WindBarbData <highcharts_stock.options.series.data.bar.WindBarbData>`
+class: :class:`WindBarbData <highcharts_gantt.options.series.data.bar.WindBarbData>`
 ********************************************************************************************************************
 
 .. autoclass:: WindBarbData
@@ -58,7 +58,7 @@ class: :class:`WindBarbData <highcharts_stock.options.series.data.bar.WindBarbDa
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: WindBarbData
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -66,7 +66,7 @@ class: :class:`WindBarbData <highcharts_stock.options.series.data.bar.WindBarbDa
 -----------------
 
 ********************************************************************************************************************
-class: :class:`XRangeData <highcharts_stock.options.series.data.bar.XRangeData>`
+class: :class:`XRangeData <highcharts_gantt.options.series.data.bar.XRangeData>`
 ********************************************************************************************************************
 
 .. autoclass:: XRangeData
@@ -76,7 +76,7 @@ class: :class:`XRangeData <highcharts_stock.options.series.data.bar.XRangeData>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: XRangeData
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

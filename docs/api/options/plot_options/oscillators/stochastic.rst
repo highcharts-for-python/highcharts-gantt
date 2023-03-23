@@ -1,5 +1,5 @@
 ###################################################################################
-:mod:`.stochastic <highcharts_stock.options.plot_options.oscillators.stochastic>`
+:mod:`.stochastic <highcharts_gantt.options.plot_options.oscillators.stochastic>`
 ###################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 -------------------------
 
-.. module:: highcharts_stock.options.plot_options.oscillators.stochastic
+.. module:: highcharts_gantt.options.plot_options.oscillators.stochastic
 
 *******************************************************************************************************************************************
-class: :class:`StochasticOptions <highcharts_stock.options.plot_options.oscillators.stochastic.StochasticOptions>`
+class: :class:`StochasticOptions <highcharts_gantt.options.plot_options.oscillators.stochastic.StochasticOptions>`
 *******************************************************************************************************************************************
 
 .. autoclass:: StochasticOptions
@@ -22,7 +22,7 @@ class: :class:`StochasticOptions <highcharts_stock.options.plot_options.oscillat
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: StochasticOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`StochasticOptions <highcharts_stock.options.plot_options.oscillat
 -------------------------
 
 *******************************************************************************************************************************************
-class: :class:`StochasticParameters <highcharts_stock.options.plot_options.oscillators.stochastic.StochasticParameters>`
+class: :class:`StochasticParameters <highcharts_gantt.options.plot_options.oscillators.stochastic.StochasticParameters>`
 *******************************************************************************************************************************************
 
 .. autoclass:: StochasticParameters
@@ -40,7 +40,7 @@ class: :class:`StochasticParameters <highcharts_stock.options.plot_options.oscil
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: StochasticParameters
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -48,7 +48,7 @@ class: :class:`StochasticParameters <highcharts_stock.options.plot_options.oscil
 -------------------------
 
 *******************************************************************************************************************************************
-class: :class:`StochasticStyleOptions <highcharts_stock.options.plot_options.oscillators.stochastic.StochasticStyleOptions>`
+class: :class:`StochasticStyleOptions <highcharts_gantt.options.plot_options.oscillators.stochastic.StochasticStyleOptions>`
 *******************************************************************************************************************************************
 
 .. autoclass:: StochasticStyleOptions
@@ -58,7 +58,7 @@ class: :class:`StochasticStyleOptions <highcharts_stock.options.plot_options.osc
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: StochasticStyleOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -66,7 +66,7 @@ class: :class:`StochasticStyleOptions <highcharts_stock.options.plot_options.osc
 ----------------------
 
 *******************************************************************************************************************************************
-class: :class:`SlowStochasticOptions <highcharts_stock.options.plot_options.oscillators.stochastic.SlowStochasticOptions>`
+class: :class:`SlowStochasticOptions <highcharts_gantt.options.plot_options.oscillators.stochastic.SlowStochasticOptions>`
 *******************************************************************************************************************************************
 
 .. autoclass:: SlowStochasticOptions
@@ -76,7 +76,7 @@ class: :class:`SlowStochasticOptions <highcharts_stock.options.plot_options.osci
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: SlowStochasticOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -84,7 +84,7 @@ class: :class:`SlowStochasticOptions <highcharts_stock.options.plot_options.osci
 -------------------------
 
 *******************************************************************************************************************************************
-class: :class:`SlowStochasticParameters <highcharts_stock.options.plot_options.oscillators.stochastic.SlowStochasticParameters>`
+class: :class:`SlowStochasticParameters <highcharts_gantt.options.plot_options.oscillators.stochastic.SlowStochasticParameters>`
 *******************************************************************************************************************************************
 
 .. autoclass:: SlowStochasticParameters
@@ -94,7 +94,7 @@ class: :class:`SlowStochasticParameters <highcharts_stock.options.plot_options.o
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: SlowStochasticParameters
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

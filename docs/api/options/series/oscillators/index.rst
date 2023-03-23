@@ -1,5 +1,5 @@
 #############################################################################
-:mod:`.oscillators <highcharts_stock.options.series.oscillators>`
+:mod:`.oscillators <highcharts_gantt.options.series.oscillators>`
 #############################################################################
 
 .. contents:: Module Contents
@@ -18,10 +18,10 @@
 
 -------------------------
 
-.. module:: highcharts_stock.options.series.oscillators
+.. module:: highcharts_gantt.options.series.oscillators
 
 ********************************************************************************************************************
-class: :class:`AroonOscillatorSeries <highcharts_stock.options.series.oscillators.AroonOscillatorSeries>`
+class: :class:`AroonOscillatorSeries <highcharts_gantt.options.series.oscillators.AroonOscillatorSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: AroonOscillatorSeries
@@ -31,7 +31,7 @@ class: :class:`AroonOscillatorSeries <highcharts_stock.options.series.oscillator
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: AroonOscillatorSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -41,7 +41,7 @@ class: :class:`AroonOscillatorSeries <highcharts_stock.options.series.oscillator
 
 
 ********************************************************************************************************************
-class: :class:`APOSeries <highcharts_stock.options.series.oscillators.APOSeries>`
+class: :class:`APOSeries <highcharts_gantt.options.series.oscillators.APOSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: APOSeries
@@ -51,7 +51,7 @@ class: :class:`APOSeries <highcharts_stock.options.series.oscillators.APOSeries>
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: APOSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -61,7 +61,7 @@ class: :class:`APOSeries <highcharts_stock.options.series.oscillators.APOSeries>
 
 
 ********************************************************************************************************************
-class: :class:`CCISeries <highcharts_stock.options.series.oscillators.CCISeries>`
+class: :class:`CCISeries <highcharts_gantt.options.series.oscillators.CCISeries>`
 ********************************************************************************************************************
 
 .. autoclass:: CCISeries
@@ -71,7 +71,7 @@ class: :class:`CCISeries <highcharts_stock.options.series.oscillators.CCISeries>
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: CCISeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -81,7 +81,7 @@ class: :class:`CCISeries <highcharts_stock.options.series.oscillators.CCISeries>
 
 
 ********************************************************************************************************************
-class: :class:`ChaikinSeries <highcharts_stock.options.series.oscillators.ChaikinSeries>`
+class: :class:`ChaikinSeries <highcharts_gantt.options.series.oscillators.ChaikinSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: ChaikinSeries
@@ -91,7 +91,7 @@ class: :class:`ChaikinSeries <highcharts_stock.options.series.oscillators.Chaiki
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ChaikinSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -101,7 +101,7 @@ class: :class:`ChaikinSeries <highcharts_stock.options.series.oscillators.Chaiki
 
 
 ********************************************************************************************************************
-class: :class:`CMOSeries <highcharts_stock.options.series.oscillators.CMOSeries>`
+class: :class:`CMOSeries <highcharts_gantt.options.series.oscillators.CMOSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: CMOSeries
@@ -111,7 +111,7 @@ class: :class:`CMOSeries <highcharts_stock.options.series.oscillators.CMOSeries>
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: CMOSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -121,7 +121,7 @@ class: :class:`CMOSeries <highcharts_stock.options.series.oscillators.CMOSeries>
 
 
 ********************************************************************************************************************
-class: :class:`DPOSeries <highcharts_stock.options.series.oscillators.DPOSeries>`
+class: :class:`DPOSeries <highcharts_gantt.options.series.oscillators.DPOSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: DPOSeries
@@ -131,7 +131,7 @@ class: :class:`DPOSeries <highcharts_stock.options.series.oscillators.DPOSeries>
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: DPOSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -141,7 +141,7 @@ class: :class:`DPOSeries <highcharts_stock.options.series.oscillators.DPOSeries>
 
 
 ********************************************************************************************************************
-class: :class:`TRIXSeries <highcharts_stock.options.series.oscillators.TRIXSeries>`
+class: :class:`TRIXSeries <highcharts_gantt.options.series.oscillators.TRIXSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: TRIXSeries
@@ -151,7 +151,7 @@ class: :class:`TRIXSeries <highcharts_stock.options.series.oscillators.TRIXSerie
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: TRIXSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -161,7 +161,7 @@ class: :class:`TRIXSeries <highcharts_stock.options.series.oscillators.TRIXSerie
 
 
 ********************************************************************************************************************
-class: :class:`WilliamsRSeries <highcharts_stock.options.series.oscillators.WilliamsRSeries>`
+class: :class:`WilliamsRSeries <highcharts_gantt.options.series.oscillators.WilliamsRSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: WilliamsRSeries
@@ -171,7 +171,7 @@ class: :class:`WilliamsRSeries <highcharts_stock.options.series.oscillators.Will
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: WilliamsRSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -188,24 +188,24 @@ Sub-components
 
   * - Module
     - Classes / Functions
-  * - :mod:`.options.series.oscillators <highcharts_stock.options.series.oscillators>`
-    - :class:`AroonOscillatorSeries <highcharts_stock.options.series.oscillators.AroonOscillatorSeries>`
-      :class:`APOSeries <highcharts_stock.options.series.oscillators.APOSeries>`
-      :class:`CCISeries <highcharts_stock.options.series.oscillators.CCISeries>`
-      :class:`ChaikinSeries <highcharts_stock.options.series.oscillators.ChaikinSeries>`
-      :class:`CMOSeries <highcharts_stock.options.series.oscillators.CMOSeries>`
-      :class:`DPOSeries <highcharts_stock.options.series.oscillators.DPOSeries>`
-      :class:`TRIXSeries <highcharts_stock.options.series.oscillators.TRIXSeries>`
-      :class:`WilliamsRSeries <highcharts_stock.options.series.oscillators.WilliamsRSeries>`
-  * - :mod:`.options.series.oscillators.ao <highcharts_stock.options.series.oscillators.ao>`
-    - :class:`AOSeries <highcharts_stock.options.series.oscillators.ao.AOSeries>`
-  * - :mod:`.options.series.oscillators.klinger <highcharts_stock.options.series.oscillators.klinger>`
-    - :class:`KlingerSeries <highcharts_stock.options.series.oscillators.klinger.KlingerSeries>`
-  * - :mod:`.options.series.oscillators.money_flow <highcharts_stock.options.series.oscillators.money_flow>`
-    - :class:`MFISeries <highcharts_stock.options.series.oscillators.money_flow.MFISeries>`
-      :class:`CMFSeries <highcharts_stock.options.series.oscillators.money_flow.CMFSeries>`
-  * - :mod:`.options.series.oscillators.ppo <highcharts_stock.options.series.oscillators.ppo>`
-    - :class:`PPOSeries <highcharts_stock.options.series.oscillators.ppo.PPOSeries>`
-  * - :mod:`.options.series.oscillators.stochastic <highcharts_stock.options.series.oscillators.stochastic>`
-    - :class:`StochasticSeries <highcharts_stock.options.series.oscillators.stochastic.StochasticSeries>`
-      :class:`SlowStochasticSeries <highcharts_stock.options.series.oscillators.stochastic.SlowStochasticSeries>`
+  * - :mod:`.options.series.oscillators <highcharts_gantt.options.series.oscillators>`
+    - :class:`AroonOscillatorSeries <highcharts_gantt.options.series.oscillators.AroonOscillatorSeries>`
+      :class:`APOSeries <highcharts_gantt.options.series.oscillators.APOSeries>`
+      :class:`CCISeries <highcharts_gantt.options.series.oscillators.CCISeries>`
+      :class:`ChaikinSeries <highcharts_gantt.options.series.oscillators.ChaikinSeries>`
+      :class:`CMOSeries <highcharts_gantt.options.series.oscillators.CMOSeries>`
+      :class:`DPOSeries <highcharts_gantt.options.series.oscillators.DPOSeries>`
+      :class:`TRIXSeries <highcharts_gantt.options.series.oscillators.TRIXSeries>`
+      :class:`WilliamsRSeries <highcharts_gantt.options.series.oscillators.WilliamsRSeries>`
+  * - :mod:`.options.series.oscillators.ao <highcharts_gantt.options.series.oscillators.ao>`
+    - :class:`AOSeries <highcharts_gantt.options.series.oscillators.ao.AOSeries>`
+  * - :mod:`.options.series.oscillators.klinger <highcharts_gantt.options.series.oscillators.klinger>`
+    - :class:`KlingerSeries <highcharts_gantt.options.series.oscillators.klinger.KlingerSeries>`
+  * - :mod:`.options.series.oscillators.money_flow <highcharts_gantt.options.series.oscillators.money_flow>`
+    - :class:`MFISeries <highcharts_gantt.options.series.oscillators.money_flow.MFISeries>`
+      :class:`CMFSeries <highcharts_gantt.options.series.oscillators.money_flow.CMFSeries>`
+  * - :mod:`.options.series.oscillators.ppo <highcharts_gantt.options.series.oscillators.ppo>`
+    - :class:`PPOSeries <highcharts_gantt.options.series.oscillators.ppo.PPOSeries>`
+  * - :mod:`.options.series.oscillators.stochastic <highcharts_gantt.options.series.oscillators.stochastic>`
+    - :class:`StochasticSeries <highcharts_gantt.options.series.oscillators.stochastic.StochasticSeries>`
+      :class:`SlowStochasticSeries <highcharts_gantt.options.series.oscillators.stochastic.SlowStochasticSeries>`

@@ -1,5 +1,5 @@
 #############################################################################
-:mod:`.stock_tools <highcharts_stock.global_options.language.stock_tools>`
+:mod:`.stock_tools <highcharts_gantt.global_options.language.stock_tools>`
 #############################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.global_options.language.stock_tools
+.. module:: highcharts_gantt.global_options.language.stock_tools
 
 *********************************************************************************************************************************
-class: :class:`StockToolsLanguageOptions <highcharts_stock.global_options.language.stock_tools.StockToolsLanguageOptions>`
+class: :class:`StockToolsLanguageOptions <highcharts_gantt.global_options.language.stock_tools.StockToolsLanguageOptions>`
 *********************************************************************************************************************************
 
 .. autoclass:: StockToolsLanguageOptions
@@ -22,7 +22,7 @@ class: :class:`StockToolsLanguageOptions <highcharts_stock.global_options.langua
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: StockToolsLanguageOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`StockToolsLanguageOptions <highcharts_stock.global_options.langua
 -------------------------------------------
 
 *********************************************************************************************************************************
-class: :class:`StockToolsGUI <highcharts_stock.global_options.language.stock_tools.StockToolsGUI>`
+class: :class:`StockToolsGUI <highcharts_gantt.global_options.language.stock_tools.StockToolsGUI>`
 *********************************************************************************************************************************
 
 .. autoclass:: StockToolsGUI
@@ -40,7 +40,7 @@ class: :class:`StockToolsGUI <highcharts_stock.global_options.language.stock_too
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: StockToolsGUI
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

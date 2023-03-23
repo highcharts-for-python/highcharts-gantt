@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.javascript_functions <highcharts_stock.utility_classes.javascript_functions>`
+:mod:`.javascript_functions <highcharts_gantt.utility_classes.javascript_functions>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.utility_classes.javascript_functions
+.. module:: highcharts_gantt.utility_classes.javascript_functions
 
 ********************************************************************************************************************
-class: :class:`CallbackFunction <highcharts_stock.utility_classes.javascript_functions.CallbackFunction>`
+class: :class:`CallbackFunction <highcharts_gantt.utility_classes.javascript_functions.CallbackFunction>`
 ********************************************************************************************************************
 
 .. autoclass:: CallbackFunction
@@ -22,7 +22,7 @@ class: :class:`CallbackFunction <highcharts_stock.utility_classes.javascript_fun
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: CallbackFunction
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`CallbackFunction <highcharts_stock.utility_classes.javascript_fun
 -------------------
 
 ********************************************************************************************************************
-class: :class:`JavaScriptClass <highcharts_stock.utility_classes.javascript_functions.JavaScriptClass>`
+class: :class:`JavaScriptClass <highcharts_gantt.utility_classes.javascript_functions.JavaScriptClass>`
 ********************************************************************************************************************
 
 .. autoclass:: JavaScriptClass
@@ -40,7 +40,7 @@ class: :class:`JavaScriptClass <highcharts_stock.utility_classes.javascript_func
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: JavaScriptClass
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

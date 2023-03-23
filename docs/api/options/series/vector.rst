@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.vector <highcharts_stock.options.series.vector>`
+:mod:`.vector <highcharts_gantt.options.series.vector>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.vector
+.. module:: highcharts_gantt.options.series.vector
 
 ********************************************************************************************************************
-class: :class:`VectorSeries <highcharts_stock.options.series.vector.VectorSeries>`
+class: :class:`VectorSeries <highcharts_gantt.options.series.vector.VectorSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: VectorSeries
@@ -22,7 +22,7 @@ class: :class:`VectorSeries <highcharts_stock.options.series.vector.VectorSeries
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: VectorSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

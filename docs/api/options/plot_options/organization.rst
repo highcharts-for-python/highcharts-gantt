@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.organization <highcharts_stock.options.plot_options.organization>`
+:mod:`.organization <highcharts_gantt.options.plot_options.organization>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.plot_options.organization
+.. module:: highcharts_gantt.options.plot_options.organization
 
 ********************************************************************************************************************
-class: :class:`OrganizationOptions <highcharts_stock.options.plot_options.organization.OrganizationOptions>`
+class: :class:`OrganizationOptions <highcharts_gantt.options.plot_options.organization.OrganizationOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: OrganizationOptions
@@ -22,7 +22,7 @@ class: :class:`OrganizationOptions <highcharts_stock.options.plot_options.organi
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: OrganizationOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

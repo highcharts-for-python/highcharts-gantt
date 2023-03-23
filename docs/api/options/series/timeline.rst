@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.timeline <highcharts_stock.options.series.timeline>`
+:mod:`.timeline <highcharts_gantt.options.series.timeline>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.timeline
+.. module:: highcharts_gantt.options.series.timeline
 
 ********************************************************************************************************************
-class: :class:`TimelineSeries <highcharts_stock.options.series.timeline.TimelineSeries>`
+class: :class:`TimelineSeries <highcharts_gantt.options.series.timeline.TimelineSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: TimelineSeries
@@ -22,7 +22,7 @@ class: :class:`TimelineSeries <highcharts_stock.options.series.timeline.Timeline
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: TimelineSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

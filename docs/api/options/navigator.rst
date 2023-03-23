@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.navigator <highcharts_stock.options.navigator>`
+:mod:`.navigator <highcharts_gantt.options.navigator>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.navigator
+.. module:: highcharts_gantt.options.navigator
 
 ********************************************************************************************************************
-class: :class:`Navigator <highcharts_stock.options.navigator.Navigator>`
+class: :class:`Navigator <highcharts_gantt.options.navigator.Navigator>`
 ********************************************************************************************************************
 
 .. autoclass:: Navigator
@@ -22,7 +22,7 @@ class: :class:`Navigator <highcharts_stock.options.navigator.Navigator>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: Navigator
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`Navigator <highcharts_stock.options.navigator.Navigator>`
 ------------------
 
 ********************************************************************************************************************
-class: :class:`HandleOptions <highcharts_stock.options.navigator.HandleOptions>`
+class: :class:`HandleOptions <highcharts_gantt.options.navigator.HandleOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: HandleOptions
@@ -40,7 +40,7 @@ class: :class:`HandleOptions <highcharts_stock.options.navigator.HandleOptions>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: HandleOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.dmi <highcharts_stock.options.plot_options.dmi>`
+:mod:`.dmi <highcharts_gantt.options.plot_options.dmi>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.plot_options.dmi
+.. module:: highcharts_gantt.options.plot_options.dmi
 
 ********************************************************************************************************************
-class: :class:`DMIOptions <highcharts_stock.options.plot_options.dmi.DMIOptions>`
+class: :class:`DMIOptions <highcharts_gantt.options.plot_options.dmi.DMIOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: DMIOptions
@@ -22,7 +22,7 @@ class: :class:`DMIOptions <highcharts_stock.options.plot_options.dmi.DMIOptions>
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: DMIOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`DMIOptions <highcharts_stock.options.plot_options.dmi.DMIOptions>
 -------------------
 
 ********************************************************************************************************************
-class: :class:`DMIStyleOptions <highcharts_stock.options.plot_options.dmi.DMIStyleOptions>`
+class: :class:`DMIStyleOptions <highcharts_gantt.options.plot_options.dmi.DMIStyleOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: DMIStyleOptions
@@ -40,7 +40,7 @@ class: :class:`DMIStyleOptions <highcharts_stock.options.plot_options.dmi.DMISty
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: DMIStyleOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

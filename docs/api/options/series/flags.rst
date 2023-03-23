@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.flags <highcharts_stock.options.series.flags>`
+:mod:`.flags <highcharts_gantt.options.series.flags>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.flags
+.. module:: highcharts_gantt.options.series.flags
 
 ********************************************************************************************************************
-class: :class:`FlagsSeries <highcharts_stock.options.series.flags.FlagsSeries>`
+class: :class:`FlagsSeries <highcharts_gantt.options.series.flags.FlagsSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: FlagsSeries
@@ -22,7 +22,7 @@ class: :class:`FlagsSeries <highcharts_stock.options.series.flags.FlagsSeries>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: FlagsSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

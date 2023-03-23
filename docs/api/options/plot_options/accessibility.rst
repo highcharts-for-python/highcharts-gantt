@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.accessibility <highcharts_stock.options.plot_options.accessibility>`
+:mod:`.accessibility <highcharts_gantt.options.plot_options.accessibility>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.plot_options.accessibility
+.. module:: highcharts_gantt.options.plot_options.accessibility
 
 ***************************************************************************************************************************
-class: :class:`TypeOptionsAccessibility <highcharts_stock.options.plot_options.accessibility.TypeOptionsAccessibility>`
+class: :class:`TypeOptionsAccessibility <highcharts_gantt.options.plot_options.accessibility.TypeOptionsAccessibility>`
 ***************************************************************************************************************************
 
 .. autoclass:: TypeOptionsAccessibility
@@ -22,7 +22,7 @@ class: :class:`TypeOptionsAccessibility <highcharts_stock.options.plot_options.a
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: TypeOptionsAccessibility
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`TypeOptionsAccessibility <highcharts_stock.options.plot_options.a
 ------------
 
 ***************************************************************************************************************************
-class: :class:`SeriesKeyboardNavigation <highcharts_stock.options.plot_options.accessibility.SeriesKeyboardNavigation>`
+class: :class:`SeriesKeyboardNavigation <highcharts_gantt.options.plot_options.accessibility.SeriesKeyboardNavigation>`
 ***************************************************************************************************************************
 
 .. autoclass:: SeriesKeyboardNavigation
@@ -40,7 +40,7 @@ class: :class:`SeriesKeyboardNavigation <highcharts_stock.options.plot_options.a
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: SeriesKeyboardNavigation
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

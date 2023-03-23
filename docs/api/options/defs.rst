@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.defs <highcharts_stock.options.defs>`
+:mod:`.defs <highcharts_gantt.options.defs>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.defs
+.. module:: highcharts_gantt.options.defs
 
 ********************************************************************************************************************
-class: :class:`MarkerDefinition <highcharts_stock.options.defs.MarkerDefinition>`
+class: :class:`MarkerDefinition <highcharts_gantt.options.defs.MarkerDefinition>`
 ********************************************************************************************************************
 
 .. autoclass:: MarkerDefinition
@@ -22,7 +22,7 @@ class: :class:`MarkerDefinition <highcharts_stock.options.defs.MarkerDefinition>
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: MarkerDefinition
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`MarkerDefinition <highcharts_stock.options.defs.MarkerDefinition>
 ---------------
 
 ********************************************************************************************************************
-class: :class:`MarkerASTNode <highcharts_stock.options.defs.MarkerASTNode>`
+class: :class:`MarkerASTNode <highcharts_gantt.options.defs.MarkerASTNode>`
 ********************************************************************************************************************
 
 .. autoclass:: MarkerASTNode
@@ -40,7 +40,7 @@ class: :class:`MarkerASTNode <highcharts_stock.options.defs.MarkerASTNode>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: MarkerASTNode
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -49,7 +49,7 @@ class: :class:`MarkerASTNode <highcharts_stock.options.defs.MarkerASTNode>`
 ----------------
 
 ********************************************************************************************************************
-class: :class:`MarkerAttributeObject <highcharts_stock.options.defs.MarkerAttributeObject>`
+class: :class:`MarkerAttributeObject <highcharts_gantt.options.defs.MarkerAttributeObject>`
 ********************************************************************************************************************
 
 .. autoclass:: MarkerAttributeObject
@@ -59,7 +59,7 @@ class: :class:`MarkerAttributeObject <highcharts_stock.options.defs.MarkerAttrib
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: MarkerAttributeObject
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

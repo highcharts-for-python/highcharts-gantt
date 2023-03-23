@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.ad <highcharts_stock.options.plot_options.ad>`
+:mod:`.ad <highcharts_gantt.options.plot_options.ad>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.plot_options.ad
+.. module:: highcharts_gantt.options.plot_options.ad
 
 ********************************************************************************************************************
-class: :class:`ADOptions <highcharts_stock.options.plot_options.ad.ADOptions>`
+class: :class:`ADOptions <highcharts_gantt.options.plot_options.ad.ADOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: ADOptions
@@ -22,7 +22,7 @@ class: :class:`ADOptions <highcharts_stock.options.plot_options.ad.ADOptions>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ADOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`ADOptions <highcharts_stock.options.plot_options.ad.ADOptions>`
 -------------------
 
 ********************************************************************************************************************
-class: :class:`ADParameters <highcharts_stock.options.plot_options.ad.ADParameters>`
+class: :class:`ADParameters <highcharts_gantt.options.plot_options.ad.ADParameters>`
 ********************************************************************************************************************
 
 .. autoclass:: ADParameters
@@ -40,7 +40,7 @@ class: :class:`ADParameters <highcharts_stock.options.plot_options.ad.ADParamete
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ADParameters
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

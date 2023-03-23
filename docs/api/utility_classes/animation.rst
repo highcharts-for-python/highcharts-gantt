@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.animation <highcharts_stock.utility_classes.animation>`
+:mod:`.animation <highcharts_gantt.utility_classes.animation>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.utility_classes.animation
+.. module:: highcharts_gantt.utility_classes.animation
 
 ********************************************************************************************************************
-class: :class:`AnimationOptions <highcharts_stock.utility_classes.animation.AnimationOptions>`
+class: :class:`AnimationOptions <highcharts_gantt.utility_classes.animation.AnimationOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: AnimationOptions
@@ -22,7 +22,7 @@ class: :class:`AnimationOptions <highcharts_stock.utility_classes.animation.Anim
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: AnimationOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

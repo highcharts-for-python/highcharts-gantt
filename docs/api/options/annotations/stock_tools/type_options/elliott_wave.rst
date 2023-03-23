@@ -1,5 +1,5 @@
 ########################################################################################################################
-:mod:`.elliott_wave <highcharts_stock.options.annotations.stock_tools.type_options.elliott_wave>`
+:mod:`.elliott_wave <highcharts_gantt.options.annotations.stock_tools.type_options.elliott_wave>`
 ########################################################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.annotations.stock_tools.type_options.elliott_wave
+.. module:: highcharts_gantt.options.annotations.stock_tools.type_options.elliott_wave
 
 ***************************************************************************************************************************************************
-class: :class:`ElliottWaveTypeOptions <highcharts_stock.options.annotations.stock_tools.type_options.elliott_wave.ElliottWaveTypeOptions>`
+class: :class:`ElliottWaveTypeOptions <highcharts_gantt.options.annotations.stock_tools.type_options.elliott_wave.ElliottWaveTypeOptions>`
 ***************************************************************************************************************************************************
 
 .. autoclass:: ElliottWaveTypeOptions
@@ -22,7 +22,7 @@ class: :class:`ElliottWaveTypeOptions <highcharts_stock.options.annotations.stoc
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ElliottWaveTypeOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

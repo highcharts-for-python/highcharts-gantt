@@ -1,5 +1,5 @@
 #################################################################################################
-:mod:`.series <highcharts_stock.options.accessibility.series>`
+:mod:`.series <highcharts_gantt.options.accessibility.series>`
 #################################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.accessibility.series
+.. module:: highcharts_gantt.options.accessibility.series
 
 **********************************************************************************************************************************************
-class: :class:`SeriesAccessibility <highcharts_stock.options.accessibility.series.SeriesAccessibility>`
+class: :class:`SeriesAccessibility <highcharts_gantt.options.accessibility.series.SeriesAccessibility>`
 **********************************************************************************************************************************************
 
 .. autoclass:: SeriesAccessibility
@@ -22,7 +22,7 @@ class: :class:`SeriesAccessibility <highcharts_stock.options.accessibility.serie
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: SeriesAccessibility
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

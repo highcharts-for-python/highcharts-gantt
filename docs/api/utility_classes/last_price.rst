@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.last_price <highcharts_stock.utility_classes.last_price>`
+:mod:`.last_price <highcharts_gantt.utility_classes.last_price>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.utility_classes.last_price
+.. module:: highcharts_gantt.utility_classes.last_price
 
 ********************************************************************************************************************
-class: :class:`LastPriceOptions <highcharts_stock.utility_classes.last_price.LastPriceOptions>`
+class: :class:`LastPriceOptions <highcharts_gantt.utility_classes.last_price.LastPriceOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: LastPriceOptions
@@ -22,7 +22,7 @@ class: :class:`LastPriceOptions <highcharts_stock.utility_classes.last_price.Las
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: LastPriceOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

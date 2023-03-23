@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.announce_new_data <highcharts_stock.options.accessibility.announce_new_data>`
+:mod:`.announce_new_data <highcharts_gantt.options.accessibility.announce_new_data>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.accessibility.announce_new_data
+.. module:: highcharts_gantt.options.accessibility.announce_new_data
 
 ****************************************************************************************************************
-class: :class:`AnnounceNewData <highcharts_stock.options.accessibility.announce_new_data.AnnounceNewData>`
+class: :class:`AnnounceNewData <highcharts_gantt.options.accessibility.announce_new_data.AnnounceNewData>`
 ****************************************************************************************************************
 
 .. autoclass:: AnnounceNewData
@@ -22,7 +22,7 @@ class: :class:`AnnounceNewData <highcharts_stock.options.accessibility.announce_
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: AnnounceNewData
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

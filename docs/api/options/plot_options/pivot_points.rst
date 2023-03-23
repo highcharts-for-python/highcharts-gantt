@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.pivot_points <highcharts_stock.options.plot_options.pivot_points>`
+:mod:`.pivot_points <highcharts_gantt.options.plot_options.pivot_points>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.plot_options.pivot_points
+.. module:: highcharts_gantt.options.plot_options.pivot_points
 
 ********************************************************************************************************************
-class: :class:`PivotPointsOptions <highcharts_stock.options.plot_options.pivot_points.PivotPointsOptions>`
+class: :class:`PivotPointsOptions <highcharts_gantt.options.plot_options.pivot_points.PivotPointsOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: PivotPointsOptions
@@ -22,7 +22,7 @@ class: :class:`PivotPointsOptions <highcharts_stock.options.plot_options.pivot_p
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: PivotPointsOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`PivotPointsOptions <highcharts_stock.options.plot_options.pivot_p
 -------------------
 
 ********************************************************************************************************************
-class: :class:`PivotPointsParameters <highcharts_stock.options.plot_options.pivot_points.PivotPointsParameters>`
+class: :class:`PivotPointsParameters <highcharts_gantt.options.plot_options.pivot_points.PivotPointsParameters>`
 ********************************************************************************************************************
 
 .. autoclass:: PivotPointsParameters
@@ -40,7 +40,7 @@ class: :class:`PivotPointsParameters <highcharts_stock.options.plot_options.pivo
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: PivotPointsParameters
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

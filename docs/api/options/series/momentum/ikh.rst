@@ -1,5 +1,5 @@
 ##############################################################################
-:mod:`.ikh <highcharts_stock.options.series.momentum.ikh>`
+:mod:`.ikh <highcharts_gantt.options.series.momentum.ikh>`
 ##############################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 -------------------------
 
-.. module:: highcharts_stock.options.series.momentum.ikh
+.. module:: highcharts_gantt.options.series.momentum.ikh
 
 ********************************************************************************************************************
-class: :class:`IKHSeries <highcharts_stock.options.series.momentum.ikh.IKHSeries>`
+class: :class:`IKHSeries <highcharts_gantt.options.series.momentum.ikh.IKHSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: IKHSeries
@@ -22,7 +22,7 @@ class: :class:`IKHSeries <highcharts_stock.options.series.momentum.ikh.IKHSeries
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: IKHSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

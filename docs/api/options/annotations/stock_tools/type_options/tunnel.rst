@@ -1,5 +1,5 @@
 ########################################################################################################################
-:mod:`.tunnel <highcharts_stock.options.annotations.stock_tools.type_options.tunnel>`
+:mod:`.tunnel <highcharts_gantt.options.annotations.stock_tools.type_options.tunnel>`
 ########################################################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.annotations.stock_tools.type_options.tunnel
+.. module:: highcharts_gantt.options.annotations.stock_tools.type_options.tunnel
 
 ************************************************************************************************************************************
-class: :class:`TunnelTypeOptions <highcharts_stock.options.annotations.stock_tools.type_options.tunnel.TunnelTypeOptions>`
+class: :class:`TunnelTypeOptions <highcharts_gantt.options.annotations.stock_tools.type_options.tunnel.TunnelTypeOptions>`
 ************************************************************************************************************************************
 
 .. autoclass:: TunnelTypeOptions
@@ -22,7 +22,7 @@ class: :class:`TunnelTypeOptions <highcharts_stock.options.annotations.stock_too
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: TunnelTypeOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

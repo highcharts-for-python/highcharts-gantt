@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.venn <highcharts_stock.options.series.venn>`
+:mod:`.venn <highcharts_gantt.options.series.venn>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.venn
+.. module:: highcharts_gantt.options.series.venn
 
 ********************************************************************************************************************
-class: :class:`VennSeries <highcharts_stock.options.series.venn.VennSeries>`
+class: :class:`VennSeries <highcharts_gantt.options.series.venn.VennSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: VennSeries
@@ -22,7 +22,7 @@ class: :class:`VennSeries <highcharts_stock.options.series.venn.VennSeries>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: VennSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

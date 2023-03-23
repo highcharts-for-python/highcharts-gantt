@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.linear_regressions <highcharts_stock.options.plot_options.linear_regressions>`
+:mod:`.linear_regressions <highcharts_gantt.options.plot_options.linear_regressions>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.plot_options.linear_regressions
+.. module:: highcharts_gantt.options.plot_options.linear_regressions
 
 ******************************************************************************************************************************************************
-class: :class:`LinearRegressionOptions <highcharts_stock.options.plot_options.linear_regressions.LinearRegressionOptions>`
+class: :class:`LinearRegressionOptions <highcharts_gantt.options.plot_options.linear_regressions.LinearRegressionOptions>`
 ******************************************************************************************************************************************************
 
 .. autoclass:: LinearRegressionOptions
@@ -22,7 +22,7 @@ class: :class:`LinearRegressionOptions <highcharts_stock.options.plot_options.li
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: LinearRegressionOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`LinearRegressionOptions <highcharts_stock.options.plot_options.li
 -------------------
 
 ******************************************************************************************************************************************************
-class: :class:`LinearRegressionAngleOptions <highcharts_stock.options.plot_options.linear_regressions.LinearRegressionAngleOptions>`
+class: :class:`LinearRegressionAngleOptions <highcharts_gantt.options.plot_options.linear_regressions.LinearRegressionAngleOptions>`
 ******************************************************************************************************************************************************
 
 .. autoclass:: LinearRegressionAngleOptions
@@ -40,7 +40,7 @@ class: :class:`LinearRegressionAngleOptions <highcharts_stock.options.plot_optio
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: LinearRegressionAngleOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -48,7 +48,7 @@ class: :class:`LinearRegressionAngleOptions <highcharts_stock.options.plot_optio
 -------------------
 
 ******************************************************************************************************************************************************
-class: :class:`LinearRegressionInterceptOptions <highcharts_stock.options.plot_options.linear_regressions.LinearRegressionInterceptOptions>`
+class: :class:`LinearRegressionInterceptOptions <highcharts_gantt.options.plot_options.linear_regressions.LinearRegressionInterceptOptions>`
 ******************************************************************************************************************************************************
 
 .. autoclass:: LinearRegressionInterceptOptions
@@ -58,7 +58,7 @@ class: :class:`LinearRegressionInterceptOptions <highcharts_stock.options.plot_o
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: LinearRegressionInterceptOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -66,7 +66,7 @@ class: :class:`LinearRegressionInterceptOptions <highcharts_stock.options.plot_o
 -------------------
 
 ******************************************************************************************************************************************************
-class: :class:`LinearRegressionSlopeOptions <highcharts_stock.options.plot_options.linear_regressions.LinearRegressionSlopeOptions>`
+class: :class:`LinearRegressionSlopeOptions <highcharts_gantt.options.plot_options.linear_regressions.LinearRegressionSlopeOptions>`
 ******************************************************************************************************************************************************
 
 .. autoclass:: LinearRegressionSlopeOptions
@@ -76,7 +76,7 @@ class: :class:`LinearRegressionSlopeOptions <highcharts_stock.options.plot_optio
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: LinearRegressionSlopeOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -84,7 +84,7 @@ class: :class:`LinearRegressionSlopeOptions <highcharts_stock.options.plot_optio
 -------------------
 
 ******************************************************************************************************************************************************
-class: :class:`TrendlineOptions <highcharts_stock.options.plot_options.linear_regressions.TrendlineOptions>`
+class: :class:`TrendlineOptions <highcharts_gantt.options.plot_options.linear_regressions.TrendlineOptions>`
 ******************************************************************************************************************************************************
 
 .. autoclass:: TrendlineOptions
@@ -94,7 +94,7 @@ class: :class:`TrendlineOptions <highcharts_stock.options.plot_options.linear_re
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: TrendlineOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -102,7 +102,7 @@ class: :class:`TrendlineOptions <highcharts_stock.options.plot_options.linear_re
 -------------------
 
 ******************************************************************************************************************************************************
-class: :class:`LinearRegressionParameters <highcharts_stock.options.plot_options.linear_regressions.LinearRegressionParameters>`
+class: :class:`LinearRegressionParameters <highcharts_gantt.options.plot_options.linear_regressions.LinearRegressionParameters>`
 ******************************************************************************************************************************************************
 
 .. autoclass:: LinearRegressionParameters
@@ -112,7 +112,7 @@ class: :class:`LinearRegressionParameters <highcharts_stock.options.plot_options
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: LinearRegressionParameters
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -120,7 +120,7 @@ class: :class:`LinearRegressionParameters <highcharts_stock.options.plot_options
 -------------------
 
 ******************************************************************************************************************************************************
-class: :class:`TrendlineParameters <highcharts_stock.options.plot_options.linear_regressions.TrendlineParameters>`
+class: :class:`TrendlineParameters <highcharts_gantt.options.plot_options.linear_regressions.TrendlineParameters>`
 ******************************************************************************************************************************************************
 
 .. autoclass:: TrendlineParameters
@@ -130,7 +130,7 @@ class: :class:`TrendlineParameters <highcharts_stock.options.plot_options.linear
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: TrendlineParameters
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

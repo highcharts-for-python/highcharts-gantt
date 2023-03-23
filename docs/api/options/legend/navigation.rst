@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.navigation <highcharts_stock.options.legend.navigation>`
+:mod:`.navigation <highcharts_gantt.options.legend.navigation>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.legend.navigation
+.. module:: highcharts_gantt.options.legend.navigation
 
 ********************************************************************************************************************
-class: :class:`LegendNavigation <highcharts_stock.options.legend.navigation.LegendNavigation>`
+class: :class:`LegendNavigation <highcharts_gantt.options.legend.navigation.LegendNavigation>`
 ********************************************************************************************************************
 
 .. autoclass:: LegendNavigation
@@ -22,7 +22,7 @@ class: :class:`LegendNavigation <highcharts_stock.options.legend.navigation.Lege
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: LegendNavigation
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

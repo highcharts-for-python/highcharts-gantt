@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.definitions <highcharts_stock.options.stock_tools.definitions>`
+:mod:`.definitions <highcharts_gantt.options.stock_tools.definitions>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.stock_tools.definitions
+.. module:: highcharts_gantt.options.stock_tools.definitions
 
 ********************************************************************************************************************
-class: :class:`StockToolsDefinitions <highcharts_stock.options.stock_tools.definitions.StockToolsDefinitions>`
+class: :class:`StockToolsDefinitions <highcharts_gantt.options.stock_tools.definitions.StockToolsDefinitions>`
 ********************************************************************************************************************
 
 .. autoclass:: StockToolsDefinitions
@@ -22,7 +22,7 @@ class: :class:`StockToolsDefinitions <highcharts_stock.options.stock_tools.defin
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: StockToolsDefinitions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`StockToolsDefinitions <highcharts_stock.options.stock_tools.defin
 ---------------------
 
 ********************************************************************************************************************
-class: :class:`AdvancedDefinitions <highcharts_stock.options.stock_tools.definitions.AdvancedDefinitions>`
+class: :class:`AdvancedDefinitions <highcharts_gantt.options.stock_tools.definitions.AdvancedDefinitions>`
 ********************************************************************************************************************
 
 .. autoclass:: AdvancedDefinitions
@@ -40,7 +40,7 @@ class: :class:`AdvancedDefinitions <highcharts_stock.options.stock_tools.definit
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: AdvancedDefinitions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -48,7 +48,7 @@ class: :class:`AdvancedDefinitions <highcharts_stock.options.stock_tools.definit
 ---------------------
 
 ********************************************************************************************************************
-class: :class:`CrookedLinesDefinitions <highcharts_stock.options.stock_tools.definitions.CrookedLinesDefinitions>`
+class: :class:`CrookedLinesDefinitions <highcharts_gantt.options.stock_tools.definitions.CrookedLinesDefinitions>`
 ********************************************************************************************************************
 
 .. autoclass:: CrookedLinesDefinitions
@@ -58,7 +58,7 @@ class: :class:`CrookedLinesDefinitions <highcharts_stock.options.stock_tools.def
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: CrookedLinesDefinitions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -66,7 +66,7 @@ class: :class:`CrookedLinesDefinitions <highcharts_stock.options.stock_tools.def
 ---------------------
 
 ********************************************************************************************************************
-class: :class:`FlagsDefinitions <highcharts_stock.options.stock_tools.definitions.FlagsDefinitions>`
+class: :class:`FlagsDefinitions <highcharts_gantt.options.stock_tools.definitions.FlagsDefinitions>`
 ********************************************************************************************************************
 
 .. autoclass:: FlagsDefinitions
@@ -76,7 +76,7 @@ class: :class:`FlagsDefinitions <highcharts_stock.options.stock_tools.definition
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: FlagsDefinitions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -84,7 +84,7 @@ class: :class:`FlagsDefinitions <highcharts_stock.options.stock_tools.definition
 ---------------------
 
 ********************************************************************************************************************
-class: :class:`LinesDefinitions <highcharts_stock.options.stock_tools.definitions.LinesDefinitions>`
+class: :class:`LinesDefinitions <highcharts_gantt.options.stock_tools.definitions.LinesDefinitions>`
 ********************************************************************************************************************
 
 .. autoclass:: LinesDefinitions
@@ -94,7 +94,7 @@ class: :class:`LinesDefinitions <highcharts_stock.options.stock_tools.definition
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: LinesDefinitions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -102,7 +102,7 @@ class: :class:`LinesDefinitions <highcharts_stock.options.stock_tools.definition
 ---------------------
 
 ********************************************************************************************************************
-class: :class:`MeasureDefinitions <highcharts_stock.options.stock_tools.definitions.MeasureDefinitions>`
+class: :class:`MeasureDefinitions <highcharts_gantt.options.stock_tools.definitions.MeasureDefinitions>`
 ********************************************************************************************************************
 
 .. autoclass:: MeasureDefinitions
@@ -112,7 +112,7 @@ class: :class:`MeasureDefinitions <highcharts_stock.options.stock_tools.definiti
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: MeasureDefinitions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -120,7 +120,7 @@ class: :class:`MeasureDefinitions <highcharts_stock.options.stock_tools.definiti
 ---------------------
 
 ********************************************************************************************************************
-class: :class:`SimpleShapesDefinitions <highcharts_stock.options.stock_tools.definitions.SimpleShapesDefinitions>`
+class: :class:`SimpleShapesDefinitions <highcharts_gantt.options.stock_tools.definitions.SimpleShapesDefinitions>`
 ********************************************************************************************************************
 
 .. autoclass:: SimpleShapesDefinitions
@@ -130,7 +130,7 @@ class: :class:`SimpleShapesDefinitions <highcharts_stock.options.stock_tools.def
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: SimpleShapesDefinitions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -138,7 +138,7 @@ class: :class:`SimpleShapesDefinitions <highcharts_stock.options.stock_tools.def
 ---------------------
 
 ********************************************************************************************************************
-class: :class:`TypeChangeDefinitions <highcharts_stock.options.stock_tools.definitions.TypeChangeDefinitions>`
+class: :class:`TypeChangeDefinitions <highcharts_gantt.options.stock_tools.definitions.TypeChangeDefinitions>`
 ********************************************************************************************************************
 
 .. autoclass:: TypeChangeDefinitions
@@ -148,7 +148,7 @@ class: :class:`TypeChangeDefinitions <highcharts_stock.options.stock_tools.defin
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: TypeChangeDefinitions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -156,7 +156,7 @@ class: :class:`TypeChangeDefinitions <highcharts_stock.options.stock_tools.defin
 ---------------------
 
 ************************************************************************************************************************
-class: :class:`VerticalLabelsDefinitions <highcharts_stock.options.stock_tools.definitions.VerticalLabelsDefinitions>`
+class: :class:`VerticalLabelsDefinitions <highcharts_gantt.options.stock_tools.definitions.VerticalLabelsDefinitions>`
 ************************************************************************************************************************
 
 .. autoclass:: VerticalLabelsDefinitions
@@ -166,7 +166,7 @@ class: :class:`VerticalLabelsDefinitions <highcharts_stock.options.stock_tools.d
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: VerticalLabelsDefinitions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -174,7 +174,7 @@ class: :class:`VerticalLabelsDefinitions <highcharts_stock.options.stock_tools.d
 ---------------------
 
 ********************************************************************************************************************
-class: :class:`ZoomChangeDefinitions <highcharts_stock.options.stock_tools.definitions.ZoomChangeDefinitions>`
+class: :class:`ZoomChangeDefinitions <highcharts_gantt.options.stock_tools.definitions.ZoomChangeDefinitions>`
 ********************************************************************************************************************
 
 .. autoclass:: ZoomChangeDefinitions
@@ -184,7 +184,7 @@ class: :class:`ZoomChangeDefinitions <highcharts_stock.options.stock_tools.defin
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ZoomChangeDefinitions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -192,7 +192,7 @@ class: :class:`ZoomChangeDefinitions <highcharts_stock.options.stock_tools.defin
 ---------------------
 
 ********************************************************************************************************************
-class: :class:`Definition <highcharts_stock.options.stock_tools.definitions.Definition>`
+class: :class:`Definition <highcharts_gantt.options.stock_tools.definitions.Definition>`
 ********************************************************************************************************************
 
 .. autoclass:: Definition
@@ -202,7 +202,7 @@ class: :class:`Definition <highcharts_stock.options.stock_tools.definitions.Defi
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: Definition
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

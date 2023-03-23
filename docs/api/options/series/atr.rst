@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.atr <highcharts_stock.options.series.atr>`
+:mod:`.atr <highcharts_gantt.options.series.atr>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.atr
+.. module:: highcharts_gantt.options.series.atr
 
 ********************************************************************************************************************
-class: :class:`ATRSeries <highcharts_stock.options.series.atr.ATRSeries>`
+class: :class:`ATRSeries <highcharts_gantt.options.series.atr.ATRSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: ATRSeries
@@ -22,7 +22,7 @@ class: :class:`ATRSeries <highcharts_stock.options.series.atr.ATRSeries>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ATRSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`ATRSeries <highcharts_stock.options.series.atr.ATRSeries>`
 -------------------
 
 ********************************************************************************************************************
-class: :class:`NATRSeries <highcharts_stock.options.series.atr.NATRSeries>`
+class: :class:`NATRSeries <highcharts_gantt.options.series.atr.NATRSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: NATRSeries
@@ -40,7 +40,7 @@ class: :class:`NATRSeries <highcharts_stock.options.series.atr.NATRSeries>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: NATRSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

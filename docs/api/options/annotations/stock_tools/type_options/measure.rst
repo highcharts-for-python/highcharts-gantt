@@ -1,5 +1,5 @@
 ########################################################################################################################
-:mod:`.measure <highcharts_stock.options.annotations.stock_tools.type_options.measure>`
+:mod:`.measure <highcharts_gantt.options.annotations.stock_tools.type_options.measure>`
 ########################################################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.annotations.stock_tools.type_options.measure
+.. module:: highcharts_gantt.options.annotations.stock_tools.type_options.measure
 
 ************************************************************************************************************************************
-class: :class:`MeasureTypeOptions <highcharts_stock.options.annotations.stock_tools.type_options.measure.MeasureTypeOptions>`
+class: :class:`MeasureTypeOptions <highcharts_gantt.options.annotations.stock_tools.type_options.measure.MeasureTypeOptions>`
 ************************************************************************************************************************************
 
 .. autoclass:: MeasureTypeOptions
@@ -22,7 +22,7 @@ class: :class:`MeasureTypeOptions <highcharts_stock.options.annotations.stock_to
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: MeasureTypeOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`MeasureTypeOptions <highcharts_stock.options.annotations.stock_to
 -----------------------
 
 ************************************************************************************************************************************
-class: :class:`MeasureLabelOptions <highcharts_stock.options.annotations.stock_tools.type_options.measure.MeasureLabelOptions>`
+class: :class:`MeasureLabelOptions <highcharts_gantt.options.annotations.stock_tools.type_options.measure.MeasureLabelOptions>`
 ************************************************************************************************************************************
 
 .. autoclass:: MeasureLabelOptions
@@ -40,7 +40,7 @@ class: :class:`MeasureLabelOptions <highcharts_stock.options.annotations.stock_t
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: MeasureLabelOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -48,7 +48,7 @@ class: :class:`MeasureLabelOptions <highcharts_stock.options.annotations.stock_t
 -----------------------
 
 ************************************************************************************************************************************
-class: :class:`MeasureLabelStyle <highcharts_stock.options.annotations.stock_tools.type_options.measure.MeasureLabelStyle>`
+class: :class:`MeasureLabelStyle <highcharts_gantt.options.annotations.stock_tools.type_options.measure.MeasureLabelStyle>`
 ************************************************************************************************************************************
 
 .. autoclass:: MeasureLabelStyle
@@ -58,7 +58,7 @@ class: :class:`MeasureLabelStyle <highcharts_stock.options.annotations.stock_too
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: MeasureLabelStyle
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

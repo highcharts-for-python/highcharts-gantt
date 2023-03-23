@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.data <highcharts_stock.options.data>`
+:mod:`.data <highcharts_gantt.options.data>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.data
+.. module:: highcharts_gantt.options.data
 
 ********************************************************************************************************************
-class: :class:`Data <highcharts_stock.options.data.Data>`
+class: :class:`Data <highcharts_gantt.options.data.Data>`
 ********************************************************************************************************************
 
 .. autoclass:: Data
@@ -22,7 +22,7 @@ class: :class:`Data <highcharts_stock.options.data.Data>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: Data
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

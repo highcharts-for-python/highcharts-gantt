@@ -1,5 +1,5 @@
 ###################################################################################
-:mod:`.ppo <highcharts_stock.options.plot_options.oscillators.ppo>`
+:mod:`.ppo <highcharts_gantt.options.plot_options.oscillators.ppo>`
 ###################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 -------------------------
 
-.. module:: highcharts_stock.options.plot_options.oscillators.ppo
+.. module:: highcharts_gantt.options.plot_options.oscillators.ppo
 
 ********************************************************************************************************************
-class: :class:`PPOOptions <highcharts_stock.options.plot_options.oscillators.ppo.PPOOptions>`
+class: :class:`PPOOptions <highcharts_gantt.options.plot_options.oscillators.ppo.PPOOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: PPOOptions
@@ -22,7 +22,7 @@ class: :class:`PPOOptions <highcharts_stock.options.plot_options.oscillators.ppo
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: PPOOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`PPOOptions <highcharts_stock.options.plot_options.oscillators.ppo
 -------------------------
 
 ********************************************************************************************************************
-class: :class:`PPOParameters <highcharts_stock.options.plot_options.oscillators.ppo.PPOParameters>`
+class: :class:`PPOParameters <highcharts_gantt.options.plot_options.oscillators.ppo.PPOParameters>`
 ********************************************************************************************************************
 
 .. autoclass:: PPOParameters
@@ -40,7 +40,7 @@ class: :class:`PPOParameters <highcharts_stock.options.plot_options.oscillators.
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: PPOParameters
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

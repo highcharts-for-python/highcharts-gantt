@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.hlc <highcharts_stock.options.plot_options.hlc>`
+:mod:`.hlc <highcharts_gantt.options.plot_options.hlc>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.plot_options.hlc
+.. module:: highcharts_gantt.options.plot_options.hlc
 
 ********************************************************************************************************************
-class: :class:`HLCOptions <highcharts_stock.options.plot_options.hlc.HLCOptions>`
+class: :class:`HLCOptions <highcharts_gantt.options.plot_options.hlc.HLCOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: HLCOptions
@@ -22,7 +22,7 @@ class: :class:`HLCOptions <highcharts_stock.options.plot_options.hlc.HLCOptions>
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: HLCOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`HLCOptions <highcharts_stock.options.plot_options.hlc.HLCOptions>
 -------------------
 
 ********************************************************************************************************************
-class: :class:`OHLCOptions <highcharts_stock.options.plot_options.hlc.OHLCOptions>`
+class: :class:`OHLCOptions <highcharts_gantt.options.plot_options.hlc.OHLCOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: OHLCOptions
@@ -40,7 +40,7 @@ class: :class:`OHLCOptions <highcharts_stock.options.plot_options.hlc.OHLCOption
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: OHLCOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

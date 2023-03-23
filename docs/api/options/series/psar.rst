@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.psar <highcharts_stock.options.series.psar>`
+:mod:`.psar <highcharts_gantt.options.series.psar>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.psar
+.. module:: highcharts_gantt.options.series.psar
 
 ********************************************************************************************************************
-class: :class:`PSARSeries <highcharts_stock.options.series.psar.PSARSeries>`
+class: :class:`PSARSeries <highcharts_gantt.options.series.psar.PSARSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: PSARSeries
@@ -22,7 +22,7 @@ class: :class:`PSARSeries <highcharts_stock.options.series.psar.PSARSeries>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: PSARSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

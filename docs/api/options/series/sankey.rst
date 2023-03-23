@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.sankey <highcharts_stock.options.series.sankey>`
+:mod:`.sankey <highcharts_gantt.options.series.sankey>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.sankey
+.. module:: highcharts_gantt.options.series.sankey
 
 ********************************************************************************************************************
-class: :class:`SankeySeries <highcharts_stock.options.series.sankey.SankeySeries>`
+class: :class:`SankeySeries <highcharts_gantt.options.series.sankey.SankeySeries>`
 ********************************************************************************************************************
 
 .. autoclass:: SankeySeries
@@ -22,7 +22,7 @@ class: :class:`SankeySeries <highcharts_stock.options.series.sankey.SankeySeries
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: SankeySeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

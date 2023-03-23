@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.crosshair <highcharts_stock.options.axes.crosshair>`
+:mod:`.crosshair <highcharts_gantt.options.axes.crosshair>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.axes.crosshair
+.. module:: highcharts_gantt.options.axes.crosshair
 
 ********************************************************************************************************************
-class: :class:`CrosshairOptions <highcharts_stock.options.axes.crosshair.CrosshairOptions>`
+class: :class:`CrosshairOptions <highcharts_gantt.options.axes.crosshair.CrosshairOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: CrosshairOptions
@@ -22,7 +22,7 @@ class: :class:`CrosshairOptions <highcharts_stock.options.axes.crosshair.Crossha
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: CrosshairOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

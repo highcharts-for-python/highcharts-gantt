@@ -1,5 +1,5 @@
 ###################################################################################
-:mod:`.stochastic <highcharts_stock.options.series.oscillators.stochastic>`
+:mod:`.stochastic <highcharts_gantt.options.series.oscillators.stochastic>`
 ###################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 -------------------------
 
-.. module:: highcharts_stock.options.series.oscillators.stochastic
+.. module:: highcharts_gantt.options.series.oscillators.stochastic
 
 *******************************************************************************************************************************************
-class: :class:`StochasticSeries <highcharts_stock.options.series.oscillators.stochastic.StochasticSeries>`
+class: :class:`StochasticSeries <highcharts_gantt.options.series.oscillators.stochastic.StochasticSeries>`
 *******************************************************************************************************************************************
 
 .. autoclass:: StochasticSeries
@@ -22,7 +22,7 @@ class: :class:`StochasticSeries <highcharts_stock.options.series.oscillators.sto
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: StochasticSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`StochasticSeries <highcharts_stock.options.series.oscillators.sto
 ----------------------
 
 *******************************************************************************************************************************************
-class: :class:`SlowStochasticSeries <highcharts_stock.options.series.oscillators.stochastic.SlowStochasticSeries>`
+class: :class:`SlowStochasticSeries <highcharts_gantt.options.series.oscillators.stochastic.SlowStochasticSeries>`
 *******************************************************************************************************************************************
 
 .. autoclass:: SlowStochasticSeries
@@ -40,7 +40,7 @@ class: :class:`SlowStochasticSeries <highcharts_stock.options.series.oscillators
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: SlowStochasticSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

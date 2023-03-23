@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.zigzag <highcharts_stock.options.series.zigzag>`
+:mod:`.zigzag <highcharts_gantt.options.series.zigzag>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.zigzag
+.. module:: highcharts_gantt.options.series.zigzag
 
 ********************************************************************************************************************
-class: :class:`ZigZagSeries <highcharts_stock.options.series.zigzag.ZigZagSeries>`
+class: :class:`ZigZagSeries <highcharts_gantt.options.series.zigzag.ZigZagSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: ZigZagSeries
@@ -22,7 +22,7 @@ class: :class:`ZigZagSeries <highcharts_stock.options.series.zigzag.ZigZagSeries
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ZigZagSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

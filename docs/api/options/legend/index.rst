@@ -1,5 +1,5 @@
 ################################################################
-:mod:`.legend <highcharts_stock.options.legend>`
+:mod:`.legend <highcharts_gantt.options.legend>`
 ################################################################
 
 .. contents:: Module Contents
@@ -17,10 +17,10 @@
 
 -------------------------
 
-.. module:: highcharts_stock.options.legend
+.. module:: highcharts_gantt.options.legend
 
 ********************************************************************************************************************
-class: :class:`Legend <highcharts_stock.options.legend.Legend>`
+class: :class:`Legend <highcharts_gantt.options.legend.Legend>`
 ********************************************************************************************************************
 
 .. autoclass:: Legend
@@ -30,7 +30,7 @@ class: :class:`Legend <highcharts_stock.options.legend.Legend>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: Legend
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -47,16 +47,16 @@ Sub-components
 
   * - Module
     - Classes / Functions
-  * - :mod:`.options.legend <highcharts_stock.options.legend>`
-    - :class:`Legend <highcharts_stock.options.legend.Legend>`
-  * - :mod:`.options.legend.accessibility <highcharts_stock.options.legend.accessibility>`
-    - :class:`LegendAccessibilityOptions <highcharts_stock.options.legend.accessibility.LegendAccessibilityOptions>`
-      :class:`LegendKeyboardNavigation <highcharts_stock.options.legend.accessibility.LegendKeyboardNavigation>`
-  * - :mod:`.options.legend.bubble_legend <highcharts_stock.options.legend.bubble_legend>`
-    - :class:`BubbleLegend <highcharts_stock.options.legend.bubble_legend.BubbleLegend>`
-      :class:`BubbleLegendRange <highcharts_stock.options.legend.bubble_legend.BubbleLegendRange>`
-      :class:`BubbleLegendLabelOptions <highcharts_stock.options.legend.bubble_legend.BubbleLegendLabelOptions>`
-  * - :mod:`.options.legend.navigation <highcharts_stock.options.legend.navigation>`
-    - :class:`LegendNavigation <highcharts_stock.options.legend.navigation.LegendNavigation>`
-  * - :mod:`.options.legend.title <highcharts_stock.options.legend.title>`
-    - :class:`LegendTitle <highcharts_stock.options.legend.title.LegendTitle>`
+  * - :mod:`.options.legend <highcharts_gantt.options.legend>`
+    - :class:`Legend <highcharts_gantt.options.legend.Legend>`
+  * - :mod:`.options.legend.accessibility <highcharts_gantt.options.legend.accessibility>`
+    - :class:`LegendAccessibilityOptions <highcharts_gantt.options.legend.accessibility.LegendAccessibilityOptions>`
+      :class:`LegendKeyboardNavigation <highcharts_gantt.options.legend.accessibility.LegendKeyboardNavigation>`
+  * - :mod:`.options.legend.bubble_legend <highcharts_gantt.options.legend.bubble_legend>`
+    - :class:`BubbleLegend <highcharts_gantt.options.legend.bubble_legend.BubbleLegend>`
+      :class:`BubbleLegendRange <highcharts_gantt.options.legend.bubble_legend.BubbleLegendRange>`
+      :class:`BubbleLegendLabelOptions <highcharts_gantt.options.legend.bubble_legend.BubbleLegendLabelOptions>`
+  * - :mod:`.options.legend.navigation <highcharts_gantt.options.legend.navigation>`
+    - :class:`LegendNavigation <highcharts_gantt.options.legend.navigation.LegendNavigation>`
+  * - :mod:`.options.legend.title <highcharts_gantt.options.legend.title>`
+    - :class:`LegendTitle <highcharts_gantt.options.legend.title.LegendTitle>`

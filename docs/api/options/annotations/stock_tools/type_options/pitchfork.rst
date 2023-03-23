@@ -1,5 +1,5 @@
 ########################################################################################################################
-:mod:`.pitchfork <highcharts_stock.options.annotations.stock_tools.type_options.pitchfork>`
+:mod:`.pitchfork <highcharts_gantt.options.annotations.stock_tools.type_options.pitchfork>`
 ########################################################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.annotations.stock_tools.type_options.pitchfork
+.. module:: highcharts_gantt.options.annotations.stock_tools.type_options.pitchfork
 
 ************************************************************************************************************************************
-class: :class:`PitchforkTypeOptions <highcharts_stock.options.annotations.stock_tools.type_options.pitchfork.PitchforkTypeOptions>`
+class: :class:`PitchforkTypeOptions <highcharts_gantt.options.annotations.stock_tools.type_options.pitchfork.PitchforkTypeOptions>`
 ************************************************************************************************************************************
 
 .. autoclass:: PitchforkTypeOptions
@@ -22,7 +22,7 @@ class: :class:`PitchforkTypeOptions <highcharts_stock.options.annotations.stock_
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: PitchforkTypeOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

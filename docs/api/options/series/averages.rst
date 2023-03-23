@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.averages <highcharts_stock.options.series.averages>`
+:mod:`.averages <highcharts_gantt.options.series.averages>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.averages
+.. module:: highcharts_gantt.options.series.averages
 
 ********************************************************************************************************************
-class: :class:`DEMASeries <highcharts_stock.options.series.averages.DEMASeries>`
+class: :class:`DEMASeries <highcharts_gantt.options.series.averages.DEMASeries>`
 ********************************************************************************************************************
 
 .. autoclass:: DEMASeries
@@ -22,7 +22,7 @@ class: :class:`DEMASeries <highcharts_stock.options.series.averages.DEMASeries>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: DEMASeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`DEMASeries <highcharts_stock.options.series.averages.DEMASeries>`
 -------------------
 
 ********************************************************************************************************************
-class: :class:`EMASeries <highcharts_stock.options.series.averages.EMASeries>`
+class: :class:`EMASeries <highcharts_gantt.options.series.averages.EMASeries>`
 ********************************************************************************************************************
 
 .. autoclass:: EMASeries
@@ -40,7 +40,7 @@ class: :class:`EMASeries <highcharts_stock.options.series.averages.EMASeries>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: EMASeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -48,7 +48,7 @@ class: :class:`EMASeries <highcharts_stock.options.series.averages.EMASeries>`
 -------------------
 
 ********************************************************************************************************************
-class: :class:`SMASeries <highcharts_stock.options.series.averages.SMASeries>`
+class: :class:`SMASeries <highcharts_gantt.options.series.averages.SMASeries>`
 ********************************************************************************************************************
 
 .. autoclass:: SMASeries
@@ -58,7 +58,7 @@ class: :class:`SMASeries <highcharts_stock.options.series.averages.SMASeries>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: SMASeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -66,7 +66,7 @@ class: :class:`SMASeries <highcharts_stock.options.series.averages.SMASeries>`
 -------------------
 
 ********************************************************************************************************************
-class: :class:`TEMASeries <highcharts_stock.options.series.averages.TEMASeries>`
+class: :class:`TEMASeries <highcharts_gantt.options.series.averages.TEMASeries>`
 ********************************************************************************************************************
 
 .. autoclass:: TEMASeries
@@ -76,7 +76,7 @@ class: :class:`TEMASeries <highcharts_stock.options.series.averages.TEMASeries>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: TEMASeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -84,7 +84,7 @@ class: :class:`TEMASeries <highcharts_stock.options.series.averages.TEMASeries>`
 -------------------
 
 ********************************************************************************************************************
-class: :class:`VWAPSeries <highcharts_stock.options.series.averages.VWAPSeries>`
+class: :class:`VWAPSeries <highcharts_gantt.options.series.averages.VWAPSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: VWAPSeries
@@ -94,7 +94,7 @@ class: :class:`VWAPSeries <highcharts_stock.options.series.averages.VWAPSeries>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: VWAPSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -102,7 +102,7 @@ class: :class:`VWAPSeries <highcharts_stock.options.series.averages.VWAPSeries>`
 -------------------
 
 ********************************************************************************************************************
-class: :class:`WMASeries <highcharts_stock.options.series.averages.WMASeries>`
+class: :class:`WMASeries <highcharts_gantt.options.series.averages.WMASeries>`
 ********************************************************************************************************************
 
 .. autoclass:: WMASeries
@@ -112,7 +112,7 @@ class: :class:`WMASeries <highcharts_stock.options.series.averages.WMASeries>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: WMASeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

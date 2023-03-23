@@ -1,5 +1,5 @@
 ########################################################################################################################
-:mod:`.points <highcharts_stock.options.annotations.stock_tools.type_options.points>`
+:mod:`.points <highcharts_gantt.options.annotations.stock_tools.type_options.points>`
 ########################################################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.annotations.stock_tools.type_options.points
+.. module:: highcharts_gantt.options.annotations.stock_tools.type_options.points
 
 ************************************************************************************************************************************
-class: :class:`StockToolsPoint <highcharts_stock.options.annotations.stock_tools.type_options.points.StockToolsPoint>`
+class: :class:`StockToolsPoint <highcharts_gantt.options.annotations.stock_tools.type_options.points.StockToolsPoint>`
 ************************************************************************************************************************************
 
 .. autoclass:: StockToolsPoint
@@ -22,7 +22,7 @@ class: :class:`StockToolsPoint <highcharts_stock.options.annotations.stock_tools
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: StockToolsPoint
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`StockToolsPoint <highcharts_stock.options.annotations.stock_tools
 -----------------------
 
 ************************************************************************************************************************************
-class: :class:`LabeledStockToolsPoint <highcharts_stock.options.annotations.stock_tools.type_options.points.LabeledStockToolsPoint>`
+class: :class:`LabeledStockToolsPoint <highcharts_gantt.options.annotations.stock_tools.type_options.points.LabeledStockToolsPoint>`
 ************************************************************************************************************************************
 
 .. autoclass:: LabeledStockToolsPoint
@@ -40,7 +40,7 @@ class: :class:`LabeledStockToolsPoint <highcharts_stock.options.annotations.stoc
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: LabeledStockToolsPoint
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -48,7 +48,7 @@ class: :class:`LabeledStockToolsPoint <highcharts_stock.options.annotations.stoc
 -----------------------
 
 ************************************************************************************************************************************
-class: :class:`StockToolsXPoint <highcharts_stock.options.annotations.stock_tools.type_options.points.StockToolsXPoint>`
+class: :class:`StockToolsXPoint <highcharts_gantt.options.annotations.stock_tools.type_options.points.StockToolsXPoint>`
 ************************************************************************************************************************************
 
 .. autoclass:: StockToolsXPoint
@@ -58,7 +58,7 @@ class: :class:`StockToolsXPoint <highcharts_stock.options.annotations.stock_tool
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: StockToolsXPoint
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

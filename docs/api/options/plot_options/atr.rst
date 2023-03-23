@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.atr <highcharts_stock.options.plot_options.atr>`
+:mod:`.atr <highcharts_gantt.options.plot_options.atr>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.plot_options.atr
+.. module:: highcharts_gantt.options.plot_options.atr
 
 ********************************************************************************************************************
-class: :class:`ATROptions <highcharts_stock.options.plot_options.atr.ATROptions>`
+class: :class:`ATROptions <highcharts_gantt.options.plot_options.atr.ATROptions>`
 ********************************************************************************************************************
 
 .. autoclass:: ATROptions
@@ -22,7 +22,7 @@ class: :class:`ATROptions <highcharts_stock.options.plot_options.atr.ATROptions>
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ATROptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`ATROptions <highcharts_stock.options.plot_options.atr.ATROptions>
 -------------------
 
 ********************************************************************************************************************
-class: :class:`NATROptions <highcharts_stock.options.plot_options.atr.NATROptions>`
+class: :class:`NATROptions <highcharts_gantt.options.plot_options.atr.NATROptions>`
 ********************************************************************************************************************
 
 .. autoclass:: NATROptions
@@ -40,7 +40,7 @@ class: :class:`NATROptions <highcharts_stock.options.plot_options.atr.NATROption
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: NATROptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

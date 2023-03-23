@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.bullet <highcharts_stock.options.series.bullet>`
+:mod:`.bullet <highcharts_gantt.options.series.bullet>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.bullet
+.. module:: highcharts_gantt.options.series.bullet
 
 ********************************************************************************************************************
-class: :class:`BulletSeries <highcharts_stock.options.series.bullet.BulletSeries>`
+class: :class:`BulletSeries <highcharts_gantt.options.series.bullet.BulletSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: BulletSeries
@@ -22,7 +22,7 @@ class: :class:`BulletSeries <highcharts_stock.options.series.bullet.BulletSeries
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: BulletSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.dmi <highcharts_stock.options.series.dmi>`
+:mod:`.dmi <highcharts_gantt.options.series.dmi>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.dmi
+.. module:: highcharts_gantt.options.series.dmi
 
 ********************************************************************************************************************
-class: :class:`DMISeries <highcharts_stock.options.series.dmi.DMISeries>`
+class: :class:`DMISeries <highcharts_gantt.options.series.dmi.DMISeries>`
 ********************************************************************************************************************
 
 .. autoclass:: DMISeries
@@ -22,7 +22,7 @@ class: :class:`DMISeries <highcharts_stock.options.series.dmi.DMISeries>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: DMISeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

@@ -1,5 +1,5 @@
 ########################################################################################################################
-:mod:`.line <highcharts_stock.options.annotations.stock_tools.type_options.line>`
+:mod:`.line <highcharts_gantt.options.annotations.stock_tools.type_options.line>`
 ########################################################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.annotations.stock_tools.type_options.line
+.. module:: highcharts_gantt.options.annotations.stock_tools.type_options.line
 
 ************************************************************************************************************************************
-class: :class:`LineFillOnly <highcharts_stock.options.annotations.stock_tools.type_options.line.LineFillOnly>`
+class: :class:`LineFillOnly <highcharts_gantt.options.annotations.stock_tools.type_options.line.LineFillOnly>`
 ************************************************************************************************************************************
 
 .. autoclass:: LineFillOnly
@@ -22,7 +22,7 @@ class: :class:`LineFillOnly <highcharts_stock.options.annotations.stock_tools.ty
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: LineFillOnly
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`LineFillOnly <highcharts_stock.options.annotations.stock_tools.ty
 -----------------------
 
 ************************************************************************************************************************************
-class: :class:`LineStrokeWidth <highcharts_stock.options.annotations.stock_tools.type_options.line.LineStrokeWidth>`
+class: :class:`LineStrokeWidth <highcharts_gantt.options.annotations.stock_tools.type_options.line.LineStrokeWidth>`
 ************************************************************************************************************************************
 
 .. autoclass:: LineStrokeWidth
@@ -40,7 +40,7 @@ class: :class:`LineStrokeWidth <highcharts_stock.options.annotations.stock_tools
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: LineStrokeWidth
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -48,7 +48,7 @@ class: :class:`LineStrokeWidth <highcharts_stock.options.annotations.stock_tools
 -----------------------
 
 ************************************************************************************************************************************
-class: :class:`LineStrokeWidthStroke <highcharts_stock.options.annotations.stock_tools.type_options.line.LineStrokeWidthStroke>`
+class: :class:`LineStrokeWidthStroke <highcharts_gantt.options.annotations.stock_tools.type_options.line.LineStrokeWidthStroke>`
 ************************************************************************************************************************************
 
 .. autoclass:: LineStrokeWidthStroke
@@ -58,7 +58,7 @@ class: :class:`LineStrokeWidthStroke <highcharts_stock.options.annotations.stock
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: LineStrokeWidthStroke
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

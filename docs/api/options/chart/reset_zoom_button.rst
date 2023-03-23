@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.reset_zoom_button <highcharts_stock.options.chart.reset_zoom_button>`
+:mod:`.reset_zoom_button <highcharts_gantt.options.chart.reset_zoom_button>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.chart.reset_zoom_button
+.. module:: highcharts_gantt.options.chart.reset_zoom_button
 
 ********************************************************************************************************************
-class: :class:`ResetZoomButtonOptions <highcharts_stock.options.chart.reset_zoom_button.ResetZoomButtonOptions>`
+class: :class:`ResetZoomButtonOptions <highcharts_gantt.options.chart.reset_zoom_button.ResetZoomButtonOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: ResetZoomButtonOptions
@@ -22,7 +22,7 @@ class: :class:`ResetZoomButtonOptions <highcharts_stock.options.chart.reset_zoom
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ResetZoomButtonOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

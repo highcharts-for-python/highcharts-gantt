@@ -1,5 +1,5 @@
 #########################################################################################################
-:mod:`.axis <highcharts_stock.global_options.language.accessibility.axis>`
+:mod:`.axis <highcharts_gantt.global_options.language.accessibility.axis>`
 #########################################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.global_options.language.accessibility.axis
+.. module:: highcharts_gantt.global_options.language.accessibility.axis
 
 *************************************************************************************************************************************************************
-class: :class:`AxisLanguageOptions <highcharts_stock.global_options.language.accessibility.axis.AxisLanguageOptions>`
+class: :class:`AxisLanguageOptions <highcharts_gantt.global_options.language.accessibility.axis.AxisLanguageOptions>`
 *************************************************************************************************************************************************************
 
 .. autoclass:: AxisLanguageOptions
@@ -22,7 +22,7 @@ class: :class:`AxisLanguageOptions <highcharts_stock.global_options.language.acc
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: AxisLanguageOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

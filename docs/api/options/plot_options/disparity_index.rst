@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.disparity_index <highcharts_stock.options.plot_options.disparity_index>`
+:mod:`.disparity_index <highcharts_gantt.options.plot_options.disparity_index>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.plot_options.disparity_index
+.. module:: highcharts_gantt.options.plot_options.disparity_index
 
 ********************************************************************************************************************
-class: :class:`DisparityIndexOptions <highcharts_stock.options.plot_options.disparity_index.DisparityIndexOptions>`
+class: :class:`DisparityIndexOptions <highcharts_gantt.options.plot_options.disparity_index.DisparityIndexOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: DisparityIndexOptions
@@ -22,7 +22,7 @@ class: :class:`DisparityIndexOptions <highcharts_stock.options.plot_options.disp
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: DisparityIndexOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`DisparityIndexOptions <highcharts_stock.options.plot_options.disp
 -------------------
 
 ***************************************************************************************************************************
-class: :class:`DisparityIndexParameters <highcharts_stock.options.plot_options.disparity_index.DisparityIndexParameters>`
+class: :class:`DisparityIndexParameters <highcharts_gantt.options.plot_options.disparity_index.DisparityIndexParameters>`
 ***************************************************************************************************************************
 
 .. autoclass:: DisparityIndexParameters
@@ -40,7 +40,7 @@ class: :class:`DisparityIndexParameters <highcharts_stock.options.plot_options.d
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: DisparityIndexParameters
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

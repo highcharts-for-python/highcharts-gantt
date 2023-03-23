@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.disparity_index <highcharts_stock.options.series.disparity_index>`
+:mod:`.disparity_index <highcharts_gantt.options.series.disparity_index>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.disparity_index
+.. module:: highcharts_gantt.options.series.disparity_index
 
 ********************************************************************************************************************
-class: :class:`DisparityIndexSeries <highcharts_stock.options.series.disparity_index.DisparityIndexSeries>`
+class: :class:`DisparityIndexSeries <highcharts_gantt.options.series.disparity_index.DisparityIndexSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: DisparityIndexSeries
@@ -22,7 +22,7 @@ class: :class:`DisparityIndexSeries <highcharts_stock.options.series.disparity_i
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: DisparityIndexSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

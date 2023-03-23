@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.price_envelopes <highcharts_stock.options.plot_options.price_envelopes>`
+:mod:`.price_envelopes <highcharts_gantt.options.plot_options.price_envelopes>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.plot_options.price_envelopes
+.. module:: highcharts_gantt.options.plot_options.price_envelopes
 
 ********************************************************************************************************************
-class: :class:`PriceEnvelopesOptions <highcharts_stock.options.plot_options.price_envelopes.PriceEnvelopesOptions>`
+class: :class:`PriceEnvelopesOptions <highcharts_gantt.options.plot_options.price_envelopes.PriceEnvelopesOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: PriceEnvelopesOptions
@@ -22,7 +22,7 @@ class: :class:`PriceEnvelopesOptions <highcharts_stock.options.plot_options.pric
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: PriceEnvelopesOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`PriceEnvelopesOptions <highcharts_stock.options.plot_options.pric
 -------------------
 
 ******************************************************************************************************************************
-class: :class:`PriceEnvelopesParameters <highcharts_stock.options.plot_options.price_envelopes.PriceEnvelopesParameters>`
+class: :class:`PriceEnvelopesParameters <highcharts_gantt.options.plot_options.price_envelopes.PriceEnvelopesParameters>`
 ******************************************************************************************************************************
 
 .. autoclass:: PriceEnvelopesParameters
@@ -40,7 +40,7 @@ class: :class:`PriceEnvelopesParameters <highcharts_stock.options.plot_options.p
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: PriceEnvelopesParameters
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -48,7 +48,7 @@ class: :class:`PriceEnvelopesParameters <highcharts_stock.options.plot_options.p
 -------------------
 
 ******************************************************************************************************************************
-class: :class:`PriceEnvelopesStyleOptions <highcharts_stock.options.plot_options.price_envelopes.PriceEnvelopesStyleOptions>`
+class: :class:`PriceEnvelopesStyleOptions <highcharts_gantt.options.plot_options.price_envelopes.PriceEnvelopesStyleOptions>`
 ******************************************************************************************************************************
 
 .. autoclass:: PriceEnvelopesStyleOptions
@@ -58,7 +58,7 @@ class: :class:`PriceEnvelopesStyleOptions <highcharts_stock.options.plot_options
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: PriceEnvelopesStyleOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

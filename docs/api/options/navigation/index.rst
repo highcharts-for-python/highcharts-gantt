@@ -1,5 +1,5 @@
 ################################################################
-:mod:`.navigation <highcharts_stock.options.navigation>`
+:mod:`.navigation <highcharts_gantt.options.navigation>`
 ################################################################
 
 .. contents:: Module Contents
@@ -14,10 +14,10 @@
 
 -------------------------
 
-.. module:: highcharts_stock.options.navigation
+.. module:: highcharts_gantt.options.navigation
 
 ********************************************************************************************************************
-class: :class:`Navigation <highcharts_stock.options.navigation.Navigation>`
+class: :class:`Navigation <highcharts_gantt.options.navigation.Navigation>`
 ********************************************************************************************************************
 
 .. autoclass:: Navigation
@@ -27,7 +27,7 @@ class: :class:`Navigation <highcharts_stock.options.navigation.Navigation>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: Navigation
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -44,12 +44,12 @@ Sub-components
 
   * - Module
     - Classes / Functions
-  * - :mod:`.options.navigation <highcharts_stock.options.navigation>`
-    - :class:`Navigation <highcharts_stock.options.navigation.Navigation>`
-  * - :mod:`.options.navigation.bindings <highcharts_stock.options.navigation.bindings>`
-    - :class:`Bindings <highcharts_stock.options.navigation.bindings.Bindings>`
-      :class:`RectangleAnnotationBinding <highcharts_stock.options.navigation.bindings.RectangleAnnotationBinding>`
-      :class:`LabelAnnotationBinding <highcharts_stock.options.navigation.bindings.LabelAnnotationBinding>`
-      :class:`EllipseAnnotationBinding <highcharts_stock.options.navigation.bindings.EllipseAnnotationBinding>`
-      :class:`CircleAnnotationBinding <highcharts_stock.options.navigation.bindings.CircleAnnotationBinding>`
-      :class:`Binding <highcharts_stock.options.navigation.bindings.Binding>`
+  * - :mod:`.options.navigation <highcharts_gantt.options.navigation>`
+    - :class:`Navigation <highcharts_gantt.options.navigation.Navigation>`
+  * - :mod:`.options.navigation.bindings <highcharts_gantt.options.navigation.bindings>`
+    - :class:`Bindings <highcharts_gantt.options.navigation.bindings.Bindings>`
+      :class:`RectangleAnnotationBinding <highcharts_gantt.options.navigation.bindings.RectangleAnnotationBinding>`
+      :class:`LabelAnnotationBinding <highcharts_gantt.options.navigation.bindings.LabelAnnotationBinding>`
+      :class:`EllipseAnnotationBinding <highcharts_gantt.options.navigation.bindings.EllipseAnnotationBinding>`
+      :class:`CircleAnnotationBinding <highcharts_gantt.options.navigation.bindings.CircleAnnotationBinding>`
+      :class:`Binding <highcharts_gantt.options.navigation.bindings.Binding>`

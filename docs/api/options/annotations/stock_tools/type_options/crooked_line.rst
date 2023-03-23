@@ -1,5 +1,5 @@
 ########################################################################################################################
-:mod:`.crooked_line <highcharts_stock.options.annotations.stock_tools.type_options.crooked_line>`
+:mod:`.crooked_line <highcharts_gantt.options.annotations.stock_tools.type_options.crooked_line>`
 ########################################################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.annotations.stock_tools.type_options.crooked_line
+.. module:: highcharts_gantt.options.annotations.stock_tools.type_options.crooked_line
 
 ***************************************************************************************************************************************************
-class: :class:`CrookedLineTypeOptions <highcharts_stock.options.annotations.stock_tools.type_options.crooked_line.CrookedLineTypeOptions>`
+class: :class:`CrookedLineTypeOptions <highcharts_gantt.options.annotations.stock_tools.type_options.crooked_line.CrookedLineTypeOptions>`
 ***************************************************************************************************************************************************
 
 .. autoclass:: CrookedLineTypeOptions
@@ -22,7 +22,7 @@ class: :class:`CrookedLineTypeOptions <highcharts_stock.options.annotations.stoc
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: CrookedLineTypeOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`CrookedLineTypeOptions <highcharts_stock.options.annotations.stoc
 -----------------------
 
 ***************************************************************************************************************************************************
-class: :class:`InfinityLineTypeOptions <highcharts_stock.options.annotations.stock_tools.type_options.crooked_line.InfinityLineTypeOptions>`
+class: :class:`InfinityLineTypeOptions <highcharts_gantt.options.annotations.stock_tools.type_options.crooked_line.InfinityLineTypeOptions>`
 ***************************************************************************************************************************************************
 
 .. autoclass:: InfinityLineTypeOptions
@@ -40,7 +40,7 @@ class: :class:`InfinityLineTypeOptions <highcharts_stock.options.annotations.sto
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: InfinityLineTypeOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

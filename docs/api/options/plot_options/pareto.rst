@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.pareto <highcharts_stock.options.plot_options.pareto>`
+:mod:`.pareto <highcharts_gantt.options.plot_options.pareto>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.plot_options.pareto
+.. module:: highcharts_gantt.options.plot_options.pareto
 
 ********************************************************************************************************************
-class: :class:`ParetoOptions <highcharts_stock.options.plot_options.pareto.ParetoOptions>`
+class: :class:`ParetoOptions <highcharts_gantt.options.plot_options.pareto.ParetoOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: ParetoOptions
@@ -22,7 +22,7 @@ class: :class:`ParetoOptions <highcharts_stock.options.plot_options.pareto.Paret
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ParetoOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

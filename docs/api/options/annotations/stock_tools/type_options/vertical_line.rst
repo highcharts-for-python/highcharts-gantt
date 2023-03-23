@@ -1,5 +1,5 @@
 ########################################################################################################################
-:mod:`.vertical_line <highcharts_stock.options.annotations.stock_tools.type_options.vertical_line>`
+:mod:`.vertical_line <highcharts_gantt.options.annotations.stock_tools.type_options.vertical_line>`
 ########################################################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.annotations.stock_tools.type_options.vertical_line
+.. module:: highcharts_gantt.options.annotations.stock_tools.type_options.vertical_line
 
 *********************************************************************************************************************************************************
-class: :class:`VerticalLineTypeOptions <highcharts_stock.options.annotations.stock_tools.type_options.vertical_line.VerticalLineTypeOptions>`
+class: :class:`VerticalLineTypeOptions <highcharts_gantt.options.annotations.stock_tools.type_options.vertical_line.VerticalLineTypeOptions>`
 *********************************************************************************************************************************************************
 
 .. autoclass:: VerticalLineTypeOptions
@@ -22,7 +22,7 @@ class: :class:`VerticalLineTypeOptions <highcharts_stock.options.annotations.sto
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: VerticalLineTypeOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`VerticalLineTypeOptions <highcharts_stock.options.annotations.sto
 -----------------------
 
 *********************************************************************************************************************************************************
-class: :class:`VerticalLineConnector <highcharts_stock.options.annotations.stock_tools.type_options.vertical_line.VerticalLineConnector>`
+class: :class:`VerticalLineConnector <highcharts_gantt.options.annotations.stock_tools.type_options.vertical_line.VerticalLineConnector>`
 *********************************************************************************************************************************************************
 
 .. autoclass:: VerticalLineConnector
@@ -40,7 +40,7 @@ class: :class:`VerticalLineConnector <highcharts_stock.options.annotations.stock
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: VerticalLineConnector
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

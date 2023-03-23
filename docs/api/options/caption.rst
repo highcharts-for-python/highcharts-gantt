@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.caption <highcharts_stock.options.caption>`
+:mod:`.caption <highcharts_gantt.options.caption>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.caption
+.. module:: highcharts_gantt.options.caption
 
 ********************************************************************************************************************
-class: :class:`Caption <highcharts_stock.options.caption.Caption>`
+class: :class:`Caption <highcharts_gantt.options.caption.Caption>`
 ********************************************************************************************************************
 
 .. autoclass:: Caption
@@ -22,7 +22,7 @@ class: :class:`Caption <highcharts_stock.options.caption.Caption>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: Caption
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.histogram <highcharts_stock.options.series.histogram>`
+:mod:`.histogram <highcharts_gantt.options.series.histogram>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.histogram
+.. module:: highcharts_gantt.options.series.histogram
 
 ********************************************************************************************************************
-class: :class:`HistogramSeries <highcharts_stock.options.series.histogram.HistogramSeries>`
+class: :class:`HistogramSeries <highcharts_gantt.options.series.histogram.HistogramSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: HistogramSeries
@@ -22,7 +22,7 @@ class: :class:`HistogramSeries <highcharts_stock.options.series.histogram.Histog
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: HistogramSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

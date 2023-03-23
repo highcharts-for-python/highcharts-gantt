@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.drilldown <highcharts_stock.options.drilldown>`
+:mod:`.drilldown <highcharts_gantt.options.drilldown>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.drilldown
+.. module:: highcharts_gantt.options.drilldown
 
 ********************************************************************************************************************
-class: :class:`Drilldown <highcharts_stock.options.drilldown.Drilldown>`
+class: :class:`Drilldown <highcharts_gantt.options.drilldown.Drilldown>`
 ********************************************************************************************************************
 
 .. autoclass:: Drilldown
@@ -22,7 +22,7 @@ class: :class:`Drilldown <highcharts_stock.options.drilldown.Drilldown>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: Drilldown
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

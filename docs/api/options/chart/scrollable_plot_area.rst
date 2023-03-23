@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.scrollable_plot_area <highcharts_stock.options.chart.scrollable_plot_area>`
+:mod:`.scrollable_plot_area <highcharts_gantt.options.chart.scrollable_plot_area>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.chart.scrollable_plot_area
+.. module:: highcharts_gantt.options.chart.scrollable_plot_area
 
 ********************************************************************************************************************
-class: :class:`ScrollablePlotArea <highcharts_stock.options.chart.scrollable_plot_area.ScrollablePlotArea>`
+class: :class:`ScrollablePlotArea <highcharts_gantt.options.chart.scrollable_plot_area.ScrollablePlotArea>`
 ********************************************************************************************************************
 
 .. autoclass:: ScrollablePlotArea
@@ -22,7 +22,7 @@ class: :class:`ScrollablePlotArea <highcharts_stock.options.chart.scrollable_plo
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ScrollablePlotArea
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.time <highcharts_stock.options.time>`
+:mod:`.time <highcharts_gantt.options.time>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.time
+.. module:: highcharts_gantt.options.time
 
 ********************************************************************************************************************
-class: :class:`Time <highcharts_stock.options.time.Time>`
+class: :class:`Time <highcharts_gantt.options.time.Time>`
 ********************************************************************************************************************
 
 .. autoclass:: Time
@@ -22,7 +22,7 @@ class: :class:`Time <highcharts_stock.options.time.Time>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: Time
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

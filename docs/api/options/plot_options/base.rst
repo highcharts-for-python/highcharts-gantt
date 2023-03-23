@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.base <highcharts_stock.options.plot_options.base>`
+:mod:`.base <highcharts_gantt.options.plot_options.base>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.plot_options.base
+.. module:: highcharts_gantt.options.plot_options.base
 
 ********************************************************************************************************************
-class: :class:`NonIndicatorOptions <highcharts_stock.options.plot_options.base.NonIndicatorOptions>`
+class: :class:`NonIndicatorOptions <highcharts_gantt.options.plot_options.base.NonIndicatorOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: NonIndicatorOptions
@@ -22,7 +22,7 @@ class: :class:`NonIndicatorOptions <highcharts_stock.options.plot_options.base.N
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: NonIndicatorOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`NonIndicatorOptions <highcharts_stock.options.plot_options.base.N
 -------------------
 
 ********************************************************************************************************************
-class: :class:`NavigatorIndicatorOptions <highcharts_stock.options.plot_options.base.NavigatorIndicatorOptions>`
+class: :class:`NavigatorIndicatorOptions <highcharts_gantt.options.plot_options.base.NavigatorIndicatorOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: NavigatorIndicatorOptions
@@ -40,7 +40,7 @@ class: :class:`NavigatorIndicatorOptions <highcharts_stock.options.plot_options.
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: NavigatorIndicatorOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -48,7 +48,7 @@ class: :class:`NavigatorIndicatorOptions <highcharts_stock.options.plot_options.
 -------------------
 
 ********************************************************************************************************************
-class: :class:`StockBaseOptions <highcharts_stock.options.plot_options.base.StockBaseOptions>`
+class: :class:`StockBaseOptions <highcharts_gantt.options.plot_options.base.StockBaseOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: StockBaseOptions
@@ -58,7 +58,7 @@ class: :class:`StockBaseOptions <highcharts_stock.options.plot_options.base.Stoc
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: StockBaseOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

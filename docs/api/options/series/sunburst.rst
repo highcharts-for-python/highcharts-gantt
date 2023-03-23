@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.sunburst <highcharts_stock.options.series.sunburst>`
+:mod:`.sunburst <highcharts_gantt.options.series.sunburst>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.sunburst
+.. module:: highcharts_gantt.options.series.sunburst
 
 ********************************************************************************************************************
-class: :class:`SunburstSeries <highcharts_stock.options.series.sunburst.SunburstSeries>`
+class: :class:`SunburstSeries <highcharts_gantt.options.series.sunburst.SunburstSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: SunburstSeries
@@ -22,7 +22,7 @@ class: :class:`SunburstSeries <highcharts_stock.options.series.sunburst.Sunburst
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: SunburstSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

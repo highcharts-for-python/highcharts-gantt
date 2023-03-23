@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.numeric <highcharts_stock.options.axes.numeric>`
+:mod:`.numeric <highcharts_gantt.options.axes.numeric>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.axes.numeric
+.. module:: highcharts_gantt.options.axes.numeric
 
 ********************************************************************************************************************
-class: :class:`NumericAxis <highcharts_stock.options.axes.numeric.NumericAxis>`
+class: :class:`NumericAxis <highcharts_gantt.options.axes.numeric.NumericAxis>`
 ********************************************************************************************************************
 
 .. autoclass:: NumericAxis
@@ -22,7 +22,7 @@ class: :class:`NumericAxis <highcharts_stock.options.axes.numeric.NumericAxis>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: NumericAxis
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

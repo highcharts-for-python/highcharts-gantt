@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.vbp <highcharts_stock.options.series.vbp>`
+:mod:`.vbp <highcharts_gantt.options.series.vbp>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.vbp
+.. module:: highcharts_gantt.options.series.vbp
 
 ********************************************************************************************************************
-class: :class:`VBPSeries <highcharts_stock.options.series.vbp.VBPSeries>`
+class: :class:`VBPSeries <highcharts_gantt.options.series.vbp.VBPSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: VBPSeries
@@ -22,7 +22,7 @@ class: :class:`VBPSeries <highcharts_stock.options.series.vbp.VBPSeries>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: VBPSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

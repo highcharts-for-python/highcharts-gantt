@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.patterns <highcharts_stock.utility_classes.patterns>`
+:mod:`.patterns <highcharts_gantt.utility_classes.patterns>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.utility_classes.patterns
+.. module:: highcharts_gantt.utility_classes.patterns
 
 ********************************************************************************************************************
-class: :class:`Pattern <highcharts_stock.utility_classes.patterns.Pattern>`
+class: :class:`Pattern <highcharts_gantt.utility_classes.patterns.Pattern>`
 ********************************************************************************************************************
 
 .. autoclass:: Pattern
@@ -22,7 +22,7 @@ class: :class:`Pattern <highcharts_stock.utility_classes.patterns.Pattern>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: Pattern
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`Pattern <highcharts_stock.utility_classes.patterns.Pattern>`
 ----------------
 
 ********************************************************************************************************************
-class: :class:`PatternOptions <highcharts_stock.utility_classes.patterns.PatternOptions>`
+class: :class:`PatternOptions <highcharts_gantt.utility_classes.patterns.PatternOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: PatternOptions
@@ -40,7 +40,7 @@ class: :class:`PatternOptions <highcharts_stock.utility_classes.patterns.Pattern
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: PatternOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

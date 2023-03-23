@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.indicators <highcharts_stock.options.plot_options.indicators>`
+:mod:`.indicators <highcharts_gantt.options.plot_options.indicators>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.plot_options.indicators
+.. module:: highcharts_gantt.options.plot_options.indicators
 
 ********************************************************************************************************************
-class: :class:`IndicatorOptions <highcharts_stock.options.plot_options.indicators.IndicatorOptions>`
+class: :class:`IndicatorOptions <highcharts_gantt.options.plot_options.indicators.IndicatorOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: IndicatorOptions
@@ -22,7 +22,7 @@ class: :class:`IndicatorOptions <highcharts_stock.options.plot_options.indicator
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: IndicatorOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`IndicatorOptions <highcharts_stock.options.plot_options.indicator
 -------------------
 
 ***************************************************************************************************************************
-class: :class:`ComparableIndicatorOptions <highcharts_stock.options.plot_options.indicators.ComparableIndicatorOptions>`
+class: :class:`ComparableIndicatorOptions <highcharts_gantt.options.plot_options.indicators.ComparableIndicatorOptions>`
 ***************************************************************************************************************************
 
 .. autoclass:: ComparableIndicatorOptions
@@ -40,7 +40,7 @@ class: :class:`ComparableIndicatorOptions <highcharts_stock.options.plot_options
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ComparableIndicatorOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -48,7 +48,7 @@ class: :class:`ComparableIndicatorOptions <highcharts_stock.options.plot_options
 -------------------
 
 ********************************************************************************************************************
-class: :class:`ParameterBase <highcharts_stock.options.plot_options.indicators.ParameterBase>`
+class: :class:`ParameterBase <highcharts_gantt.options.plot_options.indicators.ParameterBase>`
 ********************************************************************************************************************
 
 .. autoclass:: ParameterBase
@@ -58,7 +58,7 @@ class: :class:`ParameterBase <highcharts_stock.options.plot_options.indicators.P
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ParameterBase
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

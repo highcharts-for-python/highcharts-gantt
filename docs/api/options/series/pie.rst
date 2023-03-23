@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.pie <highcharts_stock.options.series.pie>`
+:mod:`.pie <highcharts_gantt.options.series.pie>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.pie
+.. module:: highcharts_gantt.options.series.pie
 
 ********************************************************************************************************************
-class: :class:`PieSeries <highcharts_stock.options.series.pie.PieSeries>`
+class: :class:`PieSeries <highcharts_gantt.options.series.pie.PieSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: PieSeries
@@ -22,7 +22,7 @@ class: :class:`PieSeries <highcharts_stock.options.series.pie.PieSeries>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: PieSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -31,7 +31,7 @@ class: :class:`PieSeries <highcharts_stock.options.series.pie.PieSeries>`
 ------
 
 ********************************************************************************************************************
-class: :class:`VariablePieSeries <highcharts_stock.options.series.pie.VariablePieSeries>`
+class: :class:`VariablePieSeries <highcharts_gantt.options.series.pie.VariablePieSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: VariablePieSeries
@@ -41,7 +41,7 @@ class: :class:`VariablePieSeries <highcharts_stock.options.series.pie.VariablePi
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: VariablePieSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

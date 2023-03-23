@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.linear_regressions <highcharts_stock.options.series.linear_regressions>`
+:mod:`.linear_regressions <highcharts_gantt.options.series.linear_regressions>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.linear_regressions
+.. module:: highcharts_gantt.options.series.linear_regressions
 
 ******************************************************************************************************************************************************
-class: :class:`LinearRegressionSeries <highcharts_stock.options.series.linear_regressions.LinearRegressionSeries>`
+class: :class:`LinearRegressionSeries <highcharts_gantt.options.series.linear_regressions.LinearRegressionSeries>`
 ******************************************************************************************************************************************************
 
 .. autoclass:: LinearRegressionSeries
@@ -22,7 +22,7 @@ class: :class:`LinearRegressionSeries <highcharts_stock.options.series.linear_re
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: LinearRegressionSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`LinearRegressionSeries <highcharts_stock.options.series.linear_re
 -------------------
 
 ******************************************************************************************************************************************************
-class: :class:`LinearRegressionAngleSeries <highcharts_stock.options.series.linear_regressions.LinearRegressionAngleSeries>`
+class: :class:`LinearRegressionAngleSeries <highcharts_gantt.options.series.linear_regressions.LinearRegressionAngleSeries>`
 ******************************************************************************************************************************************************
 
 .. autoclass:: LinearRegressionAngleSeries
@@ -40,7 +40,7 @@ class: :class:`LinearRegressionAngleSeries <highcharts_stock.options.series.line
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: LinearRegressionAngleSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -48,7 +48,7 @@ class: :class:`LinearRegressionAngleSeries <highcharts_stock.options.series.line
 -------------------
 
 ******************************************************************************************************************************************************
-class: :class:`LinearRegressionInterceptSeries <highcharts_stock.options.series.linear_regressions.LinearRegressionInterceptSeries>`
+class: :class:`LinearRegressionInterceptSeries <highcharts_gantt.options.series.linear_regressions.LinearRegressionInterceptSeries>`
 ******************************************************************************************************************************************************
 
 .. autoclass:: LinearRegressionInterceptSeries
@@ -58,7 +58,7 @@ class: :class:`LinearRegressionInterceptSeries <highcharts_stock.options.series.
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: LinearRegressionInterceptSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -66,7 +66,7 @@ class: :class:`LinearRegressionInterceptSeries <highcharts_stock.options.series.
 -------------------
 
 ******************************************************************************************************************************************************
-class: :class:`LinearRegressionSlopeSeries <highcharts_stock.options.series.linear_regressions.LinearRegressionSlopeSeries>`
+class: :class:`LinearRegressionSlopeSeries <highcharts_gantt.options.series.linear_regressions.LinearRegressionSlopeSeries>`
 ******************************************************************************************************************************************************
 
 .. autoclass:: LinearRegressionSlopeSeries
@@ -76,7 +76,7 @@ class: :class:`LinearRegressionSlopeSeries <highcharts_stock.options.series.line
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: LinearRegressionSlopeSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -84,7 +84,7 @@ class: :class:`LinearRegressionSlopeSeries <highcharts_stock.options.series.line
 -------------------
 
 ******************************************************************************************************************************************************
-class: :class:`TrendlineSeries <highcharts_stock.options.series.linear_regressions.TrendlineSeries>`
+class: :class:`TrendlineSeries <highcharts_gantt.options.series.linear_regressions.TrendlineSeries>`
 ******************************************************************************************************************************************************
 
 .. autoclass:: TrendlineSeries
@@ -94,7 +94,7 @@ class: :class:`TrendlineSeries <highcharts_stock.options.series.linear_regressio
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: TrendlineSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.pivot_points <highcharts_stock.options.series.pivot_points>`
+:mod:`.pivot_points <highcharts_gantt.options.series.pivot_points>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.pivot_points
+.. module:: highcharts_gantt.options.series.pivot_points
 
 ********************************************************************************************************************
-class: :class:`PivotPointsSeries <highcharts_stock.options.series.pivot_points.PivotPointsSeries>`
+class: :class:`PivotPointsSeries <highcharts_gantt.options.series.pivot_points.PivotPointsSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: PivotPointsSeries
@@ -22,7 +22,7 @@ class: :class:`PivotPointsSeries <highcharts_stock.options.series.pivot_points.P
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: PivotPointsSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

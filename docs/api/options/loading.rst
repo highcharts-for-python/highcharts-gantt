@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.loading <highcharts_stock.options.loading>`
+:mod:`.loading <highcharts_gantt.options.loading>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.loading
+.. module:: highcharts_gantt.options.loading
 
 ********************************************************************************************************************
-class: :class:`Loading <highcharts_stock.options.loading.Loading>`
+class: :class:`Loading <highcharts_gantt.options.loading.Loading>`
 ********************************************************************************************************************
 
 .. autoclass:: Loading
@@ -22,7 +22,7 @@ class: :class:`Loading <highcharts_stock.options.loading.Loading>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: Loading
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

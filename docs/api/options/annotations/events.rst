@@ -1,5 +1,5 @@
 #############################################################################################
-:mod:`.events <highcharts_stock.options.annotations.events>`
+:mod:`.events <highcharts_gantt.options.annotations.events>`
 #############################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.annotations.events
+.. module:: highcharts_gantt.options.annotations.events
 
 *******************************************************************************************************************************************
-class: :class:`AnnotationEvent <highcharts_stock.options.annotations.events.AnnotationEvent>`
+class: :class:`AnnotationEvent <highcharts_gantt.options.annotations.events.AnnotationEvent>`
 *******************************************************************************************************************************************
 
 .. autoclass:: AnnotationEvent
@@ -22,7 +22,7 @@ class: :class:`AnnotationEvent <highcharts_stock.options.annotations.events.Anno
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: AnnotationEvent
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

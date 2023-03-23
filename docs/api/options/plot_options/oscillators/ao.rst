@@ -1,5 +1,5 @@
 #############################################################################
-:mod:`.ao <highcharts_stock.options.plot_options.oscillators.ao>`
+:mod:`.ao <highcharts_gantt.options.plot_options.oscillators.ao>`
 #############################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 -------------------------
 
-.. module:: highcharts_stock.options.plot_options.oscillators.ao
+.. module:: highcharts_gantt.options.plot_options.oscillators.ao
 
 ********************************************************************************************************************
-class: :class:`AOOptions <highcharts_stock.options.plot_options.oscillators.ao.AOOptions>`
+class: :class:`AOOptions <highcharts_gantt.options.plot_options.oscillators.ao.AOOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: AOOptions
@@ -22,7 +22,7 @@ class: :class:`AOOptions <highcharts_stock.options.plot_options.oscillators.ao.A
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: AOOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.psar <highcharts_stock.options.plot_options.psar>`
+:mod:`.psar <highcharts_gantt.options.plot_options.psar>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.plot_options.psar
+.. module:: highcharts_gantt.options.plot_options.psar
 
 ********************************************************************************************************************
-class: :class:`PSAROptions <highcharts_stock.options.plot_options.psar.PSAROptions>`
+class: :class:`PSAROptions <highcharts_gantt.options.plot_options.psar.PSAROptions>`
 ********************************************************************************************************************
 
 .. autoclass:: PSAROptions
@@ -22,7 +22,7 @@ class: :class:`PSAROptions <highcharts_stock.options.plot_options.psar.PSAROptio
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: PSAROptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`PSAROptions <highcharts_stock.options.plot_options.psar.PSAROptio
 -------------------
 
 ********************************************************************************************************************
-class: :class:`PSARParameters <highcharts_stock.options.plot_options.psar.PSARParameters>`
+class: :class:`PSARParameters <highcharts_gantt.options.plot_options.psar.PSARParameters>`
 ********************************************************************************************************************
 
 .. autoclass:: PSARParameters
@@ -40,7 +40,7 @@ class: :class:`PSARParameters <highcharts_stock.options.plot_options.psar.PSARPa
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: PSARParameters
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

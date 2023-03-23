@@ -1,5 +1,5 @@
 #############################################################################
-:mod:`.shared_options <highcharts_stock.global_options.shared_options>`
+:mod:`.shared_options <highcharts_gantt.global_options.shared_options>`
 #############################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,28 @@
 
 --------------
 
-.. module:: highcharts_stock.global_options.shared_options
+.. module:: highcharts_gantt.global_options.shared_options
 
 **********************************************************************************************************
-class: :class:`SharedStockOptions <highcharts_stock.global_options.shared_options.SharedStockOptions>`
+class: :class:`SharedGanttOptions <highcharts_gantt.global_options.shared_options.SharedGanttOptions>`
+**********************************************************************************************************
+
+.. autoclass:: SharedGanttOptions
+  :members:
+  :inherited-members:
+
+  .. collapse:: Class Inheritance
+
+    .. inheritance-diagram:: SharedGanttOptions
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :parts: -1
+
+  |
+
+----------------
+
+**********************************************************************************************************
+class: :class:`SharedStockOptions <highcharts_gantt.global_options.shared_options.SharedStockOptions>`
 **********************************************************************************************************
 
 .. autoclass:: SharedStockOptions
@@ -22,7 +40,7 @@ class: :class:`SharedStockOptions <highcharts_stock.global_options.shared_option
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: SharedStockOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +48,7 @@ class: :class:`SharedStockOptions <highcharts_stock.global_options.shared_option
 ----------------
 
 **********************************************************************************************
-class: :class:`SharedOptions <highcharts_stock.global_options.shared_options.SharedOptions>`
+class: :class:`SharedOptions <highcharts_gantt.global_options.shared_options.SharedOptions>`
 **********************************************************************************************
 
 .. autoclass:: SharedOptions
@@ -40,7 +58,7 @@ class: :class:`SharedOptions <highcharts_stock.global_options.shared_options.Sha
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: SharedOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

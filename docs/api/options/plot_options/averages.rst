@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.averages <highcharts_stock.options.plot_options.averages>`
+:mod:`.averages <highcharts_gantt.options.plot_options.averages>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.plot_options.averages
+.. module:: highcharts_gantt.options.plot_options.averages
 
 ********************************************************************************************************************
-class: :class:`DEMAOptions <highcharts_stock.options.plot_options.averages.DEMAOptions>`
+class: :class:`DEMAOptions <highcharts_gantt.options.plot_options.averages.DEMAOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: DEMAOptions
@@ -22,7 +22,7 @@ class: :class:`DEMAOptions <highcharts_stock.options.plot_options.averages.DEMAO
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: DEMAOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`DEMAOptions <highcharts_stock.options.plot_options.averages.DEMAO
 -------------------
 
 ********************************************************************************************************************
-class: :class:`EMAOptions <highcharts_stock.options.plot_options.averages.EMAOptions>`
+class: :class:`EMAOptions <highcharts_gantt.options.plot_options.averages.EMAOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: EMAOptions
@@ -40,7 +40,7 @@ class: :class:`EMAOptions <highcharts_stock.options.plot_options.averages.EMAOpt
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: EMAOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -48,7 +48,7 @@ class: :class:`EMAOptions <highcharts_stock.options.plot_options.averages.EMAOpt
 -------------------
 
 ********************************************************************************************************************
-class: :class:`SMAOptions <highcharts_stock.options.plot_options.averages.SMAOptions>`
+class: :class:`SMAOptions <highcharts_gantt.options.plot_options.averages.SMAOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: SMAOptions
@@ -58,7 +58,7 @@ class: :class:`SMAOptions <highcharts_stock.options.plot_options.averages.SMAOpt
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: SMAOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -66,7 +66,7 @@ class: :class:`SMAOptions <highcharts_stock.options.plot_options.averages.SMAOpt
 -------------------
 
 ********************************************************************************************************************
-class: :class:`TEMAOptions <highcharts_stock.options.plot_options.averages.TEMAOptions>`
+class: :class:`TEMAOptions <highcharts_gantt.options.plot_options.averages.TEMAOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: TEMAOptions
@@ -76,7 +76,7 @@ class: :class:`TEMAOptions <highcharts_stock.options.plot_options.averages.TEMAO
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: TEMAOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -84,7 +84,7 @@ class: :class:`TEMAOptions <highcharts_stock.options.plot_options.averages.TEMAO
 -------------------
 
 ********************************************************************************************************************
-class: :class:`VWAPOptions <highcharts_stock.options.plot_options.averages.VWAPOptions>`
+class: :class:`VWAPOptions <highcharts_gantt.options.plot_options.averages.VWAPOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: VWAPOptions
@@ -94,7 +94,7 @@ class: :class:`VWAPOptions <highcharts_stock.options.plot_options.averages.VWAPO
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: VWAPOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -102,7 +102,7 @@ class: :class:`VWAPOptions <highcharts_stock.options.plot_options.averages.VWAPO
 -------------------
 
 ********************************************************************************************************************
-class: :class:`WMAOptions <highcharts_stock.options.plot_options.averages.WMAOptions>`
+class: :class:`WMAOptions <highcharts_gantt.options.plot_options.averages.WMAOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: WMAOptions
@@ -112,7 +112,7 @@ class: :class:`WMAOptions <highcharts_stock.options.plot_options.averages.WMAOpt
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: WMAOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -120,7 +120,7 @@ class: :class:`WMAOptions <highcharts_stock.options.plot_options.averages.WMAOpt
 -------------------
 
 ********************************************************************************************************************
-class: :class:`VWAPParameters <highcharts_stock.options.plot_options.averages.VWAPParameters>`
+class: :class:`VWAPParameters <highcharts_gantt.options.plot_options.averages.VWAPParameters>`
 ********************************************************************************************************************
 
 .. autoclass:: VWAPParameters
@@ -130,7 +130,7 @@ class: :class:`VWAPParameters <highcharts_stock.options.plot_options.averages.VW
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: VWAPParameters
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

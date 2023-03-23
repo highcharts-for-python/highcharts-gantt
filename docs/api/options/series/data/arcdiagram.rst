@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.arcdiagram <highcharts_stock.options.series.data.arcdiagram>`
+:mod:`.arcdiagram <highcharts_gantt.options.series.data.arcdiagram>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.data.arcdiagram
+.. module:: highcharts_gantt.options.series.data.arcdiagram
 
 ********************************************************************************************************************
-class: :class:`ArcDiagramData <highcharts_stock.options.series.data.arcdiagram.ArcDiagramData>`
+class: :class:`ArcDiagramData <highcharts_gantt.options.series.data.arcdiagram.ArcDiagramData>`
 ********************************************************************************************************************
 
 .. autoclass:: ArcDiagramData
@@ -22,7 +22,7 @@ class: :class:`ArcDiagramData <highcharts_stock.options.series.data.arcdiagram.A
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ArcDiagramData
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

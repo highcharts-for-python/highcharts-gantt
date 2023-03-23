@@ -1,5 +1,5 @@
 ###################################################################################
-:mod:`.ppo <highcharts_stock.options.series.oscillators.ppo>`
+:mod:`.ppo <highcharts_gantt.options.series.oscillators.ppo>`
 ###################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 -------------------------
 
-.. module:: highcharts_stock.options.series.oscillators.ppo
+.. module:: highcharts_gantt.options.series.oscillators.ppo
 
 ********************************************************************************************************************
-class: :class:`PPOSeries <highcharts_stock.options.series.oscillators.ppo.PPOSeries>`
+class: :class:`PPOSeries <highcharts_gantt.options.series.oscillators.ppo.PPOSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: PPOSeries
@@ -22,7 +22,7 @@ class: :class:`PPOSeries <highcharts_stock.options.series.oscillators.ppo.PPOSer
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: PPOSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

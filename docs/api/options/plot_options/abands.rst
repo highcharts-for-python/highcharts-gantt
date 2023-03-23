@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.abands <highcharts_stock.options.plot_options.abands>`
+:mod:`.abands <highcharts_gantt.options.plot_options.abands>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.plot_options.abands
+.. module:: highcharts_gantt.options.plot_options.abands
 
 ********************************************************************************************************************
-class: :class:`AbandsOptions <highcharts_stock.options.plot_options.abands.AbandsOptions>`
+class: :class:`AbandsOptions <highcharts_gantt.options.plot_options.abands.AbandsOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: AbandsOptions
@@ -22,7 +22,7 @@ class: :class:`AbandsOptions <highcharts_stock.options.plot_options.abands.Aband
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: AbandsOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`AbandsOptions <highcharts_stock.options.plot_options.abands.Aband
 -------------------
 
 ********************************************************************************************************************
-class: :class:`BBOptions <highcharts_stock.options.plot_options.abands.BBOptions>`
+class: :class:`BBOptions <highcharts_gantt.options.plot_options.abands.BBOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: BBOptions
@@ -40,7 +40,7 @@ class: :class:`BBOptions <highcharts_stock.options.plot_options.abands.BBOptions
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: BBOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -48,7 +48,7 @@ class: :class:`BBOptions <highcharts_stock.options.plot_options.abands.BBOptions
 -------------------
 
 ********************************************************************************************************************
-class: :class:`KeltnerChannelsOptions <highcharts_stock.options.plot_options.abands.KeltnerChannelsOptions>`
+class: :class:`KeltnerChannelsOptions <highcharts_gantt.options.plot_options.abands.KeltnerChannelsOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: KeltnerChannelsOptions
@@ -58,7 +58,7 @@ class: :class:`KeltnerChannelsOptions <highcharts_stock.options.plot_options.aba
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: KeltnerChannelsOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -66,7 +66,7 @@ class: :class:`KeltnerChannelsOptions <highcharts_stock.options.plot_options.aba
 -------------------
 
 ********************************************************************************************************************
-class: :class:`PCOptions <highcharts_stock.options.plot_options.abands.PCOptions>`
+class: :class:`PCOptions <highcharts_gantt.options.plot_options.abands.PCOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: PCOptions
@@ -76,7 +76,7 @@ class: :class:`PCOptions <highcharts_stock.options.plot_options.abands.PCOptions
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: PCOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -84,7 +84,7 @@ class: :class:`PCOptions <highcharts_stock.options.plot_options.abands.PCOptions
 -------------------
 
 ********************************************************************************************************************
-class: :class:`AbandsStyleOptions <highcharts_stock.options.plot_options.abands.AbandsStyleOptions>`
+class: :class:`AbandsStyleOptions <highcharts_gantt.options.plot_options.abands.AbandsStyleOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: AbandsStyleOptions
@@ -94,7 +94,7 @@ class: :class:`AbandsStyleOptions <highcharts_stock.options.plot_options.abands.
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: AbandsStyleOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

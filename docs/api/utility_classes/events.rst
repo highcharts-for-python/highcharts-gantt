@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.events <highcharts_stock.utility_classes.events>`
+:mod:`.events <highcharts_gantt.utility_classes.events>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.utility_classes.events
+.. module:: highcharts_gantt.utility_classes.events
 
 ********************************************************************************************************************
-class: :class:`ChartEvents <highcharts_stock.utility_classes.events.ChartEvents>`
+class: :class:`ChartEvents <highcharts_gantt.utility_classes.events.ChartEvents>`
 ********************************************************************************************************************
 
 .. autoclass:: ChartEvents
@@ -22,7 +22,7 @@ class: :class:`ChartEvents <highcharts_stock.utility_classes.events.ChartEvents>
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ChartEvents
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`ChartEvents <highcharts_stock.utility_classes.events.ChartEvents>
 ----------------------
 
 ********************************************************************************************************************
-class: :class:`BreadcrumbEvents <highcharts_stock.utility_classes.events.BreadcrumbEvents>`
+class: :class:`BreadcrumbEvents <highcharts_gantt.utility_classes.events.BreadcrumbEvents>`
 ********************************************************************************************************************
 
 .. autoclass:: BreadcrumbEvents
@@ -40,7 +40,7 @@ class: :class:`BreadcrumbEvents <highcharts_stock.utility_classes.events.Breadcr
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: BreadcrumbEvents
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -48,7 +48,7 @@ class: :class:`BreadcrumbEvents <highcharts_stock.utility_classes.events.Breadcr
 ----------------------
 
 ********************************************************************************************************************
-class: :class:`NavigationEvents <highcharts_stock.utility_classes.events.NavigationEvents>`
+class: :class:`NavigationEvents <highcharts_gantt.utility_classes.events.NavigationEvents>`
 ********************************************************************************************************************
 
 .. autoclass:: NavigationEvents
@@ -58,7 +58,7 @@ class: :class:`NavigationEvents <highcharts_stock.utility_classes.events.Navigat
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: NavigationEvents
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -66,7 +66,7 @@ class: :class:`NavigationEvents <highcharts_stock.utility_classes.events.Navigat
 -----------------------
 
 ********************************************************************************************************************
-class: :class:`PointEvents <highcharts_stock.utility_classes.events.PointEvents>`
+class: :class:`PointEvents <highcharts_gantt.utility_classes.events.PointEvents>`
 ********************************************************************************************************************
 
 .. autoclass:: PointEvents
@@ -76,7 +76,7 @@ class: :class:`PointEvents <highcharts_stock.utility_classes.events.PointEvents>
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: PointEvents
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -84,7 +84,7 @@ class: :class:`PointEvents <highcharts_stock.utility_classes.events.PointEvents>
 ------------------
 
 ********************************************************************************************************************
-class: :class:`SeriesEvents <highcharts_stock.utility_classes.events.SeriesEvents>`
+class: :class:`SeriesEvents <highcharts_gantt.utility_classes.events.SeriesEvents>`
 ********************************************************************************************************************
 
 .. autoclass:: SeriesEvents
@@ -94,7 +94,7 @@ class: :class:`SeriesEvents <highcharts_stock.utility_classes.events.SeriesEvent
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: SeriesEvents
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -102,7 +102,7 @@ class: :class:`SeriesEvents <highcharts_stock.utility_classes.events.SeriesEvent
 ------------------
 
 ********************************************************************************************************************
-class: :class:`ClusterEvents <highcharts_stock.utility_classes.events.ClusterEvents>`
+class: :class:`ClusterEvents <highcharts_gantt.utility_classes.events.ClusterEvents>`
 ********************************************************************************************************************
 
 .. autoclass:: ClusterEvents
@@ -112,7 +112,7 @@ class: :class:`ClusterEvents <highcharts_stock.utility_classes.events.ClusterEve
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ClusterEvents
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -120,7 +120,7 @@ class: :class:`ClusterEvents <highcharts_stock.utility_classes.events.ClusterEve
 -----------------
 
 ********************************************************************************************************************
-class: :class:`AxisEvents <highcharts_stock.utility_classes.events.AxisEvents>`
+class: :class:`AxisEvents <highcharts_gantt.utility_classes.events.AxisEvents>`
 ********************************************************************************************************************
 
 .. autoclass:: AxisEvents
@@ -130,7 +130,7 @@ class: :class:`AxisEvents <highcharts_stock.utility_classes.events.AxisEvents>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: AxisEvents
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -138,7 +138,7 @@ class: :class:`AxisEvents <highcharts_stock.utility_classes.events.AxisEvents>`
 ----------------
 
 ********************************************************************************************************************
-class: :class:`MouseEvents <highcharts_stock.utility_classes.events.MouseEvents>`
+class: :class:`MouseEvents <highcharts_gantt.utility_classes.events.MouseEvents>`
 ********************************************************************************************************************
 
 .. autoclass:: MouseEvents
@@ -148,7 +148,7 @@ class: :class:`MouseEvents <highcharts_stock.utility_classes.events.MouseEvents>
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: MouseEvents
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -156,7 +156,7 @@ class: :class:`MouseEvents <highcharts_stock.utility_classes.events.MouseEvents>
 ----------------
 
 ********************************************************************************************************************
-class: :class:`RangeSelectorEvents <highcharts_stock.utility_classes.events.RangeSelectorEvents>`
+class: :class:`RangeSelectorEvents <highcharts_gantt.utility_classes.events.RangeSelectorEvents>`
 ********************************************************************************************************************
 
 .. autoclass:: RangeSelectorEvents
@@ -166,7 +166,7 @@ class: :class:`RangeSelectorEvents <highcharts_stock.utility_classes.events.Rang
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: RangeSelectorEvents
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

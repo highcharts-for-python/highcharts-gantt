@@ -1,5 +1,5 @@
 #############################################################################
-:mod:`.klinger <highcharts_stock.options.plot_options.oscillators.klinger>`
+:mod:`.klinger <highcharts_gantt.options.plot_options.oscillators.klinger>`
 #############################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 -------------------------
 
-.. module:: highcharts_stock.options.plot_options.oscillators.klinger
+.. module:: highcharts_gantt.options.plot_options.oscillators.klinger
 
 ********************************************************************************************************************
-class: :class:`KlingerOptions <highcharts_stock.options.plot_options.oscillators.klinger.KlingerOptions>`
+class: :class:`KlingerOptions <highcharts_gantt.options.plot_options.oscillators.klinger.KlingerOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: KlingerOptions
@@ -22,7 +22,7 @@ class: :class:`KlingerOptions <highcharts_stock.options.plot_options.oscillators
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: KlingerOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,7 @@ class: :class:`KlingerOptions <highcharts_stock.options.plot_options.oscillators
 -------------------------
 
 ********************************************************************************************************************
-class: :class:`KlingerParameters <highcharts_stock.options.plot_options.oscillators.klinger.KlingerParameters>`
+class: :class:`KlingerParameters <highcharts_gantt.options.plot_options.oscillators.klinger.KlingerParameters>`
 ********************************************************************************************************************
 
 .. autoclass:: KlingerParameters
@@ -40,7 +40,7 @@ class: :class:`KlingerParameters <highcharts_stock.options.plot_options.oscillat
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: KlingerParameters
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -48,7 +48,7 @@ class: :class:`KlingerParameters <highcharts_stock.options.plot_options.oscillat
 -------------------------
 
 ********************************************************************************************************************
-class: :class:`KlingerLineOptions <highcharts_stock.options.plot_options.oscillators.klinger.KlingerLineOptions>`
+class: :class:`KlingerLineOptions <highcharts_gantt.options.plot_options.oscillators.klinger.KlingerLineOptions>`
 ********************************************************************************************************************
 
 .. autoclass:: KlingerLineOptions
@@ -58,7 +58,7 @@ class: :class:`KlingerLineOptions <highcharts_stock.options.plot_options.oscilla
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: KlingerLineOptions
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

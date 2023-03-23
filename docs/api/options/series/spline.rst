@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.spline <highcharts_stock.options.series.spline>`
+:mod:`.spline <highcharts_gantt.options.series.spline>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_stock.options.series.spline
+.. module:: highcharts_gantt.options.series.spline
 
 ********************************************************************************************************************
-class: :class:`SplineSeries <highcharts_stock.options.series.spline.SplineSeries>`
+class: :class:`SplineSeries <highcharts_gantt.options.series.spline.SplineSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: SplineSeries
@@ -22,7 +22,7 @@ class: :class:`SplineSeries <highcharts_stock.options.series.spline.SplineSeries
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: SplineSeries
-      :top-classes: highcharts_stock.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
