@@ -1,1 +1,1 @@
-from highcharts_core.options.axes.numeric import *
+from highcharts_stock.options.axes.numeric import *

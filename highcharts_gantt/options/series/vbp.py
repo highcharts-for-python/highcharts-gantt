@@ -1,0 +1,1 @@
+from highcharts_stock.options.series.vbp import *

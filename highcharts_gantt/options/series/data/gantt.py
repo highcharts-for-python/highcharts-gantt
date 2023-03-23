@@ -566,7 +566,8 @@ class GanttData(DataBase):
 
         :param connection_kwargs: Set of keyword arugments to supply to the   
           :class:`DataConnection <highcharts_gantt.options.series.data.connect.DataConnection>`
-          constructor, besides the :meth:`.to <highcharts_gantt.options.series.data.connect.DataConnection.to>` property which is derived from the task. Defaults
+          constructor, besides the :meth:`.to <highcharts_gantt.options.series.data.connect.DataConnection.to>` 
+          property which is derived from the task. Defaults
           to :obj:`None <python:None>`
         :type connection_kwargs: :class:`dict <python:dict>` or 
           :obj:`None <python:None>`
@@ -581,11 +582,8 @@ class GanttData(DataBase):
         :raises MondayTemplateError: if ``template`` is not :obj:`None <python:None>`, 
           but is not supported
         """
-        template = validators.string(template, allow_empty = True)
+        template = validators.string(template, allow_empty = True) or 'task-management'
         property_column_map = validators.dict(property_column_map, allow_empty = True)
-        if not template and not property_column_map:
-          raise errors.HighchartsValueError('either template or property_column_map '
-                                            'must be supplied. Both were None.')
 
         if connection_callback and not checkers.is_callable(connection_callback):
             raise errors.HighchartsValueError('connection_callback - if supplied - '
@@ -593,36 +591,36 @@ class GanttData(DataBase):
 
         connection_kwargs = validators.dict(connection_kwargs,
                                             allow_empty = True) or {}
-        
+
         if not property_column_map:
-            # TODO: Define MONDAY_TEMPLATES
-            property_column_map = MONDAY_TEMPLATES.get(template, None)
+            property_column_map = constants.MONDAY_TEMPLATES.get(template, None)
             if not property_column_map:
                 raise errors.MondayTemplateError(f'template ("{template}") is not '
-                                                 f'a supported Monday.com template.')
-                
+                                                 f'a supported Monday.com template name.')
+
         data_point_kwargs = {}
         for key, field_name in property_column_map.items():
             data_point_kwargs[key] = task.get(field_name, None)
-        
+
         data_point = cls(**data_point_kwargs)
-        
-        # TODO: Handle dependencies
+
         dependencies = []
-        for item in task['dependencies']:
+        for item in task.get('dependencies', []):
+            item = validators.string(item, allow_empty = False, coerce_value = True)
             if connection_callback:
-                connection = connection_callback(connection_target = item, 
+                connection = connection_callback(connection_target = item,
                                                  task = task)
             elif connection_kwargs:
-                connection_kwargs['to'] = item['gid']
+                connection_kwargs['to'] = item
                 connection = DataConnection(**connection_kwargs)
             else:
-                connection = item['gid']
+                connection = DataConnection(to = item)
+
             dependencies.append(connection)
-            
+
         data_point.dependency = dependencies
         data_point.custom = task
-        
+
         return data_point
 
     @classmethod
@@ -654,8 +652,8 @@ class GanttData(DataBase):
 
         :param connection_kwargs: Set of keyword arugments to supply to the   
           :class:`DataConnection <highcharts_gantt.options.series.data.connect.DataConnection>`
-          constructor, besides the :meth:`.to <highcharts_gantt.options.series.data.connect.DataConnection.to>` property which is derived from the task. Defaults
-          to :obj:`None <python:None>`
+          constructor, besides the :meth:`.to <highcharts_gantt.options.series.data.connect.DataConnection.to>` 
+          property which is derived from the task. Defaults to :obj:`None <python:None>`
         :type connection_kwargs: :class:`dict <python:dict>` or 
           :obj:`None <python:None>`
 
@@ -669,30 +667,11 @@ class GanttData(DataBase):
         :raises MondayTemplateError: if ``template`` is not :obj:`None <python:None>`, 
           but is not supported
         """
-        if connection_callback and not checkers.is_callable(connection_callback):
-            raise errors.HighchartsValueError('connection_callback - if supplied - '
-                                              'must be callable.')
-
-        connection_kwargs = validators.dict(connection_kwargs,
-                                            allow_empty = True) or {}
-        
         try:
             data_point_kwargs = parse_jira_issue(issue)
-        except errors.DuplicateJIRAIssueError:
-            return
+        except errors.JIRADuplicateIssueError:
+            return None
         
-        dependencies = []
-        connections = data_point_kwargs.get('dependency', None)
-        for item in connections:
-            if not item:
-                continue
-            if isinstance(item, dict):
-                as_obj = DataConnection(**item)
-                dependencies.append(as_obj)
-            else:
-                dependencies.append(item)
-        
-        data_point_kwargs['dependency'] = dependencies
         data_point = cls(**data_point_kwargs)
         
         return data_point

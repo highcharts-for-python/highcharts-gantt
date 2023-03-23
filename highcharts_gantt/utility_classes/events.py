@@ -1,1 +1,1 @@
-from highcharts_core.utility_classes.events import *
+from highcharts_stock.utility_classes.events import *

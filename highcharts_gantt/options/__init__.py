@@ -38,19 +38,20 @@ from highcharts_gantt.options.navigator import Navigator
 from highcharts_gantt.options.range_selector import RangeSelector
 from highcharts_gantt.options.scrollbar import Scrollbar
 
-from highcharts_core.options import Options, HighchartsOptions
+from highcharts_stock.options import Options, HighchartsOptions, HighchartsStockOptions
 
-
-class HighchartsGanttOptions(HighchartsOptions):
+class HighchartsGanttOptions(HighchartsStockOptions):
     """The Python representation of the
     `Highcharts Gantt <https://api.highcharts.com/gantt/>`_ configuration object."""
 
     def __init__(self, **kwargs):
+        self._connectors = None
         self._navigator = None
         self._no_data = None
         self._range_selector = None
         self._scrollbar = None
 
+        self.connectors = kwargs.get('connectors', None)
         self.navigator = kwargs.get('navigator', None)
         self.no_data = kwargs.get('no_data', None)
         self.range_selector = kwargs.get('range_selector', None)
@@ -623,13 +624,16 @@ class HighchartsGanttOptions(HighchartsOptions):
         kwargs_dict = {
             'accessibility': as_dict.get('accessibility', None),
             'annotations': as_dict.get('annotations', None),
+            'boost': as_dict.get('boost', None),
             'caption': as_dict.get('caption', None),
             'chart': as_dict.get('chart', None),
+            'color_axis': as_dict.get('colorAxis', None),
             'colors': as_dict.get('colors', None),
             'connectors': as_dict.get('connectors', None),
             'credits': as_dict.get('credits', None),
             'data': as_dict.get('data', None),
             'defs': as_dict.get('defs', None),
+            'drilldown': as_dict.get('drilldown', None),
             'exporting': as_dict.get('exporting', None),
             'language': as_dict.get('lang', None),
             'legend': as_dict.get('legend', None),
@@ -637,17 +641,20 @@ class HighchartsGanttOptions(HighchartsOptions):
             'navigation': as_dict.get('navigation', None),
             'navigator': as_dict.get('navigator', None),
             'no_data': as_dict.get('noData', None),
+            'pane': as_dict.get('pane', None),
             'plot_options': as_dict.get('plotOptions', None),
             'range_selector': as_dict.get('rangeSelector', None),
             'responsive': as_dict.get('responsive', None),
             'scrollbar': as_dict.get('scrollbar', None),
             'series': as_dict.get('series', None),
+            'stock_tools': as_dict.get('stockTools', None),
             'subtitle': as_dict.get('subtitle', None),
             'time': as_dict.get('time', None),
             'title': as_dict.get('title', None),
             'tooltip': as_dict.get('tooltip', None),
             'x_axis': as_dict.get('xAxis', None),
             'y_axis': as_dict.get('yAxis', None),
+            'z_axis': as_dict.get('zAxis', None),
         }
 
         return kwargs_dict
@@ -656,12 +663,15 @@ class HighchartsGanttOptions(HighchartsOptions):
         untrimmed = {
             'accessibility': self.accessibility,
             'annotations': self.annotations,
+            'boost': self.boost,
             'caption': self.caption,
             'chart': self.chart,
+            'colorAxis': self.color_axis,
             'colors': self.colors,
             'connectors': self.connectors,
             'credits': self.credits,
             'data': self.data,
+            'drilldown': self.drilldown,
             'defs': self.defs,
             'exporting': self.exporting,
             'lang': self.language,
@@ -670,17 +680,20 @@ class HighchartsGanttOptions(HighchartsOptions):
             'navigation': self.navigation,
             'navigator': self.navigator,
             'noData': self.no_data,
+            'pane': self.pane,
             'plotOptions': self.plot_options,
             'rangeSelector': self.range_selector,
             'responsive': self.responsive,
             'scrollbar': self.scrollbar,
             'series': self.series,
+            'stockTools': self.stock_tools,
             'subtitle': self.subtitle,
             'time': self.time,
             'title': self.title,
             'tooltip': self.tooltip,
             'xAxis': self.x_axis,
-            'yAxis': self.y_axis
+            'yAxis': self.y_axis,
+            'zAxis': self.z_axis
         }
 
         return untrimmed

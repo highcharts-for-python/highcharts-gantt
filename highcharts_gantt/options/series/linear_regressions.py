@@ -1,0 +1,1 @@
+from highcharts_stock.options.series.linear_regressions import *

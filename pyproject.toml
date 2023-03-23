@@ -91,7 +91,10 @@ dev = [
     "IPython>=8.10.0",
     "pyspark>=3.3.0",
     "pandas>=1.3.3",
-    "orjson>=3.7.7"
+    "orjson>=3.7.7",
+    "asana>=3.0.0",
+    "monday>=1.3.0",
+    "jira>=3.4.0"
 ]
 soft = [
     "IPython>=8.10.0",
