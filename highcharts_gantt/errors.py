@@ -39,6 +39,19 @@ class JIRAAuthenticationError(HighchartsValueError):
     pass
 
 
+class JIRAProjectNotFoundError(HighchartsValueError):
+    """:exc:`ValueError <python:ValueError>` encountered when the JIRA project key specified in
+    :meth:`GanttSeries.load_from_jira() <highcharts_gantt.options.series.gantt.GanttSeries.load_from_jira>` 
+    is not found. 
+    
+    .. tip::
+    
+      This often occurs when the JIRA API client silently fails authentication, which can happen when using JIRA
+      Cloud.
+
+    """
+    pass
+
 class JIRADuplicateIssueError(HighchartsValueError):
     """:exc:`ValueError <python:ValueError>` encountered when encountering a JIRA issue 
     that is a duplicate of another issue."""

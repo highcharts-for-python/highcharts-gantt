@@ -640,20 +640,20 @@ def test_GanttSeries_from_monday(kwargs, expected_data_points, error):
     ({}, 6, None),
 
     # Errors
-    ({}, 0, errors.JIRAAuthenticationError),
+    ({}, 0, (errors.JIRAAuthenticationError, errors.JIRAProjectNotFoundError)),
 ])
 def test_GanttSeries_from_jira(kwargs, expected_data_points, error):
-    kwargs['project_id'] = os.getenv('JIRA_PROJECT_ID')
+    kwargs['project_key'] = os.getenv('JIRA_PROJECT_ID')
     
     if not error:
         result = cls.from_jira(**kwargs)
         assert result is not None
         assert isinstance(result, cls) is True
         assert len(result.data) == expected_data_points
-    elif error == errors.JIRAAuthenticationError:
+    elif error == (errors.JIRAAuthenticationError, errors.JIRAProjectNotFoundError):
         kwargs['username'] = 'invalid-username'
         kwargs['password_or_token'] = 'invalid-token'
-        
+
         with pytest.raises(error):
             result = cls.from_jira(**kwargs)
     else:

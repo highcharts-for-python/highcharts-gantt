@@ -145,10 +145,10 @@ def test_from_monday(kwargs, expected_data_points, error):
     ({}, 6, None),
 
     # Errors
-    ({}, 0, errors.JIRAAuthenticationError),
+    ({}, 0, (errors.JIRAAuthenticationError, errors.JIRAProjectNotFoundError)),
 ])
 def test_from_jira(kwargs, expected_data_points, error):
-    kwargs['project_id'] = os.getenv('JIRA_PROJECT_ID')
+    kwargs['project_key'] = os.getenv('JIRA_PROJECT_ID')
 
     if not error:
         result = cls.from_jira(**kwargs)
@@ -159,7 +159,7 @@ def test_from_jira(kwargs, expected_data_points, error):
         assert result.options.series is not None
         assert len(result.options.series) == 1
         assert len(result.options.series[0].data) == expected_data_points
-    elif error == errors.JIRAAuthenticationError:
+    elif error == (errors.JIRAAuthenticationError, errors.JIRAProjectNotFoundError):
         kwargs['username'] = 'invalid-username'
         kwargs['password_or_token'] = 'invalid-token'
         
