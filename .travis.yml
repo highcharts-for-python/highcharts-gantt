@@ -1,0 +1,42 @@
+language: python
+job:
+  include:
+    #- python: "3.8"
+    #  env: 
+    #    - TOXENV=py38
+    #- python: "3.9"
+    #  env: 
+    #    - TOXENV=py39
+    - python: "3.10"
+      dist: focal
+      env: 
+        - TOXENV=py310
+        - YARN_GPG=no
+    - python: "3.11"
+      dist: bionic
+      env: 
+        - TOXENV=py311
+        - YARN_GPG=no
+    - python: "3.10"
+      dist: focal
+      env: 
+        - TOXENV=coverage
+        - YARN_GPG=no
+    - python: "3.10"
+      dist: focal
+      env: 
+        - TOXENV=docs
+        - YARN_GPG=no
+os:
+  - linux
+git:
+  quiet: true
+
+install: 
+  - pip install -r requirements.dev.txt
+before_script:
+  - curl -Os --retry 5 https://uploader.codecov.io/latest/linux/codecov
+  - chmod +x codecov
+script: tox -- -v -n auto
+after_success:
+  - if [[ -e .coverage ]]; then ./codecov -t $CODECOV_TOKEN; fi
