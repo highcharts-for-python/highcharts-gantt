@@ -1,8 +1,9 @@
   .. note::
 
-    ``.from_series()`` is supported by both the
-    :class:`Chart <highcharts_stock.chart.Chart>` and
-    :class:`HighchartsStockOptions <highcharts_stock.options.HighchartsStockOptions>`
+    ``.from_series()`` is supported by the
+    :class:`Chart <highcharts_gantt.chart.Chart>`,
+    :class:`HighchartsGanttOptions <highcharts_gantt.options.HighchartsGanttOptions>`, and
+    :class:`HighchartsStockOptions <highcharts_gantt.options.HighchartsStockOptions>`
     classes
 
 .. code-block:: python
@@ -17,14 +18,14 @@
   .. method:: .from_series(cls, *series, kwargs = None)
     :noindex:
 
-    Creates a new :class:`Chart <highcharts_stock.chart.Chart>` instance populated
+    Creates a new :class:`Chart <highcharts_gantt.chart.Chart>` instance populated
     with ``series``.
 
     :param series: One or more :term:`series` instances (descended from
-      :class:`SeriesBase <highcharts_stock.options.series.base.SeriesBase>`) or an
+      :class:`SeriesBase <highcharts_gantt.options.series.base.SeriesBase>`) or an
       instance (e.g. :class:`dict <python:dict>`, :class:`str <python:str>`, etc.)
       coercable to one
-    :type series: :class:`SeriesBase <highcharts_stock.options.series.base.SeriesBase>`
+    :type series: :class:`SeriesBase <highcharts_gantt.options.series.base.SeriesBase>`
       or coercable
 
     :param kwargs: Other properties to use as keyword arguments for the instance to be
@@ -33,10 +34,10 @@
       .. warning::
 
         If ``kwargs`` sets the
-        :meth:`options.series <highcharts_stock.options.HighchartsStockOptions.series>`
+        :meth:`options.series <highcharts_gantt.options.HighchartsGanttOptions.series>`
         property, that setting will be *overridden* by the contents of ``series``.
 
     :type kwargs: :class:`dict <python:dict>`
 
-    :returns: A new :class:`Chart <highcharts_stock.chart.Chart>` instance
-    :rtype: :class:`Chart <highcharts_stock.chart.Chart>`
+    :returns: A new :class:`Chart <highcharts_gantt.chart.Chart>` instance
+    :rtype: :class:`Chart <highcharts_gantt.chart.Chart>`

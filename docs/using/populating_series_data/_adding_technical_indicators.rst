@@ -5,8 +5,8 @@
     .. note::
 
       All standard :term:`series` (descending from
-      :class:`SeriesBase <highcharts_stock.options.series.base.SeriesBase>`) have an
-      :meth:`.add_indicator() <highcharts_stock.options.series.base.SeriesBase>` method
+      :class:`SeriesBase <highcharts_gantt.options.series.base.SeriesBase>`) have an
+      :meth:`.add_indicator() <highcharts_gantt.options.series.base.SeriesBase>` method
       which can be used to easily configure a new indicator tied to the series in
       question.
 
@@ -29,7 +29,7 @@
 
         :param chart: The chart object in which the series is rendered and to which the
           indicator should be appended.
-        :type chart: :class:`Chart <highcharts_stock.chart.Chart>`
+        :type chart: :class:`Chart <highcharts_gantt.chart.Chart>`
 
         :param indicator_name: The name of the indicator that should be added to the series
           and chart. For the list of supported indicators, please review the
@@ -42,7 +42,7 @@
 
         :returns: ``chart`` with a new indicator series included in its list of configured
           series.
-        :rtype: :class:`Chart <highcharts_stock.chart.Chart>`
+        :rtype: :class:`Chart <highcharts_gantt.chart.Chart>`
 
   .. tab:: Using ``Chart.add_indicator()``
 
@@ -73,7 +73,7 @@
         Creates a :class:`IndicatorSeriesBase` (descendant) that calculates the
         ``indicator_name`` :term:`technical indicator` for the series provided in
         ``series``, and adds it to the chart's
-        :meth:`.options.series <highcharts_stock.options.HighchartsStockOptions.series>`.
+        :meth:`.options.series <highcharts_gantt.options.HighchartsStockOptions.series>`.
 
         :param indicator_name: The name of the indicator that should be added to the series
           and chart. For the list of supported indicators, please review the
@@ -81,12 +81,12 @@
         :type indicator_name: :class:`str <python:str>`
 
         :param series: The series to which the indicator should be added. Accepts either a
-          series' :meth:`.id <highcharts_stock.options.series.SeriesBase.id>` as a
+          series' :meth:`.id <highcharts_gantt.options.series.SeriesBase.id>` as a
           :class:`str <python:str>`, or a
-          :class:`SeriesBase <highcharts_stock.options.series.base.SeriesBase>` (descendant)
+          :class:`SeriesBase <highcharts_gantt.options.series.base.SeriesBase>` (descendant)
           instance.
         :type series: :class:`str <python:str>` or
-          :class:`SeriesBase <highcharts_stock.options.series.base.SeriesBase>`
+          :class:`SeriesBase <highcharts_gantt.options.series.base.SeriesBase>`
 
         :param indicator_kwargs: Keyword arguments to apply when instantiating the new
           indicator series. Defaults to :obj:`None <python:None>`.

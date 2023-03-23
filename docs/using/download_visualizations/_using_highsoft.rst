@@ -1,16 +1,16 @@
 .. code-block:: python
 
-  from highcharts_stock.chart import Chart
-  from highcharts_stock.options.series.area import LineSeries
+  from highcharts_gantt.chart import Chart
+  from highcharts_gantt.options.series.gantt import GanttSeries
 
   my_chart = Chart(container = 'target_div',
                    options = {
                        'series': [
-                           LineSeries(data = [0, 5, 3, 5])
+                           GanttSeries(data = [ ... ])
                        ]
                    },
                    variable_name = 'myChart',
-                   is_stock_chart = True)
+                   is_gantt_chart = True)
 
   # Download a PNG version of the chart in memory within your Python code.
   my_png_image = my_chart.download_chart(format = 'png')
@@ -25,8 +25,8 @@
 
   .. seealso::
 
-    * :meth:`Chart.download_chart() <highcharts_stock.chart.Chart.download_chart>`
-    * :class:`headless_export.ExportServer <highcharts_stock.headless_export.ExportServer>`
+    * :meth:`Chart.download_chart() <highcharts_gantt.chart.Chart.download_chart>`
+    * :class:`headless_export.ExportServer <highcharts_gantt.headless_export.ExportServer>`
 
   .. method:: .download_chart(self, filename = None, format = 'png', server_instance = None, scale = 1, width = None, auth_user = None, auth_password = None, timeout = 0.5, global_options = None, **kwargs)
     :noindex:
@@ -98,8 +98,8 @@
       ``Highcharts.setOptions()`` method, and which will be applied to the exported
       chart. Defaults to :obj:`None <python:None>`.
 
-    :type global_options: :class:`HighchartsStockOptions <highcharts_stock.options.HighchartsStockOptions>`,
-      :class:`HighchartsOptions <highcharts_stock.options.HighchartsOptions>` or
+    :type global_options: :class:`HighchartsStockOptions <highcharts_gantt.options.HighchartsStockOptions>`,
+      :class:`HighchartsOptions <highcharts_gantt.options.HighchartsOptions>` or
       :obj:`None <python:None>`
 
     .. note::

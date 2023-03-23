@@ -1,23 +1,23 @@
 .. code-block:: python
 
-  from highcharts_stock.chart import Chart
-  from highcharts_stock.options.series.area import LineSeries
-  from highcharts_stock.global_options.shared_options import SharedStockOptions
+  from highcharts_gantt.chart import Chart
+  from highcharts_gantt.options.series.gantt import GanttSeries
+  from highcharts_gantt.global_options.shared_options import SharedGanttOptions
 
   my_chart = Chart(container = 'target_div',
                    options = {
                        'series': [
-                           LineSeries(data = [0, 5, 3, 5])
+                           GanttSeries(data = [ ... ])
                        ]
                    },
                    variable_name = 'myChart',
-                   is_stock_chart = True)
+                   is_gantt_chart = True)
 
   # Now this will render the contents of "my_chart" in your Jupyter Notebook
   my_chart.display()
 
   # You can also supply shared options to display to make sure that they are applied:
-  my_shared_options = SharedStockOptions()
+  my_shared_options = SharedGanttOptions()
 
   # Now this will render the contents of "my_chart" in your Jupyter Notebook, but applying
   # your shared options
@@ -33,7 +33,7 @@
 
     :param global_options: The :term:`shared options` to use when rendering the chart.
       Defaults to :obj:`None <python:None>`
-    :type global_options: :class:`SharedOptions <highcharts_stock.global_options.shared_options.SharedOptions>`
+    :type global_options: :class:`SharedOptions <highcharts_gantt.global_options.shared_options.SharedOptions>`
       or :obj:`None <python:None>`
 
     :raises HighchartsDependencyError: if

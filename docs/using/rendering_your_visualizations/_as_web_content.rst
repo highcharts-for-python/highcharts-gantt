@@ -1,37 +1,33 @@
 .. tabs::
 
-  .. tab:: as a Highcharts Stock Chart
+  .. tab:: as a Highcharts Gantt Chart
 
     .. code-block:: python
 
-      from highcharts_stock.chart import Chart
-      from highcharts_stock.options.series.hlc import HLCSeries
+      from highcharts_gantt.chart import Chart
+      from highcharts_gantt.options.series.gantt import GanttSeries
 
       my_chart = Chart(container = 'target_div',
                        options = {
                            'series': [
-                               HLCSeries(data = [
-                                   [2, 0, 4],
-                                   [4, 2, 8],
-                                   [3, 9, 3]
+                               GanttSeries(data = [
+                                   ...
                                ])
                            ]
                        },
                        variable_name = 'myChart',
-                       is_stock_chart = True)
+                       is_gantt_chart = True)
 
       as_js_literal = my_chart.to_js_literal()
 
       # This will produce a string equivalent to:
       #
       # document.addEventListener('DOMContentLoaded', function() {
-      #   const myChart = Highcharts.stockChart('target_div', {
+      #   const myChart = Highcharts.ganttChart('target_div', {
       #      series: {
-      #          type: 'hlc',
+      #          type: 'gantt',
       #          data: [
-      #            [2, 0, 4],
-      #            [4, 2, 8],
-      #            [3, 9, 3]
+      #            ...
       #          ]
       #      }
       #   });
@@ -41,8 +37,8 @@
 
     .. code-block:: python
 
-      from highcharts_stock.chart import Chart
-      from highcharts_stock.options.series.area import LineSeries
+      from highcharts_gantt.chart import Chart
+      from highcharts_gantt.options.series.area import LineSeries
 
       my_chart = Chart(container = 'target_div',
                        options = {

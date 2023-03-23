@@ -1,7 +1,7 @@
   *There are only two hard things in Computer Science: cache invalidation and naming
   things.* -- Phil Karlton
 
-Highcharts Stock is a JavaScript library, and as such it adheres to the code conventions
+Highcharts Gantt is a JavaScript library, and as such it adheres to the code conventions
 that are popular (practically standard) when working in JavaScript. Chief among these
 conventions is that variables and object properties (keys) are typically written in
 ``camelCase``.

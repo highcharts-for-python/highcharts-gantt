@@ -1,14 +1,14 @@
   .. note::
 
-    ``.add_series()`` is supported by both the
-    :class:`Chart <highcharts_stock.chart.Chart>` and
-    :class:`HighchartsStockOptions <highcharts_stock.options.HighchartsStockOptions>`
+    ``.add_series()`` is supported by the
+    :class:`Chart <highcharts_gantt.chart.Chart>`,
+    :class:`HighchartsGanttOptions <highcharts_gantt.options.HighchartsGanttOptions>`, and
+    :class:`HighchartsStockOptions <highcharts_gantt.options.HighchartsStockOptions>`
     classes
 
 .. code-block:: python
 
   my_chart = Chart()
-  my_chart.add_series(my_series1, my_series2)
 
   my_series = LineSeries()
   my_chart.add_series(my_series)
@@ -19,12 +19,12 @@
     :noindex:
 
     Adds ``series`` to the
-    :meth:`Chart.options.series <highcharts_stock.options.HighchartsStockOptions.series>`
+    :meth:`Chart.options.series <highcharts_gantt.options.HighchartsGanttOptions.series>`
     property.
 
     :param series: One or more :term:`series` instances (descended from
-      :class:`SeriesBase <highcharts_stock.options.series.base.SeriesBase>`) or an
+      :class:`SeriesBase <highcharts_gantt.options.series.base.SeriesBase>`) or an
       instance (e.g. :class:`dict <python:dict>`, :class:`str <python:str>`, etc.)
       coercable to one
-    :type series: :class:`SeriesBase <highcharts_stock.options.series.base.SeriesBase>`
+    :type series: :class:`SeriesBase <highcharts_gantt.options.series.base.SeriesBase>`
       or coercable
