@@ -136,6 +136,35 @@ def test_from_monday(kwargs, expected_data_points, error):
 
         with pytest.raises(error):
             result = cls.from_monday(**kwargs)
-    elif error:
+    else:
         with pytest.raises(error):
             result = cls.from_monday(**kwargs)
+            
+
+@pytest.mark.parametrize('kwargs, expected_data_points, error', [
+    ({}, 6, None),
+
+    # Errors
+    ({}, 0, errors.JIRAAuthenticationError),
+])
+def test_from_jira(kwargs, expected_data_points, error):
+    kwargs['project_id'] = os.getenv('JIRA_PROJECT_ID')
+
+    if not error:
+        result = cls.from_jira(**kwargs)
+        assert result is not None
+        assert isinstance(result, cls) is True
+        assert result.is_gantt_chart is True
+        assert result.options is not None
+        assert result.options.series is not None
+        assert len(result.options.series) == 1
+        assert len(result.options.series[0].data) == expected_data_points
+    elif error == errors.JIRAAuthenticationError:
+        kwargs['username'] = 'invalid-username'
+        kwargs['password_or_token'] = 'invalid-token'
+        
+        with pytest.raises(error):
+            result = cls.from_jira(**kwargs)
+    else:
+        with pytest.raises(error):
+            result = cls.from_jira(**kwargs)
