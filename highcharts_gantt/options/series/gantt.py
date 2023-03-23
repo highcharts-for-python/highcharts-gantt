@@ -195,7 +195,16 @@ class GanttSeries(SeriesBase, GanttOptions):
           case.
           
         :param project_gid: The globally unique ID of the Project whose tasks should be
-          used to assemble the Gantt chart.
+          used to assemble the Gantt chart. 
+          
+          .. tip::
+          
+            You can find your Asana Project GID in your browser URL bar:
+            
+            .. figure:: /_static/asana-project-gid.png
+              :align: center
+              :alt: Asana Project GID
+
         :type project_gid: :class:`str <python:str>`
         
         :param section_gid: The optional unique ID of the section whose tasks should be
@@ -379,6 +388,15 @@ class GanttSeries(SeriesBase, GanttOptions):
         
         :param board_id: The ID of the Monday.com board whose items should be retrieved
           to populate the Gantt series.
+          
+          .. tip::
+            
+            You can find your Asana Project GID in your browser URL bar:
+              
+            .. figure:: /_static/monday-board-id.png
+              :align: center
+              :alt: Monday.com Board ID
+
         :type board_id: :class:`int <python:int>`
         
         :param api_token: The Monday.com API token to use when authenticating your
@@ -480,7 +498,7 @@ class GanttSeries(SeriesBase, GanttOptions):
 
     @classmethod
     def from_jira(cls, 
-                  project_id,
+                  project_key,
                   server = None,
                   jql = None,
                   username = None,
@@ -513,9 +531,9 @@ class GanttSeries(SeriesBase, GanttOptions):
           already facilitating the OAuth2 dance in a fashion appropriate for your use 
           case.
           
-        :param project_id: The globally unique ID of the Project whose tasks should be
+        :param project_key: The globally unique key of the Project whose tasks should be
           used to assemble the Gantt chart. For example, ``JRA``.
-        :type project_id: :class:`str <python:str>`
+        :type project_key: :class:`str <python:str>`
         
         :param server: The URL of the JIRA instance from which data should be retrieved.
           Defaults to :obj:`None <python:None>`, which looks for a value in the ``HIGHCHARTS_JIRA_SERVER`` environment 
@@ -633,7 +651,7 @@ class GanttSeries(SeriesBase, GanttOptions):
 
             client_kwargs['server'] = validators.url(server, allow_special_ips = True)
 
-            project_id = validators.string(project_id)
+            project_key = validators.string(project_key)
 
             username = validators.string(username, allow_empty = True) \
                 or os.getenv('HIGHCHARTS_JIRA_USERNAME', None)
@@ -669,12 +687,12 @@ class GanttSeries(SeriesBase, GanttOptions):
         if not jira_client._session:
             raise errors.JIRAAuthenticationError('jira_client is not authenticated')
 
-        if jql and f'project = {project_id}' not in jql and f'project={project_id}' not in jql:
+        if jql and f'project = {project_key}' not in jql and f'project={project_key}' not in jql:
             raise errors.HighchartsValueError(f'jql contains a project reference '
-                                                f'that does not match project_id '
-                                                f'("{project_id}").')    
+                                                f'that does not match project_key '
+                                                f'("{project_key}").')    
         elif not jql:
-            jql = f'project = {project_id}'
+            jql = f'project = {project_key}'
 
         series_kwargs = validators.dict(series_kwargs, allow_empty = True) or {}
 

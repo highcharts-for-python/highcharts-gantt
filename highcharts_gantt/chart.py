@@ -1235,7 +1235,7 @@ class Chart(ChartBase):
 
     @classmethod
     def from_jira(cls, 
-                  project_id,
+                  project_key,
                   server = None,
                   jql = None,
                   username = None,
@@ -1255,8 +1255,8 @@ class Chart(ChartBase):
         
           **Highcharts Gantt for Python** can create a JIRA API client for you, 
           authenticating using either the :term:`Basic Authentication` or 
-          :term:`Access Token` methods supported by the JIRA API. However, if you wish to use the more-involved OAuth2 
-          handshake, you can do so yourself and either
+          :term:`Access Token` methods supported by the JIRA API. However, if you wish 
+          to use the more-involved OAuth2  handshake, you can do so yourself and either
           
             * supply an ``oauth_dict`` argument containing the OAuth2 configuration 
               details, or
@@ -1269,9 +1269,9 @@ class Chart(ChartBase):
           already facilitating the OAuth2 dance in a fashion appropriate for your use 
           case.
           
-        :param project_id: The globally unique ID of the Project whose tasks should be
+        :param project_key: The globally unique key of the Project whose tasks should be
           used to assemble the Gantt chart. For example, ``JRA``.
-        :type project_id: :class:`str <python:str>`
+        :type project_key: :class:`str <python:str>`
         
         :param server: The URL of the JIRA instance from which data should be retrieved.
           Defaults to :obj:`None <python:None>`, which looks for a value in the ``HIGHCHARTS_JIRA_SERVER`` environment 
@@ -1385,7 +1385,7 @@ class Chart(ChartBase):
         options_kwargs = validators.dict(options_kwargs, allow_empty = True) or {}
         chart_kwargs = validators.dict(chart_kwargs, allow_empty = True) or {}
 
-        series = series_cls.from_jira(project_id = project_id,
+        series = series_cls.from_jira(project_key = project_key,
                                       server = server,
                                       jql = jql,
                                       username = username,
