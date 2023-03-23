@@ -107,7 +107,9 @@ Key Highcharts Gantt for Python Features
   capabilities that are often needed to get the most out of Highcharts' visualization and
   interaction capabilities.
 
-  .. seealso::
+  .. note::
+
+    **See Also:**
 
     * `Supported Visualizations <https://gantt-docs.highchartspython.com/en/latest/visualizations.html>`__
 
