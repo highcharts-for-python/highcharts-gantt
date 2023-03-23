@@ -6,8 +6,9 @@ from validator_collection import checkers
 from highcharts_core.headless_export import ExportServer as ExportServerBase
 
 from highcharts_gantt.decorators import validate_types
-from highcharts_gantt.options import HighchartsOptions, HighchartsGanttOptions
+from highcharts_gantt.options import HighchartsOptions, HighchartsGanttOptions, HighchartsStockOptions
 from highcharts_gantt.global_options.shared_options import (SharedOptions,
+                                                            SharedStockOptions,
                                                             SharedGanttOptions)
 
 load_dotenv()
@@ -33,7 +34,7 @@ class ExportServer(ExportServerBase):
         super().__init__(**kwargs)
 
     @property
-    def options(self) -> Optional[HighchartsOptions | HighchartsGanttOptions]:
+    def options(self) -> Optional[HighchartsOptions | HighchartsGanttOptions | HighchartsStockOptions]:
         """The :class:`HighchartsOptions` which should be applied to render the exported
         chart. Defaults to :obj:`None <python:None>`.
 
@@ -45,7 +46,7 @@ class ExportServer(ExportServerBase):
     def options(self, value):
         if not value:
             self._options = None
-        elif checkers.is_type(value, ('HighchartsGanttOptions', 'HighchartsOptions')):
+        elif checkers.is_type(value, ('HighchartsGanttOptions', 'HighchartsOptions', 'HighchartsStockOptions')):
             self._options = value
         elif ('navigator' in value
               or 'range_selector' in value
@@ -56,7 +57,7 @@ class ExportServer(ExportServerBase):
             self._options = validate_types(value, HighchartsOptions)
 
     @property
-    def global_options(self) -> Optional[SharedOptions | SharedGanttOptions]:
+    def global_options(self) -> Optional[SharedOptions | SharedGanttOptions | SharedStockOptions]:
         """The global options which will be passed to the (JavaScript)
         ``Highcharts.setOptions()`` method, and which will be applied to the exported
         chart. Defaults to :obj:`None <python:None>`.
@@ -72,6 +73,8 @@ class ExportServer(ExportServerBase):
             self._global_options = None
         else:
             if checkers.is_type(value, 'SharedGanttOptions'):
+                self._global_options = value
+            elif checkers.is_type(value, 'SharedStockOptions'):
                 self._global_options = value
             elif checkers.is_type(value, 'SharedOptions'):
                 self._global_options = value
