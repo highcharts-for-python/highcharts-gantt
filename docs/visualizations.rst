@@ -1228,11 +1228,10 @@ visualizations.
 
     .. error::
 
-      The **Highcharts Gantt for Python** extension and the related
-      `Highcharts Gantt <https://www.highcharts.com/products/maps/>`__ JavaScript
-      library do not support :term:`technical indicators <technical indicator>`.
+      As an extension of the **Highcharts Stock for Python** library, for reasons of
+      convenience the 
+      `Highcharts Gantt for Python <https://gantt-docs.highchartspython.com>`__ extension 
+      provides full support for all :term:`technical indicators <technical indicator>` 
+      supported by the **Highcharts Stock for Python** library.
 
-      Only **Highcharts Stock for Python** and
-      `Highcharts Stock <https://www.highcharts.com/products/stock/>`__ support
-      technical indicators. For more information, please see
-      `here <https://stock-docs.highchartspython.com/>`__.
+      For more information, please see :ref:`here <using_technical_indicators>`.

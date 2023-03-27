@@ -15,6 +15,8 @@ classes and modules.
   class definitions you can do fairly easily using the module organization and naming
   conventions used in the library.
 
+  *This is the recommended best practice to maximize performance*.
+
   In the root of the ``highcharts_gantt`` library you can find universally-shared
   class definitions, like :mod:`.metaclasses <highcharts_gantt.metaclasses>` which
   contains the :class:`HighchartsMeta <highcharts_gantt.metaclasses.HighchartsMeta>`
@@ -33,26 +35,3 @@ classes and modules.
   module defines all of the different configuration options for different series types,
   while the :mod:`.options.series <highcharts_gantt.options.series>` module defines all
   of the classes that represent :term:`series` of data in a given chart).
-
-.. tip::
-
-  To keep things simple, we recommend importing classes you need directly from the
-  :mod:`highcharts_gantt.highcharts` module. There are two paths to do so easily:
-
-  .. code-block:: python
-
-    # APPROACH #1: Import the highcharts module, and access its child classes directly.
-    #              for example by now calling highcharts.Chart().
-    from highcharts_core import highcharts
-
-    my_chart = highcharts.Chart()
-    my_shared_options = highcharts.SharedStockOptions()
-
-    my_line_series = highcharts.options.series.area.LineSeries()
-
-    # APPROACH #2: Import a specific class or module by name from the "highcharts" module.
-    from highcharts_gantt.highcharts import Chart, SharedStockOptions, options
-
-    my_chart = Chart()
-    my_shared_options = SharedStockOptions()
-    my_line_series = options.series.area.LineSeries()

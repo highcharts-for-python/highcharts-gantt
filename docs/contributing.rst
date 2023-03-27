@@ -11,7 +11,7 @@ Contributing to Highcharts for Python
 
 .. sidebar:: What makes an API idiomatic?
 
-  One of my favorite ways of thinking about idiomatic design comes from a `talk
+  One of our favorite ways of thinking about idiomatic design comes from a `talk
   given by Luciano Ramalho at Pycon 2016`_ where he listed traits of a Pythonic
   API as being:
 
@@ -47,8 +47,8 @@ In other words:
 
   Users should simply be able to drive the car without looking at the engine.
 
-The good news is that `Highcharts JS <https://www.highcharts.com>`__ applies a very similar philosophy, and so that
-makes the job for **Highcharts for Python** that much simpler.
+The good news is that `Highcharts (JS) <https://www.highcharts.com>`__ applies a very 
+similar philosophy, and so that makes the job for **Highcharts for Python** that much simpler.
 
 *************************
 Style Guide
@@ -213,9 +213,10 @@ Docstrings
 Design Patterns and Standards
 ***************************************************
 
-`Highcharts JS <https://www.highcharts.com>`__ is a large, robust, and complicated JavaScript library. If in doubt, take
-a look at their extensive `documentation <https://www.highcharts.com/docs/index>`_ and in
-particular their `API reference <https://api.highcharts.com/highcharts>`_. Because
+`Highcharts (JS) <https://www.highcharts.com>`__ is a large, robust, and complicated
+JavaScript library. If in doubt, take a look at the extensive
+`documentation <https://www.highcharts.com/docs/index>`_ and in particular the
+`API reference <https://api.highcharts.com/highcharts>`_. Because
 **Highcharts for Python** wraps the Highcharts JS API, its design is heavily shaped by
 Highcharts JS' own design - as one should expect.
 
@@ -234,7 +235,7 @@ Standard Methods: :class:`HighchartsMeta <highcharts_gantt.metaclasses.Highchart
 
 Every single object supported by the Highcharts JS API corresponds to a Python class in
 **Highcharts for Python**. You can find the complete list in our comprehensive
-:doc:`Highcharts for Python API Reference <api>`.
+:doc:`Highcharts Gantt for Python API Reference <api>`.
 
 These classes generally inherit from the :class:`HighchartsMeta` metaclass, which provides
 each class with a number of standard methods. These methods are the "workhorses" of
@@ -277,7 +278,7 @@ Multiple Inheritance, DRY and the Diamond of Death
   *Everything in moderation, including moderation.*
   -- Oscar Wilde
 
-When contributing code to the **Highcharts for Python** toolkit, it is important to
+When contributing code to the **Highcharts for Python Toolkit**, it is important to
 understand how we handle multiple inheritance and the :term:`diamond of death` problem.
 
 First, obviously, multiple inheritance is generally considered an anti-pattern. That's
@@ -285,13 +286,13 @@ because it makes debugging code much, much harder - particuarly in Python, which
 bit of a "magic" secret sauce called the MRO (Method Resolution Order) to determine which
 parent class' methods to execute and when.
 
-However, `Highcharts JS <https://www.highcharts.com>`__ - and by consequence, **Highcharts for Python** - is a very
-verbose library. I estimate that the full set of objects in the library has about 15,000
-properties in total. A great many of these properties are identical in terms of their
-syntax, and their meaning (in context). So this is a classic example of where we can apply
-the principle of :iabbr:`DRY (Don't Repeat Yourself)` to good effect. By using class
-inheritance, we can reduce the number of properties from about 15,000 to about 1,900. Not
-bad!
+However, `Highcharts <https://www.highcharts.com>`__ - and by consequence, 
+**Highcharts for Python** - is very verbose. We estimate that the full set of 
+objects across the full Python toolkit has about 15,000 properties in total. A great many 
+of these properties are identical in terms of their syntax, and their meaning (in context). 
+So this is a classic example of where we can apply the principle of 
+:iabbr:`DRY (Don't Repeat Yourself)` to good effect. By using class inheritance, we can 
+reduce the number of properties from about 15,000 to about 1,900. Not bad!
 
 However, this significant reduction *does* require us to use multiple inheritance in some
 cases, paritcularly in the :mod:`.options.series <highcharts_gantt.options.series>`
@@ -405,15 +406,15 @@ In order to build documentation locally, you can do so from the command line usi
 
 .. code-block:: bash
 
-  highcharts-stock/ $ cd docs
-  highcharts-stock/docs $ make html
+  highcharts-gantt/ $ cd docs
+  highcharts-gantt/docs $ make html
 
 .. caution::
 
   The **Highcharts for Python** documentation relies on
   `Graphviz <https://graphviz.org/>`_ to render class inheritance diagrams. While in
   most Linux environments this should just work assuming it is installed, on Windows
-  you will likley to have to use a more robust command to generate the full docs
+  you will likely have to use a more robust command to generate the full docs
   locally:
 
     .. code-block:: bash

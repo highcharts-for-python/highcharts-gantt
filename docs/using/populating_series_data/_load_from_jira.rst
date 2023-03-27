@@ -3,7 +3,7 @@
   # Given a GanttSeries named "my_series" and a JIRA project key of "ABCD"
   my_series.load_from_jira(project_key = 'ABCD')
 
-.. collapse::  Signature of the ``.load_from_jira()`` method
+.. collapse::  Method Signature
 
     .. seealso::
 
@@ -11,7 +11,7 @@
       * :meth:`Chart.from_jira() <highcharts_gantt.chart.Chart.from_jira>`
       * :meth:`GanttData.from_jira() <highcharts_gantt.options.series.data.GanttData.from_jira>`
 
-    .. method:: load_from_jira(self, project_key, server = None, jql = None, username = None, password_or_token = None, oauth_dict = None, client_kwargs = None, jira_client = None, connection_kwargs = None, connection_callback = None)
+    .. method:: .load_from_jira(self, project_key, server = None, jql = None, username = None, password_or_token = None, oauth_dict = None, client_kwargs = None, jira_client = None, connection_kwargs = None, connection_callback = None)
       :noindex:
 
       Update the :class:`GanttSeries <highcharts_gantt.options.series.gantt.GanttSeries>`
