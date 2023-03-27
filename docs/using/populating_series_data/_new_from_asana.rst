@@ -33,14 +33,14 @@
       :align: center
       :alt: Asana Project GID
 
-.. collapse::  Signature of the ``.from_asana()`` method
+.. collapse::  Method Signature
 
     .. seealso::
 
       * :meth:`Chart.from_asana() <highcharts_gantt.chart.Chart.from_asana>`
       * :meth:`GanttData.from_asana() <highcharts_gantt.options.series.data.GanttData.from_asana>`
 
-    .. method:: from_asana(cls, project_gid, section_gid = None, completed_since = None, use_html_description = True, personal_access_token = None, asana_client = None, api_request_params = None, connection_kwargs = None, connection_callback = None, series_kwargs = None)
+    .. method:: .from_asana(cls, project_gid, section_gid = None, completed_since = None, use_html_description = True, personal_access_token = None, asana_client = None, api_request_params = None, connection_kwargs = None, connection_callback = None, series_kwargs = None)
       :noindex:
       :classmethod:
 

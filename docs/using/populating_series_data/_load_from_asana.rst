@@ -15,7 +15,7 @@
       :align: center
       :alt: Asana Project GID
 
-.. collapse::  Signature of the ``.load_from_asana()`` method
+.. collapse:: Method Signature
 
     .. seealso::
 
@@ -23,7 +23,7 @@
       * :meth:`Chart.from_asana() <highcharts_gantt.chart.Chart.from_asana>`
       * :meth:`GanttData.from_asana() <highcharts_gantt.options.series.data.GanttData.from_asana>`
 
-    .. method:: load_from_asana(self, project_gid, section_gid = None, completed_since = None, use_html_description = True, personal_access_token = None, asana_client = None, api_request_params = None, connection_kwargs = None, connection_callback = None)
+    .. method:: .load_from_asana(self, project_gid, section_gid = None, completed_since = None, use_html_description = True, personal_access_token = None, asana_client = None, api_request_params = None, connection_kwargs = None, connection_callback = None)
       :noindex:
 
       Update the :class:`GanttSeries <highcharts_gantt.options.series.gantt.GanttSeries>`

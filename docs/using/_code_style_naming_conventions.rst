@@ -14,7 +14,7 @@ convention, Python generally skews towards the ``snake_case`` convention.
 
 For most Python developers, using ``snake_case`` is the "default" mindset. Most of your
 Python code will use ``snake_case``. So having to switch into ``camelcase`` to interact
-with Highcharts Stock forces us to context switch, increases cognitive load, and is an
+with Highcharts Gantt forces us to context switch, increases cognitive load, and is an
 easy place for us to overlook things and make a mistake that can be quite annoying to
 track down and fix later.
 

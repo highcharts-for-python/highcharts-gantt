@@ -2,11 +2,11 @@
 
   **Highcharts Gantt for Python** has several types of dependencies:
 
-    * "hard" dependencies, without which you will not be able to use the library at all,
-    * "soft" dependencies, which will not produce errors but which may limit the value you
+    * *hard* dependencies, without which you will not be able to use the library at all,
+    * *soft* dependencies, which will not produce errors but which may limit the value you
       get from the library,
-    * "developer" dependencies that contributors will need in their local environment, and
-    * "documentation" dependencies that are necessary if you wish to generate (this)
+    * *developer* dependencies that contributors will need in their local environment, and
+    * *documentation* dependencies that are necessary if you wish to generate (this)
       documentation
 
 .. tabs::
@@ -71,7 +71,7 @@
     .. warning::
 
       You will not be able to run unit tests without the Pytest test framework and a
-      number of necessary extensions. To install the developer (and documentation)
+      number of necessary extensions. To install the developer (and soft and documentation)
       dependencies, execute:
 
       .. code-block:: bash

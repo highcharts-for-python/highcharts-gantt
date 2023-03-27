@@ -24,14 +24,14 @@
   my_chart = Chart.from_monday(project_key = 'ABCD')
 
 
-.. collapse::  Signature of the ``.from_jira()`` method
+.. collapse:: Method Signature
 
   .. seealso::
 
       * :meth:`Chart.from_jira() <highcharts_gantt.chart.Chart.from_jira>`
       * :meth:`GanttData.from_jira() <highcharts_gantt.options.series.data.GanttData.from_jira>`
 
-  .. method:: from_jira(cls, project_key, server = None, jql = None, username = None, password_or_token = None, oauth_dict = None, client_kwargs = None, jira_client = None, connection_kwargs = None, connection_callback = None, series_kwargs = None)
+  .. method:: .from_jira(cls, project_key, server = None, jql = None, username = None, password_or_token = None, oauth_dict = None, client_kwargs = None, jira_client = None, connection_kwargs = None, connection_callback = None, series_kwargs = None)
     :noindex:
     :classmethod:
 

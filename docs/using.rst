@@ -15,39 +15,44 @@ Introduction to Highcharts Stock and Highcharts for Python
 .. sidebar:: The Highcharts for Python Toolkit
 
   The **Highcharts Gantt for Python** library is part of the broader
-  `Highcharts for Python <https://core-docs.highchartspython.com/>`_ toolkit. The core
-  toolkit provides Python wrappers for
+  `Highcharts for Python Toolkit <https://www.highcharts.com/integrations/python>`__. 
+  The core toolkit provides Python wrappers for
   `Highcharts Core <https://www.highcharts.com/products/highcharts/>`__, while
-  **Highcharts Gantt for Python** extends the core library with support for
+  **Highcharts Gantt for Python** extends the core Python library with support for
   `Highcharts Gantt <https://www.highcharts.com/products/gantt>`__ in the same way that
   Highcharts Gantt extends Highcharts Core.
 
   .. note::
 
     **Highcharts Gantt for Python** is an *additive* extension to
-    **Highcharts Stock for Python**. This means that it includes the full set of functionality
-    from Highcharts Stock for Python, is fully bakcwards-compatible with Highcharts Stock for Python,
-    and exposes the exact same API for you to use. This makes it easy to for you to
-    combine visualization from the
+    `Highcharts Stock for Python <https://stock-docs.highchartspython.com>`__:
+    
+      * It includes the full set of functionality from Highcharts Stock for Python
+      * It is fully bakcwards-compatible with Highcharts Stock for Python, and
+      * It exposes the exact same API for you to use. 
+      
+    This makes it easy to for you to combine visualization from the
     `Highcharts Core <https://www.highcharts.com/products/highcharts/>`__, 
-    `Highcharts Stock <https://www.highcharts.com/products/stock/>`_, *and* `Highcharts Gantt <https://www.highcharts.com/products/gantt/>`__ libraries without
+    `Highcharts Stock <https://www.highcharts.com/products/stock/>`_, *and* 
+    `Highcharts Gantt <https://www.highcharts.com/products/gantt/>`__ libraries without
     wrangling multiple similar dependencies in your Python code.
 
 `Highcharts Gantt <https://www.highcharts.com/products/gantt/>`__  is a powerful
 JavaScript data visualization library for timeline and :term:`Gantt chart` visualization
-enabling you to design rich, beautiful, and highly interactive data visualizations of
-(almost) any kind imaginable, and to render those visualizations in your web or mobile
-applications. Take a look at some of their
+enabling you to design rich, beautiful, and highly interactive data visualizations of 
+(almost) any kind imaginable, and to render those visualizations in your web or mobile 
+applications. Take a look at some of the
 `customer showcases <https://www.highcharts.com/blog/posts/highcharts-gantt+use-cases/>`_
-and their own `demo gallery <https://www.highcharts.com/products/gantt/demo>`_ to see what
-you can do with Highcharts Gantt.
+and `demo gallery <https://www.highcharts.com/products/gantt/demo>`_ to see some examples 
+of what you can do with Highcharts Gantt.
 
 **Highcharts Gantt for Python** is a Python wrapper for the
 `Highcharts Gantt <https://www.highcharts.com/products/gantt/>`__ JavaScript library,
 which means that it is designed to give developers working in Python a simple and Pythonic
-way of interacting with Highcharts Gantt. Highcharts for Python will *not* render
-data visualizations itself - that's what Highcharts Gantt does - but it *will* allow you
-to:
+way of interacting with Highcharts Maps (JS). 
+
+**Highcharts Gantt for Python** will *not* render data visualizations itself - that's what 
+Highcharts Gantt (JS) does - but it *will* allow you to:
 
   #. Configure your data visualizations in Python.
   #. Supply data you have in Python to your data visualizations.
@@ -67,17 +72,20 @@ to:
 Key Design Patterns in Highcharts for Python
 *****************************************************
 
-`Highcharts JS <https://www.highcharts.com>`__ is a large, robust, and complicated
-suite of JavaScript libraries. If in doubt, take a look at their extensive
-`documentation <https://www.highcharts.com/docs/index>`_ and in
-particular their `API reference`_. Because **Highcharts for Python** and
-**Highcharts Gantt for Python** wrap the Highcharts API, their design is heavily shaped by
-Highcharts JS' own design - as one should expect.
+`Highcharts <https://www.highcharts.com>`__ is a large, robust, and complicated JavaScript 
+library. If in doubt, take a look at its extensive 
+`documentation <https://www.highcharts.com/docs/index>`_ and in particular its 
+`API reference`_. 
 
-However, one of the main goals of the **Highcharts for Python** toolkit is to make the
-Highcharts JS library a little more Pythonic in terms of its design to make it easier for
-Python developers to leverage it. Here are the notable design patterns that have been
-adopted that you should be aware of:
+Because the **Highcharts for Python Toolkit** wraps the Highcharts (JS) API, its design is 
+heavily shaped by Highcharts JS' own design - as one should expect.
+
+However, one of the main goals of the Python toolkit is to make it easier for Python
+developers to leverage the Highcharts JavaScript libraries - in particular by providing a 
+more Pythonic way of interacting with the framework. 
+
+Here are the notable design patterns that have been adopted that you should be aware of:
+
 
 Code Style: Python vs JavaScript Naming Conventions
 =======================================================
@@ -140,16 +148,16 @@ Class Structures and Inheritance
 
 .. warning::
 
-  Certain sections of the **Highcharts Gantt for Python** library - in particular the
-  :mod:`options.series <highcharts_gantt.options.series>` classes - rely heavily on
+  Certain sections of the **Highcharts Maps for Python** library - in particular the
+  :mod:`options.series <highcharts_maps.options.series>` classes - rely heavily on
   multiple inheritance. This is a known anti-pattern in Python development as it runs the
   risk of encountering the :term:`diamond of death` inheritance problem. This complicates
   the process of inheriting methods or properties from parent classes when properties or
   methods share names across multiple parents.
 
-  I know this is an anti-pattern, but it was a necessary one to minimize code duplication
-  and maximize consistency. For that reason, I implemented it properly *despite* the
-  anti-pattern, using some advanced Python concepts to navigate the Python MRO
+  We know the diamond of death is an anti-pattern, but it was a necessary one to minimize 
+  code duplication and maximize consistency. For that reason, we implemented it properly 
+  *despite* the anti-pattern, using some advanced Python concepts to navigate the Python MRO
   (Method Resolution Order) system cleanly. However, an awareness of the pattern used
   may prove helpful if your code inherits from the Highcharts for Python classes.
 
@@ -170,11 +178,10 @@ any frontend framework. Whether your Python application is relying on iPython (e
 `Flask <https://flask.palletsprojects.com/en/2.2.x/>`_,
 `Django <https://www.djangoproject.com/>`_,  `FastAPI <https://fastapi.tiangolo.com/>`_,
 `Pyramid <https://trypyramid.com/>`_, `Tornado <https://www.tornadoweb.org/en/stable/>`_,
-or some completely home-grown solution all Highcharts Gantt for
-Python needs is a place where
+or some completely home-grown solution all Highcharts Gantt for Python needs is a place where
 `Highcharts Gantt <https://www.highcharts.com/products/gantt/>`__ JavaScript code can be executed.
 
-All of those frameworks I mentioned have their own best practices for organizing their
+All of those frameworks mentioned have their own best practices for organizing their
 application structures, and those should *always* take priority. Even in a data-centric
 application that will be relying heavily on **Highcharts Gantt for Python**, your
 application's core business logic will be doing most of the heavy lifting and so your
@@ -213,12 +220,12 @@ and their greatest weakness. This is because it can be quite challenging to wran
 thousands of properties - especially when even a single visualization can use hundreds of
 those properties!
 
-This is a challenge that the developers of `Highcharts JS <https://www.highcharts.com>`__
-are keenly aware of, and one which we've given some thought to throughout the
-**Highcharts for Python** toolkit. A core principle you should use throughout your project
-is to practice :iabbr:`DRY (Do Not Repeat Yourself)` programming. If your application will
-be generating multiple visualizations, they will likely need some consistent
-configurations.
+This is a challenge that we are keenly aware of, and one which we've given some thought to in 
+the design of the **Highcharts for Python Toolkit**. A core principle you should use throughout 
+your project is to practice :iabbr:`DRY (Do Not Repeat Yourself)` programming. 
+
+If your application will be generating multiple visualizations, they will likely need some 
+consistent configurations.
 
 For example, you will want their title position to be consistent, their color schemes to
 be consistent, their font sizing to be consistent, etc. In your code you want these
@@ -359,7 +366,7 @@ Jira projects, CSV files, from `pandas`_ dataframes, or `PySpark`_ dataframes.
 How Data is Represented
 ==================================
 
-`Highcharts Core <https://www.highcharts.com>`__ supports two different ways of representing
+`Highcharts <https://www.highcharts.com>`__ (JS) supports two different ways of representing
 data: as an individual :term:`series` comprised of individual data points, and as a set of
 instructions to read data dynamically from a CSV file or an HTML table.
 
@@ -368,13 +375,14 @@ instructions to read data dynamically from a CSV file or an HTML table.
     * :class:`DataBase <highcharts_gantt.options.series.data.base.DataBase>` class
     * :class:`options.Data <highcharts_gantt.options.data.Data>` class
 
-`Highcharts JS <https://www.highcharts.com>`__ organizes data into :term:`series`. You can
+`Highcharts <https://www.highcharts.com>`__ organizes data into :term:`series`. You can
 think of a series as a single line on a graph that shows a set of values. The set of
 values that make up the series are :term:`data points <data point>`, which are defined by
-a set of properties that indicate the data point's position on one or more axes. As a
-result, `Highcharts JS <https://www.highcharts.com>`__ and **Highcharts for Python** both
-represent the data points in series as a list of data point objects in the ``data``
-property within the series:
+a set of properties that indicate the data point's position on one or more axes. 
+
+As a result, `Highcharts (JS) <https://www.highcharts.com>`__ and **Highcharts for Python** both
+represent the data points in series as a list of data point objects in the ``data`` property 
+within the series:
 
 .. list-table::
   :widths: 50 50
@@ -436,7 +444,7 @@ property within the series:
         ])
 
 As you can see, **Highcharts for Python** represents its data the same way that
-`Highcharts JS <https://www.highcharts.com>`__ does. That should be expected. However,
+`Highcharts (JS) <https://www.highcharts.com>`__ does. That should be expected. However,
 constructing tens, hundreds, or possibly thousands of data points individually in your
 code would be a nightmare. For that reason, the **Highcharts for Python** toolkit provides
 a number of convenience methods to make it easier to populate your series.
@@ -456,8 +464,7 @@ series instance), or to create a new series instance with data already loaded.
 
     .. warning::
 
-      :term:`Technical indicators <technical indicator>` provided by
-      **Highcharts Stock for Python** do not support the ``.from_array()`` method because
+      :term:`Technical indicators <technical indicator>` do not support the ``.from_array()`` method because
       their data gets populated dynamically based on the series indicated in their
       :meth:`.linked_to <highcharts_gantt.options.series.base.IndicatorSeriesBase.linked_to>`
       property.
@@ -476,7 +483,7 @@ series instance), or to create a new series instance with data already loaded.
     :ref:`deserialization methods <deserialization_methods>`, so those make things very easy.
     However, they also have a special data point-specific deserialization method:
 
-      .. collapse:: Expand Method Signature
+      .. collapse:: Method Signature
 
         .. method:: .from_array(cls, value)
           :classmethod:
@@ -485,7 +492,7 @@ series instance), or to create a new series instance with data already loaded.
           Creates a collection of data point instances, parsing the contents of ``value`` as an
           array (iterable). This method is specifically used to parse data that is input to
           **Highcharts for Python** without property names, in an array-organized structure as
-          described in the `Highcharts JS <https://www.highcharts.com>`__ documentation.
+          described in the `Highcharts (JS) <https://www.highcharts.com>`__ documentation.
 
           .. seealso::
 
@@ -567,8 +574,7 @@ series instance), or to create a new series instance with data already loaded.
 
     .. warning::
 
-      :term:`Technical indicators <technical indicator>` provided by
-      **Highcharts Stock for Python** do not support the ``.load_from_*`` methods because
+      :term:`Technical indicators <technical indicator>` do not support the ``.load_from_*`` methods because
       their data gets populated dynamically based on the series indicated in their
       :meth:`.linked_to <highcharts_gantt.options.series.base.IndicatorSeriesBase.linked_to>`
       property.
@@ -591,8 +597,6 @@ series instance), or to create a new series instance with data already loaded.
 
         .. include:: using/populating_series_data/_load_from_jira.rst
 
-    .. tabs::
-
       .. tab:: Using ``.load_from_csv()``
 
         .. include:: using/populating_series_data/_load_from_csv.rst
@@ -609,8 +613,7 @@ series instance), or to create a new series instance with data already loaded.
 
     .. warning::
 
-      :term:`Technical indicators <technical indicator>` provided by
-      **Highcharts Stock for Python** do not support the ``.from_*()``,
+      :term:`Technical indicators <technical indicator>` do not support the ``.from_*()``,
       methods because their data gets populated dynamically based on the series indicated in their
       :meth:`.linked_to <highcharts_gantt.options.series.base.IndicatorSeriesBase.linked_to>`
       property.
@@ -632,8 +635,6 @@ series instance), or to create a new series instance with data already loaded.
       .. tab:: Using ``.from_jira()``
 
         .. include:: using/populating_series_data/_new_from_jira.rst
-
-    .. tabs::
 
       .. tab:: Using ``.from_csv()``
 
@@ -674,9 +675,9 @@ an instance of
   .. note::
 
     This structure - where the chart object contains an options object - is a little
-    nested for my tastes, but it is the structure which
-    `Highcharts JS <https://www.highcharts.com>`__ has adopted and
-    so for the sake of consistency the **Highcharts for Python** toolkit uses it as well.
+    nested for some tastes, but it is the structure which
+    `Highcharts (JS) <https://www.highcharts.com>`__ has adopted and
+    so for the sake of consistency the **Highcharts for Python Toolkit** uses it as well.
 
 To be visualized on your chart, you will need to add your series instances to the
 :meth:`Chart.options.series <highcharts_gantt.options.HighchartsOptions.series>`
@@ -798,12 +799,13 @@ You can also render **Highcharts Gantt for Python** visualizations inside your
 
 .. include:: using/rendering_your_visualizations/_as_jupyter.rst
 
-You can call the ``.display()`` method from anywhere within any notebook cell, and it
+You can call the :meth:`.display() <highcharts_gantt.chart.Chart.display>`
+method from anywhere within any notebook cell, and it
 will render the resulting chart in your notebook's output. That's it!
 
   .. caution::
 
-    If `iPython <https://ipython.readthedocs.io/>`_ is not available in your runtime
+    If `IPython <https://ipython.readthedocs.io/>`_ is not available in your runtime
     environment, calling
     :meth:`.display() <highcharts_gantt.chart.Chart.display>` will raise a
     :exc:`HighchartsDependencyError`.
@@ -812,9 +814,9 @@ Stock Chart vs Regular Chart
 ==================================
 
 When using **Highcharts Gantt for Python** you have the choice to render your charts
-using the `Highcharts Gantt <https://www.highcharts.com/products/gantt/>`__ chart constructor,
-the `Highcharts Stock <https://www.highcharts.com/products/stock>`__ constructor or the standard
-`Highcharts Core <https://www.highcharts.com/products/highcharts/>`__ chart constructor.
+using either the `Highcharts Gantt <https://www.highcharts.com/products/gantt/>`__ chart constructor,
+the `Highcharts Stock <https://www.highcharts.com/products/stock>`__ constructor, or the standard
+`Highcharts Core <https://www.highcharts.com/products/highcharts/>`__ constructor.
 
 The difference between these constructors relates to the features available in the
 chart. The Highcharts Gantt and Stock charts will be visualized including the :term:`navigator`
@@ -829,7 +831,8 @@ of the :term:`technical indicators <technical indicator>` supported by
 support :term:`candlestick`, :term:`HLC`, or :term:`OHLC` series types.
 
 However, Highcharts Gantt *can* visualize all of the series types offered by both
-`Highcharts Core <https://www.highcharts.com/products/highcharts/>`__ and `Highcharts Stock <https://www.highcharts.com/products/stock/>`__.
+`Highcharts Core <https://www.highcharts.com/products/highcharts/>`__ and 
+`Highcharts Stock <https://www.highcharts.com/products/stock/>`__.
 
 When working with your :class:`Chart <highcharts_gantt.chart.Chart>` object, you can set
 the :meth:`.is_gantt_chart <highcharts_gantt.chart.Chart.is_gantt_chart>` property to
@@ -859,15 +862,15 @@ property will be set to ``True``, unless explicitly overridden in your code.
 
 .. sidebar:: Highcharts Export Server
 
-  Highsoft - the developers of `Highcharts JS <https://www.highcharts.com>`__ - are kind
-  enough to provide a rate-limited publicly available :term:`Export Server` that can be
-  used by `Highcharts JS <https://www.highcharts.com>`__ license-holders. By default,
-  **Highcharts Stock for Python** is configured to use this server.
+  Highsoft - the developers of `Highcharts (JS) <https://www.highcharts.com>`__ - 
+  provide a rate-limited publicly available :term:`Export Server` that can be
+  used by `Highcharts <https://www.highcharts.com>`__ license-holders. By default,
+  the **Highcharts for Python Toolkit** is configured to use this server.
 
   However, there are many use cases where you may be deploying your own
   :term:`Export Server` and wish to use that instead. You can do this by
   creating your own
-  :class:`ExportServer <highcharts_gantt.headless_export.ExportServer>` instance and
+  :class:`ExportServer <highcharts_stock.headless_export.ExportServer>` instance and
   supplying it as the ``server_instance`` keyword argument to the ``.download_chart()``
   method.
 

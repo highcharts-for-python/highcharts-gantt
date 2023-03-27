@@ -23,7 +23,7 @@
 
 .. tip::
 
-    **Where to find my Moday.com Board ID?**
+    **Where to find my Monday.com Board ID?**
 
     Of course, you can find your Monday.com Board ID using the Monday.com API, but that is typically
     a bit cumbersome. The easiest way to find it is to simply grab it out of your browser's URL
@@ -33,14 +33,14 @@
       :align: center
       :alt: Monday.com Board ID
 
-.. collapse::  Signature of the ``.from_monday()`` method
+.. collapse::  Method Signature
 
   .. seealso::
 
       * :meth:`Chart.from_monday() <highcharts_gantt.chart.Chart.from_monday>`
       * :meth:`GanttData.from_monday() <highcharts_gantt.options.series.data.GanttData.from_monday>`
 
-  .. method:: from_monday(cls, board_id, api_token = None, template = None, property_column_map = None, connection_kwargs = None, connection_callback = None, series_kwargs = None)
+  .. method:: .from_monday(cls, board_id, api_token = None, template = None, property_column_map = None, connection_kwargs = None, connection_callback = None, series_kwargs = None)
     :noindex:
     :classmethod:
 
