@@ -1,7 +1,12 @@
 import os
 from typing import Optional, List
 
-from dotenv import load_dotenv
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 from validator_collection import validators, checkers
 
 try:
@@ -22,9 +27,6 @@ from highcharts_gantt import errors, monday
 from highcharts_gantt.options.plot_options.gantt import GanttOptions
 from highcharts_gantt.options.series.data.gantt import GanttData
 from highcharts_gantt.utility_functions import mro__to_untrimmed_dict
-
-
-load_dotenv()
 
 
 class GanttSeries(SeriesBase, GanttOptions):
@@ -309,6 +311,8 @@ class GanttSeries(SeriesBase, GanttOptions):
                                                   'Neither was supplied.')
         else:
             client = asana.Client.access_token(personal_access_token)
+            
+        client.LOG_ASANA_CHANGE_WARNINGS = False
     
         if section_gid:
             request = client.tasks.get_tasks_for_section
