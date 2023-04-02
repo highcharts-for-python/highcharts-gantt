@@ -1,4 +1,9 @@
-from dotenv import load_dotenv
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 from typing import Optional
 
 from validator_collection import checkers
@@ -11,7 +16,6 @@ from highcharts_gantt.global_options.shared_options import (SharedOptions,
                                                             SharedStockOptions,
                                                             SharedGanttOptions)
 
-load_dotenv()
 
 
 class ExportServer(ExportServerBase):

@@ -431,6 +431,11 @@ class GanttData(DataBase):
         """
         if not value:
             return []
+        elif checkers.is_string(value):
+            try:
+                value = validators.json(value)
+            except (ValueError, TypeError):
+                pass
         elif not checkers.is_iterable(value):
             value = [value]
 
@@ -531,7 +536,7 @@ class GanttData(DataBase):
             dependencies.append(connection)
             
         data_point.dependency = dependencies
-        data_point.custom = task
+        #data_point.custom = task
         
         return data_point
 
