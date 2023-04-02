@@ -536,7 +536,7 @@ class GanttData(DataBase):
             dependencies.append(connection)
             
         data_point.dependency = dependencies
-        data_point.custom = task
+        #data_point.custom = task
         
         return data_point
 
