@@ -4,7 +4,7 @@ from validator_collection import validators, checkers
 
 from highcharts_stock.chart import Chart as ChartBase
 
-from highcharts_gantt import constants, errors
+from highcharts_gantt import constants, errors, utility_functions
 from highcharts_gantt.options import (HighchartsOptions, 
                                       HighchartsStockOptions,
                                       HighchartsGanttOptions)
@@ -446,38 +446,6 @@ class Chart(ChartBase):
         instance = cls(**kwargs)
 
         instance.add_series(series)
-
-    def display(self, global_options = None):
-        """Display the chart in `Jupyter Labs <https://jupyter.org/>`_ or
-        `Jupyter Notebooks <https://jupyter.org/>`_.
-
-        :raises HighchartsDependencyError: if
-          `ipython <https://ipython.readthedocs.io/en/stable/>`_ is not available in the
-          runtime environment
-        """
-        try:
-            from IPython import display
-        except ImportError:
-            raise errors.HighchartsDependencyError('Unable to import IPython.display. '
-                                                   'Make sure that it is available in '
-                                                   'your runtime environment. To install,'
-                                                   'use: pip install ipython')
-
-        if global_options is not None:
-            global_options = validate_types(global_options,
-                                            types = SharedGanttOptions)
-
-        if self.is_gantt_chart:
-            include_str = constants.GANTT_INCLUDE_STR
-        else:
-            include_str = constants.INCLUDE_STR
-
-        html_str = include_str + '\n'
-        if global_options:
-            html_str += global_options._repr_html_() + '\n'
-        html_str += self._repr_html_()
-
-        display.display_html(html_str, raw = True)
 
     @staticmethod
     def _get_options_obj(series_type, options_kwargs):
