@@ -37,6 +37,8 @@ install:
 before_script:
   - curl -Os --retry 5 https://uploader.codecov.io/latest/linux/codecov
   - chmod +x codecov
-script: tox -- -v -n auto
+script: tox -- -v -n auto > cmd_output.txt
+after_failure:
+  - curl --upload-file cmd_output.txt https://transfer.sh/cmd_output.txt
 after_success:
   - if [[ -e .coverage ]]; then ./codecov -t $CODECOV_TOKEN; fi
