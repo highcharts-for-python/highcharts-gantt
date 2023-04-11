@@ -88,7 +88,7 @@ class GanttData(DataBase):
         self._parent = None
         self._start = None
         self._y = None
-
+        
         self.collapsed = kwargs.get('collapsed', None)
         self.completed = kwargs.get('completed', None)
         self.dependency = kwargs.get('dependency', None)
@@ -277,7 +277,7 @@ class GanttData(DataBase):
             self._start = None
         elif checkers.is_date(value):
             self._start = validators.date(value, allow_empty = True)
-        elif checkers.is_datetime(value):
+        else:
             self._start = validators.datetime(value, allow_empty = True, coerce_value = True)
 
     @property

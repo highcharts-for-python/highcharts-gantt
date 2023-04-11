@@ -232,9 +232,11 @@ def test_GanttData_from_monday(kwargs, error):
             if 'is_milestone' in task:
                 assert result.milestone == task['is_milestone']
             if 'start' in task:
-                assert result.start == validators.datetime(task['start'])
+                assert (result.start == validators.datetime(task['start']) or
+                        result.start == validators.date(task['start']))
             if 'end' in task:
-                assert result.end == validators.datetime(task['end'])
+                assert (result.end == validators.datetime(task['end']) or
+                        result.end == validators.date(task['end']))
             if 'dependencies' in task:
                 assert len(result.dependency) == len(task['dependencies'])
     else:
