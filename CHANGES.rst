@@ -1,3 +1,11 @@
+Release 1.0.0
+=========================================
+
+* **First official release!**
+* Fixed over-eager logical filtering on ``options.series.data.GanttData`` instantiation.
+
+---------------
+
 Release 1.0.0-rc6
 =========================================
 
