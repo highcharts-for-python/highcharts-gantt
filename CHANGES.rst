@@ -1,3 +1,14 @@
+Release 1.0.0-rc6
+=========================================
+
+* Added demos to documentation.
+* Fixed ``options.series.gantt.GanttSeries`` documentation.
+* Aligned Jupyter display to new Highcharts Core signature.
+* Added ``datetime.date`` (as opposed to ``datetime.datetime`` 
+  support for ``GanttSeries.start`` and ``GanttSeries.end``.
+
+---------------
+
 Release 1.0.0-rc5
 =========================================
 

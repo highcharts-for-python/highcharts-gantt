@@ -124,6 +124,7 @@ GANTT_SERIES_LIST = [
     'gantt'
 ]
 
+
 def create_series_obj(value,
                       default_type = None) -> Optional[SeriesBase]:
     """Create an instance descended from
@@ -179,8 +180,8 @@ def create_series_obj(value,
 
                 type_ = preliminary_as_dict.get('type', default_type)
         else:
-                preliminary_as_dict = json.loads(value)
-                type_ = preliminary_as_dict.get('type', default_type)
+            preliminary_as_dict = json.loads(value)
+            type_ = preliminary_as_dict.get('type', default_type)
 
         if not type_:
             raise errors.HighchartsValueError('To instantiate a Series, the "type" must '

@@ -1,6 +1,6 @@
 from typing import Optional, List
 from decimal import Decimal
-from datetime import datetime
+from datetime import datetime, date
 
 from validator_collection import validators, checkers
 
@@ -192,7 +192,7 @@ class GanttData(DataBase):
                 self._dependency = [x for x in processed_value]
 
     @property
-    def end(self) -> Optional[datetime]:
+    def end(self) -> Optional[datetime | date]:
         """The end time of the data point (task).
 
         .. note::
@@ -205,13 +205,19 @@ class GanttData(DataBase):
           JavaScript object literal notation it will be converted back to a numerical
           value.
 
-        :rtype: :class:`datetime <python:datetime.datetime>` or :obj:`None <python:None>`
+        :rtype: :class:`datetime <python:datetime.datetime>` or :class:`date <python:datetime.date>` 
+          or :obj:`None <python:None>`
         """
         return self._end
 
     @end.setter
     def end(self, value):
-        self._end = validators.datetime(value, allow_empty = True, coerce_value = True)
+        if not value:
+            self._end = None
+        elif checkers.is_date(value):
+            self._end = validators.date(value, allow_empty = True)
+        else:
+            self._end = validators.datetime(value, allow_empty = True, coerce_value = True)
 
     @property
     def milestone(self) -> Optional[bool]:
@@ -247,7 +253,7 @@ class GanttData(DataBase):
         self._parent = validators.string(value, allow_empty = True)
 
     @property
-    def start(self) -> Optional[datetime]:
+    def start(self) -> Optional[date | datetime]:
         """The start time of the data point (task).
 
         .. note::
@@ -260,13 +266,19 @@ class GanttData(DataBase):
           JavaScript object literal notation it will be converted back to a numerical
           value.
 
-        :rtype: :class:`datetime <python:datetime.datetime>` or :obj:`None <python:None>`
+        :rtype: :class:`datetime <python:datetime.datetime>` or :class:`date <python:datetime.date>` 
+          or :obj:`None <python:None>`
         """
         return self._start
 
     @start.setter
     def start(self, value):
-        self._start = validators.datetime(value, allow_empty = True, coerce_value = True)
+        if not value:
+            self._start = None
+        elif checkers.is_date(value):
+            self._start = validators.date(value, allow_empty = True)
+        elif checkers.is_datetime(value):
+            self._start = validators.datetime(value, allow_empty = True, coerce_value = True)
 
     @property
     def y(self) -> Optional[int | float | Decimal]:
@@ -332,10 +344,14 @@ class GanttData(DataBase):
             'y': self.y
         }
 
-        if self.end is not None:
+        if self.end is not None and hasattr(self.end, 'timestamp'):
             untrimmed['end'] = self.end.timestamp()
-        if self.start is not None:
+        else:
+            untrimmed['end'] = self.end
+        if self.start is not None and hasattr(self.start, 'timestamp'):
             untrimmed['start'] = self.start.timestamp()
+        else:
+            untrimmed['start'] = self.start
 
         parent_as_dict = super()._to_untrimmed_dict(in_cls = in_cls)
         for key in parent_as_dict:

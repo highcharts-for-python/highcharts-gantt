@@ -70,6 +70,7 @@ class Chart(ChartBase):
     def _jupyter_javascript(self, 
                             global_options = None, 
                             container = None,
+                            random_slug = None,
                             retries = 3,
                             interval = 1000):
         """Return the JavaScript code which Jupyter Labs will need to render the chart.
@@ -84,6 +85,10 @@ class Chart(ChartBase):
           property if set, and ``'highcharts_target_div'`` if not set.
         :type container: :class:`str <python:str>` or :obj:`None <python:None>`
 
+        :param random_slug: The random sequence of characters to append to the container name to ensure uniqueness.
+          Defaults to :obj:`None <python:None>`
+        :type random_slug: :class:`str <python:str>` or :obj:`None <python:None>`
+        
         :param retries: The number of times to retry rendering the chart. Used to avoid race conditions with the 
           Highcharts script. Defaults to 3.
         :type retries: :class:`int <python:int>`
@@ -95,7 +100,11 @@ class Chart(ChartBase):
         :rtype: :class:`str <python:str>`
         """
         original_container = self.container
-        self.container = container or self.container or 'highcharts_target_div'
+        new_container = container or self.container or 'highcharts_target_div'
+        if not random_slug:
+            self.container = new_container
+        else:
+            self.container = f'{new_container}_{random_slug}'
         
         if global_options is not None:
             global_options = validate_types(global_options,
@@ -109,6 +118,7 @@ class Chart(ChartBase):
 
         js_str += utility_functions.prep_js_for_jupyter(self.to_js_literal(),
                                                         container = self.container,
+                                                        random_slug = random_slug,
                                                         retries = retries,
                                                         interval = interval)
 
@@ -894,10 +904,13 @@ class Chart(ChartBase):
             chart_kwargs['is_gantt_chart'] = True
         elif checkers.is_type(options, 'HighchartsOptions'):
             options = options
-        elif ('navigator' in value
-              or 'range_selector' in value
-              or 'rangeSelector' in value
-              or 'connectors' in value):
+        elif ('navigator' in options
+              or 'range_selector' in options
+              or 'rangeSelector' in options
+              or 'connectors' in options):
+            options = validate_types(options, HighchartsGanttOptions)
+            chart_kwargs['is_gantt_chart'] = True
+        elif chart_kwargs.get('is_gantt_chart', False):
             options = validate_types(options, HighchartsGanttOptions)
             chart_kwargs['is_gantt_chart'] = True
         else:
