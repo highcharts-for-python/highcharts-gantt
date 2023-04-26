@@ -524,6 +524,8 @@ Core Components
       :class:`ParentNodeOptions <highcharts_gantt.options.plot_options.packedbubble.ParentNodeOptions>`
   * - :mod:`.options.plot_options.pareto <highcharts_gantt.options.plot_options.pareto>`
     - :class:`ParetoOptions <highcharts_gantt.options.plot_options.pareto.ParetoOptions>`
+  * - :mod:`.options.plot_options.pictorial <highcharts_gantt.options.plot_options.pictorial>`
+    - :class:`PictorialOptions <highcharts_gantt.options.plot_options.pictorial.PictorialOptions>`
   * - :mod:`.options.plot_options.pie <highcharts_gantt.options.plot_options.pie>`
     - :class:`PieOptions <highcharts_gantt.options.plot_options.pie.PieOptions>`
       :class:`VariablePieOptions <highcharts_gantt.options.plot_options.pie.VariablePieOptions>`
@@ -553,12 +555,17 @@ Core Components
       :class:`Scatter3DOptions <highcharts_gantt.options.plot_options.scatter.Scatter3DOptions>`
   * - :mod:`.options.plot_options.series <highcharts_gantt.options.plot_options.series>`
     - :class:`SeriesOptions <highcharts_gantt.options.plot_options.series.SeriesOptions>`
+  * - :mod:`.options.plot_options.sonification <highcharts_gantt.options.plot_options.sonification>`
+    - :class:`SeriesSonification <highcharts_gantt.options.plot_options.sonification.SeriesSonification>`
   * - :mod:`.options.plot_options.spline <highcharts_gantt.options.plot_options.spline>`
     - :class:`SplineOptions <highcharts_gantt.options.plot_options.spline.SplineOptions>`
   * - :mod:`.options.plot_options.sunburst <highcharts_gantt.options.plot_options.sunburst>`
     - :class:`SunburstOptions <highcharts_gantt.options.plot_options.sunburst.SunburstOptions>`
   * - :mod:`.options.plot_options.timeline <highcharts_gantt.options.plot_options.timeline>`
     - :class:`TimelineOptions <highcharts_gantt.options.plot_options.timeline.TimelineOptions>`
+  * - :mod:`.options.plot_options.treegraph <highcharts_gantt.options.plot_options.treegraph>`
+    - :class:`TreegraphOptions <highcharts_gantt.options.plot_options.treegraph.TreegraphOptions>`
+      :class:`TreegraphEvents <highcharts_gantt.options.plot_options.treegraph.TreegraphEvents>`
   * - :mod:`.options.plot_options.treemap <highcharts_gantt.options.plot_options.treemap>`
     - :class:`TreemapOptions <highcharts_gantt.options.plot_options.treemap.TreemapOptions>`
   * - :mod:`.options.plot_options.vbp <highcharts_gantt.options.plot_options.vbp>`
@@ -691,6 +698,8 @@ Core Components
       :class:`SinglePointBase <highcharts_gantt.options.series.data.single_point.SinglePointBase>`
   * - :mod:`.options.series.data.sunburst <highcharts_gantt.options.series.data.sunburst>`
     - :class:`SunburstData <highcharts_gantt.options.series.data.sunburst.SunburstData>`
+  * - :mod:`.options.series.data.treegraph <highcharts_gantt.options.series.data.treegraph>`
+    - :class:`TreegraphData <highcharts_gantt.options.series.data.treegraph.TreegraphData>`
   * - :mod:`.options.series.data.treemap <highcharts_gantt.options.series.data.treemap>`
     - :class:`TreemapData <highcharts_gantt.options.series.data.treemap.TreemapData>`
   * - :mod:`.options.series.data.vector <highcharts_gantt.options.series.data.vector>`
@@ -777,6 +786,9 @@ Core Components
     - :class:`PackedBubbleSeries <highcharts_gantt.options.series.packedbubble.PackedBubbleSeries>`
   * - :mod:`.options.series.pareto <highcharts_gantt.options.series.pareto>`
     - :class:`ParetoSeries <highcharts_gantt.options.series.pareto.ParetoSeries>`
+  * - :mod:`.options.series.pictorial <highcharts_gantt.options.series.pictorial>`
+    - :class:`PictorialSeries <highcharts_gantt.options.series.pictorial.PictorialSeries>`
+      :class:`PictorialPaths <highcharts_gantt.options.series.pictorial.PictorialPaths>`
   * - :mod:`.options.series.pie <highcharts_gantt.options.series.pie>`
     - :class:`PieSeries <highcharts_gantt.options.series.pie.PieSeries>`
       :class:`VariablePieSeries <highcharts_gantt.options.series.pie.VariablePieSeries>`
@@ -804,6 +816,8 @@ Core Components
     - :class:`SunburstSeries <highcharts_gantt.options.series.sunburst.SunburstSeries>`
   * - :mod:`.options.series.timeline <highcharts_gantt.options.series.timeline>`
     - :class:`TimelineSeries <highcharts_gantt.options.series.timeline.TimelineSeries>`
+  * - :mod:`.options.series.treegraph <highcharts_gantt.options.series.treegraph>`
+    - :class:`TreegraphSeries <highcharts_gantt.options.series.treegraph.TreegraphSeries>`
   * - :mod:`.options.series.treemap <highcharts_gantt.options.series.treemap>`
     - :class:`TreemapSeries <highcharts_gantt.options.series.treemap.TreemapSeries>`
   * - :mod:`.options.series.vbp <highcharts_gantt.options.series.vbp>`
@@ -816,6 +830,22 @@ Core Components
     - :class:`WordcloudSeries <highcharts_gantt.options.series.wordcloud.WordcloudSeries>`
   * - :mod:`.options.series.zigzag <highcharts_gantt.options.series.zigzag>`
     - :class:`ZigZagSeries <highcharts_gantt.options.series.zigzag.ZigZagSeries>`
+  * - :mod:`.options.sonification <highcharts_gantt.options.sonification>`
+    - :class:`SonificationOptions <highcharts_gantt.options.sonification.SonificationOptions>`
+  * - :mod:`.options.sonification.grouping <highcharts_gantt.options.sonification.grouping>`
+    - :class:`PointGrouping <highcharts_gantt.options.sonification.grouping.SonificationGrouping>`
+  * - :mod:`.options.sonification.mapping <highcharts_gantt.options.sonification.mapping>`
+    - :class:`SonificationMapping <highcharts_gantt.options.sonification.mapping.SonificationMapping>`
+      :class:`AudioParameter <highcahrts_core.options.sonification.mapping.AudioParameter>`
+      :class:`AudioFilter <highcharts_gantt.options.sonification.mapping.AudioFilter>`
+      :class:`PitchParameter <highcharts_gantt.options.sonification.mapping.PitchParameter>`
+      :class:`TremoloEffect <highcahrts_core.options.sonification.mapping.TremoloEffect>`
+  * - :mod:`.options.sonification.track_configurations <highcharts_gantt.options.sonification.track_configurations>`
+    - :class:`InstrumentTrackConfiguration <highcharts_gantt.options.sonification.track_configurations.InstrumentTrackConfiguration>`
+      :class:`SpeechTrackConfiguration <highcharts_gantt.options.sonification.track_configurations.SpeechTrackConfiguration>`
+      :class:`ContextTrackConfiguration <highcharts_gantt.options.sonification.track_configurations.ContextTrackConfiguration>`
+      :class:`TrackConfigurationBase <highcharts_gantt.options.sonification.track_configurations.TrackConfigurationBase>`
+      :class:`ActiveWhen <highcharts_gantt.options.sonification.track_configurations.ActiveWhen>`
   * - :mod:`.options.stock_tools <highcharts_gantt.options.stock_tools>`
     - :class:`StockTools <highcharts_gantt.options.stock_tools.StockTools>`
       :class:`StockToolsGUI <highcharts_gantt.options.stock_tools.StockToolsGUI>`

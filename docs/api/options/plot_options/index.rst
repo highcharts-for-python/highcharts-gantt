@@ -50,6 +50,7 @@
   oscillators/index
   packedbubble
   pareto
+  pictorial
   pie
   pivot_points
   points
@@ -60,9 +61,11 @@
   sankey
   scatter
   series
+  sonification
   spline
   sunburst
   timeline
+  treegraph
   treemap
   vbp
   vector
@@ -291,6 +294,8 @@ Sub-components
       :class:`ParentNodeOptions <highcharts_gantt.options.plot_options.packedbubble.ParentNodeOptions>`
   * - :mod:`.options.plot_options.pareto <highcharts_gantt.options.plot_options.pareto>`
     - :class:`ParetoOptions <highcharts_gantt.options.plot_options.pareto.ParetoOptions>`
+  * - :mod:`.options.plot_options.pictorial <highcharts_gantt.options.plot_options.pictorial>`
+    - :class:`PictorialOptions <highcharts_gantt.options.plot_options.pictorial.PictorialOptions>`
   * - :mod:`.options.plot_options.pie <highcharts_gantt.options.plot_options.pie>`
     - :class:`PieOptions <highcharts_gantt.options.plot_options.pie.PieOptions>`
       :class:`VariablePieOptions <highcharts_gantt.options.plot_options.pie.VariablePieOptions>`
@@ -320,12 +325,17 @@ Sub-components
       :class:`Scatter3DOptions <highcharts_gantt.options.plot_options.scatter.Scatter3DOptions>`
   * - :mod:`.options.plot_options.series <highcharts_gantt.options.plot_options.series>`
     - :class:`SeriesOptions <highcharts_gantt.options.plot_options.series.SeriesOptions>`
+  * - :mod:`.options.plot_options.sonification <highcharts_gantt.options.plot_options.sonification>`
+    - :class:`SeriesSonification <highcharts_gantt.options.plot_options.sonification.SeriesSonification>`
   * - :mod:`.options.plot_options.spline <highcharts_gantt.options.plot_options.spline>`
     - :class:`SplineOptions <highcharts_gantt.options.plot_options.spline.SplineOptions>`
   * - :mod:`.options.plot_options.sunburst <highcharts_gantt.options.plot_options.sunburst>`
     - :class:`SunburstOptions <highcharts_gantt.options.plot_options.sunburst.SunburstOptions>`
   * - :mod:`.options.plot_options.timeline <highcharts_gantt.options.plot_options.timeline>`
     - :class:`TimelineOptions <highcharts_gantt.options.plot_options.timeline.TimelineOptions>`
+  * - :mod:`.options.plot_options.treegraph <highcharts_gantt.options.plot_options.treegraph>`
+    - :class:`TreegraphOptions <highcharts_gantt.options.plot_options.treegraph.TreegraphOptions>`
+      :class:`TreegraphEvents <highcharts_gantt.options.plot_options.treegraph.TreegraphEvents>`
   * - :mod:`.options.plot_options.treemap <highcharts_gantt.options.plot_options.treemap>`
     - :class:`TreemapOptions <highcharts_gantt.options.plot_options.treemap.TreemapOptions>`
   * - :mod:`.options.plot_options.vbp <highcharts_gantt.options.plot_options.vbp>`
