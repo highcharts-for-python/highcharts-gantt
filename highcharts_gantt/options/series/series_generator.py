@@ -43,6 +43,7 @@ from highcharts_gantt.options.series.networkgraph import NetworkGraphSeries
 from highcharts_gantt.options.series.organization import OrganizationSeries
 from highcharts_gantt.options.series.packedbubble import PackedBubbleSeries
 from highcharts_gantt.options.series.pareto import ParetoSeries
+from highcharts_gantt.options.series.pictorial import PictorialSeries
 from highcharts_gantt.options.series.pie import PieSeries
 from highcharts_gantt.options.series.pie import VariablePieSeries
 from highcharts_gantt.options.series.polygon import PolygonSeries
@@ -100,6 +101,7 @@ SERIES_CLASSES = {
     'organization': OrganizationSeries,
     'packedbubble': PackedBubbleSeries,
     'pareto': ParetoSeries,
+    'pictorial': PictorialSeries,
     'pie': PieSeries,
     'variablepie': VariablePieSeries,
     'polygon': PolygonSeries,

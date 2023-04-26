@@ -45,6 +45,7 @@
   organization
   packedbubble
   pareto
+  pictorial
   pie
   pivot_points
   points
@@ -276,6 +277,9 @@ Sub-components
     - :class:`PackedBubbleSeries <highcharts_gantt.options.series.packedbubble.PackedBubbleSeries>`
   * - :mod:`.options.series.pareto <highcharts_gantt.options.series.pareto>`
     - :class:`ParetoSeries <highcharts_gantt.options.series.pareto.ParetoSeries>`
+  * - :mod:`.options.series.pictorial <highcharts_gantt.options.series.pictorial>`
+    - :class:`PictorialSeries <highcharts_gantt.options.series.pictorial.PictorialSeries>`
+      :class:`PictorialPaths <highcharts_gantt.options.series.pictorial.PictorialPaths>`
   * - :mod:`.options.series.pie <highcharts_gantt.options.series.pie>`
     - :class:`PieSeries <highcharts_gantt.options.series.pie.PieSeries>`
       :class:`VariablePieSeries <highcharts_gantt.options.series.pie.VariablePieSeries>`

@@ -32,6 +32,7 @@ from highcharts_gantt.options.plot_options.networkgraph import NetworkGraphOptio
 from highcharts_gantt.options.plot_options.organization import OrganizationOptions
 from highcharts_gantt.options.plot_options.packedbubble import PackedBubbleOptions
 from highcharts_gantt.options.plot_options.pareto import ParetoOptions
+from highcharts_gantt.options.plot_options.pictorial import PictorialOptions
 from highcharts_gantt.options.plot_options.pie import PieOptions
 from highcharts_gantt.options.plot_options.polygon import PolygonOptions
 from highcharts_gantt.options.plot_options.pyramid import PyramidOptions
@@ -784,6 +785,28 @@ class PlotOptions(PlotOptionsBase):
         self._pareto = value
 
     @property
+    def pictorial(self) -> Optional[PictorialOptions]:
+        """General options to apply to all Pictorial series types.
+
+        A pictorial series uses vector images to represent the data, with the data's shape
+        determined by the ``path`` parameter.
+
+        .. figure:: ../../../_static/pictorial-example.png
+          :alt: Pictorial Example Chart
+          :align: center
+
+
+        :rtype: :class:`PictorialOptions <highcharts_gantt.options.plot_options.pictorial.PictorialOptions>` or
+          :obj:`None <python:None>`
+        """
+        return self._pictorial
+
+    @pictorial.setter
+    @class_sensitive(PictorialOptions)
+    def pictorial(self, value):
+        self._pictorial = value
+
+    @property
     def pie(self) -> Optional[PieOptions]:
         """General options to apply to all Pie series types.
 
@@ -1405,6 +1428,7 @@ class PlotOptions(PlotOptionsBase):
             'organization': as_dict.get('organization', None),
             'packedbubble': as_dict.get('packedbubble', None),
             'pareto': as_dict.get('pareto', None),
+            'pictorial': as_dict.get('pictorial', None),
             'pie': as_dict.get('pie', None),
             'polygon': as_dict.get('polygon', None),
             'pyramid': as_dict.get('pyramid', None),
