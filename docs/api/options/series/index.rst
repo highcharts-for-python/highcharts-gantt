@@ -45,6 +45,7 @@
   organization
   packedbubble
   pareto
+  pictorial
   pie
   pivot_points
   points
@@ -58,6 +59,7 @@
   spline
   sunburst
   timeline
+  treegraph
   treemap
   vbp
   vector
@@ -187,6 +189,8 @@ Sub-components
       :class:`SinglePointBase <highcharts_gantt.options.series.data.single_point.SinglePointBase>`
   * - :mod:`.options.series.data.sunburst <highcharts_gantt.options.series.data.sunburst>`
     - :class:`SunburstData <highcharts_gantt.options.series.data.sunburst.SunburstData>`
+  * - :mod:`.options.series.data.treegraph <highcharts_gantt.options.series.data.treegraph>`
+    - :class:`TreegraphData <highcharts_gantt.options.series.data.treegraph.TreegraphData>`
   * - :mod:`.options.series.data.treemap <highcharts_gantt.options.series.data.treemap>`
     - :class:`TreemapData <highcharts_gantt.options.series.data.treemap.TreemapData>`
   * - :mod:`.options.series.data.vector <highcharts_gantt.options.series.data.vector>`
@@ -273,6 +277,9 @@ Sub-components
     - :class:`PackedBubbleSeries <highcharts_gantt.options.series.packedbubble.PackedBubbleSeries>`
   * - :mod:`.options.series.pareto <highcharts_gantt.options.series.pareto>`
     - :class:`ParetoSeries <highcharts_gantt.options.series.pareto.ParetoSeries>`
+  * - :mod:`.options.series.pictorial <highcharts_gantt.options.series.pictorial>`
+    - :class:`PictorialSeries <highcharts_gantt.options.series.pictorial.PictorialSeries>`
+      :class:`PictorialPaths <highcharts_gantt.options.series.pictorial.PictorialPaths>`
   * - :mod:`.options.series.pie <highcharts_gantt.options.series.pie>`
     - :class:`PieSeries <highcharts_gantt.options.series.pie.PieSeries>`
       :class:`VariablePieSeries <highcharts_gantt.options.series.pie.VariablePieSeries>`
@@ -300,6 +307,8 @@ Sub-components
     - :class:`SunburstSeries <highcharts_gantt.options.series.sunburst.SunburstSeries>`
   * - :mod:`.options.series.timeline <highcharts_gantt.options.series.timeline>`
     - :class:`TimelineSeries <highcharts_gantt.options.series.timeline.TimelineSeries>`
+  * - :mod:`.options.series.treegraph <highcharts_gantt.options.series.treegraph>`
+    - :class:`TreegraphSeries <highcharts_gantt.options.series.treegraph.TreegraphSeries>`
   * - :mod:`.options.series.treemap <highcharts_gantt.options.series.treemap>`
     - :class:`TreemapSeries <highcharts_gantt.options.series.treemap.TreemapSeries>`
   * - :mod:`.options.series.vbp <highcharts_gantt.options.series.vbp>`

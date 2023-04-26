@@ -25,6 +25,7 @@ from highcharts_gantt.options.no_data import NoData
 from highcharts_gantt.options.plot_options import PlotOptions
 from highcharts_gantt.options.plot_options.generic import GenericTypeOptions
 from highcharts_gantt.options.responsive import Responsive
+from highcharts_gantt.options.sonification import SonificationOptions
 from highcharts_gantt.options.subtitle import Subtitle
 from highcharts_gantt.options.time import Time
 from highcharts_gantt.options.title import Title
@@ -514,6 +515,20 @@ class HighchartsGanttOptions(HighchartsStockOptions):
                             for x in value]
 
     @property
+    def sonification(self) -> Optional[SonificationOptions]:
+        """Configuration of global sonification settings for the entire chart.
+        
+        :rtype: :class:`SonificationOptions <highcharts_gantt.options.sonification.SonificationOptions>` or
+          :obj:`None <python:None>`
+        """
+        return self._sonification
+    
+    @sonification.setter
+    @class_sensitive(SonificationOptions)
+    def sonification(self, value):
+        self._sonification = value
+
+    @property
     def subtitle(self) -> Optional[Subtitle]:
         """The chart's subtitle.
 
@@ -647,6 +662,7 @@ class HighchartsGanttOptions(HighchartsStockOptions):
             'responsive': as_dict.get('responsive', None),
             'scrollbar': as_dict.get('scrollbar', None),
             'series': as_dict.get('series', None),
+            'sonification': as_dict.get('sonification', None),
             'stock_tools': as_dict.get('stockTools', None),
             'subtitle': as_dict.get('subtitle', None),
             'time': as_dict.get('time', None),
@@ -686,6 +702,7 @@ class HighchartsGanttOptions(HighchartsStockOptions):
             'responsive': self.responsive,
             'scrollbar': self.scrollbar,
             'series': self.series,
+            'sonification': self.sonification,
             'stockTools': self.stock_tools,
             'subtitle': self.subtitle,
             'time': self.time,

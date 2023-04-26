@@ -43,6 +43,7 @@ from highcharts_gantt.options.series.networkgraph import NetworkGraphSeries
 from highcharts_gantt.options.series.organization import OrganizationSeries
 from highcharts_gantt.options.series.packedbubble import PackedBubbleSeries
 from highcharts_gantt.options.series.pareto import ParetoSeries
+from highcharts_gantt.options.series.pictorial import PictorialSeries
 from highcharts_gantt.options.series.pie import PieSeries
 from highcharts_gantt.options.series.pie import VariablePieSeries
 from highcharts_gantt.options.series.polygon import PolygonSeries
@@ -54,6 +55,7 @@ from highcharts_gantt.options.series.scatter import Scatter3DSeries
 from highcharts_gantt.options.series.spline import SplineSeries
 from highcharts_gantt.options.series.sunburst import SunburstSeries
 from highcharts_gantt.options.series.timeline import TimelineSeries
+from highcharts_gantt.options.series.treegraph import TreegraphSeries
 from highcharts_gantt.options.series.treemap import TreemapSeries
 from highcharts_gantt.options.series.vector import VectorSeries
 from highcharts_gantt.options.series.venn import VennSeries
@@ -99,6 +101,7 @@ SERIES_CLASSES = {
     'organization': OrganizationSeries,
     'packedbubble': PackedBubbleSeries,
     'pareto': ParetoSeries,
+    'pictorial': PictorialSeries,
     'pie': PieSeries,
     'variablepie': VariablePieSeries,
     'polygon': PolygonSeries,
@@ -110,6 +113,7 @@ SERIES_CLASSES = {
     'spline': SplineSeries,
     'sunburst': SunburstSeries,
     'timeline': TimelineSeries,
+    'treegraph': TreegraphSeries,
     'treemap': TreemapSeries,
     'vector': VectorSeries,
     'venn': VennSeries,
