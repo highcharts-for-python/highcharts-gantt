@@ -26,6 +26,7 @@
   range
   single_point
   sunburst
+  treegraph
   treemap
   vector
   venn
@@ -94,6 +95,8 @@ Sub-components
       :class:`SinglePointBase <highcharts_gantt.options.series.data.single_point.SinglePointBase>`
   * - :mod:`.options.series.data.sunburst <highcharts_gantt.options.series.data.sunburst>`
     - :class:`SunburstData <highcharts_gantt.options.series.data.sunburst.SunburstData>`
+  * - :mod:`.options.series.data.treegraph <highcharts_gantt.options.series.data.treegraph>`
+    - :class:`TreegraphData <highcharts_gantt.options.series.data.treegraph.TreegraphData>`
   * - :mod:`.options.series.data.treemap <highcharts_gantt.options.series.data.treemap>`
     - :class:`TreemapData <highcharts_gantt.options.series.data.treemap.TreemapData>`
   * - :mod:`.options.series.data.vector <highcharts_gantt.options.series.data.vector>`

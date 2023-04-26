@@ -64,6 +64,7 @@
   spline
   sunburst
   timeline
+  treegraph
   treemap
   vbp
   vector
@@ -329,6 +330,9 @@ Sub-components
     - :class:`SunburstOptions <highcharts_gantt.options.plot_options.sunburst.SunburstOptions>`
   * - :mod:`.options.plot_options.timeline <highcharts_gantt.options.plot_options.timeline>`
     - :class:`TimelineOptions <highcharts_gantt.options.plot_options.timeline.TimelineOptions>`
+  * - :mod:`.options.plot_options.treegraph <highcharts_gantt.options.plot_options.treegraph>`
+    - :class:`TreegraphOptions <highcharts_gantt.options.plot_options.treegraph.TreegraphOptions>`
+      :class:`TreegraphEvents <highcharts_gantt.options.plot_options.treegraph.TreegraphEvents>`
   * - :mod:`.options.plot_options.treemap <highcharts_gantt.options.plot_options.treemap>`
     - :class:`TreemapOptions <highcharts_gantt.options.plot_options.treemap.TreemapOptions>`
   * - :mod:`.options.plot_options.vbp <highcharts_gantt.options.plot_options.vbp>`

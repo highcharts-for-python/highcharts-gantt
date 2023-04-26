@@ -54,6 +54,7 @@ from highcharts_gantt.options.series.scatter import Scatter3DSeries
 from highcharts_gantt.options.series.spline import SplineSeries
 from highcharts_gantt.options.series.sunburst import SunburstSeries
 from highcharts_gantt.options.series.timeline import TimelineSeries
+from highcharts_gantt.options.series.treegraph import TreegraphSeries
 from highcharts_gantt.options.series.treemap import TreemapSeries
 from highcharts_gantt.options.series.vector import VectorSeries
 from highcharts_gantt.options.series.venn import VennSeries
@@ -110,6 +111,7 @@ SERIES_CLASSES = {
     'spline': SplineSeries,
     'sunburst': SunburstSeries,
     'timeline': TimelineSeries,
+    'treegraph': TreegraphSeries,
     'treemap': TreemapSeries,
     'vector': VectorSeries,
     'venn': VennSeries,
