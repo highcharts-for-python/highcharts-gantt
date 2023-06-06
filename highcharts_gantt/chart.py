@@ -1,10 +1,10 @@
-from typing import Optional
+from typing import Optional, List
 
 from validator_collection import validators, checkers
 
 from highcharts_stock.chart import Chart as ChartBase
 
-from highcharts_gantt import constants, errors, utility_functions
+from highcharts_gantt import errors, utility_functions
 from highcharts_gantt.options import (HighchartsOptions, 
                                       HighchartsStockOptions,
                                       HighchartsGanttOptions)
@@ -29,43 +29,6 @@ class Chart(ChartBase):
         self.is_gantt_chart = kwargs.get('is_gantt_chart', False)
 
         super().__init__(**kwargs)
-
-    def _jupyter_include_scripts(self):
-        """Return the JavaScript code that is used to load the Highcharts JS libraries.
-
-        .. note::
-
-          Currently includes *all* `Highcharts JS <https://www.highcharts.com/>`_ modules
-          in the HTML. This issue will be addressed when roadmap issue :issue:`2` is
-          released.
-
-        :rtype: :class:`str <python:str>`
-        """
-        js_str = ''
-        if self.is_gantt_chart:
-            for item in constants.GANTT_INCLUDE_LIBS:
-                js_str += utility_functions.jupyter_add_script(item)
-                js_str += """.then(() => {"""
-                
-            for item in constants.GANTT_INCLUDE_LIBS:
-                js_str += """});"""
-        elif self.is_stock_chart:
-            for item in constants.STOCK_INCLUDE_LIBS:
-                js_str += utility_functions.jupyter_add_script(item)
-                js_str += """.then(() => {"""
-
-            for item in constants.STOCK_INCLUDE_LIBS:
-                js_str += """});"""
-
-        else:
-            for item in constants.INCLUDE_LIBS:
-                js_str += utility_functions.jupyter_add_script(item)
-                js_str += """.then(() => {"""
-
-            for item in constants.INCLUDE_LIBS:
-                js_str += """});"""
-
-        return js_str
 
     def _jupyter_javascript(self, 
                             global_options = None, 
@@ -125,6 +88,27 @@ class Chart(ChartBase):
         self.container = original_container
 
         return js_str
+
+    def get_required_modules(self, include_extension = False) -> List[str]:
+        """Return the list of URLs from which the Highcharts JavaScript modules
+        needed to render the chart can be retrieved.
+        
+        :param include_extension: if ``True``, will return script names with the 
+          ``'.js'`` extension included. Defaults to ``False``.
+        :type include_extension: :class:`bool <python:bool>`
+
+        :rtype: :class:`list <python:list>`
+        """
+        initial_scripts = ['highcharts']
+        if self.is_gantt_chart:
+            initial_scripts.extend(['gantt/modules/gantt'])
+        has_stock_tools = hasattr(self.options, 'stock_tools') and self.options.stock_tools
+        if self.is_stock_chart or has_stock_tools:
+            initial_scripts.append('modules/stock')
+
+        scripts = self._process_required_modules(initial_scripts, include_extension)
+
+        return scripts
 
     def _repr_html_(self):
         """Produce the HTML representation of the chart.
