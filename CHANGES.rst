@@ -1,18 +1,16 @@
 Release 1.2.0
 =========================================
 
+* **ENHANCEMENT:** Align the API to **Highcharts (JS) v.11.1** (#22). In particular, this includes:
+
+  * Changes inherited from **Highcharts Core for Python v.1.2.0**. See `here <https://core-docs.highchartspython.com/en/latest/history.html#release-1-2-0>`__.
+
 * **ENHANCEMENT:** Added support for the inclusion of scripts based on features used in the chart (#7).
-* **ENHANCEMENT:** Added ``dict`` support to ``options.series.labels.SeriesLabel.style`` and ``utility_classes.data_labels.DataLabel.style``.
+* **ENHANCEMENT:** Added ``dict`` support to ``.style`` property on labels and titles.
+* **DOCS:** Various documentation updates and fixes.
+* **DEPENDENCY:** Bumped ``requests`` version for security patch.
 
-------------------
-
-Release 1.1.1
-=========================================
-
-* **FIXED:** Problem when producing a JS literal, with the JS code inserting an unnecessary ``new``.
-* **ENHANCEMENT:** Added more elegant error handling when something goes wrong displaying a chart in Jupyter.
-
----------------------
+---------------
 
 Release 1.1.0
 =========================================
