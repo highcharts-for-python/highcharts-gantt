@@ -57,6 +57,7 @@ class XRangeOptions(SeriesOptions, XRangeBase):
             'include_in_data_export': as_dict.get('includeInDataExport', None),
             'keys': as_dict.get('keys', None),
             'label': as_dict.get('label', None),
+            'legend_symbol': as_dict.get('legendSymbol', None),
             'linked_to': as_dict.get('linkedTo', None),
             'marker': as_dict.get('marker', None),
             'on_point': as_dict.get('onPoint', None),
@@ -91,6 +92,7 @@ class XRangeOptions(SeriesOptions, XRangeBase):
             'linecap': as_dict.get('linecap', None),
             'line_width': as_dict.get('lineWidth', None),
             'negative_color': as_dict.get('negativeColor', None),
+            'point_description_format': as_dict.get('pointDescriptionFormat', None),
             'point_interval': as_dict.get('pointInterval', None),
             'point_interval_unit': as_dict.get('pointIntervalUnit', None),
             'point_placement': as_dict.get('pointPlacement', None),
@@ -122,6 +124,7 @@ class XRangeOptions(SeriesOptions, XRangeBase):
 
             'drag_drop': as_dict.get('dragDrop', None),
             'negative_color': as_dict.get('negativeColor', None),
+            'point_description_format': as_dict.get('pointDescriptionFormat', None),
             'point_interval': as_dict.get('pointInterval', None),
             'point_interval_unit': as_dict.get('pointIntervalUnit', None),
             'point_placement': as_dict.get('pointPlacement', None),
