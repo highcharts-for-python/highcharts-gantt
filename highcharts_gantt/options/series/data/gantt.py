@@ -345,10 +345,15 @@ class GanttData(DataBase):
         }
 
         if self.end is not None and hasattr(self.end, 'timestamp'):
+            if not self.end.tzinfo:
+                self.end = self.end.replace(tzinfo = datetime.timezone.utc)
             untrimmed['end'] = self.end.timestamp() * 1000
         else:
             untrimmed['end'] = self.end
         if self.start is not None and hasattr(self.start, 'timestamp'):
+            if not self.start.tzinfo:
+                self.start = self.start.replace(tzinfo = datetime.timezone.utc)
+
             untrimmed['start'] = self.start.timestamp() * 1000
         else:
             untrimmed['start'] = self.start
