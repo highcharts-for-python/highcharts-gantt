@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.gantt <highcharts_core.options.series.gantt>`
+:mod:`.gantt <highcharts_gantt.options.series.gantt>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_core.options.series.gantt
+.. module:: highcharts_gantt.options.series.gantt
 
 ********************************************************************************************************************
-class: :class:`GanttSeries <highcharts_core.options.series.gantt.GanttSeries>`
+class: :class:`GanttSeries <highcharts_gantt.options.series.gantt.GanttSeries>`
 ********************************************************************************************************************
 
 .. autoclass:: GanttSeries
@@ -22,7 +22,7 @@ class: :class:`GanttSeries <highcharts_core.options.series.gantt.GanttSeries>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: GanttSeries
-      :top-classes: highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
