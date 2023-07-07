@@ -1,3 +1,11 @@
+Release 1.2.2
+=========================================
+
+* **BUGFIX:** Fixed support for serialization of ``GanttData`` instances with timezone-naive ``datetime`` instances in ``start and ``end``. Closes #29.
+* **DOCS:** Fixed broken links in documentation to ``options.series.gantt.GanttSeries`` and ``options.series.data.gantt.GanttData``. Closes #28.
+
+------------------
+
 Release 1.2.1
 =========================================
 
