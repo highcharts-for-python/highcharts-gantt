@@ -1,6 +1,6 @@
 from typing import Optional, List
 from decimal import Decimal
-from datetime import datetime, date
+from datetime import datetime, date, timezone
 
 from validator_collection import validators, checkers
 
@@ -346,13 +346,13 @@ class GanttData(DataBase):
 
         if self.end is not None and hasattr(self.end, 'timestamp'):
             if not self.end.tzinfo:
-                self.end = self.end.replace(tzinfo = datetime.timezone.utc)
+                self.end = self.end.replace(tzinfo = timezone.utc)
             untrimmed['end'] = self.end.timestamp() * 1000
         else:
             untrimmed['end'] = self.end
         if self.start is not None and hasattr(self.start, 'timestamp'):
             if not self.start.tzinfo:
-                self.start = self.start.replace(tzinfo = datetime.timezone.utc)
+                self.start = self.start.replace(tzinfo = timezone.utc)
 
             untrimmed['start'] = self.start.timestamp() * 1000
         else:

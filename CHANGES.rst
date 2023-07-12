@@ -1,3 +1,10 @@
+Release 1.2.3
+=========================================
+
+* **BUGFIX:** Fixed refernece bug in serialization of ``GanttData`` instances with timezone-naive ``datetime`` instances in ``start and ``end``.
+
+------------------
+
 Release 1.2.2
 =========================================
 
