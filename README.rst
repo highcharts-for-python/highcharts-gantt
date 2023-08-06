@@ -84,7 +84,7 @@ Before you install, please be aware of the following "hard" dependencies:
   * Python 3.10 or higher
   * Highcharts Gantt (JS) v.10.3 or higher (not technically a Python dependency, but 
     it won't work with earlier versions of Highcharts Stock)
-  * `Highcharts Stock for Python <https://stock-docs.highchartspython.com/en/latest/>`__ v.1.0 or higher
+  * `Highcharts Stock for Python <https://stock-docs.highchartspython.com/en/latest/>`__ v.1.3 or higher
   * `esprima-python <https://github.com/Kronuz/esprima-python>`__ v.4.0 or higher
   * `requests <https://requests.readthedocs.io/en/latest/>`__ v.2.31 or higher
   * `validator-collection <https://validator-collection.readthedocs.io/en/latest/>`__
