@@ -4,17 +4,17 @@ import pytest
 
 from json.decoder import JSONDecodeError
 
-from highcharts_gantt.options.series.bar import BaseBarSeries as cls
-from highcharts_gantt.options.series.bar import BarSeries as cls2
-from highcharts_gantt.options.series.bar import ColumnSeries as cls3
-from highcharts_gantt.options.series.bar import ColumnPyramidSeries as cls4
-from highcharts_gantt.options.series.bar import ColumnRangeSeries as cls5
-from highcharts_gantt.options.series.bar import CylinderSeries as cls6
-from highcharts_gantt.options.series.bar import VariwideSeries as cls7
-from highcharts_gantt.options.series.bar import WaterfallSeries as cls8
-from highcharts_gantt.options.series.bar import WindBarbSeries as cls9
-from highcharts_gantt.options.series.bar import XRangeSeries as cls10
-from highcharts_gantt import errors
+from highcharts_stock.options.series.bar import BaseBarSeries as cls
+from highcharts_stock.options.series.bar import BarSeries as cls2
+from highcharts_stock.options.series.bar import ColumnSeries as cls3
+from highcharts_stock.options.series.bar import ColumnPyramidSeries as cls4
+from highcharts_stock.options.series.bar import ColumnRangeSeries as cls5
+from highcharts_stock.options.series.bar import CylinderSeries as cls6
+from highcharts_stock.options.series.bar import VariwideSeries as cls7
+from highcharts_stock.options.series.bar import WaterfallSeries as cls8
+from highcharts_stock.options.series.bar import WindBarbSeries as cls9
+from highcharts_stock.options.series.bar import XRangeSeries as cls10
+from highcharts_stock import errors
 from tests.fixtures import input_files, check_input_file, to_camelCase, to_js_dict, \
     Class__init__, Class__to_untrimmed_dict, Class_from_dict, Class_to_dict, \
     Class_from_js_literal
@@ -132,8 +132,8 @@ STANDARD_PARAMS = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category',
-            'y': 123
+            'y': 123,
+            'name': 'some category'
           }
       ],
       'id': 'some-id-goes-here',
@@ -256,8 +256,8 @@ STANDARD_PARAMS = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category',
-            'y': 123
+            'y': 123,
+            'name': 'some category'
           }
       ],
       'id': 'some-id-goes-here',
@@ -425,8 +425,8 @@ STANDARD_PARAMS = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category',
-            'y': 123
+            'y': 123,
+            'name': 'some category'
           }
       ],
       'id': 'some-id-goes-here',
@@ -1055,8 +1055,8 @@ STANDARD_PARAMS_4 = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category',
-            'y': 123
+            'y': 123,
+            'name': 'some category'
           },
           {
             'dataLabels': {
@@ -1155,8 +1155,8 @@ STANDARD_PARAMS_4 = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category',
-            'y': 123
+            'y': 123,
+            'name': 'some category'
           }
       ],
       'id': 'some-id-goes-here',
@@ -1268,8 +1268,8 @@ STANDARD_PARAMS_4 = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category',
-            'y': 123
+            'y': 123,
+            'name': 'some category'
           },
           {
             'dataLabels': {
@@ -1368,8 +1368,8 @@ STANDARD_PARAMS_4 = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category',
-            'y': 123
+            'y': 123,
+            'name': 'some category'
           }
       ],
       'id': 'some-id-goes-here',
@@ -1486,8 +1486,8 @@ STANDARD_PARAMS_4 = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category',
-            'y': 123
+            'y': 123,
+            'name': 'some category'
           },
           {
             'dataLabels': {
@@ -1586,8 +1586,8 @@ STANDARD_PARAMS_4 = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category',
-            'y': 123
+            'y': 123,
+            'name': 'some category'
           }
       ],
       'id': 'some-id-goes-here',
@@ -1749,8 +1749,8 @@ STANDARD_PARAMS_4 = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category',
-            'y': 123
+            'y': 123,
+            'name': 'some category'
           },
           {
             'data_labels': {
@@ -1849,8 +1849,8 @@ STANDARD_PARAMS_4 = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category',
-            'y': 123
+            'y': 123,
+            'name': 'some category'
           }
       ],
       'id': 'some-id-goes-here',
@@ -2374,7 +2374,7 @@ STANDARD_PARAMS_5 = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category'
+            'name': 'some category'
           },
           {
             'dataLabels': {
@@ -2475,7 +2475,6 @@ STANDARD_PARAMS_5 = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category',
 
             'accessibility': {
                 'description': 'Some description goes here',
@@ -2617,7 +2616,7 @@ STANDARD_PARAMS_5 = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category'
+            'name': 'some category'
           },
           {
             'dataLabels': {
@@ -2718,7 +2717,6 @@ STANDARD_PARAMS_5 = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category',
 
             'accessibility': {
                 'description': 'Some description goes here',
@@ -2905,7 +2903,7 @@ STANDARD_PARAMS_5 = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category'
+            'name': 'some category'
           },
           {
             'dataLabels': {
@@ -3006,7 +3004,6 @@ STANDARD_PARAMS_5 = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category',
 
             'accessibility': {
                 'description': 'Some description goes here',
@@ -3601,8 +3598,8 @@ STANDARD_PARAMS_7 = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category',
-            'y': 123
+            'y': 123,
+            'name': 'some category'
           },
           {
             'z': 456,
@@ -3703,8 +3700,8 @@ STANDARD_PARAMS_7 = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category',
-            'y': 123
+            'y': 123,
+            'name': 'some category'
           }
       ],
       'id': 'some-id-goes-here',
@@ -3818,8 +3815,8 @@ STANDARD_PARAMS_7 = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category',
-            'y': 123
+            'y': 123,
+            'name': 'some category'
           },
           {
             'z': 456,
@@ -3920,8 +3917,8 @@ STANDARD_PARAMS_7 = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category',
-            'y': 123
+            'y': 123,
+            'name': 'some category'
           }
       ],
       'id': 'some-id-goes-here',
@@ -4080,8 +4077,8 @@ STANDARD_PARAMS_7 = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category',
-            'y': 123
+            'y': 123,
+            'name': 'some category'
           },
           {
             'z': 456,
@@ -4182,8 +4179,8 @@ STANDARD_PARAMS_7 = [
               'symbol': 'circle',
               'width': 48
             },
-            'x': 'some category',
-            'y': 123
+            'y': 123,
+            'name': 'some category'
           }
       ],
       'id': 'some-id-goes-here',
