@@ -2,10 +2,8 @@
   collapsed: false,
   completed: 0.5,
   dependency: null,
-  end: 1675141282.0,
   milestone: false,
   parent: 'some-id-goes-here',
-  start: 1675141282.0,
   y: 123,
 
   accessibility: {

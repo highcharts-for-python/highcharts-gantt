@@ -1,11 +1,11 @@
 from typing import Optional, List
 
-from validator_collection import checkers
+from validator_collection import checkers, validators
 
 from highcharts_core.options.series.data.bar import (BarData,
-                                                       WaterfallData,
-                                                       WindBarbData,
-                                                       XRangeData as XRangeDataBase)
+                                                     WaterfallData,
+                                                     WindBarbData,
+                                                     XRangeData as XRangeDataBase)
 
 from highcharts_gantt.options.series.data.connect import DataConnection
 from highcharts_gantt.decorators import validate_types
