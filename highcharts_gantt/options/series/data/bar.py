@@ -2,10 +2,14 @@ from typing import Optional, List
 
 from validator_collection import checkers, validators
 
-from highcharts_core.options.series.data.bar import (BarData,
-                                                     WaterfallData,
-                                                     WindBarbData,
-                                                     XRangeData as XRangeDataBase)
+from highcharts_stock.options.series.data.bar import (BarData,
+                                                      BarDataCollection,
+                                                      WaterfallData,
+                                                      WaterfallDataCollection,
+                                                      WindBarbData,
+                                                      WindBarbDataCollection,
+                                                      XRangeData as XRangeDataBase,
+                                                      XRangeDataCollection as XRangeDataCollectionBase)
 
 from highcharts_gantt.options.series.data.connect import DataConnection
 from highcharts_gantt.decorators import validate_types
@@ -64,6 +68,16 @@ class XRangeData(XRangeDataBase):
                 self._connect = [x for x in processed_value]
 
     @classmethod
+    def from_ndarray(cls, value):
+        """Creates a collection of data points from a `NumPy <https://numpy.org>`__ 
+        :class:`ndarray <numpy:ndarray>` instance.
+        
+        :returns: A collection of data point values.
+        :rtype: :class:`DataPointCollection <highcharts_core.options.series.data.collections.DataPointCollection>`
+        """
+        return XRangeDataCollection.from_ndarray(value)
+
+    @classmethod
     def _get_kwargs_from_dict(cls, as_dict):
         """Convenience method which returns the keyword arguments used to initialize the
         class from a Highcharts Javascript-compatible :class:`dict <python:dict>` object.
@@ -116,3 +130,25 @@ class XRangeData(XRangeDataBase):
             untrimmed[key] = parent_as_dict[key]
 
         return untrimmed
+
+
+class XRangeDataCollection(XRangeDataCollectionBase):
+    """A collection of :class:`XRangeData` objects.
+
+    .. note::
+    
+      When serializing to JS literals, if possible, the collection is serialized to a primitive
+      array to boost performance within Python *and* JavaScript. However, this may not always be
+      possible if data points have non-array-compliant properties configured (e.g. adjusting their 
+      style, names, identifiers, etc.). If serializing to a primitive array is not possible, the
+      results are serialized as JS literal objects.
+
+    """
+
+    @classmethod
+    def _get_data_point_class(cls):
+        """The Python class to use as the underlying data point within the Collection.
+        
+        :rtype: class object
+        """
+        return XRangeData

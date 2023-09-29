@@ -10,6 +10,7 @@ from highcharts_gantt import errors, constants
 from highcharts_gantt.decorators import validate_types
 from highcharts_gantt.metaclasses import HighchartsMeta
 from highcharts_gantt.options.series.data.connect import DataConnection
+from highcharts_gantt.options.series.data.collections import DataPointCollection
 from highcharts_gantt.utility_functions import validate_color, parse_jira_issue
 from highcharts_gantt.utility_classes.gradients import Gradient
 from highcharts_gantt.utility_classes.patterns import Pattern
@@ -365,7 +366,7 @@ class GanttData(DataBase):
         return untrimmed
 
     @classmethod
-    def from_array(cls, value):
+    def from_list(cls, value):
         """Creates a collection of data point instances, parsing the contents of ``value``
         as an array (iterable). This method is specifically used to parse data that is
         input to **Highcharts for Python** without property names, in an array-organized
@@ -476,6 +477,16 @@ class GanttData(DataBase):
             collection.append(as_obj)
 
         return collection
+
+    @classmethod
+    def from_ndarray(cls, value):
+        """Creates a collection of data points from a `NumPy <https://numpy.org>`__ 
+        :class:`ndarray <numpy:ndarray>` instance.
+        
+        :returns: A collection of data point values.
+        :rtype: :class:`DataPointCollection <highcharts_core.options.series.data.collections.DataPointCollection>`
+        """
+        return GanttDataCollection.from_ndarray(value)
 
     @classmethod
     def from_asana(cls,
@@ -701,3 +712,25 @@ class GanttData(DataBase):
         data_point = cls(**data_point_kwargs)
         
         return data_point
+
+
+class GanttDataCollection(DataPointCollection):
+    """A collection of :class:`XRangeData` objects.
+
+    .. note::
+    
+      When serializing to JS literals, if possible, the collection is serialized to a primitive
+      array to boost performance within Python *and* JavaScript. However, this may not always be
+      possible if data points have non-array-compliant properties configured (e.g. adjusting their 
+      style, names, identifiers, etc.). If serializing to a primitive array is not possible, the
+      results are serialized as JS literal objects.
+
+    """
+
+    @classmethod
+    def _get_data_point_class(cls):
+        """The Python class to use as the underlying data point within the Collection.
+        
+        :rtype: class object
+        """
+        return GanttData
