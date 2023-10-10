@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.boxplot <highcharts_gantt.options.series.data.boxplot>`
+:mod:`.boxplot <highcharts_stock.options.series.data.boxplot>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_gantt.options.series.data.boxplot
+.. module:: highcharts_core.options.series.data.boxplot
 
 ********************************************************************************************************************
-class: :class:`BoxPlotData <highcharts_gantt.options.series.data.boxplot.BoxPlotData>`
+class: :class:`BoxPlotData <highcharts_stock.options.series.data.boxplot.BoxPlotData>`
 ********************************************************************************************************************
 
 .. autoclass:: BoxPlotData
@@ -22,7 +22,25 @@ class: :class:`BoxPlotData <highcharts_gantt.options.series.data.boxplot.BoxPlot
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: BoxPlotData
-      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_core.metaclasses.HighchartsMeta
+      :parts: -1
+
+  |
+
+--------------
+
+********************************************************************************************************************
+class: :class:`BoxPlotDataCollection <highcharts_stock.options.series.data.boxplot.BoxPlotDataCollection>`
+********************************************************************************************************************
+
+.. autoclass:: BoxPlotDataCollection
+  :members:
+  :inherited-members:
+
+  .. collapse:: Class Inheritance
+
+    .. inheritance-diagram:: BoxPlotDataCollection
+      :top-classes: highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

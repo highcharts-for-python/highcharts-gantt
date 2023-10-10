@@ -6,15 +6,9 @@
 
   custom_server = ExportServer(url = 'https://www.mydomain.dev/some_pathname_goes_here')
 
-  my_chart = Chart(container = 'target_div',
-                   options = {
-                       'series': [
-                           GanttSeries(data = [ ... ])
-                       ]
-                   },
-                   variable_name = 'myChart',
-                   is_gantt_chart = True)
-
+  my_chart = Chart(data = [0, 5, 3, 5],
+                   series_type = 'line')
+ 
   # Download a PNG version of the chart in memory within your Python code.
   my_png_image = my_chart.download_chart(format = 'png',
                                          server_instance = custom_server)
@@ -54,8 +48,9 @@
     :param server_instance: Provide an already-configured :class:`ExportServer`
       instance to use to programmatically produce the exported chart. Defaults to
       :obj:`None <python:None>`, which causes **Highcharts for Python** to instantiate
-      a new :class:`ExportServer` instance with all applicable defaults.
-    :type server_instance: :class:`ExportServer` or :obj:`None <python:None>`
+      a new :class:`ExportServer <highcharts_gantt.headless_export.ExportServer>` instance with all applicable defaults.
+    :type server_instance: :class:`ExportServer <highcharts_gantt.headless_export.ExportServer>`
+      or :obj:`None <python:None>`
 
     :param format: The format in which the exported chart should be returned. Defaults to
       ``'png'``.
@@ -118,7 +113,7 @@
 
     .. note::
 
-      All other keyword arguments are as per the :class:`ExportServer` constructor.
+      All other keyword arguments are as per the :class:`ExportServer <highcharts_gantt.headless_export.ExportServer>` constructor.
 
     :returns: The exported chart image, either as a :class:`bytes <python:bytes>`
       binary object or as a base-64 encoded string (depending on the ``use_base64``
