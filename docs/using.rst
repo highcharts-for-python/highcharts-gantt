@@ -86,7 +86,6 @@ more Pythonic way of interacting with the framework.
 
 Here are the notable design patterns that have been adopted that you should be aware of:
 
-
 Code Style: Python vs JavaScript Naming Conventions
 =======================================================
 
@@ -95,9 +94,9 @@ Code Style: Python vs JavaScript Naming Conventions
 Standard Methods
 =======================================
 
-Every single object supported by the Highcharts Gantt API corresponds to a Python class in
-**Highcharts Gantt for Python**. You can find the complete list in our comprehensive
-:doc:`Highcharts Gantt for Python API Reference <api>`.
+Every single object supported by the Highcharts JavaScript API corresponds to a Python 
+class in **Highcharts Gantt for Python**. You can find the complete list in our 
+comprehensive :doc:`Highcharts Gantt for Python API Reference <api>`.
 
 These classes generally inherit from the
 :class:`HighchartsMeta <highcharts_gantt.metaclasses.HighchartsMeta>` metaclass, which
@@ -148,18 +147,18 @@ Class Structures and Inheritance
 
 .. warning::
 
-  Certain sections of the **Highcharts Maps for Python** library - in particular the
-  :mod:`options.series <highcharts_maps.options.series>` classes - rely heavily on
+  Certain sections of **Highcharts Gantt for Python** - in particular the
+  :mod:`options.series <highcharts_gantt.options.series>` classes - rely heavily on
   multiple inheritance. This is a known anti-pattern in Python development as it runs the
   risk of encountering the :term:`diamond of death` inheritance problem. This complicates
   the process of inheriting methods or properties from parent classes when properties or
   methods share names across multiple parents.
 
-  We know the diamond of death is an anti-pattern, but it was a necessary one to minimize 
-  code duplication and maximize consistency. For that reason, we implemented it properly 
-  *despite* the anti-pattern, using some advanced Python concepts to navigate the Python MRO
-  (Method Resolution Order) system cleanly. However, an awareness of the pattern used
-  may prove helpful if your code inherits from the Highcharts for Python classes.
+  We know the diamond of death is an anti-pattern, but it was a necessary one to 
+  minimize code duplication and maximize consistency. For that reason, we implemented it 
+  properly *despite* the anti-pattern, using some advanced Python concepts to navigate the 
+  Python MRO (Method Resolution Order) system cleanly. However, an awareness of the pattern 
+  used may prove helpful if your code inherits from the Highcharts for Python classes.
 
   .. seealso::
 
@@ -366,88 +365,164 @@ Jira projects, CSV files, from `pandas`_ dataframes, or `PySpark`_ dataframes.
 How Data is Represented
 ==================================
 
-`Highcharts <https://www.highcharts.com>`__ (JS) supports two different ways of representing
-data: as an individual :term:`series` comprised of individual data points, and as a set of
-instructions to read data dynamically from a CSV file or an HTML table.
+`Highcharts <https://www.highcharts.com>`__ (JS) supports two different ways of 
+representing data: as an individual :term:`series` comprised of individual data 
+points, and as a set of instructions to read data dynamically from a CSV file or 
+an HTML table.
 
   .. seealso::
 
     * :class:`DataBase <highcharts_gantt.options.series.data.base.DataBase>` class
     * :class:`options.Data <highcharts_gantt.options.data.Data>` class
 
-`Highcharts <https://www.highcharts.com>`__ organizes data into :term:`series`. You can
-think of a series as a single line on a graph that shows a set of values. The set of
-values that make up the series are :term:`data points <data point>`, which are defined by
-a set of properties that indicate the data point's position on one or more axes. 
+`Highcharts <https://www.highcharts.com>`__ organizes data into :term:`series`. You 
+can think of a series as a single line on a graph that shows a set of values. The set 
+of values that make up the series are :term:`data points <data point>`, which are defined 
+by a set of properties that indicate the data point's position on one or more axes. 
 
-As a result, `Highcharts (JS) <https://www.highcharts.com>`__ and **Highcharts for Python** both
-represent the data points in series as a list of data point objects in the ``data`` property 
-within the series:
+As a result, `Highcharts (JS) <https://www.highcharts.com>`__ and
+**Highcharts for Python** both represent the data points in series as a list of data point
+objects in the ``data`` property within the series:
 
-.. list-table::
-  :widths: 50 50
-  :header-rows: 1
+    .. list-table::
+      :widths: 50 50
+      :header-rows: 1
 
-  * - Highcharts JS
-    - Highcharts for Python
-  * - .. code-block:: javascript
+      * - Highcharts (JS)
+        - Highcharts for Python
+      * - .. code-block:: javascript
 
-        // Example Series Object
-        // (for a Line series type):
-        {
-          data: [
+            // Example Series Object
+            // (for a Line series type):
             {
-              id: 'first-data-point',
-              x: 1,
-              y: 123,
+              data: [
+                {
+                  id: 'first-data-point',
+                  x: 1,
+                  y: 123,
+                  // ...
+                  // optional additional properties
+                  // for styling/behavior go here
+                  // ...
+                },
+                {
+                  id: 'second-data-point',
+                  x: 2,
+                  y: 456,
+                  // ...
+                  // optional additional properties
+                  // for styling/behavior go here
+                  // ...
+                },
+                {
+                  id: 'third-data-point',
+                  x: 3,
+                  y: 789,
+                  // ...
+                  // optional additional properties
+                  // for styling/behavior go here
+                  // ...
+                }
+              ],
               // ...
-              // optional additional properties
-              // for styling/behavior go here
-              // ...
-            },
-            {
-              id: 'second-data-point',
-              x: 2,
-              y: 456,
-              // ...
-              // optional additional properties
-              // for styling/behavior go here
-              // ...
-            },
-            {
-              id: 'third-data-point',
-              x: 3,
-              y: 789,
-              // ...
-              // optional additional properties
-              // for styling/behavior go here
-              // ...
+              // other Series properties go here
+              // to configure styling/behavior
             }
-          ],
-          // ...
-          // other Series properties go here
-          // to configure styling/behavior
-        }
-    - .. code-block:: python
+        - .. code-block:: python
 
-        # Corresponding LineSeries object
-        my_series = Series(data = [
-            CartesianData(id = 'first-data-point1',
-                          x = 1,
-                          y = 123),
-            CartesianData(id = 'second-data-point1',
-                          x = 2,
-                          y = 456),
-            CartesianData(id = 'third-data-point1',
-                          x = 3,
-                          y = 789),
-        ])
+            # Corresponding LineSeries object
+            my_series = Series(data = [
+                CartesianData(id = 'first-data-point1',
+                              x = 1,
+                              y = 123),
+                CartesianData(id = 'second-data-point1',
+                              x = 2,
+                              y = 456),
+                CartesianData(id = 'third-data-point1',
+                              x = 3,
+                              y = 789),
+            ])
+
+  #. As a single :class:`DataPointCollection <highcharts_gantt.options.series.data.collections.DataPointCollection>`
+     object in the ``data`` property within the series, which in turn contains the 
+     individual data points.
+
+    .. list-table::
+      :widths: 50 50
+      :header-rows: 1
+
+      * - Highcharts (JS)
+        - Highcharts for Python
+      * - .. code-block:: javascript
+
+            // Example Series Object
+            // (for a Line series type):
+            {
+              data: [
+                {
+                  name: 'first-data-point',
+                  x: 1,
+                  y: 123,
+                  // ...
+                  // optional additional properties
+                  // for styling/behavior go here
+                  // ...
+                },
+                {
+                  name: 'second-data-point',
+                  x: 2,
+                  y: 456,
+                  // ...
+                  // optional additional properties
+                  // for styling/behavior go here
+                  // ...
+                },
+                {
+                  name: 'third-data-point',
+                  x: 3,
+                  y: 789,
+                  // ...
+                  // optional additional properties
+                  // for styling/behavior go here
+                  // ...
+                }
+              ],
+              // ...
+              // other Series properties go here
+              // to configure styling/behavior
+            }
+        - .. code-block:: python
+
+            # EXAMPLE 1. Corresponding LineSeries object, with data as an
+            # numpy.ndarray.
+
+            my_series = Series(data = CartesianDataCollection(
+                ndarray = [
+                    [1, 123, 'first-data-point1'],
+                    [2, 456, 'second-data-point1'],
+                    [3, 789, 'third-data-point1'])
+            ])
+
+            # EXAMPLE 2. Corresponding LineSeries object, with data as a
+            # primitive array.
+
+            my_series = Series(data = CartesianDataCollection(
+                array = [
+                    [1, 123, 'first-data-point1'],
+                    [2, 456, 'second-data-point1'],
+                    [3, 789, 'third-data-point1'])
+                ]
+            ))
 
 As you can see, **Highcharts for Python** represents its data the same way that
-`Highcharts (JS) <https://www.highcharts.com>`__ does. That should be expected. However,
-constructing tens, hundreds, or possibly thousands of data points individually in your
-code would be a nightmare. For that reason, the **Highcharts for Python** toolkit provides
-a number of convenience methods to make it easier to populate your series.
+`Highcharts (JS) <https://www.highcharts.com>`__ does. That should be expected. 
+However, constructing tens, hundreds, or possibly thousands of data points 
+individually in your code would be a nightmare. For that reason, the 
+**Highcharts for Python Toolkit** natively supports vectorized 
+:class:`numpy.ndarray <numpy:numpy.ndarray>` values, and automatically assembles data
+point collections for easy management/manipulation. In addition, the Toolkit 
+provides a number of convenience methods to make it easier to populate your 
+series.
 
 .. _populating_series_data:
 
@@ -483,14 +558,17 @@ series instance), or to create a new series instance with data already loaded.
     :ref:`deserialization methods <deserialization_methods>`, so those make things very easy.
     However, they also have a special data point-specific deserialization method:
 
-      .. collapse:: Method Signature
+      .. collapse:: Expand Method Signature
 
         .. method:: .from_array(cls, value)
           :classmethod:
           :noindex:
 
-          Creates a collection of data point instances, parsing the contents of ``value`` as an
-          array (iterable). This method is specifically used to parse data that is input to
+          Creates a 
+          :class:`DataPointCollection <highcharts_gantt.options.series.data.collections.DataPointCollection>`
+          instance if possible, or falls back to a collection of data point 
+          instances, parsing the contents of ``value`` as an array (iterable). This method 
+          is specifically used to parse data that is input to
           **Highcharts for Python** without property names, in an array-organized structure as
           described in the `Highcharts (JS) <https://www.highcharts.com>`__ documentation.
 
@@ -513,12 +591,37 @@ series instance), or to create a new series instance with data already loaded.
 
               my_series = LineSeries()
 
+              # EXAMPLE 1.
               # A simple array of numerical values which correspond to the Y value of the data
-              # point
+              # point, passed to the .from_array() method.
+
+              my_series = LineSeries.from_array([0, 5, 3, 5])
+
+              # EXAMPLE 2.
+              # A simple array of numerical values which correspond to the Y value of the data
+              # point, passed to the series data property.
+
               my_series.data = [0, 5, 3, 5]
 
+              # EXAMPLE 3.
+              # A simple array of numerical values which correspond to the Y value of the data
+              # point, updated in the series using the .load_from_array() method.
+
+              my_series.load_from_array([0, 5, 3, 5])
+
+              # EXAMPLE 4.
               # An array containing 2-member arrays (corresponding to the X and Y values of the
-              # data point)
+              # data point), passed to the .from_array() class method.
+              my_series = LineSeries.from_array([
+                  [0, 0],
+                  [1, 5],
+                  [2, 3],
+                  [3, 5]
+              ])
+
+              # EXAMPLE 5.
+              # An array containing 2-member arrays (corresponding to the X and Y values of the
+              # data point), passed to the series data property.
               my_series.data = [
                   [0, 0],
                   [1, 5],
@@ -526,7 +629,37 @@ series instance), or to create a new series instance with data already loaded.
                   [3, 5]
               ]
 
-              # An array of dict with named values
+              # EXAMPLE 6.
+              # An array of dict with named values, passed to the .from_array() class method.
+              my_series = LineSeries.from_array([
+                {
+                    'x': 0,
+                    'y': 0,
+                    'name': 'Point1',
+                    'color': '#00FF00'
+                },
+                {
+                    'x': 1,
+                    'y': 5,
+                    'name': 'Point2',
+                    'color': '#CCC'
+                },
+                {
+                    'x': 2,
+                    'y': 3,
+                    'name': 'Point3',
+                    'color': '#999'
+                },
+                {
+                    'x': 3,
+                    'y': 5,
+                    'name': 'Point4',
+                    'color': '#000'
+                }
+              ])
+
+              # EXAMPLE 6.
+              # An array of dict with named values, passed to the series data property.
               my_series.data = [
                 {
                     'x': 0,
@@ -554,6 +687,36 @@ series instance), or to create a new series instance with data already loaded.
                 }
               ]
 
+              # EXAMPLE 6.
+              # An array of dict with named values, passed to .load_from_array()
+              # method.
+              my_series.load_from_array([
+                {
+                    'x': 0,
+                    'y': 0,
+                    'name': 'Point1',
+                    'color': '#00FF00'
+                },
+                {
+                    'x': 1,
+                    'y': 5,
+                    'name': 'Point2',
+                    'color': '#CCC'
+                },
+                {
+                    'x': 2,
+                    'y': 3,
+                    'name': 'Point3',
+                    'color': '#999'
+                },
+                {
+                    'x': 3,
+                    'y': 5,
+                    'name': 'Point4',
+                    'color': '#000'
+                }
+              ])
+
           :param value: The value that should contain the data which will be converted into data
             point instances.
 
@@ -568,13 +731,16 @@ series instance), or to create a new series instance with data already loaded.
             :class:`DataBase <highcharts_gantt.options.series.data.base.DataBase>`)
           :rtype: :class:`list <python:list>` of
             :class:`DataBase <highcharts_gantt.options.series.data.base.DataBase>`-descendant
-            instances
+            instances or
+            :class:`DataPointCollection <highcharts_gantt.options.series.data.collections.DataPointCollection>`
+            instance
 
-  .. tab:: Load to Existing Series
+  .. tab:: Update an Existing Series
 
     .. warning::
 
-      :term:`Technical indicators <technical indicator>` do not support the ``.load_from_*`` methods because
+      :term:`Technical indicators <technical indicator>` provided by
+      **Highcharts Stock for Python** do not support the ``.load_from_*`` methods because
       their data gets populated dynamically based on the series indicated in their
       :meth:`.linked_to <highcharts_gantt.options.series.base.IndicatorSeriesBase.linked_to>`
       property.
@@ -583,19 +749,12 @@ series instance), or to create a new series instance with data already loaded.
 
         * :doc:`Using Highcharts for Python <using>` > :ref:`Using Technical Indicators <using_technical_indicators>`
 
+
     .. tabs::
 
-      .. tab:: Using ``.load_from_asana()``
+      .. tab:: Using ``.load_from_array()``
 
-        .. include:: using/populating_series_data/_load_from_asana.rst
-
-      .. tab:: Using ``.load_from_monday()``
-
-        .. include:: using/populating_series_data/_load_from_monday.rst
-
-      .. tab:: Using ``.load_from_jira()``
-
-        .. include:: using/populating_series_data/_load_from_jira.rst
+        .. include:: using/populating_series_data/_load_from_array.rst
 
       .. tab:: Using ``.load_from_csv()``
 
@@ -613,8 +772,10 @@ series instance), or to create a new series instance with data already loaded.
 
     .. warning::
 
-      :term:`Technical indicators <technical indicator>` do not support the ``.from_*()``,
-      methods because their data gets populated dynamically based on the series indicated in their
+      :term:`Technical indicators <technical indicator>` provided by
+      **Highcharts for Python** do not support the ``.from_csv()``,
+      ``.from_pandas()``, and ``.from_pyspark()`` methods because their data gets populated
+      dynamically based on the series indicated in their
       :meth:`.linked_to <highcharts_gantt.options.series.base.IndicatorSeriesBase.linked_to>`
       property.
 
@@ -623,6 +784,10 @@ series instance), or to create a new series instance with data already loaded.
         * :doc:`Using Highcharts for Python <using>` > :ref:`Using Technical Indicators <using_technical_indicators>`
 
     .. tabs::
+
+      .. tab:: Using ``.from_array()``
+
+        .. include:: using/populating_series_data/_new_from_array.rst
 
       .. tab:: Using ``.from_asana()``
 
@@ -685,6 +850,10 @@ property. You can do this in several ways:
 
 .. tabs::
 
+  .. tab:: Using Keyword Arguments
+
+    .. include:: using/adding_series_to_charts/_using_kwargs.rst
+
   .. tab:: Using ``.options.series``
 
     .. include:: using/assembling_your_chart/_using_series_property.rst
@@ -744,29 +913,41 @@ your visualizations:
 Rendering Highcharts Visualizations in Web Content
 ========================================================
 
-`Highcharts JS <https://www.highcharts.com>`__ is a JavaScript library specifically
-designed to enable rendering high-end data visualizations in a web context. The library is
-designed and optimized to operate within a web browser. The **Highcharts for Python**
-toolkit therefore fully supports this capability, and we've enabled it using the
-*batteries included* principle.
+`Highcharts <https://www.highcharts.com>`__ is a suite of JavaScript libraries 
+designed to enable rendering high-end data visualizations in a web context. They are 
+designed and optimized to operate within a web browser. The 
+**Highcharts for Python Toolkit** therefore fully supports this capability, and we've 
+enabled it using the *batteries included* principle.
 
-To render a **Highcharts Gantt for Python** visualization, all you need is for the browser
-to execute the output of the chart's
-:meth:`.to_js_literal() <highcharts_gantt.chart.Chart.to_js_literal>` method, which will
-return a snippet of JavaScript code which when included in a web page will display the
-chart in full.
+To render a **Highcharts for Python** visualization in a web context, all you need is
+for the browser to execute the output of the chart's
+:meth:`.to_js_literal() <highcharts_gantt.chart.Chart.to_js_literal>` method.
+
+That method will return a snippet of JavaScript code which when included in a web page
+will display the chart in full.
 
 .. warning::
 
-  The current version of **Highcharts Gantt for Python** assumes that your web content
-  already has all the ``<script/>`` tags which include the
-  `Highcharts Core <https://www.highcharts.com/products/highcharts>`__,
-  `Highcharts Stock <https://www.highcharts.com/products/stock>`__, and
-  `Highcharts Gantt <https://www.highcharts.com/products/gantt>`__ modules your chart
-  relies on.
+  The :meth:`.to_js_literal() <highcharts_gantt.chart.Chart.to_js_literal>` method 
+  assumes that your web content already has all the ``<script/>`` tags which include 
+  the `Highcharts (JS) <https://www.highcharts.com>`__ modules your chart relies on.
 
-  This is likely to change in a future version of **Highcharts for Python**, where the
-  toolkit will support the production of ``<script/>`` tags (see roadmap :issue:`7`).
+  If you need to generate the required ``<script/>`` tags for your chart, you can do
+  so by calling:
+
+    .. code-block:: python
+
+      # EXAMPLE 1.
+      # Get a list of <script/> tags.
+      list_of_script_tags = my_chart.get_script_tags()
+
+      # EXAMPLE 2.
+      # Get a string of <script/> tags.
+      script_tags_as_str = my_chart.get_script_tags(as_str = True)
+
+      # EXAMPLE 3.
+      # Get a list of the required Highcharts modules.
+      required_modules = my_chart.get_required_modules()
 
 For example:
 
@@ -799,8 +980,7 @@ You can also render **Highcharts Gantt for Python** visualizations inside your
 
 .. include:: using/rendering_your_visualizations/_as_jupyter.rst
 
-You can call the :meth:`.display() <highcharts_gantt.chart.Chart.display>`
-method from anywhere within any notebook cell, and it
+You can call the ``.display()`` method from anywhere within any notebook cell, and it
 will render the resulting chart in your notebook's output. That's it!
 
   .. caution::
@@ -870,7 +1050,7 @@ property will be set to ``True``, unless explicitly overridden in your code.
   However, there are many use cases where you may be deploying your own
   :term:`Export Server` and wish to use that instead. You can do this by
   creating your own
-  :class:`ExportServer <highcharts_stock.headless_export.ExportServer>` instance and
+  :class:`ExportServer <highcharts_gantt.headless_export.ExportServer>` instance and
   supplying it as the ``server_instance`` keyword argument to the ``.download_chart()``
   method.
 
@@ -903,6 +1083,7 @@ environment. The actual file itself is produced using a
   .. tab:: Using a Custom Server
 
     .. include:: using/download_visualizations/_using_custom.rst
+
 
 .. warning::
 
