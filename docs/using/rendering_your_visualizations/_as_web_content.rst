@@ -40,13 +40,7 @@
       from highcharts_gantt.chart import Chart
       from highcharts_gantt.options.series.area import LineSeries
 
-      my_chart = Chart(container = 'target_div',
-                       options = {
-                           'series': [
-                               LineSeries(data = [0, 5, 3, 5])
-                           ]
-                       },
-                       variable_name = 'myChart')
+      my_chart = Chart(data = [0, 5, 3, 5], series_type = 'line')
 
       as_js_literal = my_chart.to_js_literal()
 

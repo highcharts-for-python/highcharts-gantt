@@ -207,36 +207,35 @@ Hello World, and Basic Usage
 1. Import Highcharts Gantt for Python
 ==========================================
 
-  .. code-block:: python
-    
-    # BEST PRACTICE!
-    # PRECISE LOCATION PATTERN
-    # This method of importing Highcharts Gantt for Python objects yields the fastest
-    # performance for the import statement. However, it is more verbose and requires
-    # you to navigate the extensive Highcharts Gantt for Python API.
+.. code-block:: python
+  
+  # PRECISE-LOCATION PATTERN: BEST PRACTICE!
+  # This method of importing Highcharts for Python objects yields the fastest
+  # performance for the import statement. However, it is more verbose and requires
+  # you to navigate the extensive Highcharts Core for Python API.
 
-    # Import classes using precise module indications. For example:
-    from highcharts_gantt.chart import Chart
-    from highcharts_gantt.global_options.shared_options import SharedGanttOptions
-    from highcharts_gantt.options import HighchartsGanttOptions
-    from highcharts_gantt.options.plot_options.gantt import GanttOptions
-    from highcharts_gantt.options.series.gantt import GanttSeries
+  # Import classes using precise module indications. For example:
+  from highcharts_core.chart import Chart
+  from highcharts_core.global_options.shared_options import SharedOptions
+  from highcharts_core.options import HighchartsOptions
+  from highcharts_core.options.plot_options.bar import BarOptions
+  from highcharts_core.options.series.bar import BarSeries
 
-    # CATCH-ALL PATTERN
-    # This method of importing Highcharts Gantt for Python classes has relatively slow
-    # performance because it imports hundreds of different classes from across the entire
-    # library. This is also a known anti-pattern, as it obscures the namespace within the
-    # library. Both may be acceptable to you in your use-case, but do use at your own risk.
+  # CATCH-ALL PATTERN
+  # This method of importing Highcharts for Python classes has relatively slow
+  # performance because it imports hundreds of different classes from across the entire
+  # library. This performance impact may be acceptable to you in your use-case, but
+  # do use at your own risk.
 
-    # Import objects from the catch-all ".highcharts" module.
-    from highcharts_gantt import highcharts
+  # Import objects from the catch-all ".highcharts" module.
+  from highcharts_core import highcharts
 
-    # You can now access specific classes without individual import statements.
-    highcharts.Chart
-    highcharts.SharedGanttOptions
-    highcharts.HighchartsGanttOptions
-    highcharts.GanttOptions
-    highcharts.GanttSeries
+  # You can now access specific classes without individual import statements.
+  highcharts.Chart
+  highcharts.SharedOptions
+  highcharts.HighchartsOptions
+  highcharts.BarOptions
+  highcharts.BarSeries
 
 
 2. Create Your Chart
@@ -244,47 +243,52 @@ Hello World, and Basic Usage
 
   .. code-block:: python
 
+    # from a primitive array, using keyword arguments
+    my_chart = Chart(data = [[1, 23], [2, 34], [3, 45]], 
+                     series_type = 'line')
+
+    # from a primitive array, using the .from_array() method
+    my_chart = Chart.from_array([[1, 23], [2, 34], [3, 45]], 
+                                series_type = 'line')
+
+    # from a Numpy ndarray, using keyword arguments
+    my_chart = Chart(data = numpy_array, series_type = 'line')
+
+    # from a Numpy ndarray, using the .from_array() method
+    my_chart = Chart.from_array(data = numpy_array, series_type = 'line')
+
     # from a JavaScript file
-    my_chart = highcharts.Chart.from_js_literal('my_js_literal.js')
+    my_chart = Chart.from_js_literal('my_js_literal.js')
 
     # from a JSON file
-    my_chart = highcharts.Chart.from_json('my_json.json')
+    my_chart = Chart.from_json('my_json.json')
 
     # from a Python dict
-    my_chart = highcharts.Chart.from_dict(my_dict_obj)
+    my_chart = Chart.from_dict(my_dict_obj)
 
     # from a Pandas dataframe
-    my_chart = highcharts.Chart.from_pandas(df,
-                                            property_map = {
-                                                'x': 'transactionDate',
-                                                'y': 'invoiceAmt',
-                                                'id': 'id'
-                                            },
-                                            series_type = 'line')
+    my_chart = Chart.from_pandas(df)
 
     # from a PySpark dataframe
-    my_chart = highcharts.Chart.from_pyspark(df,
-                                             property_map = {
-                                                 'x': 'transactionDate',
-                                                 'y': 'invoiceAmt',
-                                                 'id': 'id'
-                                             },
-                                             series_type = 'line')
+    my_chart = Chart.from_pyspark(df,
+                                  property_map = {
+                                      'x': 'transactionDate',
+                                      'y': 'invoiceAmt',
+                                      'id': 'id'
+                                  },
+                                  series_type = 'line')
 
     # from a CSV
-    my_chart = highcharts.Chart.from_csv('/some_file_location/filename.csv'
-                                         column_property_map = {
-                                            'x': 0,
-                                            'y': 4,
-                                            'id': 14
-                                         },
-                                         series_type = 'line')
+    my_chart = Chart.from_csv('/some_file_location/filename.csv')
 
     # from a HighchartsOptions configuration object
-    my_chart = highcharts.Chart.from_options(my_options)
+    my_chart = Chart.from_options(my_options)
 
-    # from a Series configuration
-    my_chart = highcharts.Chart.from_series(my_series)
+    # from a Series configuration, using keyword arguments
+    my_chart = Chart(series = my_series)
+
+    # from a Series configuration, using .from_series()
+    my_chart = Chart.from_series(my_series)
 
 
 3. Configure Global Settings (optional)
@@ -292,20 +296,20 @@ Hello World, and Basic Usage
 
   .. code-block:: python
 
-    # Import SharedGanttOptions
-    from highcharts_gantt.global_options.shared_options import SharedGanttOptions
+    # Import SharedOptions
+    from highcharts_core.global_options.shared_options import SharedOptions
 
     # from a JavaScript file
-    my_global_settings = SharedGanttOptions.from_js_literal('my_js_literal.js')
+    my_global_settings = SharedOptions.from_js_literal('my_js_literal.js')
 
     # from a JSON file
-    my_global_settings = SharedGanttOptions.from_json('my_json.json')
+    my_global_settings = SharedOptions.from_json('my_json.json')
 
     # from a Python dict
-    my_global_settings = SharedGanttOptions.from_dict(my_dict_obj)
+    my_global_settings = SharedOptions.from_dict(my_dict_obj)
 
     # from a HighchartsOptions configuration object
-    my_global_settings = SharedGanttOptions.from_options(my_options)
+    my_global_settings = SharedOptions.from_options(my_options)
 
 
 4. Configure Your Chart / Global Settings
@@ -313,9 +317,10 @@ Hello World, and Basic Usage
 
   .. code-block:: python
 
-    from highcharts_gantt.options.title import Title
-    from highcharts_gantt.options.credits import Credits
+    from highcharts_core.options.title import Title
+    from highcharts_core.options.credits import Credits
 
+    # EXAMPLE 1.
     # Using dicts
     my_chart.title = {
         'align': 'center'
@@ -326,7 +331,7 @@ Hello World, and Basic Usage
 
     my_chart.credits = {
         'enabled': True,
-        'href': 'https://www.highcharts.com/',
+        'href': 'https://www.highchartspython.com/',
         'position': {
             'align': 'center',
             'vertical_align': 'bottom',
@@ -341,16 +346,20 @@ Hello World, and Basic Usage
         'text': 'Chris Modzelewski'
     }
 
+    # EXAMPLE 2.
     # Using direct objects
-    from highcharts_gantt.options.title import Title
-    from highcharts_gantt.options.credits import Credits
+    from highcharts_core.options.title import Title
+    from highcharts_core.options.credits import Credits
 
-    my_title = Title(text = 'The Title for My Chart', floating = True, align = 'center')
+    my_title = Title(text = 'The Title for My Chart',
+                     floating = True, 
+                     align = 'center')
     my_chart.options.title = my_title
 
-    my_credits = Credits(text = 'Chris Modzelewski', enabled = True, href = 'https://www.highcharts.com')
+    my_credits = Credits(text = 'Chris Modzelewski', 
+                         enabled = True, 
+                         href = 'https://www.highchartspython.com')
     my_chart.options.credits = my_credits
-
 
 5. Generate the JavaScript Code for Your Chart
 =================================================
@@ -360,9 +369,11 @@ that will render the chart wherever it is you want it to go:
 
   .. code-block:: python
 
+    # EXAMPLE 1.
     # as a string
     js_as_str = my_chart.to_js_literal()
 
+    # EXAMPLE 2.
     # to a file (and as a string)
     js_as_str = my_chart.to_js_literal(filename = 'my_target_file.js')
 
@@ -390,6 +401,13 @@ that will render the chart wherever it is you want it to go:
     # to an image file (and as in-memory bytes)
     my_image_bytes = my_chart.download_chart(filename = 'my_target_file.png',
                                              format = 'png')
+
+8. Render Your Chart in a Jupyter Notebook
+===============================================
+
+  .. code-block:: python
+
+    my_chart.display()
 
 --------------
 

@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.bullet <highcharts_gantt.options.series.data.bullet>`
+:mod:`.bullet <highcharts_stock.options.series.data.bullet>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_gantt.options.series.data.bullet
+.. module:: highcharts_core.options.series.data.bullet
 
 ********************************************************************************************************************
-class: :class:`BulletData <highcharts_gantt.options.series.data.bullet.BulletData>`
+class: :class:`BulletData <highcharts_stock.options.series.data.bullet.BulletData>`
 ********************************************************************************************************************
 
 .. autoclass:: BulletData
@@ -22,7 +22,25 @@ class: :class:`BulletData <highcharts_gantt.options.series.data.bullet.BulletDat
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: BulletData
-      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_core.metaclasses.HighchartsMeta
+      :parts: -1
+
+  |
+
+--------------
+
+********************************************************************************************************************
+class: :class:`BulletDataCollection <highcharts_stock.options.series.data.bullet.BulletDataCollection>`
+********************************************************************************************************************
+
+.. autoclass:: BulletDataCollection
+  :members:
+  :inherited-members:
+
+  .. collapse:: Class Inheritance
+
+    .. inheritance-diagram:: BulletDataCollection
+      :top-classes: highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |

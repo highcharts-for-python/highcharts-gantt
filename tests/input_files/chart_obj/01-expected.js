@@ -1,4 +1,4 @@
-var someVariableName = Highcharts.stockChart('some-div-id',
+var someVariableName = Highcharts.ganttChart('some-div-id',
 {
   accessibility: {
       announceNewData: {
@@ -763,8 +763,8 @@ var someVariableName = Highcharts.stockChart('some-div-id',
       enabled: true,
       text: 'Button Label',
       theme: {
-          fill: '#fff',
-          stroke: '#ccc'
+          'fill': '#fff',
+          'stroke': '#ccc'
       },
       y: 0
     },
