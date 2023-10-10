@@ -1,20 +1,20 @@
 from typing import Optional, List
 
 from highcharts_core.options.series.bar import (BaseBarSeries,
-                                                  BarSeries,
-                                                  ColumnSeries,
-                                                  ColumnPyramidSeries,
-                                                  ColumnRangeSeries,
-                                                  CylinderSeries,
-                                                  VariwideSeries,
-                                                  WaterfallSeries,
-                                                  WindBarbSeries)
+                                                BarSeries,
+                                                ColumnSeries,
+                                                ColumnPyramidSeries,
+                                                ColumnRangeSeries,
+                                                CylinderSeries,
+                                                VariwideSeries,
+                                                WaterfallSeries,
+                                                WindBarbSeries)
 
 
 from highcharts_gantt.options.plot_options.bar import XRangeOptions
-from highcharts_gantt.options.series.data.bar import XRangeData
+from highcharts_gantt.options.series.data.bar import XRangeData, XRangeDataCollection
 
-from highcharts_gantt.utility_functions import mro__to_untrimmed_dict
+from highcharts_gantt.utility_functions import mro__to_untrimmed_dict, is_ndarray
 
 
 class XRangeSeries(BaseBarSeries, XRangeOptions):
@@ -43,7 +43,7 @@ class XRangeSeries(BaseBarSeries, XRangeOptions):
         super().__init__(**kwargs)
 
     @property
-    def data(self) -> Optional[List[XRangeData]]:
+    def data(self) -> Optional[List[XRangeData] | XRangeDataCollection]:
         """Collection of data that represents the series. Defaults to
         :obj:`None <python:None>`.
 
@@ -52,13 +52,14 @@ class XRangeSeries(BaseBarSeries, XRangeOptions):
         :class:`dict <python:dict>` instances that can be coerced to :class:`XRangeData`.
 
         :rtype: :class:`list <python:list>` of :class:`XRangeData` or
+          :class:`XRangeDataCollection` or
           :obj:`None <python:None>`
         """
         return self._data
 
     @data.setter
     def data(self, value):
-        if not value:
+        if not is_ndarray(value) and not value:
             self._data = None
         else:
             self._data = XRangeData.from_array(value)
@@ -169,3 +170,22 @@ class XRangeSeries(BaseBarSeries, XRangeOptions):
         untrimmed = mro__to_untrimmed_dict(self, in_cls = in_cls)
 
         return untrimmed
+
+    @classmethod
+    def _data_collection_class(cls):
+        """Returns the class object used for the data collection.
+        
+        :rtype: :class:`DataPointCollection <highcharts_core.options.series.data.collections.DataPointCollection>`
+          descendent
+        """
+        return XRangeData
+    
+    @classmethod
+    def _data_point_class(cls):
+        """Returns the class object used for individual data points.
+        
+        :rtype: :class:`DataBase <highcharts_core.options.series.data.base.DataBase>` 
+          descendent
+        """
+        return XRangeDataCollection
+

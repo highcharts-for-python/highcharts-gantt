@@ -1,5 +1,5 @@
 ##########################################################################################
-:mod:`.range <highcharts_gantt.options.series.data.range>`
+:mod:`.range <highcharts_stock.options.series.data.range>`
 ##########################################################################################
 
 .. contents:: Module Contents
@@ -9,10 +9,10 @@
 
 --------------
 
-.. module:: highcharts_gantt.options.series.data.range
+.. module:: highcharts_core.options.series.data.range
 
 ********************************************************************************************************************
-class: :class:`RangeData <highcharts_gantt.options.series.data.range.RangeData>`
+class: :class:`RangeData <highcharts_stock.options.series.data.range.RangeData>`
 ********************************************************************************************************************
 
 .. autoclass:: RangeData
@@ -22,7 +22,7 @@ class: :class:`RangeData <highcharts_gantt.options.series.data.range.RangeData>`
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: RangeData
-      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
@@ -30,7 +30,25 @@ class: :class:`RangeData <highcharts_gantt.options.series.data.range.RangeData>`
 ---------------
 
 ********************************************************************************************************************
-class: :class:`ConnectedRangeData <highcharts_gantt.options.series.data.range.ConnectedRangeData>`
+class: :class:`RangeDataCollection <highcharts_stock.options.series.data.range.RangeDataCollection>`
+********************************************************************************************************************
+
+.. autoclass:: RangeDataCollection
+  :members:
+  :inherited-members:
+
+  .. collapse:: Class Inheritance
+
+    .. inheritance-diagram:: RangeDataCollection
+      :top-classes: highcharts_core.metaclasses.HighchartsMeta
+      :parts: -1
+
+  |
+
+---------------
+
+********************************************************************************************************************
+class: :class:`ConnectedRangeData <highcharts_stock.options.series.data.range.ConnectedRangeData>`
 ********************************************************************************************************************
 
 .. autoclass:: ConnectedRangeData
@@ -40,7 +58,25 @@ class: :class:`ConnectedRangeData <highcharts_gantt.options.series.data.range.Co
   .. collapse:: Class Inheritance
 
     .. inheritance-diagram:: ConnectedRangeData
-      :top-classes: highcharts_gantt.metaclasses.HighchartsMeta, highcharts_core.metaclasses.HighchartsMeta
+      :top-classes: highcharts_core.metaclasses.HighchartsMeta
+      :parts: -1
+
+  |
+
+---------------
+
+***********************************************************************************************************************
+class: :class:`ConnectedRangeDataCollection <highcharts_stock.options.series.data.range.ConnectedRangeDataCollection>`
+***********************************************************************************************************************
+
+.. autoclass:: ConnectedRangeDataCollection
+  :members:
+  :inherited-members:
+
+  .. collapse:: Class Inheritance
+
+    .. inheritance-diagram:: ConnectedRangeDataCollection
+      :top-classes: highcharts_core.metaclasses.HighchartsMeta
       :parts: -1
 
   |
