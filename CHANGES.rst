@@ -1,4 +1,26 @@
 
+Release 1.5.0
+=========================================
+
+* **ENHANCEMENT:** Align the API to **Highcharts (JS) v.11.2** (#127). In particular, this includes:
+
+  * Added ``.radius`` support to Connectors.
+  * Added Navigator ``.accessibility`` support.
+  * Added ``.class_name`` to Stock Tools definitions.
+  * Added reversal support to Fibonacci Stock Tools.
+  * Added ``AxisEvents.point_break_out`` property.
+  * Added ``.node_alignment`` property to ``SankeyOptions`` and ``SankeySeries``.
+  * Added ``.link_color_mode`` property to ``SankeyOptions`` and ``SankeySeries``.
+  * Added ``.inactive_other_points`` property to multiple series types.
+  * Added ``.grouping`` property to Lollipop series type.
+  * Added ``.low_marker`` property Area Range and Dumbell series types.
+  * Added ``.show_export_in_progress`` and ``.export_in_progress`` support.
+  * Added ``.drag`` annotation event support.
+  
+* **BUGFIX:** Fixed missing ``.levels`` support in ``TreegraphOptions`` and ``TreegraphSeries``.
+
+-----------------------
+
 Release 1.4.0
 =========================================
 
