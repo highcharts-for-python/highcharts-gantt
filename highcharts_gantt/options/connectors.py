@@ -17,9 +17,11 @@ class ConnectorOptions(ConnectorBase):
     def __init__(self, **kwargs):
         self._algorithm_margin = None
         self._enabled = None
+        self._radius = None
         
         self.algorithm_margin = kwargs.get('algorithm_margin', None)
         self.enabled = kwargs.get('enabled', None)
+        self.radius = kwargs.get('radius', None)
         
         super().__init__(**kwargs)
 
@@ -70,6 +72,7 @@ class ConnectorOptions(ConnectorBase):
             'line_color': as_dict.get('lineColor', None),
             'line_width': as_dict.get('lineWidth', None),
             'marker': as_dict.get('marker', None),
+            'radius': as_dict.get('radius', None),
             'start_marker': as_dict.get('startMarker', None),
             
             'algorithm_margin': as_dict.get('algorithmMargin', None),
@@ -81,7 +84,7 @@ class ConnectorOptions(ConnectorBase):
     def _to_untrimmed_dict(self, in_cls = None) -> dict:
         untrimmed = {
             'algorithmMargin': self.algorithm_margin,
-            'enabled': self.enabled
+            'enabled': self.enabled,
         }
         
         parent_as_dict = super()._to_untrimmed_dict(in_cls = in_cls) or {}
