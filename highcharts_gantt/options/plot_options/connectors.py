@@ -19,6 +19,7 @@ class ConnectorOptions(HighchartsMeta):
         self._line_color = None
         self._line_width = None
         self._marker = None
+        self._radius = None
         self._start_marker = None
 
         self.dash_style = kwargs.get('dash_style', None)
@@ -26,6 +27,7 @@ class ConnectorOptions(HighchartsMeta):
         self.line_color = kwargs.get('line_color', None)
         self.line_width = kwargs.get('line_width', None)
         self.marker = kwargs.get('marker', None)
+        self.radius = kwargs.get('radius', None)
         self.start_marker = kwargs.get('start_marker', None)
 
     @property
@@ -131,6 +133,19 @@ class ConnectorOptions(HighchartsMeta):
         self._marker = value
 
     @property
+    def radius(self) -> Optional[int | float | Decimal]:
+        """The corner radius for the connector line.
+        
+        :rtype: numeric or :obj:`None <python:None>`
+        """
+        return self._radius
+    
+    @radius.setter
+    def radius(self, value):
+        self._radius = validators.numeric(value,
+                                          allow_empty = True)
+
+    @property
     def start_marker(self) -> Optional[Marker]:
         """Configuration of the marker to use at the start of the connector.
 
@@ -158,6 +173,7 @@ class ConnectorOptions(HighchartsMeta):
             'line_color': as_dict.get('lineColor', None),
             'line_width': as_dict.get('lineWidth', None),
             'marker': as_dict.get('marker', None),
+            'radius': as_dict.get('radius', None),
             'start_marker': as_dict.get('startMarker', None),
         }
 
@@ -170,6 +186,7 @@ class ConnectorOptions(HighchartsMeta):
             'lineColor': self.line_color,
             'lineWidth': self.line_width,
             'marker': self.marker,
+            'radius': self.radius,
             'startMarker': self.start_marker,
         }
 
