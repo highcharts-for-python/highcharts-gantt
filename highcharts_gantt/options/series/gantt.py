@@ -1129,8 +1129,8 @@ class GanttSeries(SeriesBase, GanttOptions):
         :rtype: :class:`DataPointCollection <highcharts_core.options.series.data.collections.DataPointCollection>`
           descendent
         """
-        return GanttData
-    
+        return GanttDataCollection
+
     @classmethod
     def _data_point_class(cls):
         """Returns the class object used for individual data points.
@@ -1138,4 +1138,4 @@ class GanttSeries(SeriesBase, GanttOptions):
         :rtype: :class:`DataBase <highcharts_core.options.series.data.base.DataBase>` 
           descendent
         """
-        return GanttDataCollection
+        return GanttData
