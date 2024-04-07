@@ -1,6 +1,21 @@
 
-Release 1.6.0
+Release 1.7.0
 =========================================
+
+*NOTE:* This release skips the v.1.6 number to maintain alignment with the other Highcharts for Python
+libraries.
+
+* **ENHANCEMENT:** Align the API to **Highcharts Stock (JS) v.11.4** (#62). In particular, this includes:
+
+  * Updated requirements to depend on Highcharts Stock for Python v.1.7.
+  * Added ``.element_type`` support to the Stock Tools GUI.
+  * Added ``Accessibility.high_contrast_mode`` support.
+  * Added ``OrganizationOptions.hanging_side`` support.
+  * Added ``SankeyOptions.node_distance`` support.
+  * Added ``TreegraphOptions.node_distance`` support.
+  * Adjusted diagram (``ArcDiagramOptions``, ``TreegraphOptions``, ``DependencyWheelOptions``, and 
+    ``SankeyOptions``) ``.node_width`` support and documentation.
+  * Added ``NodeOptions.height`` support.
 
 * **ENHANCEMENT:** Align the API to **Highcharts (JS) v.11.3** (#47). In particular, this includes:
 
