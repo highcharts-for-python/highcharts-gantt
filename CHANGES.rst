@@ -1,4 +1,39 @@
 
+Release 1.7.0
+=========================================
+
+*NOTE:* This release skips the v.1.6 number to maintain alignment with the other Highcharts for Python
+libraries.
+
+* **ENHANCEMENT:** Align the API to **Highcharts Stock (JS) v.11.4** (#62). In particular, this includes:
+
+  * Updated requirements to depend on Highcharts Stock for Python v.1.7.
+  * Added ``.element_type`` support to the Stock Tools GUI.
+  * Added ``Accessibility.high_contrast_mode`` support.
+  * Added ``OrganizationOptions.hanging_side`` support.
+  * Added ``SankeyOptions.node_distance`` support.
+  * Added ``TreegraphOptions.node_distance`` support.
+  * Adjusted diagram (``ArcDiagramOptions``, ``TreegraphOptions``, ``DependencyWheelOptions``, and 
+    ``SankeyOptions``) ``.node_width`` support and documentation.
+  * Added ``NodeOptions.height`` support.
+
+* **ENHANCEMENT:** Align the API to **Highcharts (JS) v.11.3** (#47). In particular, this includes:
+
+  * Updated requirements to depend on Highcharts Stock for Python v.1.6.
+  * Added ``ChartOptions.axis_layout_runs`` property.
+  * Added ``ColorAxis.height`` property.
+  * Added ``ColorAxis.width`` property.
+  * Added ``Data.column_types`` property.
+  * Added ``Exporting.fetch_options`` property.
+  * Implemented support for verbose axis date-time unit labelling configuration (see: ``DateTimeLabelFormats``).
+
+* **BUGFIX:** Fixed validation error in ``GanttSeries.from_pandas()`` (#46).
+* **BUGFIX:** Fixed missing functionality for ``RangeSelectorButton.type`` property.
+* **BUGFIX:** Fixed missing ``FlagData.text`` property (courtesy of `@szemek <https://github.com/szemek>`__ )
+* **DOCUMENTATION:** Fixed typos in **Getting Started** tutorial.
+
+-----------------------
+
 Release 1.5.0
 =========================================
 
