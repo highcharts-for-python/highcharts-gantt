@@ -655,3 +655,25 @@ def test_to_dict(kwargs, error):
 ])
 def test_from_js_literal(input_files, filename, as_file, error):
     Class_from_js_literal(cls, input_files, filename, as_file, error)
+
+def test_bugfix162(input_files):
+    from highcharts_gantt.chart import Chart
+    from highcharts_gantt.options.series.gantt import GanttSeries
+
+    import pandas as pd
+    from collections import defaultdict
+
+    filename = "series/base/bugfix162.csv"
+    input_file = check_input_file(input_files, filename)
+
+    dtype = defaultdict(lambda: "str")
+
+    df = pd.read_csv(input_file, dtype=dtype, parse_dates=["start", "end"])
+
+    # Creating a Series from the DataFrame
+    my_series = GanttSeries.from_pandas(
+        df,
+        property_map={"id": "task_id", "name": "name", "start": "start", "end": "end"},
+    )
+
+    assert my_series is not None

@@ -11,7 +11,7 @@ from highcharts_gantt.decorators import validate_types
 from highcharts_gantt.metaclasses import HighchartsMeta
 from highcharts_gantt.options.series.data.connect import DataConnection
 from highcharts_gantt.options.series.data.collections import DataPointCollection
-from highcharts_gantt.utility_functions import validate_color, parse_jira_issue
+from highcharts_gantt.utility_functions import validate_color, parse_jira_issue, datetime64_to_datetime
 from highcharts_gantt.utility_classes.gradients import Gradient
 from highcharts_gantt.utility_classes.patterns import Pattern
 
@@ -218,7 +218,13 @@ class GanttData(DataBase):
         elif checkers.is_date(value):
             self._end = validators.date(value, allow_empty = True)
         else:
-            self._end = validators.datetime(value, allow_empty = True, coerce_value = True)
+            try:
+                self._end = validators.datetime(value, allow_empty = True, coerce_value = True)
+            except (ValueError, TypeError) as error:
+                if checkers.is_type(value, 'datetime64'):
+                    self._end = datetime64_to_datetime(value)
+                else:
+                    raise error
 
     @property
     def milestone(self) -> Optional[bool]:
@@ -279,7 +285,13 @@ class GanttData(DataBase):
         elif checkers.is_date(value):
             self._start = validators.date(value, allow_empty = True)
         else:
-            self._start = validators.datetime(value, allow_empty = True, coerce_value = True)
+            try:
+                self._start = validators.datetime(value, allow_empty = True, coerce_value = True)
+            except (ValueError, TypeError) as error:
+                if checkers.is_type(value, 'datetime64'):
+                    self._start = datetime64_to_datetime(value)
+                else:
+                    raise error
 
     @property
     def y(self) -> Optional[int | float | Decimal]:
